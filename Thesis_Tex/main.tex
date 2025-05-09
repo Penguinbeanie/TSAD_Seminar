@@ -94,7 +94,7 @@
 
 \begin{document}
   \JMUTitle
-      {Time Series Anomaly Detection}        % Titel der Arbeit
+      {Time Series Anomaly Detection Benchmarking}        % Titel der Arbeit
       {Philip Spaier}                        % Vor- und Nachname des Autors
       {3110375}
       
@@ -153,16 +153,26 @@ Allgemeine Merkmale
 %%  Hauptteil  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Abschnitt} \label{einleitung}
-Ein Hauptabschnitt - idealerweise sollten keine Abschnitte leer sein.
 
-\subsection{Unterabschnitt}
-Ein Unterabschnitt - idealerweise sollten keine Abschnitte leer sein.
+\section{Literature Review} \label{einleitung}
+Time Series Anomaly Detection, as a subcategory of the broader field of Anomaly Detection, has seen increased attention since the start of the twenty first century. With the internet having established itself as a persistent and omnipresent force in every imaginable aspect of human life, time series data can be found in abundance. Modern developments in Internet-of-Things (IoT) applications, the digitization of financial data, and a massive rise in the consumption of streaming services have contributed to an exponential growth of time series data [source needed]. This in turn has made the manual search of potential anomalies in many fields completely infeasible, leading to an increased demand for automated anomaly detection methods. While there is a continuously growing repertoire of such automated detection methods, the lack of a generally accepted and reliable benchmark makes not just further developments but also the selection of appropriate models difficult. In the following sections of this literature review, I will provide the reader with a better understanding of context independent Time Series Anomaly Detection, the most commonly applied methods, and the current state of benchmarking.
 
-\subsubsection{Unterunterabschnitt}
-Ein Unterunterabschnitt - idealerweise sollten keine Abschnitte leer sein.
 
-\section{Einfache Formatvorlagen}
+\subsection{Time Series Data and Anomalies}
+Time Series Data, as used in the rest of this thesis, shall be defined as follows: a sequence of data or observations, typically indexed by or associated with specific timestamps, collected in chronological order over a period of time.
+For the purpose of analysis, continuous signals must be converted into individual data points. Each datapoint can either represent a binary state (1 or 0), be a numerical value measured on a ratio scale (eg. number of occurrences), or a numerical value measured on an interval scale (eg. temperature on a Celsius scale).
+A time series with a dimensionality of one (only a single feature) will be referred to as "univariate", while a time series with higher dimensionality (multiple features) will be referred to as "multivariate". \\
+An anomaly will be defined as follows: an abnormal, rarely occurring data point or sequence, that has to be be detectable with exclusively context independent methods. Individual anomalous data points that will be referred to as "point based" anomalies, while multiple consecutive anomalous points will be referred to as "sequence based" anomalies \citep[S. 3]{liu2024elephant}.
+
+Insert Images of point vs sequence.
+
+
+\subsection{Detection Methods}
+\subsection{Performance Metrics}
+
+\subsection{State of Benchmarking}
+
+\section{Dataset Analysis}
 
 \textbf{Das ist fett gedruckter Text}.
 
@@ -181,6 +191,11 @@ Nummerierte Aufzählungen sind oft hilfreich für Reihenfolgen:
     \item Zweiter Eintrag
 \end{enumerate}
 
+\section{Replication of TSB-AD Benchmark Results}
+
+\section{Dataset Creation}
+
+\section{Conclusion}
 
 \section{Zitieren und Referenzieren}
 
