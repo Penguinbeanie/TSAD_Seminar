@@ -19,6 +19,206 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{BSI1}{misc}{}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.bsi.bund.de/EN/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/DoS-Denial-of-Service/dos-denial-of-service_node.html}}
+      \field{note}{Accessed: 2025-05-10}
+      \field{title}{Bundesamt für Sicherheit in der Informationstechnik}
+      \field{year}{2025}
+      \field{dateera}{ce}
+    \endentry
+    \entry{chalapathy2019deeplearninganomalydetection}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=aadf32eda4ecc06c6384bef70590720f}{%
+           family={Chalapathy},
+           familyi={C\bibinitperiod},
+           given={Raghavendra},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54ff2f270b001c9403fc0563fe52d8aa}{%
+           family={Chawla},
+           familyi={C\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3a9d96a04a7b0091921215389f3ec35c}
+      \strng{fullhash}{3a9d96a04a7b0091921215389f3ec35c}
+      \strng{fullhashraw}{3a9d96a04a7b0091921215389f3ec35c}
+      \strng{bibnamehash}{3a9d96a04a7b0091921215389f3ec35c}
+      \strng{authorbibnamehash}{3a9d96a04a7b0091921215389f3ec35c}
+      \strng{authornamehash}{3a9d96a04a7b0091921215389f3ec35c}
+      \strng{authorfullhash}{3a9d96a04a7b0091921215389f3ec35c}
+      \strng{authorfullhashraw}{3a9d96a04a7b0091921215389f3ec35c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Deep Learning for Anomaly Detection: A Survey}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1901.03407
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1901.03407
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1901.03407
+      \endverb
+    \endentry
+    \entry{DBSurv}{misc}{}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.deutsche-boerse-cash-market.com/dbcm-en/about-us/organisation-of-the-fwb/market-surveillance-in-germany/market-surveillance-21856?frag=249060}}
+      \field{note}{Accessed: 2025-05-10}
+      \field{title}{Deutsche Börse}
+      \field{year}{2025}
+      \field{dateera}{ce}
+    \endentry
+    \entry{FOULADI2020102587}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0be361d03a1f7011f4aed28484d2eddf}{%
+           family={Fouladi},
+           familyi={F\bibinitperiod},
+           given={Ramin\bibnamedelima Fadaei},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfe47d9199dbdd52914e0b87d8b30099}{%
+           family={Ermiş},
+           familyi={E\bibinitperiod},
+           given={Orhan},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53087d0aba193df1b349307c636f531b}{%
+           family={Anarim},
+           familyi={A\bibinitperiod},
+           given={Emin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{aeca8b1af45bd7a4c8ec82c4471bc661}
+      \strng{fullhash}{aeca8b1af45bd7a4c8ec82c4471bc661}
+      \strng{fullhashraw}{aeca8b1af45bd7a4c8ec82c4471bc661}
+      \strng{bibnamehash}{aeca8b1af45bd7a4c8ec82c4471bc661}
+      \strng{authorbibnamehash}{aeca8b1af45bd7a4c8ec82c4471bc661}
+      \strng{authornamehash}{aeca8b1af45bd7a4c8ec82c4471bc661}
+      \strng{authorfullhash}{aeca8b1af45bd7a4c8ec82c4471bc661}
+      \strng{authorfullhashraw}{aeca8b1af45bd7a4c8ec82c4471bc661}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software defined networking (SDN) has emerged as the integral part of cloud services since it provides flexible management capabilities to monitor and to analyze the network traffic with the help of programmable entities. Although, such functionalities play a significant role in terms of protecting the availability of cloud services against the security threats, SDN still has some vulnerabilities such as the distributed denial of service (DDoS) attacks. The DDoS attackers use spurious packets similar to normal ones and endanger the service continuity of SDN. Although conventional packet-based intrusion detection systems have broad databases to detect DDoS attacks, they are impotent of detection when the attack traffic is sheltered by the normal network traffic. The idea is therefore, to come up with a new countermeasure by observing and distinguishing the instant changes in network. In this work, we propose a DDoS attack detection and defense scheme using time-series analysis for SDN. The proposed scheme employs a model based on the upcoming traffic feature forecasting and the chaos theory together with the exponential filter and the dynamic threshold method to detect instant changes in the network. The experimental result shows that our algorithm has high detection rate and low false alarm.}
+      \field{issn}{2214-2126}
+      \field{journaltitle}{Journal of Information Security and Applications}
+      \field{title}{A DDoS attack detection and defense scheme using time-series analysis for SDN}
+      \field{volume}{54}
+      \field{year}{2020}
+      \field{pages}{102587}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jisa.2020.102587
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2214212620307560
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2214212620307560
+      \endverb
+      \keyw{Distributed denial of service (DDoS),Software defined network (SDN),ARIMA,Chaos theory,Exponential smoothing}
+    \endentry
+    \entry{jiang2024anomalydetectionelectrocardiogramsadvancing}{misc}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=635adf59fbbe2c4f3400bc02ce591e2d}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Aofan},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93abac0f63d619d0edfe4e84d66625e7}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Chaoqin},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad5307933ed001122b79b97ba8a99017}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77f5125dd8abbb219369d6fe501f52a8}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yuchen},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0bf52d027abbec57d92e8e2cfe437671}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Zi},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4131da5ff245e426fb9762f2b57780ef}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Kang},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84b4956e7b931fa40210c38847c21748}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ya},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b5b3a5c892da0161ccfb138059007bb8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yanfeng},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1106d012484f7e392ce0844dd456e835}
+      \strng{fullhash}{60dcc22eec809c839769684f22dc5e85}
+      \strng{fullhashraw}{60dcc22eec809c839769684f22dc5e85}
+      \strng{bibnamehash}{60dcc22eec809c839769684f22dc5e85}
+      \strng{authorbibnamehash}{60dcc22eec809c839769684f22dc5e85}
+      \strng{authornamehash}{1106d012484f7e392ce0844dd456e835}
+      \strng{authorfullhash}{60dcc22eec809c839769684f22dc5e85}
+      \strng{authorfullhashraw}{60dcc22eec809c839769684f22dc5e85}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Anomaly Detection in Electrocardiograms: Advancing Clinical Diagnosis Through Self-Supervised Learning}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2404.04935
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2404.04935
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2404.04935
+      \endverb
+    \endentry
     \entry{liu2024elephant}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=7c7337373a8d8c9e482652f942bc915a}{%
@@ -54,6 +254,75 @@
       \field{year}{2024}
       \field{pages}{108231\bibrangedash 108261}
       \range{pages}{31}
+    \endentry
+    \entry{VisaFr}{misc}{}{}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.visaacceptance.com/en-us/solutions/ai-driven-fraud-management.html}}
+      \field{note}{Accessed: 2025-05-10}
+      \field{title}{Visa Acceptance Solutions}
+      \field{year}{2025}
+      \field{dateera}{ce}
+    \endentry
+    \entry{FinFraud}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=b749c24f3d473862fccb585920e76d2d}{%
+           family={{Zhou, Xun}},
+           familyi={Z\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=2990c1d81b1e9ce8f513ad9839c3a63d}{%
+           family={{Cheng, Sicong}},
+           familyi={C\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=21d5df4e0c671df382309d927193a4f2}{%
+           family={{Zhu, Meng}},
+           familyi={Z\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=77d8dcf4893849e7141a07900bbfd610}{%
+           family={{Guo, Chengkun}},
+           familyi={G\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=fccac22d46c778c6a7729a262646bc05}{%
+           family={{Zhou, Sida}},
+           familyi={Z\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ebdb809a84d2a00eb22940a460541dfa}{%
+           family={{Xu, Peng}},
+           familyi={X\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=f07d15b30fe4ed497649a402f47f6d80}{%
+           family={{Xue, Zhenghua}},
+           familyi={X\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ff7c71247914f48119f8fc8e161b06ea}{%
+           family={{Zhang, Weishi}},
+           familyi={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf792c49de50fefe5f81fb603d366977}
+      \strng{fullhash}{47ae0f0d185b1e6ccdd989b2a45de8cb}
+      \strng{fullhashraw}{47ae0f0d185b1e6ccdd989b2a45de8cb}
+      \strng{bibnamehash}{47ae0f0d185b1e6ccdd989b2a45de8cb}
+      \strng{authorbibnamehash}{47ae0f0d185b1e6ccdd989b2a45de8cb}
+      \strng{authornamehash}{cf792c49de50fefe5f81fb603d366977}
+      \strng{authorfullhash}{47ae0f0d185b1e6ccdd989b2a45de8cb}
+      \strng{authorfullhashraw}{47ae0f0d185b1e6ccdd989b2a45de8cb}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MATEC Web Conf.}
+      \field{title}{A state of the art survey of data mining-based fraud detection and credit scoring}
+      \field{volume}{189}
+      \field{year}{2018}
+      \field{pages}{03002}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1051/matecconf/201818903002
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1051/matecconf/201818903002
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1051/matecconf/201818903002
+      \endverb
     \endentry
   \enddatalist
   \missing{baumol1958warehouse}
