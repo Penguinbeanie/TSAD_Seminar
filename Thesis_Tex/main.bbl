@@ -19,6 +19,67 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{boniol2024divetimeseriesanomalydetection}{misc}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f286b8f76f2aa3253e841a5896a1c52d}{%
+           family={Boniol},
+           familyi={B\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c7337373a8d8c9e482652f942bc915a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Qinghua},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1926d7165fcafaae7a8ac141a89fab16}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Mingyi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5dd9a3f3ecfded799322c136900994e2}{%
+           family={Palpanas},
+           familyi={P\bibinitperiod},
+           given={Themis},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c28927bb966cb6d440fc37f585184d5c}{%
+           family={Paparrizos},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ab529604c15e06867f4c039d36aa5364}
+      \strng{fullhash}{0f6e7e5e537ee84f854fabbb3fcbca9c}
+      \strng{fullhashraw}{0f6e7e5e537ee84f854fabbb3fcbca9c}
+      \strng{bibnamehash}{0f6e7e5e537ee84f854fabbb3fcbca9c}
+      \strng{authorbibnamehash}{0f6e7e5e537ee84f854fabbb3fcbca9c}
+      \strng{authornamehash}{ab529604c15e06867f4c039d36aa5364}
+      \strng{authorfullhash}{0f6e7e5e537ee84f854fabbb3fcbca9c}
+      \strng{authorfullhashraw}{0f6e7e5e537ee84f854fabbb3fcbca9c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Dive into Time-Series Anomaly Detection: A Decade Review}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2412.20512
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2412.20512
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2412.20512
+      \endverb
+    \endentry
     \entry{BSI1}{misc}{}{}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
@@ -140,6 +201,65 @@
       \endverb
       \keyw{Distributed denial of service (DDoS),Software defined network (SDN),ARIMA,Chaos theory,Exponential smoothing}
     \endentry
+    \entry{astro}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=89429e5c46c9fa825593945237b44693}{%
+           family={Huijse},
+           familyi={H\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f07c3bef24084a19384507876a3b7f4}{%
+           family={Estevez},
+           familyi={E\bibinitperiod},
+           given={Pablo\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fdc9616728b141c7487d4e014be5a68f}{%
+           family={Protopapas},
+           familyi={P\bibinitperiod},
+           given={Pavlos},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90b5c73fd79e521ce40f686a82ebff01}{%
+           family={Principe},
+           familyi={P\bibinitperiod},
+           given={Jose\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27f0504eea46e7f90942392a3074fcc4}{%
+           family={Zegers},
+           familyi={Z\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{95af79d2881c926c10906e2ec4af5d61}
+      \strng{fullhash}{dc0ecb648fc805f29404ae4fcb69c0ba}
+      \strng{fullhashraw}{dc0ecb648fc805f29404ae4fcb69c0ba}
+      \strng{bibnamehash}{dc0ecb648fc805f29404ae4fcb69c0ba}
+      \strng{authorbibnamehash}{dc0ecb648fc805f29404ae4fcb69c0ba}
+      \strng{authornamehash}{95af79d2881c926c10906e2ec4af5d61}
+      \strng{authorfullhash}{dc0ecb648fc805f29404ae4fcb69c0ba}
+      \strng{authorfullhashraw}{dc0ecb648fc805f29404ae4fcb69c0ba}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Computational Intelligence Magazine}
+      \field{number}{3}
+      \field{title}{Computational Intelligence Challenges and Applications on Large-Scale Astronomical Time Series Databases}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{27\bibrangedash 39}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/MCI.2014.2326100
+      \endverb
+      \keyw{Computational intelligence;Large scale systems;Time series analysis;Databases;Telescopes;Astronomy;Time domain analysis}
+    \endentry
     \entry{jiang2024anomalydetectionelectrocardiogramsadvancing}{misc}{}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=635adf59fbbe2c4f3400bc02ce591e2d}{%
@@ -255,6 +375,53 @@
       \field{pages}{108231\bibrangedash 108261}
       \range{pages}{31}
     \endentry
+    \entry{SchmidlEtAl2022Anomaly}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4a742bada01b9a54aa361c425bdc817d}{%
+           family={Schmidl},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57c098baaa906cd941d31b83350f2fe5}{%
+           family={Wenig},
+           familyi={W\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a50a572ebbc65b289cc3df3ee2cba96}{%
+           family={Papenbrock},
+           familyi={P\bibinitperiod},
+           given={Thorsten},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2a5f7ca2f6f4d1afe4fd1525899bb8f9}
+      \strng{fullhash}{2a5f7ca2f6f4d1afe4fd1525899bb8f9}
+      \strng{fullhashraw}{2a5f7ca2f6f4d1afe4fd1525899bb8f9}
+      \strng{bibnamehash}{2a5f7ca2f6f4d1afe4fd1525899bb8f9}
+      \strng{authorbibnamehash}{2a5f7ca2f6f4d1afe4fd1525899bb8f9}
+      \strng{authornamehash}{2a5f7ca2f6f4d1afe4fd1525899bb8f9}
+      \strng{authorfullhash}{2a5f7ca2f6f4d1afe4fd1525899bb8f9}
+      \strng{authorfullhashraw}{2a5f7ca2f6f4d1afe4fd1525899bb8f9}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the VLDB Endowment (PVLDB)}
+      \field{number}{9}
+      \field{title}{Anomaly Detection in Time Series: A Comprehensive Evaluation}
+      \field{volume}{15}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{1779\bibrangedash 1797}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.14778/3538598.3538602
+      \endverb
+    \endentry
     \entry{VisaFr}{misc}{}{}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
@@ -266,6 +433,75 @@
       \field{title}{Visa Acceptance Solutions}
       \field{year}{2025}
       \field{dateera}{ce}
+    \endentry
+    \entry{Zamanzadeh_Darban_2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=7c1632dc7a01d4cd0610383dd34a4d13}{%
+           family={Zamanzadeh\bibnamedelima Darban},
+           familyi={Z\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=021b501817a8d003c9b230aaed364b70}{%
+           family={Webb},
+           familyi={W\bibinitperiod},
+           given={Geoffrey\bibnamedelima I.},
+           giveni={G\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=019bcbde9904047f7c02c1ae64e1d46e}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Shirui},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d21646a18174eae99dcae32060cefefc}{%
+           family={Aggarwal},
+           familyi={A\bibinitperiod},
+           given={Charu},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=405c61b4c7a54fd045c4fa8032a6741c}{%
+           family={Salehi},
+           familyi={S\bibinitperiod},
+           given={Mahsa},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery (ACM)}%
+      }
+      \strng{namehash}{d5aa7a3696a9b6273eb53f79dba990e0}
+      \strng{fullhash}{3e5e0cf6fbdbed9555d758b784698f7b}
+      \strng{fullhashraw}{3e5e0cf6fbdbed9555d758b784698f7b}
+      \strng{bibnamehash}{3e5e0cf6fbdbed9555d758b784698f7b}
+      \strng{authorbibnamehash}{3e5e0cf6fbdbed9555d758b784698f7b}
+      \strng{authornamehash}{d5aa7a3696a9b6273eb53f79dba990e0}
+      \strng{authorfullhash}{3e5e0cf6fbdbed9555d758b784698f7b}
+      \strng{authorfullhashraw}{3e5e0cf6fbdbed9555d758b784698f7b}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1557-7341}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{month}{10}
+      \field{number}{1}
+      \field{title}{Deep Learning for Time Series Anomaly Detection: A Survey}
+      \field{volume}{57}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 42}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.1145/3691338
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1145/3691338
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1145/3691338
+      \endverb
     \endentry
     \entry{FinFraud}{article}{}{}
       \name{author}{8}{}{%
