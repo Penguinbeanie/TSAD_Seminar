@@ -1191,6 +1191,82 @@
       \field{pages}{108231\bibrangedash 108261}
       \range{pages}{31}
     \endentry
+    \entry{papaVus}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=c28927bb966cb6d440fc37f585184d5c}{%
+           family={Paparrizos},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f286b8f76f2aa3253e841a5896a1c52d}{%
+           family={Boniol},
+           familyi={B\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5dd9a3f3ecfded799322c136900994e2}{%
+           family={Palpanas},
+           familyi={P\bibinitperiod},
+           given={Themis},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a10ec178d031d2e8ccfadd70714bf9cc}{%
+           family={Tsay},
+           familyi={T\bibinitperiod},
+           given={Ruey\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ff56cfa8bd2fa08db74380bb2c9d556}{%
+           family={Elmore},
+           familyi={E\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b80efa845ff86794acc83783899dcf0}{%
+           family={Franklin},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {VLDB Endowment}%
+      }
+      \strng{namehash}{e17ca8fe295857868ec414fabb32d2af}
+      \strng{fullhash}{1bcfe7d18fe9ca720450bb4dfa5297d5}
+      \strng{fullhashraw}{1bcfe7d18fe9ca720450bb4dfa5297d5}
+      \strng{bibnamehash}{1bcfe7d18fe9ca720450bb4dfa5297d5}
+      \strng{authorbibnamehash}{1bcfe7d18fe9ca720450bb4dfa5297d5}
+      \strng{authornamehash}{e17ca8fe295857868ec414fabb32d2af}
+      \strng{authorfullhash}{1bcfe7d18fe9ca720450bb4dfa5297d5}
+      \strng{authorfullhashraw}{1bcfe7d18fe9ca720450bb4dfa5297d5}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Anomaly detection (AD) is a fundamental task for time-series analytics with important implications for the downstream performance of many applications. In contrast to other domains where AD mainly focuses on point-based anomalies (i.e., outliers in standalone observations), AD for time series is also concerned with range-based anomalies (i.e., outliers spanning multiple observations). Nevertheless, it is common to use traditional point-based information retrieval measures, such as Precision, Recall, and F-score, to assess the quality of methods by thresholding the anomaly score to mark each point as an anomaly or not. However, mapping discrete labels into continuous data introduces unavoidable shortcomings, complicating the evaluation of range-based anomalies. Notably, the choice of evaluation measure may significantly bias the experimental outcome. Despite over six decades of attention, there has never been a large-scale systematic quantitative and qualitative analysis of time-series AD evaluation measures. This paper extensively evaluates quality measures for time-series AD to assess their robustness under noise, misalignments, and different anomaly cardinality ratios. Our results indicate that measures producing quality values independently of a threshold (i.e., AUC-ROC and AUC-PR) are more suitable for time-series AD. Motivated by this observation, we first extend the AUC-based measures to account for range-based anomalies. Then, we introduce a new family of parameter-free and threshold-independent measures, VUS (Volume Under the Surface), to evaluate methods while varying parameters. Our findings demonstrate that our four measures are significantly more robust in assessing the quality of time-series AD methods.}
+      \field{issn}{2150-8097}
+      \field{journaltitle}{Proc. VLDB Endow.}
+      \field{month}{7}
+      \field{number}{11}
+      \field{title}{Volume under the surface: a new accuracy evaluation measure for time-series anomaly detection}
+      \field{volume}{15}
+      \field{year}{2022}
+      \field{pages}{2774\bibrangedash 2787}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.14778/3551793.3551830
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.14778/3551793.3551830
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.14778/3551793.3551830
+      \endverb
+    \endentry
     \entry{SchmidlEtAl2022Anomaly}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=4a742bada01b9a54aa361c425bdc817d}{%

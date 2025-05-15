@@ -25,6 +25,8 @@
 \usepackage[justification=centering]{caption}
 \usepackage[style=authoryear,natbib=true,backend=biber,maxbibnames=20]{biblatex}
 \usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{makecell}
 \bibliography{literatur}
 
 \setlength{\parindent}{0em} 
@@ -192,7 +194,62 @@ Detection methods, in common descriptions and within the scientific literature, 
 \subsubsection{Architecture} \textit{Statistical models} identify anomalies by relying on statistical assumptions to detect deviations from expected data distributions. They often involve fitting a distribution model to the data and measuring abnormality based on probabilities or distances from the calculated distribution. Statistical models often require a threshold to be set beforehand\parencites[p.~6-7]{liu2024elephant}[p.~1]{FOULADI2020102587}. \par \textit{Neural Network based models} are a collection of distributed, adaptive, non-linear processing units with adjustable weights \parencites[p.~427]{GURESEN2011426}. They rely on a training dataset and are often semi-supervised. Deep neural networks, a subcategory of neural networks, model spacial and temporal dependencies \parencites[p.~6-7]{liu2024elephant}[6]{Zamanzadeh_Darban_2024}.\par \textit{Foundational Models} utilize transfer learning, using knowledge from a different class of tasks and then applying it on the target task. These models are pre-trained and are then being fine-tuned \parencites[p.~4]{bommasani2022opportunitiesrisksfoundationmodels}. In the context of TSAD, those models are GPT models fine tuned on time series data, general purpose time series models, or originally time series classification models now used for anomaly detection \parencites[p.~7]{liu2024elephant}.
 
 \subsubsection{Technique} \textit{Distance based models} work on the idea that anomalous points or sequences will further away when using a distance measurement. They can be either be compared to their nearest neighbor, all other points/subsequences, or cluster centers \parencites[p.~6]{SchmidlEtAl2022Anomaly}. Such distances are calculated in various ways depending on the model and implementation, with the most common definitions being the Euclidean distance or the Z-normalized Euclidean distance. Distance based models use only the x- and y-axis data, with no labels being required \parencites[p.~8]{boniol2024divetimeseriesanomalydetection}. \par \textit{Forecasting models} learn the normal patters of a time series and, often using a sliding context window, forecast the next datapoint in the series. The forecasted and actual data points are then compared, with the difference being used for an anomaly score. Given a high enough anomaly score, a point is considered an anomaly. Such models are usually semi-supervised \parencites[p.~4-5]{SchmidlEtAl2022Anomaly}. \par \textit{Isolation Tree Models} use ensembles of random trees, selecting random features and splits, to separate points or sequences from each other. It operates on the idea that anomalies require fewer steps to be separated from the rest of the data than normal points/sequences. For each point/sequence, the distance from the root is calculated. The shorter a distance is, the more likely is a point/sequence to be an anomaly. These models can be both unsupervised and supervised \parencites[p.~6-7]{SchmidlEtAl2022Anomaly} \par \textit{Distribution based models} estimate a distribution of the time series and then score individual points or sequences as anomalous or normal based on it. Anomalous points are expected to have a low probability. Alternatively to probabilities, the anomaly score can also be calculated using likelihoods or distances. These models are generally unsupervised or occasionally semi-supervised \parencites[p.~6]{SchmidlEtAl2022Anomaly}. \par \textit{Graph based models} methods turn time series data, or parts of it, into a graph structure. This graph represents the different types of patterns (subsequences) found in the data as nodes, and how these patterns follow each other over time as connections (edges) between the nodes. Anomalies are then determined based on usual structures or behaviors found in the graph \parencites[p.~23-24]{boniol2024divetimeseriesanomalydetection}. Graph based time series models can be further divided in multiple subcategories, including AutoEncoder- and GAN-based methods, as well as predictive graph models \parencite{ho2025graphanomalydetectiontime}. \par \textit{Reconstruction models} learn a time series' features and patterns by encoding normal data into a low dimensional space. Given a test dataset, they compress test data and reconstruct it using their model based on that low-dimensional space. Should a point or sequence of this reconstructed version deviate substantially from the actual data, then it is labeled as anomalous. These models are often considered semi-supervised because they typically use normal labeled data for training. However, models that do not rely on a training dataset and instead directly encode and reconstruct the test data also exist, operating in an unsupervised manner. \parencites[p.~5]{SchmidlEtAl2022Anomaly}. \par \textit{Encoder based models} operate similarly to reconstruction models. They compress a given time series into a low-dimensional representation, but instead of reconstructing it, they directly compare this compressed version to their model of normal time series. Anomalous points or sequences might have unusual encoded representations, and their deviations from the normal model are then used to calculate an anomaly score \parencites[p.~5-6]{SchmidlEtAl2022Anomaly}.
+
 \subsection{Performance Metrics}
+
+For the effective evaluation of a models performance, as defined by \cite{papaVus}, metrics have to fullfil the following criteria:
+\begin{itemize}
+    \item \textit{Robustness to Lag:} The evaluation measure should be insensitive to slight temporal shifts or lags in anomaly scores.
+    \item \textit{Robustness to Noise:} The evaluation measure should be stable and unaffected by noise in the anomaly scores.
+    \item \textit{Robustness to Anomaly Cardinality Ratio:} The evaluation measure's score should not be influenced by the proportion of anomalies in the data.
+    \item \textit{High Separability between Accurate and Inaccurate Methods:} The measure must effectively distinguish between accurate and inaccurate detection methods.
+    \item \textit{Consistency:} The measure should produce repeatable scores for similar data and consistently rank different methods.
+\end{itemize}
+Commonly applied performance measures for TSAD can generally be classified based on two characteristics: Point-wise or Range-wise, and Threshold-dependent or Threshold-independent.
+
+
+\subsubsection{Point-wise or Range-wise}
+\textit{Point-wise evaluation measures} look at each anomalous point independently, determining in a binary fashion whether a model classified them correctly as normal or anomalous \parencite[p.~7]{liu2024elephant}. These measures suffer from a variety of issues. Most crucially, they can unfairly penalize methods that detect only part of an anomalous range or whose detection peak doesn't perfectly align with the labeled range. Further more, they are sensitive to temporal lag. Should an anomalous data point be detected slightly before or after the actual anomaly occurs, a fully point-wise metric will score it with an unreasonably low score \parencites[p.~2778]{papaVus}.\\ \textit{Range-wise measures} look at anomalies not just from the perspective of individual points but take sequences into consideration. For anomalous sequences, their evaluation can involve determining how much the detected and the actual sequence overlap. Additionally, such measures may incorporate strategies like adequately handling lag (e.g., by considering an anomaly detected if it's within a specified range of an actual one, even if not at the exact spot) or including a cardinality factor to penalize models that incorrectly segment anomalies (such as detecting multiple short ones for a single large event, or vice-versa) \parencite[p.~7]{liu2024elephant}.
+\subsubsection{Threshold-dependent or Threshold-independent}
+\textit{Threshold-dependent measures} require a threshold to be set that determines whether an anomaly score classifies a value as anomalous or normal. This can be done based on statistical assumptions, or using dynamic algorithms that adjust to the data and results \parencites[p.~38-39]{boniol2024divetimeseriesanomalydetection}. Setting these thresholds automatically, however, is often difficult when working with large and diverse datasets, and the chosen thresholds can drastically change a metric's accuracy. Noise and the normal-to-anomalous ratio in a time series can be particularly problematic \parencites[p.~2777-2778]{papaVus}. \\
+\textit{Threshold-independent measures} evaluate the performance of a time series anomaly detection method without needing a specific score cutoff to decide what constitutes an anomaly. Instead of relying on a fixed threshold, they assess how effectively the method's anomaly scores rank true anomalies higher than normal data points across the entire range of scores \parencites[p.~39-41]{boniol2024divetimeseriesanomalydetection}.
+
+\subsubsection{Definition and Classifgication of Metrics}
+
+The following defines the most commonly used metrics and classifies them into the above described categories \parencites[p.2776-2780]{papaVus}:
+\begin{itemize}
+    \item \textit{Precision / Range Precision:} number of correctly identified anomalies over all anomalies.
+    \item \textit{Recall (TPR) / Range Recall:} number of correctly identified anomalies over all anomalies.
+    \item \textit{F-Score / Range F-Score:} Harmonic Mean of Precision and Recall. 
+    \item \textit{False Positive Rate (FPR):} number of points wrongly identified as anomalies over the total number of normal points.
+    \item \textit{AUC-ROC:} area under the curve corresponding to TPR on the y-axis and FPR on the x-axis at all threshold levels.
+    \item \textit{AUC-Precision:} area under the curve corresponding to the Recall on the x-axis and Precision on the y-axis at all threshold levels.
+    \item \textit{VUS-ROC:} generating multiple ROC curves for a range of different buffer lengths. These stacked ROC curves form a 3D surface, and VUS-ROC is the volume beneath this surface.
+    \item \textit{VUS-Precision:} generating multiple Precision-Recall curves for a range of different buffer lengths. These stacked PR curves form a 3D surface, and VUS-Precision (VUS-PR) is the volume beneath this surface.
+\end{itemize}
+
+
+
+
+\begin{table}[htbp]
+  \centering
+  \label{tab:evaluation_categories}
+
+  \begin{tabular}{lcc}
+    \toprule
+    & Threshold-dependent & Threshold-independent \\
+    \midrule
+    Point-wise & \makecell[l]{Precision \\ Recall \\ False Positive Rate \\ F-Score} & \makecell[l]{AUC-ROC \\ AUC-Precision} \\
+    \midrule
+    Range-wise & \makecell[l]{Range Precision \\ Range Recall \\ Range F-Score} & \makecell[l]{VUS-ROC \\ VUS-Precision} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Evaluation Measures}
+
+\end{table}
+
+\textbf{}
+
 
 \subsection{State of Benchmarking}
 
