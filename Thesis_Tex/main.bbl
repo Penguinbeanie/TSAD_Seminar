@@ -1326,6 +1326,46 @@
       \field{year}{2025}
       \field{dateera}{ce}
     \endentry
+    \entry{wu2021current}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e235de559356486e060dcf2b887097eb}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Renjie},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b417f0b6b69bda05d9053cc6dd6d7c19}{%
+           family={Keogh},
+           familyi={K\bibinitperiod},
+           given={Eamonn\bibnamedelima J},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{689894c8b4e28a5063d82b56831caeea}
+      \strng{fullhash}{689894c8b4e28a5063d82b56831caeea}
+      \strng{fullhashraw}{689894c8b4e28a5063d82b56831caeea}
+      \strng{bibnamehash}{689894c8b4e28a5063d82b56831caeea}
+      \strng{authorbibnamehash}{689894c8b4e28a5063d82b56831caeea}
+      \strng{authornamehash}{689894c8b4e28a5063d82b56831caeea}
+      \strng{authorfullhash}{689894c8b4e28a5063d82b56831caeea}
+      \strng{authorfullhashraw}{689894c8b4e28a5063d82b56831caeea}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on knowledge and data engineering}
+      \field{number}{3}
+      \field{title}{Current time series anomaly detection benchmarks are flawed and are creating the illusion of progress}
+      \field{volume}{35}
+      \field{year}{2021}
+      \field{pages}{2421\bibrangedash 2429}
+      \range{pages}{9}
+    \endentry
     \entry{Zamanzadeh_Darban_2024}{article}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=7c1632dc7a01d4cd0610383dd34a4d13}{%
