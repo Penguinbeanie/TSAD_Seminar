@@ -257,10 +257,16 @@ Datasets/Online: Yahoo, NASA, SIGKDD
 
 While time series anomaly detection is a well-established field, most advancements in systematic bench marking have been made within the last decade. The following will provide an overview over the most important papers and datasets contributing this endeavor. As always, given the large corpus of work, this is not a comprehensive list.  \par
 \textbf{Numenta Anomaly Benchmark (NAB), 2015:} The Numeta Anomaly Benchmark is often considered to be the first large scale open source benchmarking environment for TSAD. At the time of release, it contained 58 datasets, made up of a mixture of artificial and real time series. The labels are first created by multiple humans, then combined into a ground truth by an algorithm. NAB uses a custom threshold dependent scoring function for the evaluation of a model's performance, designating high value to an algorithms ability to detect an anomaly as early as possible. It is designed specifically for real time anomaly detection, not static analysis. Therefore, only unsupervised models can be tested, with no training/test split of the data.\par
-\textbf{Illusion of Progress (2021):} \cite{wu2021current} provides substantial criticism regarding the state of TSAD benchmarking. The authors find most previously created datasets to contain one or multiple of the following flaws:
+\textbf{Illusion of Progress (2021):} \cite{wu2021current} provide substantial criticism regarding the state of TSAD benchmarking. The authors find most previously created datasets to contain one or multiple of the following flaws:
 \begin{itemize}
     \item \textit{Triviality:} Many anomalies are "are so simple that solving them seems pointless or even absurd" \parencites[p.~2]{wu2021current}.
+    \item \textit{Unrealistic Anomaly Density:} Many time series have anomaly rates so high that they can realistically no longer be defined as anomalous. The task turns into a classification problem.
+    \item \textit{Mislabeled Ground Truth:} Many time series have data that, without context, appears to be mislabeled. Normal data points are falsely labeled as anomalies and vice versa.
+    \item \textit{Run-to-failure Bias:} In the case of real data, many systems are operated until failure. This results in an unusually high anomaly count towards the end of the dataset.
 \end{itemize}
+The authors introduce their UCR Time Series Anomaly Archive, a collection of 250 curated univariate time series from human medicine, biology, meteorology and industry \parencite{wu2021current}. \par
+\textbf{GutenTAG (2022)}: 
+
 
 
 \section{Dataset Analysis}
