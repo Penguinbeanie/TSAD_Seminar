@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.17)  17 MAY 2025 19:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.17)  18 MAY 2025 23:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -546,7 +546,7 @@ LaTeX Font Info:    Trying to load font information for T1+PTSans-TLF on input l
 File: T1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for T1/PTSans-TLF.
 ) (./main.aux (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex)
 Package babel Info: Importing data for ngerman
-(babel)             from babel-de.ini. Reported on input line 201.
+(babel)             from babel-de.ini. Reported on input line 204.
 )
 \openout1 = `main.aux'.
 
@@ -731,78 +731,80 @@ l.175
 
 [7]
 
-LaTeX Warning: Citation 'clemen1989combining' on page 8 undefined on input line 299.
+LaTeX Warning: Citation 'clemen1989combining' on page 8 undefined on input line 301.
 
 
-LaTeX Warning: Citation 'he2017mask' on page 8 undefined on input line 299.
+LaTeX Warning: Citation 'he2017mask' on page 8 undefined on input line 301.
 
 
-LaTeX Warning: Citation 'clemen1989combining' on page 8 undefined on input line 299.
+LaTeX Warning: Citation 'clemen1989combining' on page 8 undefined on input line 301.
 
 
-LaTeX Warning: Citation 'clemen1989combining' on page 8 undefined on input line 299.
+LaTeX Warning: Citation 'clemen1989combining' on page 8 undefined on input line 301.
 
 
-LaTeX Warning: Citation 'baumol1958warehouse' on page 8 undefined on input line 299.
+LaTeX Warning: Citation 'baumol1958warehouse' on page 8 undefined on input line 301.
 
 
-LaTeX Warning: Citation 'he2017mask' on page 8 undefined on input line 299.
+LaTeX Warning: Citation 'he2017mask' on page 8 undefined on input line 301.
 
 
-Overfull \hbox (23.77827pt too wide) in paragraph at lines 299--300
+Overfull \hbox (23.77827pt too wide) in paragraph at lines 301--302
 \T1/PTSans-TLF/m/n/12 Beiträge in Fachzeitschriften wie [] oder Kon-feren-zartikel wie []
  []
 
 
-Overfull \hbox (92.03983pt too wide) in paragraph at lines 299--300
+Overfull \hbox (92.03983pt too wide) in paragraph at lines 301--302
 \T1/PTSans-TLF/m/n/12 tieren ([]), auch mit mehreren Au-toren ([]; [];
  []
 
 
-LaTeX Warning: Citation 'chollet2018deep' on page 8 undefined on input line 301.
+LaTeX Warning: Citation 'chollet2018deep' on page 8 undefined on input line 303.
 
 
-LaTeX Warning: Citation 'shiny1' on page 8 undefined on input line 303.
+LaTeX Warning: Citation 'shiny1' on page 8 undefined on input line 305.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 303.
+(Font)              <7> on input line 305.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 303.
-LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 303.
+(Font)              <5> on input line 305.
+LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 305.
 (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTMono-TLF.fd
 File: T1PTMono-TLF.fd 2014/02/02 Font definitions for T1/PTMono-TLF.
 )
+
+[8]
 File: siegel.pdf Graphic file (type pdf)
 <use siegel.pdf>
-Package pdftex.def Info: siegel.pdf  used on input line 317.
+Package pdftex.def Info: siegel.pdf  used on input line 319.
 (pdftex.def)             Requested size: 138.21777pt x 139.31554pt.
 
 
-[8{c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc}]
+[9{c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc}]
 
-[9]
-Overfull \hbox (48.00337pt too wide) in paragraph at lines 359--359
+[10]
+Overfull \hbox (48.00337pt too wide) in paragraph at lines 361--361
 \T1/PTMono-TLF/m/n/12 de / EN / Themen / Verbraucherinnen -[] und -[] Verbraucher / Cyber -[] Sicherheitslage /
  []
 
 
 
-[10
+[11
 
 ]
-Overfull \hbox (7.71909pt too wide) in paragraph at lines 359--359
+Overfull \hbox (7.71909pt too wide) in paragraph at lines 361--361
 \T1/PTMono-TLF/m/n/12 201818903002$[]\T1/PTSans-TLF/m/n/12 . URL: []$\T1/PTMono-TLF/m/n/12 https : / / doi . org / 10 . 1051 / matecconf / 201818903002$[]\T1/PTSans-TLF/m/n/12 . 
  []
 
 
 
-[11] (./Erklaerung.tex
+[12] (./Erklaerung.tex
 
-[12
+[13
 
 ])
 
-[13] (./main.aux)
+[14] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-29>
@@ -821,18 +823,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21067 strings out of 469590
- 375257 string characters out of 5474519
- 1240735 words of memory out of 5000000
- 47579 multiletter control sequences out of 15000+600000
+ 21069 strings out of 469590
+ 375275 string characters out of 5474519
+ 1240740 words of memory out of 5000000
+ 47580 multiletter control sequences out of 15000+600000
  723963 words of font info for 80 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  75i,15n,79p,4024b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptmono/PTM55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS56F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS75F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on main.pdf (17 pages, 1146820 bytes).
+Output written on main.pdf (18 pages, 1147613 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
+ 390 PDF objects out of 1000 (max. 8388607)
+ 346 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
  198 words of extra memory for PDF output out of 10000 (max. 10000000)
 

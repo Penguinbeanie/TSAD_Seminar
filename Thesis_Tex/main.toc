@@ -20,8 +20,8 @@
 \contentsline {section}{\numberline {6}Zitieren und Referenzieren}{8}{section.6}%
 \contentsline {section}{\numberline {7}Abbildungen}{9}{section.7}%
 \contentsline {section}{\numberline {8}Tabellen}{9}{section.8}%
-\contentsline {section}{\numberline {9}Formeln}{9}{section.9}%
-\contentsline {section}{Bibliography}{11}{equation.1}%
-\contentsline {section}{\numberline {A}Anhang A}{12}{appendix.A}%
+\contentsline {section}{\numberline {9}Formeln}{10}{section.9}%
+\contentsline {section}{Bibliography}{12}{equation.1}%
+\contentsline {section}{\numberline {A}Anhang A}{13}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
