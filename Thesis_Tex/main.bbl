@@ -1076,6 +1076,73 @@
       \endverb
       \keyw{Computational intelligence;Large scale systems;Time series analysis;Databases;Telescopes;Astronomy;Time domain analysis}
     \endentry
+    \entry{jacob2021exathlonbenchmarkexplainableanomaly}{misc}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=9d6b60d994cfebc8067be035be10e029}{%
+           family={Jacob},
+           familyi={J\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f9c80f21ac9c39660b31815b6f31282}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7146e1d964919da90b901f4aa06bc4cb}{%
+           family={Stiegler},
+           familyi={S\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5db3f4b675f9246f45d1d3cc2c4faee}{%
+           family={Rad},
+           familyi={R\bibinitperiod},
+           given={Bijan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae402f0f831d38b55287db7536d082c3}{%
+           family={Diao},
+           familyi={D\bibinitperiod},
+           given={Yanlei},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4c3bc79de252f04014f60bbbe926165}{%
+           family={Tatbul},
+           familyi={T\bibinitperiod},
+           given={Nesime},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a0b96cbaec6031cd545b3bba51e7e22e}
+      \strng{fullhash}{9388f9d741f02a979136c5d40cc294b9}
+      \strng{fullhashraw}{9388f9d741f02a979136c5d40cc294b9}
+      \strng{bibnamehash}{9388f9d741f02a979136c5d40cc294b9}
+      \strng{authorbibnamehash}{9388f9d741f02a979136c5d40cc294b9}
+      \strng{authornamehash}{a0b96cbaec6031cd545b3bba51e7e22e}
+      \strng{authorfullhash}{9388f9d741f02a979136c5d40cc294b9}
+      \strng{authorfullhashraw}{9388f9d741f02a979136c5d40cc294b9}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Exathlon: A Benchmark for Explainable Anomaly Detection over Time Series}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2010.05073
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2010.05073
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2010.05073
+      \endverb
+    \endentry
     \entry{jiang2024anomalydetectionelectrocardiogramsadvancing}{misc}{}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=635adf59fbbe2c4f3400bc02ce591e2d}{%
@@ -1155,6 +1222,132 @@
       \verb https://arxiv.org/abs/2404.04935
       \endverb
     \endentry
+    \entry{NEURIPS}{misc}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=ef6a5e943d33b7faaae1a26edb54e594}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Kwei-Herng},
+           giveni={K\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=906b59d1cc2e5b314c20ab36e5c76442}{%
+           family={Zha},
+           familyi={Z\bibinitperiod},
+           given={Daochen},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecf613c1d97a79061731e5cd63bc3342}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Junjie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba51490fdfee4e053d199f28e82dad4f}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0872803c816a75beb68897c2ebb41ac}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Guanchu},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13be76d254e7c2f65cfc92bc75bb18fd}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Xia},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e7b269ce0cc524b52556c54f801032b0}{%
+           family={Vanschoren},
+           familyi={V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=57fdf5020af51b5d3029ff3c18506641}{%
+           family={Yeung},
+           familyi={Y\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3bf2ed6748ad0b388cf68327782aa664}
+      \strng{fullhash}{359128750730af5205e20797d325c612}
+      \strng{fullhashraw}{359128750730af5205e20797d325c612}
+      \strng{bibnamehash}{359128750730af5205e20797d325c612}
+      \strng{authorbibnamehash}{359128750730af5205e20797d325c612}
+      \strng{authornamehash}{3bf2ed6748ad0b388cf68327782aa664}
+      \strng{authorfullhash}{359128750730af5205e20797d325c612}
+      \strng{authorfullhashraw}{359128750730af5205e20797d325c612}
+      \strng{editorbibnamehash}{5a4208ca357ef920ecae6fec35c4c22d}
+      \strng{editornamehash}{5a4208ca357ef920ecae6fec35c4c22d}
+      \strng{editorfullhash}{5a4208ca357ef920ecae6fec35c4c22d}
+      \strng{editorfullhashraw}{5a4208ca357ef920ecae6fec35c4c22d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks}
+      \field{title}{Revisiting Time Series Outlier Detection: Definitions and Benchmarks}
+      \field{volume}{1}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/ec5decca5ed3d6b8079e2e7e7bacc9f2-Paper-round1.pdf
+      \endverb
+      \verb{url}
+      \verb https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/ec5decca5ed3d6b8079e2e7e7bacc9f2-Paper-round1.pdf
+      \endverb
+    \endentry
+    \entry{Lavin_2015}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cf72098cd45f5c1bf15686baa9bed3e8}{%
+           family={Lavin},
+           familyi={L\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a01da48611238f2d1508928a8b87f5bf}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Subutai},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{59861238b977aec89614a63271c5e6e2}
+      \strng{fullhash}{59861238b977aec89614a63271c5e6e2}
+      \strng{fullhashraw}{59861238b977aec89614a63271c5e6e2}
+      \strng{bibnamehash}{59861238b977aec89614a63271c5e6e2}
+      \strng{authorbibnamehash}{59861238b977aec89614a63271c5e6e2}
+      \strng{authornamehash}{59861238b977aec89614a63271c5e6e2}
+      \strng{authorfullhash}{59861238b977aec89614a63271c5e6e2}
+      \strng{authorfullhashraw}{59861238b977aec89614a63271c5e6e2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE 14th International Conference on Machine Learning and Applications (ICMLA)}
+      \field{month}{12}
+      \field{title}{Evaluating Real-Time Anomaly Detection Algorithms -- The Numenta Anomaly Benchmark}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1109/icmla.2015.141
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1109/ICMLA.2015.141
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/ICMLA.2015.141
+      \endverb
+    \endentry
     \entry{liu2024elephant}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=7c7337373a8d8c9e482652f942bc915a}{%
@@ -1192,7 +1385,7 @@
       \range{pages}{31}
     \endentry
     \entry{papaVus}{article}{}{}
-      \name{author}{6}{}{%
+      \name{author}{6}{ul=2}{%
         {{un=0,uniquepart=base,hash=c28927bb966cb6d440fc37f585184d5c}{%
            family={Paparrizos},
            familyi={P\bibinitperiod},
@@ -1233,12 +1426,12 @@
       \list{publisher}{1}{%
         {VLDB Endowment}%
       }
-      \strng{namehash}{e17ca8fe295857868ec414fabb32d2af}
+      \strng{namehash}{d575b5e496102d3e98d1e9190520bc3e}
       \strng{fullhash}{1bcfe7d18fe9ca720450bb4dfa5297d5}
       \strng{fullhashraw}{1bcfe7d18fe9ca720450bb4dfa5297d5}
       \strng{bibnamehash}{1bcfe7d18fe9ca720450bb4dfa5297d5}
       \strng{authorbibnamehash}{1bcfe7d18fe9ca720450bb4dfa5297d5}
-      \strng{authornamehash}{e17ca8fe295857868ec414fabb32d2af}
+      \strng{authornamehash}{d575b5e496102d3e98d1e9190520bc3e}
       \strng{authorfullhash}{1bcfe7d18fe9ca720450bb4dfa5297d5}
       \strng{authorfullhashraw}{1bcfe7d18fe9ca720450bb4dfa5297d5}
       \field{sortinit}{P}
@@ -1266,6 +1459,70 @@
       \verb{url}
       \verb https://doi.org/10.14778/3551793.3551830
       \endverb
+    \endentry
+    \entry{paparrizos2022tsb}{article}{}{}
+      \name{author}{6}{ul=2}{%
+        {{un=0,uniquepart=base,hash=c28927bb966cb6d440fc37f585184d5c}{%
+           family={Paparrizos},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7df6bfb145f4164a2e38941b40abd06}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Yuhao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f286b8f76f2aa3253e841a5896a1c52d}{%
+           family={Boniol},
+           familyi={B\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a10ec178d031d2e8ccfadd70714bf9cc}{%
+           family={Tsay},
+           familyi={T\bibinitperiod},
+           given={Ruey\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5dd9a3f3ecfded799322c136900994e2}{%
+           family={Palpanas},
+           familyi={P\bibinitperiod},
+           given={Themis},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b80efa845ff86794acc83783899dcf0}{%
+           family={Franklin},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {VLDB Endowment}%
+      }
+      \strng{namehash}{3d0bd99d36431953546886c598f80396}
+      \strng{fullhash}{73ebce64ec255e54be64b3c271cfa33c}
+      \strng{fullhashraw}{73ebce64ec255e54be64b3c271cfa33c}
+      \strng{bibnamehash}{73ebce64ec255e54be64b3c271cfa33c}
+      \strng{authorbibnamehash}{73ebce64ec255e54be64b3c271cfa33c}
+      \strng{authornamehash}{3d0bd99d36431953546886c598f80396}
+      \strng{authorfullhash}{73ebce64ec255e54be64b3c271cfa33c}
+      \strng{authorfullhashraw}{73ebce64ec255e54be64b3c271cfa33c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the VLDB Endowment}
+      \field{number}{8}
+      \field{title}{TSB-UAD: an end-to-end benchmark suite for univariate time-series anomaly detection}
+      \field{volume}{15}
+      \field{year}{2022}
+      \field{pages}{1697\bibrangedash 1711}
+      \range{pages}{15}
     \endentry
     \entry{SchmidlEtAl2022Anomaly}{article}{}{}
       \name{author}{3}{}{%
@@ -1365,6 +1622,18 @@
       \field{year}{2021}
       \field{pages}{2421\bibrangedash 2429}
       \range{pages}{9}
+    \endentry
+    \entry{Yahoo}{misc}{}{}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70}}
+      \field{note}{Accessed: 2025-05-20}
+      \field{title}{Yahoo}
+      \field{year}{2015}
+      \field{dateera}{ce}
     \endentry
     \entry{Zamanzadeh_Darban_2024}{article}{}{}
       \name{author}{5}{}{%

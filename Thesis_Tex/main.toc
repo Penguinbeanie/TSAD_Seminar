@@ -13,15 +13,15 @@
 \contentsline {subsubsection}{\numberline {1.4.2}Threshold-dependent or Threshold-independent}{6}{subsubsection.1.4.2}%
 \contentsline {subsubsection}{\numberline {1.4.3}Definition and Classifgication of Metrics}{6}{subsubsection.1.4.3}%
 \contentsline {subsection}{\numberline {1.5}State of Benchmarking}{7}{subsection.1.5}%
-\contentsline {section}{\numberline {2}Dataset Analysis}{8}{section.2}%
-\contentsline {section}{\numberline {3}Replication of TSB-AD Benchmark Results}{8}{section.3}%
-\contentsline {section}{\numberline {4}Dataset Creation}{8}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}%
-\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{8}{section.6}%
-\contentsline {section}{\numberline {7}Abbildungen}{9}{section.7}%
-\contentsline {section}{\numberline {8}Tabellen}{9}{section.8}%
-\contentsline {section}{\numberline {9}Formeln}{10}{section.9}%
-\contentsline {section}{Bibliography}{12}{equation.1}%
-\contentsline {section}{\numberline {A}Anhang A}{13}{appendix.A}%
+\contentsline {section}{\numberline {2}Dataset Analysis}{9}{section.2}%
+\contentsline {section}{\numberline {3}Replication of TSB-AD Benchmark Results}{9}{section.3}%
+\contentsline {section}{\numberline {4}Dataset Creation}{9}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}%
+\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{9}{section.6}%
+\contentsline {section}{\numberline {7}Abbildungen}{10}{section.7}%
+\contentsline {section}{\numberline {8}Tabellen}{10}{section.8}%
+\contentsline {section}{\numberline {9}Formeln}{11}{section.9}%
+\contentsline {section}{Bibliography}{13}{equation.1}%
+\contentsline {section}{\numberline {A}Anhang A}{14}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
