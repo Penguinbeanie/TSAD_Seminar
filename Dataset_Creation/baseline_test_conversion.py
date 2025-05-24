@@ -43,5 +43,5 @@ def parse_nmon_to_csv(nmon_file_path):
             writer.writerow(cpu_data[timestamp])
 
 # Use the script
-nmon_file_path = r"C:\Users\Kai\Documents\Time_Series_Anomaly_Detection\TSAD_Seminar\Dataset_Creation\kai-VMware-Virtual-Platform_250523_1704.nmon"
+nmon_file_path = r"C:\Users\Kai\Documents\Time_Series_Anomaly_Detection\TSAD_Seminar\Dataset_Creation\kai-VMware-Virtual-Platform_250523_2019.nmon"
 parse_nmon_to_csv(nmon_file_path)
