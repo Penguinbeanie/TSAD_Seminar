@@ -87,7 +87,7 @@ def continuous_logging():
 
 # Set up the run times
 total_runtime = timedelta(minutes=110) # Shortened for testing
-initial_normal_period = timedelta(minutes=1) # Shortened for testing
+initial_normal_period = timedelta(minutes=25) # Shortened for testing
 start_time = datetime.now()
 
 # List of matrix sizes
@@ -145,11 +145,11 @@ try:
 
     print(f"Initial period finished. Entering mixed normal/anomaly period until {start_time + total_runtime}")
     while datetime.now() - start_time < total_runtime:
-        random_choice = random.randint(1, 10) # Adjusted for potentially longer runs or more anomalies
+        random_choice = random.randint(1, 50) # Adjusted for potentially longer runs or more anomalies
         if random_choice == 10: # Anomaly
             workload_type = 'anomaly'
             current_execution_state = 'working_anomaly'
-            sleep_duration = 4  # Anomaly sleep duration in seconds
+            sleep_duration = 3  # Anomaly sleep duration in seconds
             
             event_details = f'type:{workload_type},sleep_duration:{sleep_duration}'
             log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), current_execution_state, 'WORKLOAD_START', event_details, ''])
