@@ -1,0 +1,5 @@
+001: Additional Load | Merged dataset using nmon
+002: Additional Load | First fully automated dataset but without the 0.3 logger delay
+003: Additional Load | 0.3 logger before and after + labeling first idle after each anomaly also as "1"
+005: Additional Sleep Time | logger maintained but only labeling the new sleep time as "1"
+006: Additional Sleep Time | logger maintained and labeling the entire sleep time sequence as "1"
