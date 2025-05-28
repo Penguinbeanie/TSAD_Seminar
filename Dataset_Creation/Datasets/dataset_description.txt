@@ -5,3 +5,8 @@
 006: (CPU_test5) Additional Sleep Time | logger maintained and labeling the entire sleep time sequence as "1"
 007: (CPU_test6) Additional Sleep Time AND Additional Load | logger maintained and labeling the entire sleep time sequence as "1" AND labeling first idle after each anomaly also as "1"
         Additional Sleep Time: 3 | Default Sleep time: 4 Additional Load: 5000 | Default Load: [2800, 3000, 3200, 3400] | Ratio: [1,100] each 1
+008: Additional Sleep Time AND Additional Load | normal_sizes = [1800, 2000, 2200, 2400]
+                                                 anomaly_sizes = [3300, 3500]
+                                                 Additional Sleep Time: 1
+009: Additional Load | normal_sizes = [1800, 2000, 3000, 3200]
+                       anomaly_sizes = [2500]

@@ -1,0 +1,16 @@
+timestamp,state,event_type,event_details,cpu_percent
+2025-05-28 14:17:10,idle,SAMPLED_STATE,,0.0
+2025-05-28 14:17:10,idle,SCRIPT_START,,
+2025-05-28 14:17:10,working_normal,WORKLOAD_START,"type:normal,size:2000",
+2025-05-28 14:17:11,working_normal,WORKLOAD_END,"type:normal,size:2000,duration:0.47s",
+2025-05-28 14:17:11,idle,SAMPLED_STATE,,66.3
+2025-05-28 14:17:12,idle,SAMPLED_STATE,,26.0
+2025-05-28 14:17:13,idle,SAMPLED_STATE,,17.1
+2025-05-28 14:17:14,idle,SAMPLED_STATE,,13.5
+2025-05-28 14:17:15,working_normal,WORKLOAD_START,"type:normal,size:3000",
+2025-05-28 14:17:15,working_normal,SAMPLED_STATE,,68.9
+2025-05-28 14:17:16,working_normal,WORKLOAD_END,"type:normal,size:3000,duration:1.56s",
+2025-05-28 14:17:16,working_normal,SAMPLED_STATE,,100.0
+2025-05-28 14:17:17,idle,SAMPLED_STATE,,25.4
+2025-05-28 14:17:18,idle,SAMPLED_STATE,,17.7
+2025-05-28 14:17:19,idle,SAMPLED_STATE,,8.8
