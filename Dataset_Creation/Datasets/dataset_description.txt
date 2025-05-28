@@ -1,5 +1,7 @@
 001: Additional Load | Merged dataset using nmon
 002: Additional Load | First fully automated dataset but without the 0.3 logger delay
 003: Additional Load | 0.3 logger before and after + labeling first idle after each anomaly also as "1"
-005: Additional Sleep Time | logger maintained but only labeling the new sleep time as "1"
-006: Additional Sleep Time | logger maintained and labeling the entire sleep time sequence as "1"
+005: (CPU_test5) Additional Sleep Time | logger maintained but only labeling the new sleep time as "1"
+006: (CPU_test5) Additional Sleep Time | logger maintained and labeling the entire sleep time sequence as "1"
+007: (CPU_test6) Additional Sleep Time AND Additional Load | logger maintained and labeling the entire sleep time sequence as "1" AND labeling first idle after each anomaly also as "1"
+        Additional Sleep Time: 3 | Default Sleep time: 4 Additional Load: 5000 | Default Load: [2800, 3000, 3200, 3400] | Ratio: [1,100] each 1
