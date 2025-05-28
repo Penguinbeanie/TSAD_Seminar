@@ -1,8 +1,8 @@
 import csv
 
 def create_labeled_dataset():
-    input_csv_path = 'Dataset_Creation/prelim_datasets/execution_log_6.csv'
-    output_csv_path = 'Dataset_Creation/prelim_datasets/CPU_7_labeled.csv'
+    input_csv_path = 'Dataset_Creation/prelim_datasets/execution_log_9.csv'
+    output_csv_path = 'Dataset_Creation/prelim_datasets/CPU_9_labeled.csv'
 
     processed_rows = []
     # This flag tracks if an anomaly cluster just occurred and the next idle sample should be labeled as anomaly.
