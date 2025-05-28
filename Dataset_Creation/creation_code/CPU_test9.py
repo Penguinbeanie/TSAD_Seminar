@@ -91,8 +91,8 @@ initial_normal_period = timedelta(minutes=25) # Shortened for testing
 start_time = datetime.now()
 
 # List of matrix sizes
-normal_sizes = [1800, 2000, 3000, 3200]
-anomaly_sizes = [2500]
+normal_sizes = [2800, 3000, 4000, 4200]
+anomaly_sizes = [3500]
 
 # Create or open the CSV file for logging
 log_file = 'execution_log_9.csv' # New file name
