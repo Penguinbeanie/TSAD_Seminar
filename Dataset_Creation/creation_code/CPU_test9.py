@@ -146,19 +146,27 @@ try:
     print(f"Initial period finished. Entering mixed normal/anomaly period until {start_time + total_runtime}")
     while datetime.now() - start_time < total_runtime:
         random_choice = random.randint(1, 50) # Adjusted for potentially longer runs or more anomalies
-        if random_choice == 10: # Anomaly
+        if random_choice == 20: # High CPU load anomaly
+            matrix_size = random.choice(anomaly_sizes)
             workload_type = 'anomaly'
             current_execution_state = 'working_anomaly'
-            sleep_duration = 3  # Anomaly sleep duration in seconds
             
-            event_details = f'type:{workload_type},sleep_duration:{sleep_duration}'
+            event_details = f'type:{workload_type},size:{matrix_size}'
             log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), current_execution_state, 'WORKLOAD_START', event_details, ''])
-            print(f"  MAIN: Starting {workload_type} workload (sleep for {sleep_duration}s). State: {current_execution_state}")
+            print(f"  MAIN: Starting {workload_type} workload (size {matrix_size}). State: {current_execution_state}")
 
             op_start_time = time.time()
-            time.sleep(sleep_duration)  # Sleep instead of matrix calculation
+            matrix_a = np.random.rand(matrix_size, matrix_size)
+            matrix_b = np.random.rand(matrix_size, matrix_size)
+            for i in range(5):
+                result = np.dot(matrix_a, matrix_b)
+                if np.linalg.norm(result) != 0:
+                    matrix_a = result / np.linalg.norm(result)
             op_end_time = time.time()
             op_duration = op_end_time - op_start_time
+            
+            # Clean up matrices for anomaly workload
+            del result, matrix_a, matrix_b
 
         else: # Normal
             matrix_size = random.choice(normal_sizes)
