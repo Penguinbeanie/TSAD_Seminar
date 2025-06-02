@@ -24,10 +24,8 @@ current_execution_state = 'idle' # Initial state
 continue_logging = True
 
 def continuous_logging():
-    """Function to continuously log the current execution state and CPU usage,
+    """Function to continuously log the current execution state and RAM usage,
     with a delay for the first log of a new workload and after workload ends."""
-    psutil.cpu_percent(interval=None, percpu=False) # Prime psutil
-
     last_log_time = datetime.min
     previous_state_in_logger = 'uninitialized'
     workload_start_detected_by_logger_time = None
@@ -75,12 +73,14 @@ def continuous_logging():
 
         if should_log_this_iteration:
             try:
-                cpu_percent = psutil.cpu_percent(interval=None, percpu=False)
-                log_entry(log_file, [current_time.strftime('%Y-%m-%d %H:%M:%S'), current_main_thread_state, 'SAMPLED_STATE', '', cpu_percent])
+                # Get RAM usage instead of CPU
+                process = psutil.Process(os.getpid())
+                ram_usage = process.memory_info().rss / 1024 / 1024  # Convert to MB
+                log_entry(log_file, [current_time.strftime('%Y-%m-%d %H:%M:%S'), current_main_thread_state, 'SAMPLED_STATE', '', ram_usage])
                 last_log_time = current_time
 
             except Exception as e:
-                log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 'error', 'LOGGER_ERROR', f'Failed to get CPU: {e}', ''])
+                log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 'error', 'LOGGER_ERROR', f'Failed to get RAM: {e}', ''])
 
         previous_state_in_logger = current_main_thread_state
         time.sleep(0.1)
@@ -90,17 +90,17 @@ total_runtime = timedelta(minutes=110) # Shortened for testing
 initial_normal_period = timedelta(minutes=25) # Shortened for testing
 start_time = datetime.now()
 
-# List of matrix sizes
-normal_sizes = [2800, 3000, 3200, 3400]
-anomaly_sizes = [5000]
+# List of matrix sizes - adjusted for RAM consumption
+normal_sizes = [3000, 4000, 5000, 6000]  # Larger matrices for more RAM usage
+anomaly_sizes = [8000]  # Even larger for anomalies
 
 # Create or open the CSV file for logging
-log_file = 'execution_log_51.csv' # New file name
+log_file = 'ram_execution_log_1.csv'  # New file name for RAM monitoring
 with open(log_file, 'w', newline='') as f:
     writer = csv.writer(f)
-    writer.writerow(['timestamp', 'state', 'event_type', 'event_details', 'cpu_percent'])
+    writer.writerow(['timestamp', 'state', 'event_type', 'event_details', 'ram_usage_mb'])
 
-print(f"Starting simulation. Total runtime: {total_runtime}, Initial normal period: {initial_normal_period}")
+print(f"Starting RAM usage simulation. Total runtime: {total_runtime}, Initial normal period: {initial_normal_period}")
 print(f"Logging to: {log_file}")
 
 # Start the logging thread
@@ -110,7 +110,7 @@ logging_thread.start()
 log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), current_execution_state, 'SCRIPT_START', '', ''])
 
 try:
-    # Initial 15-minute normal period
+    # Initial normal period
     print(f"Entering initial normal period until {start_time + initial_normal_period}")
     while datetime.now() - start_time < initial_normal_period:
         matrix_size = random.choice(normal_sizes)
@@ -123,44 +123,52 @@ try:
         print(f"  MAIN: Starting {workload_type} workload (size {matrix_size}). State: {current_execution_state}")
 
         op_start_time = time.time()
-        matrix_a = np.random.rand(matrix_size, matrix_size)
-        matrix_b = np.random.rand(matrix_size, matrix_size)
+        # Create multiple matrices to increase RAM usage
+        matrices = [np.random.rand(matrix_size, matrix_size) for _ in range(3)]
+        result = matrices[0]
         for i in range(5):
-            result = np.dot(matrix_a, matrix_b)
+            result = np.dot(result, matrices[1])
             if np.linalg.norm(result) != 0:
-                 matrix_a = result / np.linalg.norm(result)
-            # print(f"    Dot product {i+1}/5 completed.")
+                result = result / np.linalg.norm(result)
         op_end_time = time.time()
         op_duration = op_end_time - op_start_time
 
         # WORKLOAD_END logged while state is still 'working_normal'
         event_details += f',duration:{op_duration:.2f}s'
         log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), current_execution_state, 'WORKLOAD_END', event_details, ''])
-        del result, matrix_a, matrix_b
+        del result, matrices
 
         current_execution_state = 'idle'
         print(f"  MAIN: Workload done. Duration {op_duration:.2f}s. State: {current_execution_state}. Sleeping for 4 seconds.")
         time.sleep(4)
-        # print(f"  MAIN: Sleep finished.")
 
     print(f"Initial period finished. Entering mixed normal/anomaly period until {start_time + total_runtime}")
     while datetime.now() - start_time < total_runtime:
-        random_choice = random.randint(1, 50) # Adjusted for potentially longer runs or more anomalies
-        if random_choice == 10: # Anomaly
+        random_choice = random.randint(1, 50)
+        if random_choice == 20:  # High RAM usage anomaly
+            matrix_size = random.choice(anomaly_sizes)
             workload_type = 'anomaly'
             current_execution_state = 'working_anomaly'
-            sleep_duration = 3  # Anomaly sleep duration in seconds
             
-            event_details = f'type:{workload_type},sleep_duration:{sleep_duration}'
+            event_details = f'type:{workload_type},size:{matrix_size}'
             log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), current_execution_state, 'WORKLOAD_START', event_details, ''])
-            print(f"  MAIN: Starting {workload_type} workload (sleep for {sleep_duration}s). State: {current_execution_state}")
+            print(f"  MAIN: Starting {workload_type} workload (size {matrix_size}). State: {current_execution_state}")
 
             op_start_time = time.time()
-            time.sleep(sleep_duration)  # Sleep instead of matrix calculation
+            # Create more matrices for anomaly to use more RAM
+            matrices = [np.random.rand(matrix_size, matrix_size) for _ in range(4)]
+            result = matrices[0]
+            for i in range(5):
+                result = np.dot(result, matrices[1])
+                if np.linalg.norm(result) != 0:
+                    result = result / np.linalg.norm(result)
             op_end_time = time.time()
             op_duration = op_end_time - op_start_time
+            
+            # Clean up matrices
+            del result, matrices
 
-        else: # Normal
+        else:  # Normal workload
             matrix_size = random.choice(normal_sizes)
             workload_type = 'normal'
             current_execution_state = 'working_normal'
@@ -170,17 +178,17 @@ try:
             print(f"  MAIN: Starting {workload_type} workload (size {matrix_size}). State: {current_execution_state}")
 
             op_start_time = time.time()
-            matrix_a = np.random.rand(matrix_size, matrix_size)
-            matrix_b = np.random.rand(matrix_size, matrix_size)
+            matrices = [np.random.rand(matrix_size, matrix_size) for _ in range(3)]
+            result = matrices[0]
             for i in range(5):
-                result = np.dot(matrix_a, matrix_b)
+                result = np.dot(result, matrices[1])
                 if np.linalg.norm(result) != 0:
-                    matrix_a = result / np.linalg.norm(result)
+                    result = result / np.linalg.norm(result)
             op_end_time = time.time()
             op_duration = op_end_time - op_start_time
             
-            # Clean up matrices for normal workload
-            del result, matrix_a, matrix_b
+            # Clean up matrices
+            del result, matrices
 
         event_details += f',duration:{op_duration:.2f}s'
         log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), current_execution_state, 'WORKLOAD_END', event_details, ''])
@@ -188,12 +196,11 @@ try:
         current_execution_state = 'idle'
         print(f"  MAIN: Workload done. Duration {op_duration:.2f}s. State: {current_execution_state}. Sleeping for 4 seconds.")
         time.sleep(4)
-        # print(f"  MAIN: Sleep finished.")
 
 finally:
-    current_execution_state = 'ending_script' # Final state
+    current_execution_state = 'ending_script'  # Final state
     log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), current_execution_state, 'SCRIPT_END', '', ''])
     print("Shutting down logging thread...")
     continue_logging = False
-    logging_thread.join(timeout=3) # Give it a moment to finish its last loop and log
+    logging_thread.join(timeout=3)  # Give it a moment to finish its last loop and log
     print("Script completed.")
