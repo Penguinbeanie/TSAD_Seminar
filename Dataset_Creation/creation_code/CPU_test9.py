@@ -95,7 +95,7 @@ normal_sizes = [2800, 3000, 4000, 4200]
 anomaly_sizes = [3500]
 
 # Create or open the CSV file for logging
-log_file = 'execution_log_9.csv' # New file name
+log_file = 'execution_log_91.csv' # New file name
 with open(log_file, 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(['timestamp', 'state', 'event_type', 'event_details', 'cpu_percent'])
