@@ -219,51 +219,55 @@ def run_workload_loop(function_id, config):
         anomaly_decision_range = config.get('anomaly_decision_range', 50) # e.g. 1 to 50 or 1 to 150
 
         while datetime.now() - start_time < total_runtime:
-            workload_type = 'normal'
+            workload_type = 'normal' # Default to normal
             matrix_size = random.choice(normal_sizes)
             current_sleep_time = base_sleep_time
             num_matrices_op = 3 # Default for normal
             
             # Anomaly decision
-            # For function 4, anomaly_config will be a list of choices. Others a dict.
             chosen_anomaly_type = None
+            chosen_anomaly_def = None # Will hold the specific anomaly dict for dataset4
+
             if isinstance(anomaly_config, list): # Function 4 case
-                if random.randint(1, anomaly_decision_range) == 1: # Adjust trigger as needed
+                if random.randint(1, anomaly_decision_range) == 1:
                     chosen_anomaly_def = random.choice(anomaly_config)
                     workload_type = chosen_anomaly_def['type']
-                    chosen_anomaly_type = workload_type # for logging details
-            elif anomaly_config.get('size') or anomaly_config.get('sleep_increase_s'): # Func 1, 2, 3
-                if random.randint(1, anomaly_decision_range) == 1: # Adjust trigger
+                    chosen_anomaly_type = workload_type 
+            elif anomaly_config.get('type'): # Func 1, 2, 3 (check if 'type' exists)
+                if random.randint(1, anomaly_decision_range) == 1:
                     workload_type = anomaly_config['type']
                     chosen_anomaly_type = workload_type
+            
+            # Determine parameters based on workload type
+            current_params_source = chosen_anomaly_def if chosen_anomaly_def else anomaly_config
 
-
-            if workload_type == 'ram_spike': # Function 1 type anomaly
-                matrix_size = random.choice(anomaly_config['size'])
-                num_matrices_op = anomaly_config.get('num_matrices', 4) # More matrices for RAM spike
+            if workload_type == 'ram_spike': 
+                matrix_size = random.choice(current_params_source['size'])
+                num_matrices_op = current_params_source.get('num_matrices', 4)
                 update_state(function_id, 'working_anomaly_ram_spike')
                 event_details = f'type:anomaly_ram_spike,size:{matrix_size}'
-            elif workload_type == 'sleep_increase': # Function 2 type anomaly
-                current_sleep_time += anomaly_config['sleep_increase_s']
-                # Matrix size remains normal for this anomaly type
+            elif workload_type == 'sleep_increase': 
+                # current_sleep_time is modified, matrix_size remains normal for this anomaly type
+                current_sleep_time += current_params_source['sleep_increase_s']
                 update_state(function_id, 'working_anomaly_sleep')
                 event_details = f'type:anomaly_sleep_increase,sleep_time:{current_sleep_time}s'
                 log_entry(function_id, 'WORKLOAD_START', event_details)
-                # Skip matrix operation for sleep anomaly - just sleep
-                duration = current_sleep_time
+                
+                duration = current_sleep_time # The "work" is the sleep itself
                 event_details_end = event_details + f',duration:{duration:.2f}s,anomaly_trigger:sleep_increase'
                 log_entry(function_id, 'WORKLOAD_END', event_details_end)
                 update_state(function_id, 'idle')
                 time.sleep(current_sleep_time)
-                continue  # Skip the rest of the loop
-            elif workload_type == 'medium_ram_spike': # Function 3 type anomaly
-                matrix_size = random.choice(anomaly_config['size'])
-                num_matrices_op = anomaly_config.get('num_matrices', 3) # Default or specific
+                continue  # Skip the rest of the loop for sleep anomaly
+            elif workload_type == 'medium_ram_spike': 
+                matrix_size = random.choice(current_params_source['size'])
+                num_matrices_op = current_params_source.get('num_matrices', 3)
                 update_state(function_id, 'working_anomaly_medium_ram_spike')
                 event_details = f'type:anomaly_medium_ram_spike,size:{matrix_size}'
-            else: # Normal workload
+            else: # Normal workload (workload_type == 'normal')
                 update_state(function_id, 'working_normal')
                 event_details = f'type:normal,size:{matrix_size}'
+                # matrix_size, num_matrices_op, current_sleep_time already set for normal
 
             log_entry(function_id, 'WORKLOAD_START', event_details)
             # print(f"  {function_id} MAIN: Starting {workload_type} workload (details: {event_details}). State: {THREAD_STATES[function_id]['current_execution_state']}")
