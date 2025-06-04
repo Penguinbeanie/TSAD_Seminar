@@ -354,7 +354,7 @@ def generate_dataset_4():
     config = {
         'id_suffix': '4_mixed_anomalies',
         'total_runtime_min': 160,
-        'initial_normal_min': 35,
+        'initial_normal_min': 25,
         'normal_sizes': [3000, 3500, 4500, 5000],
         'anomaly_config': [ # List of anomaly definitions to choose from
             {'type': 'ram_spike', 'size': [6000], 'num_matrices': 4},
@@ -364,7 +364,7 @@ def generate_dataset_4():
         'base_sleep_time_s': 4,
         'prep_memory_anomaly_size': 6000, # Prepare with the largest RAM anomaly
         'prep_num_matrices': 4,
-        'anomaly_decision_range': 150, # Increased range for same anomaly frequency
+        'anomaly_decision_range': 50, # Increased range for same anomaly frequency
     }
     run_workload_loop('dataset4', config)
 
@@ -375,17 +375,17 @@ def main():
 
 
     
-    print("Starting Dataset 1 Generation...")
-    generate_dataset_1()
-    print("\nDataset 1 Generation Finished.\n")
+    #print("Starting Dataset 1 Generation...")
+    #generate_dataset_1()
+    #print("\nDataset 1 Generation Finished.\n")
     
-    print("Starting Dataset 2 Generation...")
-    generate_dataset_2()
-    print("\nDataset 2 Generation Finished.\n")
+    #print("Starting Dataset 2 Generation...")
+    #generate_dataset_2()
+    #print("\nDataset 2 Generation Finished.\n")
 
-    print("Starting Dataset 3 Generation...")
-    generate_dataset_3()
-    print("\nDataset 3 Generation Finished.\n")
+    #print("Starting Dataset 3 Generation...")
+    #generate_dataset_3()
+    #print("\nDataset 3 Generation Finished.\n")
     
     print("Starting Dataset 4 Generation...") # As per user focus
     generate_dataset_4()
