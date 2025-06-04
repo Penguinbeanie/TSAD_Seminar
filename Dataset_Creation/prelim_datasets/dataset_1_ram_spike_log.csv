@@ -1,19 +1,4 @@
 timestamp,state,event_type,event_details,ram_usage_mb
-2025-06-03 19:16:25,idle,SCRIPT_START,Dataset 1_ram_spike,
-2025-06-03 19:16:25,idle,SAMPLED_STATE,,27.70
-2025-06-03 19:16:25,working_special_prep,WORKLOAD_START,"type:prep_anomaly,size:6000",
-2025-06-03 19:16:26,working_special_prep,SAMPLED_STATE,,1427.22
-2025-06-03 19:16:27,working_special_prep,SAMPLED_STATE,,1427.22
-2025-06-03 19:16:28,working_special_prep,SAMPLED_STATE,,1635.43
-2025-06-03 19:16:29,working_special_prep,SAMPLED_STATE,,1702.14
-2025-06-03 19:16:30,working_special_prep,SAMPLED_STATE,,1702.14
-2025-06-03 19:16:31,working_special_prep,SAMPLED_STATE,,1702.04
-2025-06-03 19:16:32,working_special_prep,SAMPLED_STATE,,1702.04
-2025-06-03 19:16:33,working_special_prep,SAMPLED_STATE,,1702.02
-2025-06-03 19:16:34,working_special_prep,SAMPLED_STATE,,1702.02
-2025-06-03 19:16:35,working_special_prep,SAMPLED_STATE,,1702.02
-2025-06-03 19:16:36,working_special_prep,SAMPLED_STATE,,1702.02
-2025-06-03 19:16:37,working_special_prep,WORKLOAD_END,"type:prep_anomaly,size:6000,duration:11.36s",
 2025-06-03 19:16:37,working_normal,WORKLOAD_START,"type:normal,size:4500",
 2025-06-03 19:16:37,working_normal,SAMPLED_STATE,,672.32
 2025-06-03 19:16:38,working_normal,SAMPLED_STATE,,826.82

@@ -32,8 +32,8 @@ Common Parameters for Normal Operations (unless specified otherwise):
 ### Function 1: `generate_dataset_1()`
 - **Description**: Generates dataset with high RAM usage anomalies.
 - **Log File**: `dataset_1_ram_spike_log.csv`
-- **Total Runtime**: 15 minutes.
-- **Initial Normal Period**: First 3 minutes.
+- **Total Runtime**: 90 minutes.
+- **Initial Normal Period**: First 20 minutes.
 - **Anomaly Type**: High RAM usage. This is achieved by performing matrix calculations with a larger matrix size.
     - Anomaly Matrix Size: `[6000]` (chosen randomly if multiple were provided, here only one)
     - Number of matrices for anomaly operation: 4 (to further increase RAM impact)
@@ -43,8 +43,8 @@ Common Parameters for Normal Operations (unless specified otherwise):
 ### Function 2: `generate_dataset_2()`
 - **Description**: Simulates an anomaly where the system becomes unresponsive or slow, characterized by an increased sleep time.
 - **Log File**: `dataset_2_sleep_anomaly_log.csv`
-- **Total Runtime**: 15 minutes.
-- **Initial Normal Period**: First 3 minutes.
+- **Total Runtime**: 90 minutes.
+- **Initial Normal Period**: First 20 minutes.
 - **Anomaly Type**: Increased sleep duration.
     - During an anomaly event, the sleep timer is increased by 2 seconds (i.e., total 6 seconds of sleep instead of 4).
     - No matrix calculations are performed during the sleep anomaly period.
@@ -54,8 +54,8 @@ Common Parameters for Normal Operations (unless specified otherwise):
 ### Function 3: `generate_dataset_3()`
 - **Description**: Simulates an anomaly with a medium-sized matrix calculation, representing a moderate RAM increase.
 - **Log File**: `dataset_3_medium_ram_spike_log.csv`
-- **Total Runtime**: 15 minutes.
-- **Initial Normal Period**: First 3 minutes.
+- **Total Runtime**: 90 minutes.
+- **Initial Normal Period**: First 20 minutes.
 - **Anomaly Type**: Medium RAM usage increase.
     - Anomaly Matrix Size: `[4000]`
     - Number of matrices for anomaly operation: 3 (standard)
@@ -65,8 +65,8 @@ Common Parameters for Normal Operations (unless specified otherwise):
 ### Function 4: `generate_dataset_4()`
 - **Description**: A more complex scenario that combines all three previously described anomaly types. Only one anomaly type is selected at random when an anomaly event occurs. This function also has a longer runtime.
 - **Log File**: `dataset_4_mixed_anomalies_log.csv`
-- **Total Runtime**: 25 minutes.
-- **Initial Normal Period**: First 6 minutes.
+- **Total Runtime**: 160 minutes.
+- **Initial Normal Period**: First 35 minutes.
 - **Anomaly Types (randomly chosen when an anomaly event occurs)**:
     1.  **High RAM Spike**: Matrix size `[6000]`, 4 matrices (like Function 1's anomaly).
     2.  **Increased Sleep**: Sleep time +2 seconds (like Function 2's anomaly), no matrix calculations during sleep.
@@ -107,7 +107,7 @@ How to Run
 ----------
 Execute the `generate_all_datasets.py` script using a Python interpreter.
 ```bash
-python Dataset_Creation/creation_code/generate_all_datasets.py
+python Dataset_Creation/creation_code/RAM_production/generate_all_datasets.py
 ```
 By default, the `main()` function in the script is configured to run all dataset generation functions sequentially.
 
