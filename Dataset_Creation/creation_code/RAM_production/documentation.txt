@@ -6,7 +6,7 @@ This document provides an overview of the `generate_all_datasets.py` script, its
 Output Directory
 ----------------
 All generated dataset CSV files and this documentation are stored in:
-`C:\Users\Kai\Documents\Time_Series_Anomaly_Detection\TSAD_Seminar\Dataset_Creation\prelim_datasets\`
+`/home/kai/Documents/TSAD/TSAD_Seminar/Dataset_Creation/prelim_datasets`
 
 Script Overview
 ---------------
@@ -30,10 +30,10 @@ Common Parameters for Normal Operations (unless specified otherwise):
 - Number of matrix dot product operations per workload: 5
 
 ### Function 1: `generate_dataset_1()`
-- **Description**: Replicates the functionality of the original `RAM_test1.py`.
+- **Description**: Generates dataset with high RAM usage anomalies.
 - **Log File**: `dataset_1_ram_spike_log.csv`
-- **Total Runtime**: 90 minutes.
-- **Initial Normal Period**: First 25 minutes.
+- **Total Runtime**: 15 minutes.
+- **Initial Normal Period**: First 3 minutes.
 - **Anomaly Type**: High RAM usage. This is achieved by performing matrix calculations with a larger matrix size.
     - Anomaly Matrix Size: `[6000]` (chosen randomly if multiple were provided, here only one)
     - Number of matrices for anomaly operation: 4 (to further increase RAM impact)
@@ -41,21 +41,21 @@ Common Parameters for Normal Operations (unless specified otherwise):
 - **Memory Preparation**: At the very start of this function, a single instance of the anomaly-sized matrix operation (6000x6000, 4 matrices) is run to prepare/pre-warm system memory.
 
 ### Function 2: `generate_dataset_2()`
-- **Description**: Simulates an anomaly where the system becomes unresponsive or slow, characterized by an increased sleep time rather than a direct RAM spike from computation.
+- **Description**: Simulates an anomaly where the system becomes unresponsive or slow, characterized by an increased sleep time.
 - **Log File**: `dataset_2_sleep_anomaly_log.csv`
-- **Total Runtime**: 90 minutes.
-- **Initial Normal Period**: First 25 minutes.
+- **Total Runtime**: 15 minutes.
+- **Initial Normal Period**: First 3 minutes.
 - **Anomaly Type**: Increased sleep duration.
-    - During an anomaly event, the sleep timer after a normal-sized matrix workload is increased by 2 seconds (i.e., total 6 seconds of sleep instead of 4).
-    - Matrix calculations during an "anomaly" event use standard normal sizes.
+    - During an anomaly event, the sleep timer is increased by 2 seconds (i.e., total 6 seconds of sleep instead of 4).
+    - No matrix calculations are performed during the sleep anomaly period.
 - **Anomaly Trigger**: Randomly, with a 1 in 50 chance per workload cycle after the initial normal period.
 - **Memory Preparation**: None specific, as the anomaly is not primarily RAM-based.
 
 ### Function 3: `generate_dataset_3()`
 - **Description**: Simulates an anomaly with a medium-sized matrix calculation, representing a moderate RAM increase.
 - **Log File**: `dataset_3_medium_ram_spike_log.csv`
-- **Total Runtime**: 90 minutes.
-- **Initial Normal Period**: First 25 minutes.
+- **Total Runtime**: 15 minutes.
+- **Initial Normal Period**: First 3 minutes.
 - **Anomaly Type**: Medium RAM usage increase.
     - Anomaly Matrix Size: `[4000]`
     - Number of matrices for anomaly operation: 3 (standard)
@@ -65,11 +65,11 @@ Common Parameters for Normal Operations (unless specified otherwise):
 ### Function 4: `generate_dataset_4()`
 - **Description**: A more complex scenario that combines all three previously described anomaly types. Only one anomaly type is selected at random when an anomaly event occurs. This function also has a longer runtime.
 - **Log File**: `dataset_4_mixed_anomalies_log.csv`
-- **Total Runtime**: 150 minutes.
-- **Initial Normal Period**: First 35 minutes.
+- **Total Runtime**: 25 minutes.
+- **Initial Normal Period**: First 6 minutes.
 - **Anomaly Types (randomly chosen when an anomaly event occurs)**:
     1.  **High RAM Spike**: Matrix size `[6000]`, 4 matrices (like Function 1's anomaly).
-    2.  **Increased Sleep**: Sleep time +2 seconds (like Function 2's anomaly), normal matrix size.
+    2.  **Increased Sleep**: Sleep time +2 seconds (like Function 2's anomaly), no matrix calculations during sleep.
     3.  **Medium RAM Spike**: Matrix size `[4000]`, 3 matrices (like Function 3's anomaly).
 - **Anomaly Trigger**: Randomly, with a 1 in 150 chance per workload cycle after the initial normal period (range increased from 1-50 to 1-150 to maintain approximately the same anomaly occurrence frequency over its longer active period compared to a 1-in-50 trigger in shorter functions).
 - **Memory Preparation**: At the very start of this function, a single instance of the high RAM spike anomaly (6000x6000 matrix size, 4 matrices) is run to prepare/pre-warm system memory.
@@ -83,7 +83,7 @@ Each dataset function generates a CSV log file with the following columns:
     - `idle`: The script is between workloads (sleeping).
     - `working_normal`: Performing a standard workload.
     - `working_anomaly_ram_spike`: Performing a high RAM usage anomaly workload.
-    - `working_anomaly_sleep`: Performing a normal workload that will be followed by increased sleep (anomaly).
+    - `working_anomaly_sleep`: In sleep anomaly state.
     - `working_anomaly_medium_ram_spike`: Performing a medium RAM usage anomaly workload.
     - `working_special_prep`: Performing initial memory preparation workload.
     - `ending_script`: The script is shutting down.
@@ -91,12 +91,13 @@ Each dataset function generates a CSV log file with the following columns:
 3.  `event_type`: Describes the nature of the log entry. Examples:
     - `SCRIPT_START`: Marks the beginning of the dataset generation.
     - `SCRIPT_END`: Marks the end of the dataset generation.
-    - `WORKLOAD_START`: Marks the beginning of a matrix operation workload.
-    - `WORKLOAD_END`: Marks the completion of a matrix operation workload.
+    - `WORKLOAD_START`: Marks the beginning of a matrix operation workload or sleep anomaly.
+    - `WORKLOAD_END`: Marks the completion of a matrix operation workload or sleep anomaly.
     - `SAMPLED_STATE`: A periodic log entry from the logger thread, capturing the current state and RAM usage.
     - `LOGGER_ERROR`: Indicates an error occurred within the logger thread trying to capture data.
 4.  `event_details`: Provides specific details about the event. Examples:
-    - For `WORKLOAD_START`/`WORKLOAD_END`: `type:[normal|anomaly_type],size:[matrix_size]`, and for `WORKLOAD_END`, also `duration:[seconds]s`. For sleep anomalies, may include `増_sleep:[seconds]s`. For Function 4 WORKLOAD_END with an anomaly, includes `anomaly_trigger:[type_of_anomaly_triggered]`.
+    - For matrix workloads `WORKLOAD_START`/`WORKLOAD_END`: `type:[normal|anomaly_type],size:[matrix_size]`, and for `WORKLOAD_END`, also `duration:[seconds]s`.
+    - For sleep anomalies: `type:anomaly_sleep_increase,sleep_time:[total_sleep_time]s`.
     - For `SCRIPT_START`/`SCRIPT_END`: Information about the dataset being generated.
     - For `LOGGER_ERROR`: Details about the logging error.
     - Empty for `SAMPLED_STATE` entries where RAM is the primary data.
@@ -108,7 +109,7 @@ Execute the `generate_all_datasets.py` script using a Python interpreter.
 ```bash
 python Dataset_Creation/creation_code/generate_all_datasets.py
 ```
-By default, the `main()` function in the script is configured to run `generate_dataset_4()`. You can modify `main()` to run other dataset generation functions or all of them sequentially by uncommenting the respective calls.
+By default, the `main()` function in the script is configured to run all dataset generation functions sequentially.
 
 Note on Concurrency
 -------------------

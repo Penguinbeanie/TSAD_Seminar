@@ -14,7 +14,7 @@ LOG_LOCK = threading.Lock()
 # Key: function_id (e.g., "dataset1"), Value: {"current_execution_state": "idle", "continue_logging": True, "log_file": "path/to/log.csv"}
 THREAD_STATES = {}
 
-OUTPUT_BASE_DIR = os.path.join(os.path.expanduser("~"), "Documents", "Time_Series_Anomaly_Detection", "TSAD_Seminar", "Dataset_Creation", "prelim_datasets")
+OUTPUT_BASE_DIR = "/home/kai/Documents/TSAD/TSAD_Seminar/Dataset_Creation/prelim_datasets"
 
 def ensure_output_dir():
     """Ensures the output directory exists."""
@@ -247,7 +247,15 @@ def run_workload_loop(function_id, config):
                 current_sleep_time += anomaly_config['sleep_increase_s']
                 # Matrix size remains normal for this anomaly type
                 update_state(function_id, 'working_anomaly_sleep')
-                event_details = f'type:anomaly_sleep_increase,size:{matrix_size},เพิ่ม_sleep:{anomaly_config["sleep_increase_s"]}s'
+                event_details = f'type:anomaly_sleep_increase,sleep_time:{current_sleep_time}s'
+                log_entry(function_id, 'WORKLOAD_START', event_details)
+                # Skip matrix operation for sleep anomaly - just sleep
+                duration = current_sleep_time
+                event_details_end = event_details + f',duration:{duration:.2f}s,anomaly_trigger:sleep_increase'
+                log_entry(function_id, 'WORKLOAD_END', event_details_end)
+                update_state(function_id, 'idle')
+                time.sleep(current_sleep_time)
+                continue  # Skip the rest of the loop
             elif workload_type == 'medium_ram_spike': # Function 3 type anomaly
                 matrix_size = random.choice(anomaly_config['size'])
                 num_matrices_op = anomaly_config.get('num_matrices', 3) # Default or specific
@@ -298,8 +306,8 @@ def generate_dataset_1():
     """Anomaly: Larger matrix multiplication."""
     config = {
         'id_suffix': '1_ram_spike',
-        'total_runtime_min': 10,
-        'initial_normal_min': 3,
+        'total_runtime_min': 90,
+        'initial_normal_min': 20,
         'normal_sizes': [3000, 3500, 4500, 5000],
         'anomaly_config': {'type': 'ram_spike', 'size': [6000], 'num_matrices': 4}, # More matrices for higher RAM
         'prep_memory_anomaly_size': 6000, # Prepare with anomaly size
@@ -312,8 +320,8 @@ def generate_dataset_2():
     """Anomaly: Increased sleep timer instead of larger matrix."""
     config = {
         'id_suffix': '2_sleep_anomaly',
-        'total_runtime_min': 10,
-        'initial_normal_min': 3,
+        'total_runtime_min': 90,
+        'initial_normal_min': 20,
         'normal_sizes': [3000, 3500, 4500, 5000],
         # Matrix size for "anomaly" event is normal, but sleep increases
         'anomaly_config': {'type': 'sleep_increase', 'sleep_increase_s': 2},
@@ -327,8 +335,8 @@ def generate_dataset_3():
     """Anomaly: Matrix calculation of medium size."""
     config = {
         'id_suffix': '3_medium_ram_spike',
-        'total_runtime_min': 10,
-        'initial_normal_min': 3,
+        'total_runtime_min': 90,
+        'initial_normal_min': 20,
         'normal_sizes': [3000, 3500, 4500, 5000],
         'anomaly_config': {'type': 'medium_ram_spike', 'size': [4000], 'num_matrices': 3},
         'anomaly_decision_range': 50,
@@ -341,8 +349,8 @@ def generate_dataset_4():
     """All three previous anomalies included, one selected at random. Longer runtime."""
     config = {
         'id_suffix': '4_mixed_anomalies',
-        'total_runtime_min': 20,
-        'initial_normal_min': 6,
+        'total_runtime_min': 160,
+        'initial_normal_min': 35,
         'normal_sizes': [3000, 3500, 4500, 5000],
         'anomaly_config': [ # List of anomaly definitions to choose from
             {'type': 'ram_spike', 'size': [6000], 'num_matrices': 4},
