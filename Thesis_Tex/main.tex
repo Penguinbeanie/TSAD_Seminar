@@ -11,6 +11,12 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{titlesec}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+
 \usepackage{enumitem}% http://ctan.org/pkg/enumitem
 
 %folgende Zeile auskommentieren für englische Arbeiten
@@ -33,6 +39,8 @@
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
 
+\colorlet{myLightGreen}{green!10!gray} 
+\colorlet{myLightBlue}{blue!20}   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Definition der Kopfzeile %%
@@ -275,24 +283,100 @@ When looking at the evaluation results of all major benchmarks, it is difficult 
 
 \section{Dataset Analysis}
 
-\textbf{Das ist fett gedruckter Text}.
+\section{Replication of TSB-AD Benchmark Results}
 
-\textit{Das ist kursiver Text}.
-
-
-Auflistungen sind oft hilfreich für die Strukturierung:
+\subsection{Setup and Implementation}
+For the recreation of the TSB-AD benchmark results, the following core components were used:
 \begin{itemize}
-    \item Erster Eintrag
-    \item Zweiter Eintrag
+    \item AMD Ryzen 5 7500F, 6C/12T, 3.70-5.00GHz
+    \item Nvidia 3060TI 8 GB GDDR6 VRAM
+    \item 32 GB DDR5 RAM
+    \item OS: Windows 11
 \end{itemize}
 
-Nummerierte Aufzählungen sind oft hilfreich für Reihenfolgen:
-\begin{enumerate}
-    \item Erster Eintrag
-    \item Zweiter Eintrag
-\end{enumerate}
+For the actual implementation, the TSb-AD Github repository was cloned and instructions provided by the authors on how to set up the correct development environment was followed. Despite extensive efforts, I was not able to get all provided anomaly detection models to run reliably. These are the models which I could not successfully implement:
 
-\section{Replication of TSB-AD Benchmark Results}
+\begin{itemize}
+    \item 1
+    \item 2
+    \item 3
+\end{itemize}
+
+\subsection{Results}
+\subsubsection{Univariate Results}
+Since \cite{liu2024elephant} only publish the full VUS-PR results for each individual dataset and model, the comparison will focus on this metric. Table 2 provides information about the differences found between both benchmark evaluations.
+
+\begin{table}[H]
+    \centering
+    \label{tab:vus_pr_diff_summary_uni}
+    \begin{tabular}{lrrrrrrr}
+        \toprule
+        \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File\\ID}} & \textbf{\makecell[r]{Num. of\\Anom.}} & \textbf{\makecell[r]{Datasets\\>5\% Diff.}} & \textbf{\makecell[r]{Datasets\\>25\% Diff.}} & \textbf{\makecell[r]{Datasets\\>50\% Diff.}} \\
+        \midrule
+        \rowcolor{lightgray} IForest & 0.163 & 0.999 & 552 & 1 & 195 & 81 & 24 \\
+        \rowcolor{myLightBlue} LSTMAD & 0.108 & 0.951 & 849 & 2 & 118 & 36 & 12 \\
+        \rowcolor{myLightBlue} USAD & 0.106 & 0.982 & 849 & 2 & 111 & 44 & 27 \\
+        \rowcolor{myLightBlue} TranAD & 0.093 & 0.934 & 865 & 2 & 109 & 47 & 19 \\
+        \rowcolor{myLightBlue} OmniAnomaly & 0.082 & 0.966 & 865 & 2 & 101 & 44 & 13 \\
+        \rowcolor{myLightBlue} CNN & 0.079 & 0.987 & 645 & 1 & 125 & 29 & 12 \\
+        \rowcolor{myLightBlue} AnomalyTrans & 0.053 & 0.603 & 191 & 2 & 26 & 10 & 5 \\
+        \rowcolor{lightgray} KShapeAD & 0.048 & 0.999 & 780 & 1 & 71 & 14 & 8 \\
+        \rowcolor{lightgray} SAND & 0.047 & 0.994 & 680 & 1 & 70 & 17 & 7 \\
+        \rowcolor{myLightBlue} FITS & 0.038 & 0.450 & 579 & 1 & 86 & 6 & 0 \\
+        \rowcolor{myLightBlue} AutoEncoder & 0.006 & 0.152 & 658 & 1 & 8 & 0 & 0 \\
+        \rowcolor{lightgray} LOF & 0.002 & 0.075 & 811 & 3 & 2 & 0 & 0 \\
+        \rowcolor{lightgray} POLY & 0.001 & 0.288 & 534 & 1 & 2 & 1 & 0 \\
+        \rowcolor{lightgray} MatrixProfile & 5.96e-05 & 0.015 & 017 & 1 & 0 & 0 & 0 \\
+        \rowcolor{lightgray} SR & 8.24e-06 & 0.002 & 534 & 1 & 0 & 0 & 0 \\
+        \bottomrule
+    \end{tabular}
+    \par
+    \vspace{1em}
+    \noindent 
+    \begin{tabular}{@{} p{1em} l @{}} 
+        \rowcolor{lightgray} \strut & Statistical Methods \\
+        \rowcolor{myLightBlue} \strut & Neural Network-based Method \\
+        
+    \end{tabular}
+    \caption{\label{tab:Table 2} Summary of absolute differences in VUS-PR for univariate datasets.}
+\end{table}
+
+For most models, the average difference stays firmly below 10\%, with IForest, LSTMAD, and USAD being the only exceptions. Notably, roughly half of all models have at least one dataset with the absolute score differing by more than 0.950. Over a third of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differs by at least 50\%. These high discrepancies occurred for datasets with a low anomaly count, making even small variations strongly noticeable. Statistical methods, with the exception of IForrest, showed a generally higher consistency between runs than Neural Network-based methods.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Summary of absolute differences in VUS-PR for multivariate datasets.}
+    \label{tab:vus_pr_diff_summary_multi}
+    \begin{tabular}{lrrrrrr}
+        \toprule
+        \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File ID (Max. Diff.)}} & \textbf{\makecell[r]{Datasets\\>5\% Diff.}} & \textbf{\makecell[r]{Datasets\\>25\% Diff.}} & \textbf{\makecell[r]{Datasets\\>50\% Diff.}} \\
+        \midrule
+        TranAD             & 0.185   & 0.910   & 175 & 83  & 36 & 28 \\
+        PCA                & 0.155   & 0.855   & 156 & 91  & 44 & 17 \\
+        OmniAnomaly        & 0.148   & 0.910   & 175 & 110 & 36 & 11 \\
+        USAD               & 0.147   & 0.909   & 175 & 109 & 36 & 8  \\
+        IForest            & 0.122   & 0.942   & 156 & 85  & 29 & 12 \\
+        CNN                & 0.095   & 0.922   & 187 & 70  & 15 & 12 \\
+        LSTMAD             & 0.086   & 0.952   & 175 & 57  & 10 & 6  \\
+        FITS               & 0.065   & 0.479   & 7   & 64  & 11 & 0  \\
+        AnomalyTransformer & 0.036   & 0.614   & 175 & 33  & 5  & 1  \\
+        CBLOF              & 0.030   & 0.870   & 194 & 8   & 7  & 5  \\
+        KMeansAD           & 0.019   & 0.566   & 46  & 19  & 1  & 1  \\
+        RobustPCA          & 0.015   & 0.396   & 14  & 17  & 1  & 0  \\
+        EIF                & 0.015   & 0.095   & 8   & 1   & 0  & 0  \\
+        AutoEncoder        & 0.009   & 0.318   & 17  & 6   & 2  & 0  \\
+        KNN                & 0.008   & 0.504   & 156 & 8   & 1  & 1  \\
+        MCD                & 0.007   & 0.544   & 194 & 2   & 1  & 1  \\
+        LOF                & 0.004   & 0.340   & 156 & 2   & 1  & 0  \\
+        OCSVM              & 0.004   & 0.370   & 17  & 2   & 2  & 0  \\
+        HBOS               & 1.71e-08 & 2.91e-06 & 123 & 0   & 0  & 0  \\
+        COPOD              & 9.61e-18 & 2.22e-16 & 8   & 0   & 0  & 0  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+
 
 \section{Dataset Creation}
 
