@@ -304,9 +304,9 @@ For the actual implementation, the TSb-AD Github repository was cloned and instr
 
 \subsection{Results}
 \subsubsection{Univariate Results}
-Since \cite{liu2024elephant} only publish the full VUS-PR results for each individual dataset and model, the comparison will focus on this metric. Table 2 provides information about the differences found between both benchmark evaluations.
+Since \cite{liu2024elephant} only publish the full VUS-PR results for each individual dataset and model, the comparison will focus on this metric. Table 2 provides information about the differences found between both benchmark evaluations for univariate detection models.
 
-\begin{table}[H]
+\begin{table}[htbp]
     \centering
     \label{tab:vus_pr_diff_summary_uni}
     \begin{tabular}{lrrrrrrr}
@@ -323,6 +323,7 @@ Since \cite{liu2024elephant} only publish the full VUS-PR results for each indiv
         \rowcolor{lightgray} KShapeAD & 0.048 & 0.999 & 780 & 1 & 71 & 14 & 8 \\
         \rowcolor{lightgray} SAND & 0.047 & 0.994 & 680 & 1 & 70 & 17 & 7 \\
         \rowcolor{myLightBlue} FITS & 0.038 & 0.450 & 579 & 1 & 86 & 6 & 0 \\
+        \rowcolor{myLightGreen} MOMENT\_ZS & 0.007 & 0.413 & 579 & 1 & 9 & 1 & 0 \\
         \rowcolor{myLightBlue} AutoEncoder & 0.006 & 0.152 & 658 & 1 & 8 & 0 & 0 \\
         \rowcolor{lightgray} LOF & 0.002 & 0.075 & 811 & 3 & 2 & 0 & 0 \\
         \rowcolor{lightgray} POLY & 0.001 & 0.288 & 534 & 1 & 2 & 1 & 0 \\
@@ -336,43 +337,57 @@ Since \cite{liu2024elephant} only publish the full VUS-PR results for each indiv
     \begin{tabular}{@{} p{1em} l @{}} 
         \rowcolor{lightgray} \strut & Statistical Methods \\
         \rowcolor{myLightBlue} \strut & Neural Network-based Method \\
+        \rowcolor{myLightGreen} \strut & Foundation model-based Method \\
         
     \end{tabular}
     \caption{\label{tab:Table 2} Summary of absolute differences in VUS-PR for univariate datasets.}
 \end{table}
 
-For most models, the average difference stays firmly below 10\%, with IForest, LSTMAD, and USAD being the only exceptions. Notably, roughly half of all models have at least one dataset with the absolute score differing by more than 0.950. Over a third of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differs by at least 50\%. These high discrepancies occurred for datasets with a low anomaly count, making even small variations strongly noticeable. Statistical methods, with the exception of IForrest, showed a generally higher consistency between runs than Neural Network-based methods.
+For most models, the average difference stayed firmly below 0.100, with IForest, LSTMAD, and USAD being the main exceptions. Beyond these averages, roughly half of all models had at least one dataset where the absolute score differed by more than 0.950. Furthermore, over a third of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differed by at least 50\%. These high discrepancies typically occurred for datasets with a low anomaly count, making even small variations in detected anomalies strongly noticeable in the scores. When comparing model types, statistical methods generally showed higher consistency between runs than Neural Network-based methods. This is somewhat to be expected, as the inherent complexity, numerous parameters, and sensitivity to initialization or even minor data variations in Neural Networks can lead to greater variability in outcomes, even when attempting to fix seeds. The notable exception here was IForest; its inconsistency was somewhat surprising, especially given it was configured with 200 n\_estimators and a consistent seed, factors which should generally promote stability. Interestingly, Moment (zero-shot) demonstrated remarkably high consistency, outperforming even 3 statistical methods and significantly surpassing most other neural network models. This high consistency is largely attributable to its fundamental zero-shot nature: as a pre-trained model, it involves little re-training randomness in each run, relying instead on fixed, deterministic weights for its inferences. Multiple datasets appeared twice as an entry for the highest absolute difference. These are: \#849, \#865, \#579, \#534.
 
+\subsubsection{Multivariate Results}
+
+Table 3 provides information about the differences found between both benchmark evaluations for multivariate detection models.
+
+The results for multivariate detections models are in many ways similar to those of univariate detections models. Only 5 out of 20 models display an average difference between runs of more than 0.100, with those being TranAD, PCA, OmniAnomaly, USAD, and IForest. 1/4th of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differed by at least 50\%. These high discrepancies typically occurred for datasets with a low anomaly count. As with the univariate models, when comparing model types, statistical methods generally showed higher consistency between runs than Neural Network-based methods. The exceptions here being the statistical models PCA and IForest (ranking 2nd and 5th), and the Neural Network-based model AutoEncoder (ranking 14th). HBOS was the only model to have its largest difference occur during a dataset with multiple hundred anomalies. Given the small absolute difference (0.00000291), this seems insignificant. Most prone to differences was the dataset \#175, appearing 5 times as the dataset with the highest absolute difference, followed by \#156 with 4 appearances.  \par
+However, it's important to stress that these observations - for univariate and multivariate models alike - are based on a very limited sample size of just two runs (the original authors' and my own). Therefore, while these discrepancies are noteworthy, this comparison doesn't provide any conclusive results regarding the general reproducibility of these models without further, more extensive investigation.
 \begin{table}[htbp]
     \centering
-    \caption{Summary of absolute differences in VUS-PR for multivariate datasets.}
     \label{tab:vus_pr_diff_summary_multi}
-    \begin{tabular}{lrrrrrr}
+    \begin{tabular}{lrrrrrrr}
         \toprule
-        \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File ID (Max. Diff.)}} & \textbf{\makecell[r]{Datasets\\>5\% Diff.}} & \textbf{\makecell[r]{Datasets\\>25\% Diff.}} & \textbf{\makecell[r]{Datasets\\>50\% Diff.}} \\
+        \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File\\ID}} & \textbf{\makecell[r]{Num. of\\Anom.}} & \textbf{\makecell[r]{Datasets\\>5\% Diff.}} & \textbf{\makecell[r]{Datasets\\>25\% Diff.}} & \textbf{\makecell[r]{Datasets\\>50\% Diff.}} \\
         \midrule
-        TranAD             & 0.185   & 0.910   & 175 & 83  & 36 & 28 \\
-        PCA                & 0.155   & 0.855   & 156 & 91  & 44 & 17 \\
-        OmniAnomaly        & 0.148   & 0.910   & 175 & 110 & 36 & 11 \\
-        USAD               & 0.147   & 0.909   & 175 & 109 & 36 & 8  \\
-        IForest            & 0.122   & 0.942   & 156 & 85  & 29 & 12 \\
-        CNN                & 0.095   & 0.922   & 187 & 70  & 15 & 12 \\
-        LSTMAD             & 0.086   & 0.952   & 175 & 57  & 10 & 6  \\
-        FITS               & 0.065   & 0.479   & 7   & 64  & 11 & 0  \\
-        AnomalyTransformer & 0.036   & 0.614   & 175 & 33  & 5  & 1  \\
-        CBLOF              & 0.030   & 0.870   & 194 & 8   & 7  & 5  \\
-        KMeansAD           & 0.019   & 0.566   & 46  & 19  & 1  & 1  \\
-        RobustPCA          & 0.015   & 0.396   & 14  & 17  & 1  & 0  \\
-        EIF                & 0.015   & 0.095   & 8   & 1   & 0  & 0  \\
-        AutoEncoder        & 0.009   & 0.318   & 17  & 6   & 2  & 0  \\
-        KNN                & 0.008   & 0.504   & 156 & 8   & 1  & 1  \\
-        MCD                & 0.007   & 0.544   & 194 & 2   & 1  & 1  \\
-        LOF                & 0.004   & 0.340   & 156 & 2   & 1  & 0  \\
-        OCSVM              & 0.004   & 0.370   & 17  & 2   & 2  & 0  \\
-        HBOS               & 1.71e-08 & 2.91e-06 & 123 & 0   & 0  & 0  \\
-        COPOD              & 9.61e-18 & 2.22e-16 & 8   & 0   & 0  & 0  \\
+        \rowcolor{myLightBlue} TranAD & 0.185 & 0.910 & 175 & 4 & 83 & 36 & 28 \\
+        \rowcolor{lightgray} PCA & 0.155 & 0.855 & 156 & 1 & 91 & 44 & 17 \\
+        \rowcolor{myLightBlue} OmniAnomaly & 0.148 & 0.910 & 175 & 4 & 110 & 36 & 11 \\
+        \rowcolor{myLightBlue} USAD & 0.147 & 0.909 & 175 & 4 & 109 & 36 & 8 \\
+        \rowcolor{lightgray} IForest & 0.122 & 0.942 & 156 & 1 & 85 & 29 & 12 \\
+        \rowcolor{myLightBlue} CNN & 0.095 & 0.922 & 187 & 6 & 70 & 15 & 12 \\
+        \rowcolor{myLightBlue} LSTMAD & 0.086 & 0.952 & 175 & 4 & 57 & 10 & 6 \\
+        \rowcolor{myLightBlue} FITS & 0.065 & 0.479 & 007 & 1 & 64 & 11 & 0 \\
+        \rowcolor{myLightBlue} AnomalyTransformer & 0.036 & 0.614 & 175 & 4 & 33 & 5 & 1 \\
+        \rowcolor{lightgray} CBLOF & 0.030 & 0.870 & 194 & 5 & 8 & 7 & 5 \\
+        \rowcolor{lightgray} KMeansAD & 0.019 & 0.566 & 046 & 1 & 19 & 1 & 1 \\
+        \rowcolor{lightgray} RobustPCA & 0.015 & 0.396 & 014 & 1 & 17 & 1 & 0 \\
+        \rowcolor{lightgray} EIF & 0.015 & 0.095 & 008 & 2 & 1 & 0 & 0 \\
+        \rowcolor{myLightBlue} AutoEncoder & 0.009 & 0.318 & 017 & 1 & 6 & 2 & 0 \\
+        \rowcolor{lightgray} KNN & 0.008 & 0.504 & 156 & 1 & 8 & 1 & 1 \\
+        \rowcolor{lightgray} MCD & 0.007 & 0.544 & 194 & 5 & 2 & 1 & 1 \\
+        \rowcolor{lightgray} LOF & 0.004 & 0.340 & 156 & 1 & 2 & 1 & 0 \\
+        \rowcolor{lightgray} OCSVM & 0.004 & 0.370 & 017 & 1 & 2 & 2 & 0 \\
+        \rowcolor{lightgray} HBOS & 1.71e-08 & 2.91e-06 & 123 & 463 & 0 & 0 & 0 \\
+        \rowcolor{lightgray} COPOD & 9.61e-18 & 2.22e-16 & 008 & 2 & 0 & 0 & 0 \\
         \bottomrule
     \end{tabular}
+    \par
+    \vspace{1em}
+    \noindent 
+    \begin{tabular}{@{} p{1em} l @{}} 
+        \rowcolor{lightgray} \strut & Statistical Methods \\
+        \rowcolor{myLightBlue} \strut & Neural Network-based Method \\
+    \end{tabular}
+    \caption{\label{tab:Table 3} Summary of absolute differences in VUS-PR for multivariate datasets.}
 \end{table}
 
 
@@ -384,15 +399,7 @@ For most models, the average difference stays firmly below 10\%, with IForest, L
 
 \section{Zitieren und Referenzieren}
 
-Beiträge in Fachzeitschriften wie \citet{clemen1989combining} oder Konferenzartikel wie \citet{he2017mask} werden auf diese Weise im Text zitiert. In anderen Fällen möchte man aber in Klammern zitieren \citep{clemen1989combining}, auch mit mehreren Autoren \citep{clemen1989combining,baumol1958warehouse,he2017mask}.
 
-Bei Monographien muss eine Seitenzahl mit angegeben werden \citep[S. 28]{chollet2018deep}.
-
-So wird eine Webquelle zitiert: \citet{shiny1}. Es kann bei kurzen Informationen im Internet aber auch reichen die Adresse\footnote{\url{https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/}} als Fußnote einzubetten.
-
-So werden andere Teile der Arbeit referenziert: Kapitel \ref{einleitung}, Gleichung \ref{eq:1} zeigt...
-
-So verweisen wir auf eine Fußnote \footnote{dies ist eine Fußnote}.
 
 \section{Abbildungen}
 
