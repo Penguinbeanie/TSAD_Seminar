@@ -294,12 +294,16 @@ For the recreation of the TSB-AD benchmark results, the following core component
     \item OS: Windows 11
 \end{itemize}
 
-For the actual implementation, the TSb-AD Github repository was cloned and instructions provided by the authors on how to set up the correct development environment was followed. Despite extensive efforts, I was not able to get all provided anomaly detection models to run reliably. These are the models which I could not successfully implement:
+For the actual implementation, the TSB-AD Github repository was cloned and instructions provided by the authors on how to set up the correct development environment were followed. Given the high number of datasets, the benchmark was performed primarily running 3 models in parallel. Two non-resource intensive models using only the CPU (Statistical Methods as classified by the authors of TSB-AD) and one GPU utilizing model (Neural Network-based Method or Foundation Model-based Method). GPU utilization would frequently reach 100\%, whereas CPU utilization rarely exceeded even 60\%.\par
+Despite extensive efforts, I was not able to get all provided anomaly detection models to run reliably. These are the models which I could not successfully implement:
 
 \begin{itemize}
-    \item 1
-    \item 2
-    \item 3
+    \item \textbf{MomentFM, TimesFM, and TimesFT} require packages that cause unresolvable dependency incompatibilities with TSB-AD.
+    \item \textbf{Chronos and OFA} have required packages that do not work on my system for an unidentified reason. 
+    \item \textbf{Lag-Lama} has a required file which I can not find in the provided Github repository.
+    \item \textbf{EIF} causes the system to run out of memory and crash.
+    \item \textbf{Donut} creates a for me unidentifiable error, seemingly stemming from the donut.py file itself.
+    \item \textbf{NORMA} and Series2Graph are commercially licensed models. 
 \end{itemize}
 
 \subsection{Results}
