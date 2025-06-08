@@ -21,12 +21,13 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{11}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Benchmarking Conclusion}{11}{subsubsection.3.2.3}%
 \contentsline {section}{\numberline {4}Dataset Creation}{13}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}%
-\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{13}{section.6}%
-\contentsline {section}{\numberline {7}Abbildungen}{13}{section.7}%
-\contentsline {section}{\numberline {8}Tabellen}{14}{section.8}%
-\contentsline {section}{\numberline {9}Formeln}{14}{section.9}%
-\contentsline {section}{Bibliography}{16}{equation.1}%
-\contentsline {section}{\numberline {A}Anhang A}{17}{appendix.A}%
+\contentsline {subsection}{\numberline {4.1}Dataset Description}{13}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Conclusion}{15}{section.5}%
+\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{15}{section.6}%
+\contentsline {section}{\numberline {7}Abbildungen}{15}{section.7}%
+\contentsline {section}{\numberline {8}Tabellen}{15}{section.8}%
+\contentsline {section}{\numberline {9}Formeln}{16}{section.9}%
+\contentsline {section}{Bibliography}{18}{equation.1}%
+\contentsline {section}{\numberline {A}Anhang A}{19}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
