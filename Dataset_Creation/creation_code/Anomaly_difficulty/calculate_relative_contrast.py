@@ -97,7 +97,7 @@ if __name__ == "__main__":
     print(f"Starting analysis at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
     # Define input and output paths
-    INPUT_PATH = r"C:\Users\Kai\Documents\Time_Series_Anomaly_Detection\TSAD_Seminar\Dataset_Creation\prelim_datasets\012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv"
+    INPUT_PATH = r"C:\Users\Kai\Documents\Time_Series_Anomaly_Detection\TSAD_Seminar\Dataset_Creation\prelim_datasets\011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv"
     OUTPUT_DIR = r"C:\Users\Kai\Documents\Time_Series_Anomaly_Detection\TSAD_Seminar\Dataset_Creation\creation_code\Anomaly_difficulty"
     WINDOW_SIZE = 10  # Length of the patterns to compare
 
