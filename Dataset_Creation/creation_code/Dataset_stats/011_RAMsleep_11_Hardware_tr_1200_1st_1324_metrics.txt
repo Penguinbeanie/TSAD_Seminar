@@ -1,0 +1,9 @@
+Dataset Anomaly Statistics
+=========================
+
+Total Anomaly Sequences: 11
+Total Anomaly Points: 110
+Average Anomaly Length: 10.0
+Longest Anomaly Length: 10
+Shortest Anomaly Length: 10
+Anomaly Ratio: 0.0207

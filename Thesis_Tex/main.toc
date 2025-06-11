@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {6}Zitieren und Referenzieren}{16}{section.6}%
 \contentsline {section}{\numberline {7}Abbildungen}{16}{section.7}%
 \contentsline {section}{\numberline {8}Tabellen}{16}{section.8}%
-\contentsline {section}{\numberline {9}Formeln}{16}{section.9}%
+\contentsline {section}{\numberline {9}Formeln}{17}{section.9}%
 \contentsline {section}{Bibliography}{19}{equation.1}%
 \contentsline {section}{\numberline {A}Anhang A}{20}{appendix.A}%
 \babel@toc {ngerman}{}\relax 

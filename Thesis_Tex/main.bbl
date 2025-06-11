@@ -1571,6 +1571,103 @@
       \verb 10.14778/3538598.3538602
       \endverb
     \endentry
+    \entry{DTW}{article}{}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=3d8260acdd72b376866455e65a3b46f6}{%
+           family={Tavenard},
+           familyi={T\bibinitperiod},
+           given={Romain},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5fa0def8b83dd494fbd31bea4f1b1616}{%
+           family={Faouzi},
+           familyi={F\bibinitperiod},
+           given={Johann},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c5a678081dbfbac82c5fad7985c4288}{%
+           family={Vandewiele},
+           familyi={V\bibinitperiod},
+           given={Gilles},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=162179e9d8886bb02748213e34724e0f}{%
+           family={Divo},
+           familyi={D\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d64451dbfb2e1f56a73f05db4da022f}{%
+           family={Androz},
+           familyi={A\bibinitperiod},
+           given={Guillaume},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c31c8214f544c0de18f0d4f0c9ae9a92}{%
+           family={Holtz},
+           familyi={H\bibinitperiod},
+           given={Chester},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b87d6cd807b72e5f58499930691574bb}{%
+           family={Payne},
+           familyi={P\bibinitperiod},
+           given={Marie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69b85665ba97bc383033dd1cc5c5b136}{%
+           family={Yurchak},
+           familyi={Y\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79459fbb8b30a6b984f147d458fe144d}{%
+           family={Ru{ß}wurm},
+           familyi={R\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88277b9cf231e28345c3ca05481435af}{%
+           family={Kolar},
+           familyi={K\bibinitperiod},
+           given={Kushal},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2525824015a6342fb3c147868906f7af}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={Eli},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5fa44d6efc7fdedc9d652badce047a0e}
+      \strng{fullhash}{17e51d952c21c8a1e6fad3a2eb9ed35e}
+      \strng{fullhashraw}{17e51d952c21c8a1e6fad3a2eb9ed35e}
+      \strng{bibnamehash}{17e51d952c21c8a1e6fad3a2eb9ed35e}
+      \strng{authorbibnamehash}{17e51d952c21c8a1e6fad3a2eb9ed35e}
+      \strng{authornamehash}{5fa44d6efc7fdedc9d652badce047a0e}
+      \strng{authorfullhash}{17e51d952c21c8a1e6fad3a2eb9ed35e}
+      \strng{authorfullhashraw}{17e51d952c21c8a1e6fad3a2eb9ed35e}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{118}
+      \field{title}{Tslearn, A Machine Learning Toolkit for Time Series Data}
+      \field{volume}{21}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb http://jmlr.org/papers/v21/20-091.html
+      \endverb
+      \verb{url}
+      \verb http://jmlr.org/papers/v21/20-091.html
+      \endverb
+    \endentry
     \entry{VisaFr}{misc}{}{}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
