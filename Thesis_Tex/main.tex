@@ -190,7 +190,7 @@ The list extends far beyond the fields named above. Time Series Anomaly Detectio
 
 
 \subsection{Detection Methods}
-Detection methods, in common descriptions and within the scientific literature, are often grouped or distinguished by a variety of aspects. This categorization can sometimes lack a consistent taxonomy. To provide a clearer framework, I will now systematically explain and categorize these methods through three key perspectives:
+Detection methods, in common descriptions and within the scientific literature alike, are often grouped or distinguished by a variety of aspects. This categorization can sometimes lack a consistent taxonomy. To provide a clearer framework, I will now systematically explain and categorize these methods through three key perspectives:
 \begin{itemize}
     \item Degree of supervision
     \item Architecture
@@ -398,8 +398,8 @@ The results for multivariate detections models are in many ways similar to those
 Across both univariate and multivariate anomaly detection models, the observed trends regarding benchmark evaluation consistency are largely parallel. While most models displayed relatively small average differences between the two evaluations, a significant portion exhibited substantial discrepancies on individual datasets, particularly those with low anomaly counts where even minor variations in anomaly detection profoundly impacted scores. A consistent finding was that statistical methods generally demonstrated higher consistency than Neural Network-based models. However, notable exceptions exist, such as IForest often showing surprising inconsistency despite its configuration, and conversely, zero-shot models like Moment achieving remarkable stability due to their pre-trained, less randomizable nature. Given that most of the highest absolute differences can be found on recurring datasets, it is reasonable to assume that the specific type of anomalies and data sequences significantly influences the consistency between benchmarking runs. Furthermore, since a large portion of datasets with equally low anomaly counts are not present on this list, it can be ruled out that the higher differences between runs are entirely attributable solely to their low anomaly count. \par
 However, it's important to stress that these observations - for univariate and multivariate models alike - are based on a very limited sample size of just two runs (the original authors' and my own). Therefore, while these results are noteworthy, this comparison doesn't provide any conclusive results regarding the general reproducibility of these models without further, more extensive investigation.
 
-\section{Dataset Creation}
-A common hurdle cited amon Time Series Anomaly Detection researchers is the lack of high quality, accurately labeled data \parencites[p.~2]{liu2024elephant}[p.~1-6]{wu2021current}[p.~1]{paparrizos2022tsb}. Out of the existing datasets that fulfill the desired criteria, most are either entirely synthetic or contain artificially inserted anomalies that attempt to mimic real world scenarios based on statistical assumptions. To contribute to the current state of research, I will be providing 4 high quality, real datasets with accurate labels. 
+\section{Dataset Setup}
+A common hurdle cited amon Time Series Anomaly Detection researchers is the lack of high quality, accurately labeled data \parencites[p.~2]{liu2024elephant}[p.~1-6]{wu2021current}[p.~1]{paparrizos2022tsb}. Out of the existing datasets that fulfill the desired criteria, most are either entirely synthetic or contain artificially inserted anomalies that attempt to mimic real world scenarios based on statistical assumptions. To contribute to the current state of research, I will be providing 4 real, high quality, univariate datasets with accurate labels. 
 
 \subsection{Dataset Description}
 The provided datasets contain information about RAM utilization during matrix multiplication. While the first 3 datasets each include 1 unique type of anomaly, the fourth dataset combines all 3 anomalies. \par
@@ -439,6 +439,27 @@ The provided datasets contain information about RAM utilization during matrix mu
     \item \textit{Anomaly 3} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 
     \item \textit{Combined Anomaly Frequency} 3
 \end{itemize}
+
+\subsection{Logging}
+
+With real data, the biggest challenge is not to find extensive datasets, its to find datasets with accurate labels. Without those, (semi-)supervised models can not function and no models can be be properly evaluated. Given this challenge, creating an accurate logging mechanism that will correctly label datapoints as either normal or anomalous was at the core of this entire seminar paper. \par
+The logging system employs a dual approach that provides a comprehensive view of each action executed and acurate monitoring of Resident Set Size (RSS) memory usage. It captures both discrete events and continuous system state. At its center is a centralized, thread-safe function called log\_entry which appends timestamped records to a CSV file. It utilizes a global threading.Lock to serialize file access, preventing race conditions and ensuring that multiple logging instances can write log entries without corruption. \par
+The first part is event-driven and activates whenever the script is started, an instance of matrix multiplication is started, or an instance of matrix multiplication concludes. These event logs provide a clear overview of all operations. \\
+The second part of my logging system (continuous\_logger\_thread) continously samples current RSS memory usage while running in parallel to the rest of the working script. It monitors the current state of operations in 0.1 second intervals. If it detects the state changing from 'idle' to 'working', it waits for 0.3 seconds before recording RSS memory usage. During testing, I encountered the issue of a matrix multiplication having technically started but no changes in actual hardware utilisation has yet occured. The 0.3 seconds delay ensures that the first datapoint after a workload has started is correctly labeled as "working". This is particularily important for when an anomaly has been injected. Similarly, when it detect a state change from 'working' to 'idle', the logger waits 0.1 seconds before recording RSS memory usage. This exists to prevent situations where the matrix multiplication has already ended but the memory was not yet released. While none of these state changes occure, the logger takes a snapshot every 1.0 seconds. The 0.3 seconds and 0.1 seconds where each originally selected during extensive testing on a dataset that was supposed to track CPU usage. When used on memory, it continued to function as intended and was therefore kept.
+
+\subsection{Hardware Setup}
+
+The simulations are ran on the previously described system that was used for the replication of the TSB-AD benchmark. Since Windows is notorious for unannounced and unwanted background activities that can often neither be reliably prevented, nor accounted for, a VMWare Workstation Virtual Machine was used. The specific setup and resource allocations were as follows:
+
+\begin{itemize}
+    \item 4 Processor Cores (2 Processors with 2 Cores each)
+    \item 8GB DDR5 RAM
+    \item OS: Linux Ubuntu 24.04.2 LTS 64-bit
+    \item Automatic Updates Disabled
+    \item Networking Disabled
+\end{itemize}
+
+\subsection{Statistical Overview}
 
 
 

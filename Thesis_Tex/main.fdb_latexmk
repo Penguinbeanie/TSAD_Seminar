@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber main"] 1749414829.50076 "main.bcf" "main.bbl" "main" 1749415420.75936 0
+["biber main"] 1749414829.50076 "main.bcf" "main.bbl" "main" 1749606220.13042 0
   "literatur.bib" 1747713639 15710 edfd0827e9ee5ca6158ad457ce5a576d ""
-  "main.bcf" 1749415420 112574 345c4bba79c842886dc63dc0077e6d2d "pdflatex"
+  "main.bcf" 1749606220 112574 345c4bba79c842886dc63dc0077e6d2d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749415419.24825 "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" "main.pdf" "main" 1749415420.75989 0
+["pdflatex"] 1749606218.62875 "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" "main.pdf" "main" 1749606220.13096 0
   "Erklaerung.tex" 1746319809 589 3a777ef59b3432279df3da8f2011a68a ""
-  "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" 1749415418 48845 47dbbc9b0eb4f116d0c186d6da1b5d66 ""
+  "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" 1749606218 52001 fadc55bb1c296af39eb82799aafe54fa ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc" 1747076911 2566 85d32bcd815d608c52dde2d0410884fa ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptsans_t1.enc" 1747076911 2581 aa32af98902e3c55fcf7bccadd42cf8a ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptsans_ts1.enc" 1747076911 2906 b1860f7ce9685133efbb4942788d2962 ""
@@ -158,14 +158,14 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1747078268 5569470 f263a82cf6bb394f5bc87b63f38b78df ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747078430 3567528 16558e2c0c4b28fea81dee716e177901 ""
   "c:/texlive/2025/texmf.cnf" 1747078253 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1749415420 13857 5b019b4dff2830a5136a350d6713cfcd "pdflatex"
+  "main.aux" 1749606220 14221 5084da53676acb5ced7a75f37893b91c "pdflatex"
   "main.bbl" 1749414831 75612 ffe5bd6a4bb20a03b92d9c89f2f7b132 "biber main"
-  "main.lof" 1749415420 192 16c43af8b87c234cdc69663cdd1f01ac "pdflatex"
-  "main.lot" 1749415420 563 1781303cbb489b633eee9ba4dbd50e9f "pdflatex"
-  "main.out" 1749415420 4674 78538e2c86fb73ef205bfe8b28da8100 "pdflatex"
-  "main.run.xml" 1749415420 2405 cff807d55f4cd2189edf3a528c771463 "pdflatex"
-  "main.tex" 1749415418 48845 47dbbc9b0eb4f116d0c186d6da1b5d66 ""
-  "main.toc" 1749415420 2584 d842267b3ba00270f8f5fb84d4258161 "pdflatex"
+  "main.lof" 1749606220 192 ff9f13ad4e7223e9ab1bdd35e1ae2ceb "pdflatex"
+  "main.lot" 1749606220 563 4e5b9ce16afc988b27bccfb3ffe8d745 "pdflatex"
+  "main.out" 1749606220 5044 121863b0318aa5b22ed2c4d22be4ca05 "pdflatex"
+  "main.run.xml" 1749606220 2405 cff807d55f4cd2189edf3a528c771463 "pdflatex"
+  "main.tex" 1749606218 52001 fadc55bb1c296af39eb82799aafe54fa ""
+  "main.toc" 1749606220 2825 3581d5ce1574d24bc615e42bd5d623f1 "pdflatex"
   "siegel.pdf" 1746319809 1019282 bb97a4a36068cfb4723485c3224a81fc ""
   (generated)
   "main.aux"

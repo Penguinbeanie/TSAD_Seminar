@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{List of Figures}{II}{Doc-Start}%
-\contentsline {section}{List of Tables}{II}{Doc-Start}%
+\contentsline {section}{List of Figures}{III}{Doc-Start}%
+\contentsline {section}{List of Tables}{III}{Doc-Start}%
 \contentsline {section}{\numberline {1}Literature Review}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Time Series Data and Anomaly Detection Definition}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Relevant Fields}{2}{subsection.1.2}%
@@ -20,14 +20,17 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Univariate Results}{10}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{11}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Benchmarking Conclusion}{11}{subsubsection.3.2.3}%
-\contentsline {section}{\numberline {4}Dataset Creation}{13}{section.4}%
+\contentsline {section}{\numberline {4}Dataset Setup}{13}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Dataset Description}{13}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Conclusion}{15}{section.5}%
-\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{15}{section.6}%
-\contentsline {section}{\numberline {7}Abbildungen}{15}{section.7}%
-\contentsline {section}{\numberline {8}Tabellen}{15}{section.8}%
+\contentsline {subsection}{\numberline {4.2}Logging}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Hardware Setup}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Statistical Overview}{16}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Conclusion}{16}{section.5}%
+\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{16}{section.6}%
+\contentsline {section}{\numberline {7}Abbildungen}{16}{section.7}%
+\contentsline {section}{\numberline {8}Tabellen}{16}{section.8}%
 \contentsline {section}{\numberline {9}Formeln}{16}{section.9}%
-\contentsline {section}{Bibliography}{18}{equation.1}%
-\contentsline {section}{\numberline {A}Anhang A}{19}{appendix.A}%
+\contentsline {section}{Bibliography}{19}{equation.1}%
+\contentsline {section}{\numberline {A}Anhang A}{20}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 

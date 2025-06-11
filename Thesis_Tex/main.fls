@@ -295,13 +295,13 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT main.toc
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/paratype/ptsans/PTSans-Bold-tlf-t1.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/paratype/ptsans/PTSans-Bold-tlf-t1--base.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/paratype/ptsans/PTSans-Bold-tlf-t1.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/paratype/ptsans/PTSans-Bold-tlf-t1--base.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/paratype/ptsans/PTSans-Regular-tlf-t1.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/paratype/ptsans/PTSans-Regular-tlf-t1--base.tfm
+OUTPUT main.toc
 INPUT ./main.lof
 INPUT ./main.lof
 INPUT main.lof
