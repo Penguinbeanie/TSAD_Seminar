@@ -18,19 +18,20 @@
 \contentsline {subsection}{\numberline {3.1}Setup and Implementation}{9}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Results}{10}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Univariate Results}{10}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{11}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Benchmarking Conclusion}{11}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{10}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Benchmarking Conclusion}{13}{subsubsection.3.2.3}%
 \contentsline {section}{\numberline {4}Dataset Setup}{13}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Dataset Description}{13}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Logging}{15}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Hardware Setup}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Hardware Setup}{16}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Statistical Overview}{16}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Conclusion}{16}{section.5}%
-\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{16}{section.6}%
-\contentsline {section}{\numberline {7}Abbildungen}{16}{section.7}%
-\contentsline {section}{\numberline {8}Tabellen}{16}{section.8}%
-\contentsline {section}{\numberline {9}Formeln}{17}{section.9}%
-\contentsline {section}{Bibliography}{19}{equation.1}%
-\contentsline {section}{\numberline {A}Anhang A}{20}{appendix.A}%
+\contentsline {subsection}{\numberline {4.5}Benchmarking}{17}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Conclusion}{17}{section.5}%
+\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{17}{section.6}%
+\contentsline {section}{\numberline {7}Abbildungen}{17}{section.7}%
+\contentsline {section}{\numberline {8}Tabellen}{17}{section.8}%
+\contentsline {section}{\numberline {9}Formeln}{18}{section.9}%
+\contentsline {section}{Bibliography}{20}{equation.1}%
+\contentsline {section}{\numberline {A}Anhang A}{21}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 

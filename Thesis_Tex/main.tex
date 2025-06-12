@@ -307,8 +307,8 @@ Despite extensive efforts, I was not able to get all provided anomaly detection 
 \end{itemize}
 
 \subsection{Results}
+Since \cite{liu2024elephant} only publish the full VUS-PR results for each individual dataset and model, the comparison will focus on this metric.
 \subsubsection{Univariate Results}
-Since \cite{liu2024elephant} only publish the full VUS-PR results for each individual dataset and model, the comparison will focus on this metric. Table 2 provides information about the differences found between both benchmark evaluations for univariate detection models.
 
 \begin{table}[htbp]
     \centering
@@ -317,6 +317,8 @@ Since \cite{liu2024elephant} only publish the full VUS-PR results for each indiv
         \toprule
         \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File\\ID}} & \textbf{\makecell[r]{Num. of\\Anom.}} & \textbf{\makecell[r]{Datasets\\>5\% Diff.}} & \textbf{\makecell[r]{Datasets\\>25\% Diff.}} & \textbf{\makecell[r]{Datasets\\>50\% Diff.}} \\
         \midrule
+        \rowcolor{lightgray} Sub-IForest & 0.231 & 0.966 & 405 & 1 & 210 & 115 & 67 \\
+        \rowcolor{lightgray} Sub-LOF & 0.177 & 0.960 & 603 & 1 & 208 & 89 & 38 \\
         \rowcolor{lightgray} IForest & 0.163 & 0.999 & 552 & 1 & 195 & 81 & 24 \\
         \rowcolor{myLightBlue} LSTMAD & 0.108 & 0.951 & 849 & 2 & 118 & 36 & 12 \\
         \rowcolor{myLightBlue} USAD & 0.106 & 0.982 & 849 & 2 & 111 & 44 & 27 \\
@@ -327,10 +329,16 @@ Since \cite{liu2024elephant} only publish the full VUS-PR results for each indiv
         \rowcolor{lightgray} KShapeAD & 0.048 & 0.999 & 780 & 1 & 71 & 14 & 8 \\
         \rowcolor{lightgray} SAND & 0.047 & 0.994 & 680 & 1 & 70 & 17 & 7 \\
         \rowcolor{myLightBlue} FITS & 0.038 & 0.450 & 579 & 1 & 86 & 6 & 0 \\
-        \rowcolor{myLightGreen} MOMENT\_ZS & 0.007 & 0.413 & 579 & 1 & 9 & 1 & 0 \\
+        \rowcolor{lightgray} KMeansAD & 0.012 & 0.268 & 419 & 1 & 21 & 1 & 0 \\
+        \rowcolor{lightgray} Sub-MCD & 0.009 & 0.316 & 788 & 1 & 20 & 1 & 0 \\
+        \rowcolor{myLightGreen} MOMENT-ZS & 0.007 & 0.413 & 579 & 1 & 9 & 1 & 0 \\
         \rowcolor{myLightBlue} AutoEncoder & 0.006 & 0.152 & 658 & 1 & 8 & 0 & 0 \\
         \rowcolor{lightgray} LOF & 0.002 & 0.075 & 811 & 3 & 2 & 0 & 0 \\
+        \rowcolor{lightgray} Sub-KNN & 0.002 & 0.216 & 538 & 3 & 3 & 0 & 0 \\
         \rowcolor{lightgray} POLY & 0.001 & 0.288 & 534 & 1 & 2 & 1 & 0 \\
+        \rowcolor{lightgray} Sub-PCA & 0.001 & 0.071 & 534 & 1 & 1 & 0 & 0 \\
+        \rowcolor{lightgray} Sub-HBOS & 0.001 & 0.094 & 531 & 1 & 1 & 0 & 0 \\
+        \rowcolor{lightgray} Sub-OCSVM & 0.001 & 0.082 & 534 & 1 & 2 & 0 & 0 \\
         \rowcolor{lightgray} MatrixProfile & 5.96e-05 & 0.015 & 017 & 1 & 0 & 0 & 0 \\
         \rowcolor{lightgray} SR & 8.24e-06 & 0.002 & 534 & 1 & 0 & 0 & 0 \\
         \bottomrule
@@ -347,7 +355,9 @@ Since \cite{liu2024elephant} only publish the full VUS-PR results for each indiv
     \caption{\label{tab:Table 2} Summary of absolute differences in VUS-PR for univariate datasets.}
 \end{table}
 
-For most models, the average difference stayed firmly below 0.100, with IForest, LSTMAD, and USAD being the main exceptions. Beyond these averages, roughly half of all models had at least one dataset where the absolute score differed by more than 0.950. Furthermore, over a third of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differed by at least 50\%. These high discrepancies typically occurred for datasets with a low anomaly count, making even small variations in detected anomalies strongly noticeable in the scores. When comparing model types, statistical methods generally showed higher consistency between runs than Neural Network-based methods. This is somewhat to be expected, as the inherent complexity, numerous parameters, and sensitivity to initialization or even minor data variations in Neural Networks can lead to greater variability in outcomes, even when attempting to fix seeds. The notable exception here was IForest; its inconsistency was somewhat surprising, especially given it was configured with 200 n\_estimators and a consistent seed, factors which should generally promote stability. Interestingly, Moment (zero-shot) demonstrated remarkably high consistency, outperforming even 3 statistical methods and significantly surpassing most other neural network models. This high consistency is largely attributable to its fundamental zero-shot nature: as a pre-trained model, it involves little re-training randomness in each run, relying instead on fixed, deterministic weights for its inferences. Multiple datasets appeared twice as an entry for the highest absolute difference. These are: \#849, \#865, \#579, \#534.
+Table 2 provides information about the differences found between both benchmark evalu-
+ations for univariate detection models. \par
+For most models, the average difference stayed firmly below 0.100, with (Sub-)IForest, Sub-LOF, LSTMAD, and USAD being the main exceptions. Beyond these averages, almost half of all models had at least one dataset where the absolute score differed by more than 0.950. Furthermore, a third of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differed by at least 50\%. These high discrepancies typically occurred for datasets with a low anomaly count, making even small variations in detected anomalies strongly noticeable in the scores. When comparing model types, statistical methods generally showed higher consistency between runs than Neural Network-based methods. This is somewhat to be expected, as the inherent complexity, numerous parameters, and sensitivity to initialization or even minor data variations in Neural Networks can lead to greater variability in outcomes, even when attempting to fix seeds. The notable exceptions here were (Sub-)IForest and Sub-LOF. There inconsistency were somewhat surprising, especially given that (Sub-)IForrest were configured with (150) 200 n\_estimators and a consistent seed, factors which should generally promote stability. Interestingly, Moment (zero-shot) demonstrated remarkably high consistency, outperforming even 3 statistical methods and significantly surpassing most other neural network models. This high consistency is largely attributable to its fundamental zero-shot nature: as a pre-trained model, it involves little re-training randomness in each run, relying instead on fixed, deterministic weights for its inferences. The dataset \#534 appeared 4 times. Multiple datasets appeared twice as an entry for the highest absolute difference. These are: \#849, \#865, \#603, \#579.
 
 \subsubsection{Multivariate Results}
 
@@ -369,7 +379,7 @@ The results for multivariate detections models are in many ways similar to those
         \rowcolor{myLightBlue} CNN & 0.095 & 0.922 & 187 & 6 & 70 & 15 & 12 \\
         \rowcolor{myLightBlue} LSTMAD & 0.086 & 0.952 & 175 & 4 & 57 & 10 & 6 \\
         \rowcolor{myLightBlue} FITS & 0.065 & 0.479 & 007 & 1 & 64 & 11 & 0 \\
-        \rowcolor{myLightBlue} AnomalyTransformer & 0.036 & 0.614 & 175 & 4 & 33 & 5 & 1 \\
+        \rowcolor{myLightBlue} AnomalyTrans & 0.036 & 0.614 & 175 & 4 & 33 & 5 & 1 \\
         \rowcolor{lightgray} CBLOF & 0.030 & 0.870 & 194 & 5 & 8 & 7 & 5 \\
         \rowcolor{lightgray} KMeansAD & 0.019 & 0.566 & 046 & 1 & 19 & 1 & 1 \\
         \rowcolor{lightgray} RobustPCA & 0.015 & 0.396 & 014 & 1 & 17 & 1 & 0 \\
@@ -461,7 +471,40 @@ The simulations are ran on the previously described system that was used for the
 
 \subsection{Statistical Overview}
 
-For the calculations of the difficulty measures, I used Relative Contrast (RC), as described by \cite[pp.~1704]{paparrizos2022tsb}. Since the authors did not specify their prefered Shape Based Distance (SBD) metric, I applied the commonly used Dynamic Time Warping (DTW), using the cdist\_dtw implementation provided by the tslearn library \parencites{DTW}.
+
+\begin{table}[htbp]
+    \centering
+    \label{tab:vus_pr_diff_summary_uni}
+    \begin{tabular}{lrrrrrrr}
+        \toprule
+        \textbf{} & \textbf{\makecell[r]{Dataset 1}} & \textbf{\makecell[r]{Dataset 2}} & \textbf{\makecell[r]{Dataset 3}} & \textbf{\makecell[r]{Dataset 4}}\\
+        \midrule
+        Anomaly Type & Large Matrix & Added Sleep & Medium Matrix & Combined \\
+        Length & 5308 & 5320 & 5319 & 9452 \\
+        Total Anomaly Sequences & 8 & 11 & 11 & 21 \\
+        Total Anomalous Points & 91 & 110 & 40 & 194 \\
+        Average Anomaly Length & 11.38 & 10.0 & 3.64 & 9.24 \\
+        Longest Anomaly & 13 & 10 & 4 & 16 \\
+        Shortest Anomaly & 10 & 10 & 3 & 4 \\
+        Anomaly Ratio (Point based) & 0.0171 & 0.0207 & 0.0075 & 0.0205 \\
+        Anomaly Ratio (Sequence based) & 0.0015 & 0.0021 & 0.0021 & 0.0022 \\
+        RC Score & 473.079 & 505.050 & 395.150 & 597.475 \\
+     
+        
+        \bottomrule
+    \end{tabular}
+    \par
+    \vspace{1em}
+    \textit{Anomaly Ratio (Point based): Total Anomalous Points divided by Length} \\
+    \textit{Anomaly Ratio (Sequence based): Total Anomalous Sequences divided by Length}
+    \noindent
+    \caption{\label{tab:Table 4} Summary of absolute differences in VUS-PR for univariate datasets.}
+\end{table}
+
+Most datasets used for the TSB-AD benchmark are between 1000 and 50000 datapoints in length. Based on this, I decided to keep Datasets 1-3 at around 5000 datapoints. This ensures a sufficiently large sample size, while keeping it small enough for me to manually go through the entire set and check for potential problems or mislabeled datpoints. Since Dataset 4 contains 3 seperate anomaly types and I intended to maintain a consistent anomaly ratio between all sets, I increased its size. Otherwise, when maintaining the same anomaly ratio, it would be possible for some anomaly type to not occure at all. \cite[pp.~8]{SchmidlEtAl2022Anomaly} define an acceptable anomaly ratio to be one below 10\%, as anything above it would be better considered to be a classification problem. The median anomaly ratio in the TSB-AD dataset is 4.85\% and \cite[p.~4]{wu2021current} consider the adequate number of anomalies to be exactly 1. Given his range of opinions, I settled on a range of between 0.7\% and 2.2\% for my datasets. The differences between datasets can be explained by the average length of an anomalous sequence depending on anomaly type. The actual anomaly ratio based on anomalous sequences to total sequences is kept steady between datasets. Maintaining the sequence ratio ensures each dataset presents a consistent number of anomalous events to detect, which is more important for a fair comparison than the point ratio that can be skewed by the varying lengths of those events. \par
+For the calculations of the difficulty measures, I used Relative Contrast (RC), as described by \cite[pp.~1704]{paparrizos2022tsb}. Since the authors did not specify their preferred Shape Based Distance (SBD) metric, I applied the commonly used Dynamic Time Warping (DTW), using the cdist\_dtw implementation provided by the tslearn library \parencites{DTW}. \cite[pp.~1704]{paparrizos2022tsb} do not clearly state how to decide on a sliding window for the comparison of individual sequences and only state to "split the time series by its period" \parencite[p.~1704]{paparrizos2022tsb}. I interpret the term "period" to mean a repeating pattern, as is common in time series analysis. With all 4 of my created datasets, a repeating period can be defined as a sequence of matrix multiplications followed by an idle state, which tends to be between 8 and 12 datapoints long. With that in mind, I selected the value 10 for my sliding window. Since I neither know the exact RC implementation of \cite{paparrizos2022tsb}, nor their used SBD metric, it is impossible to compare the here produced values with those provided in the TSB-UAD paper. Therefore, a comparison can only be made between my own datasets. A low RC score should indicate that its difficult to effectively cluster the points in a dataset, making anomaly detection theoratically more challenging. Based on this assumption, Dataset 4 should provide the easiest to detect anomalies. As will be discussed in the next section, this does not hold up.
+
+\subsection{Benchmarking}
 
 \section{Conclusion}
 

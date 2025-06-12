@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  11 JUN 2025 06:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  13 JUN 2025 00:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -583,9 +583,13 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+PTSans-TLF on input line 105.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTSans-TLF.fd
 File: T1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for T1/PTSans-TLF.
-) (./main.aux (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex)
+) (./main.aux
+
+LaTeX Warning: Label `tab:vus_pr_diff_summary_uni' multiply defined.
+
+(c:/texlive/2025/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex)
 Package babel Info: Importing data for ngerman
-(babel)             from babel-de.ini. Reported on input line 245.
+(babel)             from babel-de.ini. Reported on input line 264.
 )
 \openout1 = `main.aux'.
 
@@ -662,7 +666,7 @@ Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 105.
 Package biblatex Info: Reference segment=0 on input line 105.
-<siegel.pdf, id=135, 593.13643pt x 597.83954pt>
+<siegel.pdf, id=139, 593.13643pt x 597.83954pt>
 File: siegel.pdf Graphic file (type pdf)
 <use siegel.pdf>
 Package pdftex.def Info: siegel.pdf  used on input line 115.
@@ -745,18 +749,18 @@ Overfull \hbox (5.77362pt too wide) in paragraph at lines 265--265
 [8]
 
 [9]
-Overfull \hbox (21.57759pt too wide) in paragraph at lines 316--338
+Overfull \hbox (21.57759pt too wide) in paragraph at lines 316--346
+ [][] 
+ []
+
+
+Overfull \hbox (21.57759pt too wide) in paragraph at lines 370--396
  [][] 
  []
 
 
 
 [10]
-Overfull \hbox (55.02159pt too wide) in paragraph at lines 360--386
- [][] 
- []
-
-
 
 [11]
 
@@ -767,46 +771,57 @@ Overfull \hbox (55.02159pt too wide) in paragraph at lines 360--386
 [14]
 
 [15]
-File: siegel.pdf Graphic file (type pdf)
-<use siegel.pdf>
-Package pdftex.def Info: siegel.pdf  used on input line 480.
-(pdftex.def)             Requested size: 138.21777pt x 139.31554pt.
+Overfull \hbox (24.21031pt too wide) in paragraph at lines 478--496
+ [][] 
+ []
+
 
 
 [16]
+File: siegel.pdf Graphic file (type pdf)
+<use siegel.pdf>
+Package pdftex.def Info: siegel.pdf  used on input line 523.
+(pdftex.def)             Requested size: 138.21777pt x 139.31554pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 
 [17]
-LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 521.
+
+[18]
+LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 564.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTMono-TLF.fd
 File: T1PTMono-TLF.fd 2014/02/02 Font definitions for T1/PTMono-TLF.
 )
-Overfull \hbox (48.00337pt too wide) in paragraph at lines 522--522
+Overfull \hbox (48.00337pt too wide) in paragraph at lines 565--565
 \T1/PTMono-TLF/m/n/12 de / EN / Themen / Verbraucherinnen -[] und -[] Verbraucher / Cyber -[] Sicherheitslage /
  []
 
 
 
-[18
+[19
 
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc}]
-Overfull \hbox (11.83287pt too wide) in paragraph at lines 522--522
+Overfull \hbox (11.83287pt too wide) in paragraph at lines 565--565
 [][]\T1/PTSans-TLF/m/it/12 Yahoo \T1/PTSans-TLF/m/n/12 (2015). []$\T1/PTMono-TLF/m/n/12 https : / / webscope . sandbox . yahoo . com / catalog . php ? datatype =
  []
 
 
-Overfull \hbox (7.71909pt too wide) in paragraph at lines 522--522
+Overfull \hbox (7.71909pt too wide) in paragraph at lines 565--565
 \T1/PTMono-TLF/m/n/12 201818903002$[]\T1/PTSans-TLF/m/n/12 . URL: []$\T1/PTMono-TLF/m/n/12 https : / / doi . org / 10 . 1051 / matecconf / 201818903002$[]\T1/PTSans-TLF/m/n/12 . 
  []
 
 
 
-[19] (./Erklaerung.tex
+[20] (./Erklaerung.tex
 
-[20
+[21
 
 ])
 
-[21] (./main.aux)
+[22] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
@@ -815,8 +830,11 @@ L3 programming layer <2025-04-14>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 121863B0318AA5B22ED2C4D22BE4CA05;5044.
+(rerunfilecheck)             Checksum: 9013EDCE3245ADD9BD1583F9AD9F30D4;5162.
 
 Package biblatex Warning: Please rerun LaTeX.
 
@@ -825,18 +843,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22278 strings out of 469608
- 391814 string characters out of 5474779
- 1276470 words of memory out of 5000000
- 48717 multiletter control sequences out of 15000+600000
+ 22288 strings out of 469608
+ 391934 string characters out of 5474779
+ 1297631 words of memory out of 5000000
+ 48724 multiletter control sequences out of 15000+600000
  703385 words of font info for 81 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  75i,18n,79p,4052b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptmono/PTM55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS56F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS75F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on main.pdf (26 pages, 1175430 bytes).
+Output written on main.pdf (27 pages, 1179764 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
- 448 compressed objects within 5 object streams
- 85 named destinations out of 1000 (max. 500000)
- 270 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 463 compressed objects within 5 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 278 words of extra memory for PDF output out of 10000 (max. 10000000)
 

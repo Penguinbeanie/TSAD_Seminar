@@ -8,7 +8,7 @@ DATA_DIR = os.path.dirname(os.path.abspath(__file__))
 # File paths
 csv1_path = os.path.join(DATA_DIR, 'model_vus_pr_summary_uni.csv')
 csv2_path = os.path.join(DATA_DIR, 'author_uni_mergedTable_VUS-PR.csv')
-output_csv_path = os.path.join(DATA_DIR, 'COPY_vus_pr_comparison_summary_uni.csv')
+output_csv_path = os.path.join(DATA_DIR, '2_COPY_vus_pr_comparison_summary_uni.csv')
 
 try:
     # --- Load Data ---

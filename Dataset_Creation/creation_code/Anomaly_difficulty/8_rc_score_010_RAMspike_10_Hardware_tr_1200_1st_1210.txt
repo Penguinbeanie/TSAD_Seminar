@@ -1,0 +1,6 @@
+Analysis completed at: 2025-06-12 22:10:53
+Total execution time: 977.03 seconds
+Relative Contrast Score: 510.1908717416896
+Window Size Used: 8
+Input File: C:\Users\Kai\Documents\Time_Series_Anomaly_Detection\TSAD_Seminar\Dataset_Creation\prelim_datasets\010_RAMspike_10_Hardware_tr_1200_1st_1210.csv
+Number of subsequences analyzed: 5301
