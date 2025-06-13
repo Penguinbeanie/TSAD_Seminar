@@ -557,7 +557,7 @@ Other than the results for dataset 1, these scores are unexpectedly bad. While a
     Return anomaly labels
 \end{lstlisting}
 \par
-When appling this simple algorithm returns 110 True Positives, 0 False Positives, 0 False Negatives, and therfore a precision and sensitivity of 1 are achieved.\par
+When appling this simple algorithm, it returns 110 True Positives, 0 False Positives, 0 False Negatives, and therfore a precision and sensitivity of 1 are achieved.\par
 \textit{Dataset 3 Pseudo Code:} \par
 \begin{lstlisting}
     For i from 0 to len(data)-1:
@@ -571,7 +571,7 @@ When appling this simple algorithm returns 110 True Positives, 0 False Positives
 Similarily here, the algorithm returns 40 True Positives, 0 False Positives, 0 False Negatives, and therfore a precision and sensitivity of 1. \par
 This is obviously not a perfect test, as it requires me to have prior knowledge about the nature of the anomaly. Despite that, if an algorithm of such simplicity can detect anomalies with complete precision and sensitivity, I will argue, that any other sufficiently advanced detection method should be able to at least reach a VUS-PR score of above 0.1 to be deemed functional.\par
 The anomaly ratios (<3\%) are firmly within the established consensus for what an acceptable ratio is, the datapoints are accurately labeled with the help of an automated logger and a manual inspection, the anomalies represent real changes in workload, and the anomalies can be easily detected using a few lines of code. Based on these aspects I am willing to state that the results do not represent poor quality of the datasets but instead a blindspot in the current set of detection models inlcuded by the TSB-AD benchmark. \par
-Since dataset 4 is made up 2/3rds of the anomalies established in datasets 2 and 3, it is only natural that the average scores are also rather unimpressive and lay somewhere between those of dataset 1 and dataset 4. The inclusion of multiple anomaly types seems to have slightly degraded peak VUS-ROC performace compared to all other datasets. This is most likely the result of highly specialized modesl that are good at detecting certain anomalies (eg. peak values) struggle more with other types of anomalies. An nerual network-based model performing best in both metrics is another notable occurance.
+Since dataset 4 is made up 2/3rds of the anomalies established in datasets 2 and 3, it is only natural that the average scores are also rather unimpressive and lay somewhere between those of dataset 1 and dataset 4. The inclusion of multiple anomaly types seems to have slightly degraded peak VUS-ROC performace compared to all other datasets. This is most likely the result of highly specialized models, that are good at detecting certain anomalies (eg. peak values), struggling more with other types of anomalies. A neurual network-based model performing best in both metrics is another notable occurance.
 
 \section{Conclusion}
 
