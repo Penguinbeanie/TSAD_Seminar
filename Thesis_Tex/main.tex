@@ -474,7 +474,7 @@ The simulations are ran on the previously described system that was used for the
 
 \begin{table}[htbp]
     \centering
-    \label{tab:vus_pr_diff_summary_uni}
+    \label{tab:dataset1_4_stat_overview}
     \begin{tabular}{lrrrrrrr}
         \toprule
         \textbf{} & \textbf{\makecell[r]{Dataset 1}} & \textbf{\makecell[r]{Dataset 2}} & \textbf{\makecell[r]{Dataset 3}} & \textbf{\makecell[r]{Dataset 4}}\\
@@ -489,8 +489,6 @@ The simulations are ran on the previously described system that was used for the
         Anomaly Ratio (Point based) & 0.0171 & 0.0207 & 0.0075 & 0.0205 \\
         Anomaly Ratio (Sequence based) & 0.0015 & 0.0021 & 0.0021 & 0.0022 \\
         RC Score & 473.079 & 505.050 & 395.150 & 597.475 \\
-     
-        
         \bottomrule
     \end{tabular}
     \par
@@ -506,52 +504,46 @@ For the calculations of the difficulty measures, I used Relative Contrast (RC), 
 
 \subsection{Benchmarking}
 
-\section{Conclusion}
-
-\section{Zitieren und Referenzieren}
-
-
-
-\section{Abbildungen}
-
-Abbildungen erfordern das package \textit{graphicx}. 
-Idealerweise verwendet man Vektorgrafiken oder hochaufgelöste Bitmaps. 
-Eine gute Variante ist das Verwenden von PDFs.
-
-\begin{figure}[h]
+\begin{table}[htbp]
     \centering
-    \includegraphics[width=0.3\textwidth]{siegel.pdf}
-    \caption{Siegel der Universität}
-    \label{fig:my_label}
-\end{figure}
-
-
-\section{Tabellen}
-
-Die Tabular-Umgebung gibt die Anzahl Spalten an, deren Orientierung, Breite und evtl. Zwischenlinien. 
-
-
-\begin{table}[ht]
-    \centering
-    \caption{Meine Tabelle}
-        \begin{tabular}{ cccc } 
+    % Define the number of columns: 1 for labels (l) and 4 for data (r)
+    \begin{tabular}{lrrrr}
         \toprule
-        col1 & col2 & col3 \\
+        \textbf{} & \textbf{\makecell[r]{Dataset 1}} & \textbf{\makecell[r]{Dataset 2}} & \textbf{\makecell[r]{Dataset 3}} & \textbf{\makecell[r]{Dataset 4}}\\
         \midrule
-        \multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
-        & cell5 & cell6 \\ 
-        & cell8 & cell9 \\ 
+        % First row with anomaly types, but no main label
+        Anomaly Type & Large Matrix & Added Sleep & Medium Matrix & Combined \\
+        \midrule % A line to separate the main info from the sections
+        
+        % VUS-PR Section
+        \multicolumn{5}{l}{\textbf{VUS-PR}} \\
+        \hspace{1em}Best Model & Sub-PCA & KShapeAD & LOF & OmniAnomaly \\
+        \hspace{1em}Best Score & 0.989 & 0.562 & 0.062 & 0.394 \\
+        \hspace{1em}Average Score & 0.376 & 0.096 & 0.018 & 0.084 \\
+        \hspace{1em}Average Score (Stat. Mod.) & 0.253 & 0.144 & 0.024 & 0.062 \\
+        \hspace{1em}Average Score (NN) & 0.472 & 0.059 & 0.014 & 0.108 \\
+        
+        \cmidrule(r){1-5} % A partial rule to separate the two sections
+        
+        % VUS-ROC Section (with placeholder data)
+        \multicolumn{5}{l}{\textbf{VUS-ROC}} \\
+        \hspace{1em}Best Model & Sub-PCA & SAND & LOF & OmniAnomaly \\
+        \hspace{1em}Best Score & 0.999 & 0.949 & 0.926 & 0.878 \\
+        \hspace{1em}Average Score & 0.832 & 0.586 & 0.554 & 0.615 \\
+        \hspace{1em}Average Score (Stat. Mod.) & 0.887 & 0.572 & 0.634 & 0.613 \\
+        \hspace{1em}Average Score (NN) & 0.767 & 0.604 & 0.506 & 0.659 \\
+        
         \bottomrule
     \end{tabular}
-    \label{tab:countries}
+    \caption{VUS-PR and VUS-ROC: Summary of benchmarking results for datasets 1-4.}
+    \label{tab:VUS-PR-ROC_benchmarking_overview}
 \end{table}
 
-\section{Formeln}
 
-\begin{equation}
-    \sum_{i=1}^N x_i
-    \label{eq:1}
-\end{equation}
+\section{Conclusion}
+
+
+
 
 
 

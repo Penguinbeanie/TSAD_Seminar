@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber main"] 1749758883.93026 "main.bcf" "main.bbl" "main" 1749767872.9291 0
+["biber main"] 1749773296.63883 "main.bcf" "main.bbl" "main" 1749774714.75201 0
   "literatur.bib" 1749756768 16242 9efbe441abd687fc1d712bf45e9cd965 ""
-  "main.bcf" 1749767872 113072 568a937b8a022ad51adb60c739a6b94c "pdflatex"
+  "main.bcf" 1749774714 113072 568a937b8a022ad51adb60c739a6b94c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749767871.33049 "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" "main.pdf" "main" 1749767872.92964 0
+["pdflatex"] 1749774713.15999 "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" "main.pdf" "main" 1749774714.75255 0
   "Erklaerung.tex" 1746319809 589 3a777ef59b3432279df3da8f2011a68a ""
-  "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" 1749767870 57095 255ace5734d6e4be852110898ca757fb ""
+  "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" 1749774711 57834 3aa9029dc54631094098ece6de42564c ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc" 1747076911 2566 85d32bcd815d608c52dde2d0410884fa ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptsans_t1.enc" 1747076911 2581 aa32af98902e3c55fcf7bccadd42cf8a ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptsans_ts1.enc" 1747076911 2906 b1860f7ce9685133efbb4942788d2962 ""
@@ -44,10 +44,6 @@
   "c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS55F.pfb" 1747076911 113414 a7e28fdd5a2271aa4abeb358ce322ec2 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS56F.pfb" 1747076911 116443 4bbc6601578fd199dcdb9cbe84759892 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS75F.pfb" 1747076911 118271 99bc51fb5f08a964f0ed0deccb088d4a ""
-  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1747074622 30251 6afa5cb1d0204815a708a080681d4674 ""
-  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1747074622 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
-  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1747074622 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
-  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1747074622 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "c:/texlive/2025/texmf-dist/fonts/vf/paratype/ptmono/PTMono-Regular-tlf-t1.vf" 1747076911 1728 a416336b1e3d48f444136ad84915f3da ""
   "c:/texlive/2025/texmf-dist/fonts/vf/paratype/ptsans/PTSans-Bold-tlf-t1.vf" 1747076911 1728 d376407edfd7c6c3e1f276a4a04cd6e7 ""
   "c:/texlive/2025/texmf-dist/fonts/vf/paratype/ptsans/PTSans-Italic-tlf-t1.vf" 1747076911 1728 36b2acc2be130335ecf413b50cb121ab ""
@@ -158,14 +154,14 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1747078268 5569470 f263a82cf6bb394f5bc87b63f38b78df ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747078430 3567528 16558e2c0c4b28fea81dee716e177901 ""
   "c:/texlive/2025/texmf.cnf" 1747078253 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1749767872 15539 8c486ec0120923cd74cdda0ff09dfccd "pdflatex"
-  "main.bbl" 1749758885 79451 228e29037f5d473d27ba5caff4ead310 "biber main"
-  "main.lof" 1749767872 192 5caa1196ad7c0feaaee3a0b7b6c8a118 "pdflatex"
-  "main.lot" 1749767872 706 87f1074753e02caf96e9e23ba2e19d72 "pdflatex"
-  "main.out" 1749767872 5162 9013edce3245add9bd1583f9ad9f30d4 "pdflatex"
-  "main.run.xml" 1749767872 2405 cff807d55f4cd2189edf3a528c771463 "pdflatex"
-  "main.tex" 1749767870 57095 255ace5734d6e4be852110898ca757fb ""
-  "main.toc" 1749767872 2904 d7ec21379d6f05b4edc0820b9992c2da "pdflatex"
+  "main.aux" 1749774714 14959 1755d1b4e058957c2c2792d21910c950 "pdflatex"
+  "main.bbl" 1749773301 79451 228e29037f5d473d27ba5caff4ead310 "biber main"
+  "main.lof" 1749774714 90 1f04a37f38c539003c221a24eccd95ae "pdflatex"
+  "main.lot" 1749774714 762 098aa989c64899bfa2c684348ece731a "pdflatex"
+  "main.out" 1749774714 4719 343acebd4e7ace8f907e337bdca597db "pdflatex"
+  "main.run.xml" 1749774714 2405 cff807d55f4cd2189edf3a528c771463 "pdflatex"
+  "main.tex" 1749774711 57834 3aa9029dc54631094098ece6de42564c ""
+  "main.toc" 1749774714 2621 4d3f06c47f770a31b09bf1b4b2786a97 "pdflatex"
   "siegel.pdf" 1746319809 1019282 bb97a4a36068cfb4723485c3224a81fc ""
   (generated)
   "main.aux"

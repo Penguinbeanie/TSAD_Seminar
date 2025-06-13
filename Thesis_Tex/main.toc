@@ -1,6 +1,6 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{List of Figures}{III}{Doc-Start}%
-\contentsline {section}{List of Tables}{III}{Doc-Start}%
+\contentsline {section}{List of Figures}{II}{Doc-Start}%
+\contentsline {section}{List of Tables}{II}{Doc-Start}%
 \contentsline {section}{\numberline {1}Literature Review}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Time Series Data and Anomaly Detection Definition}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Relevant Fields}{2}{subsection.1.2}%
@@ -27,11 +27,7 @@
 \contentsline {subsection}{\numberline {4.4}Statistical Overview}{16}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Benchmarking}{17}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Conclusion}{17}{section.5}%
-\contentsline {section}{\numberline {6}Zitieren und Referenzieren}{17}{section.6}%
-\contentsline {section}{\numberline {7}Abbildungen}{17}{section.7}%
-\contentsline {section}{\numberline {8}Tabellen}{17}{section.8}%
-\contentsline {section}{\numberline {9}Formeln}{18}{section.9}%
-\contentsline {section}{Bibliography}{20}{equation.1}%
+\contentsline {section}{Bibliography}{20}{section.5}%
 \contentsline {section}{\numberline {A}Anhang A}{21}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
