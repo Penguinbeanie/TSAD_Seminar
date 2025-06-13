@@ -26,8 +26,10 @@
 \contentsline {subsection}{\numberline {4.3}Hardware Setup}{16}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Statistical Overview}{16}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Benchmarking}{17}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Conclusion}{19}{section.5}%
-\contentsline {section}{Bibliography}{21}{section.5}%
-\contentsline {section}{\numberline {A}Anhang A}{22}{appendix.A}%
+\contentsline {section}{\numberline {5}Conclusion}{20}{section.5}%
+\contentsline {section}{\numberline {6}Discussion}{20}{section.6}%
+\contentsline {section}{\numberline {7}Limitations}{20}{section.7}%
+\contentsline {section}{Bibliography}{22}{section.7}%
+\contentsline {section}{\numberline {A}Anhang A}{23}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 

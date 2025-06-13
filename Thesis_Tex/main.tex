@@ -33,6 +33,7 @@
 \usepackage{csquotes}
 \usepackage{booktabs}
 \usepackage{makecell}
+\usepackage{listings}
 \bibliography{literatur}
 
 \setlength{\parindent}{0em} 
@@ -519,9 +520,9 @@ For the calculations of the difficulty measures, I used Relative Contrast (RC), 
         \multicolumn{5}{l}{\textbf{VUS-PR}} \\
         \hspace{1em}Best Model & Sub-PCA & KShapeAD & LOF & OmniAnomaly \\
         \hspace{1em}Best Score & 0.989 & 0.562 & 0.062 & 0.394 \\
-        \hspace{1em}Average Score & 0.376 & 0.096 & 0.018 & 0.084 \\
-        \hspace{1em}Average Score (Stat. Mod.) & 0.253 & 0.144 & 0.024 & 0.062 \\
-        \hspace{1em}Average Score (NN) & 0.472 & 0.059 & 0.014 & 0.108 \\
+        \hspace{1em}Avg. Score & 0.376 & 0.096 & 0.018 & 0.084 \\
+        \hspace{1em}Avg. Score (St. Mod.) & 0.253 & 0.144 & 0.024 & 0.062 \\
+        \hspace{1em}Avg. Score (NN Mod.) & 0.472 & 0.059 & 0.014 & 0.108 \\
         
         \cmidrule(r){1-5} % A partial rule to separate the two sections
         
@@ -529,9 +530,9 @@ For the calculations of the difficulty measures, I used Relative Contrast (RC), 
         \multicolumn{5}{l}{\textbf{VUS-ROC}} \\
         \hspace{1em}Best Model & Sub-PCA & SAND & LOF & OmniAnomaly \\
         \hspace{1em}Best Score & 0.999 & 0.949 & 0.926 & 0.878 \\
-        \hspace{1em}Average Score & 0.832 & 0.586 & 0.554 & 0.615 \\
-        \hspace{1em}Average Score (Stat. Mod.) & 0.887 & 0.572 & 0.634 & 0.613 \\
-        \hspace{1em}Average Score (NN) & 0.767 & 0.604 & 0.506 & 0.659 \\
+        \hspace{1em}Avg. Score & 0.832 & 0.586 & 0.554 & 0.615 \\
+        \hspace{1em}Avg. Score (St. Mod.) & 0.887 & 0.572 & 0.634 & 0.613 \\
+        \hspace{1em}Avg. Score (NN Mod.) & 0.767 & 0.604 & 0.506 & 0.659 \\
         
         \bottomrule
     \end{tabular}
@@ -544,8 +545,41 @@ When looking at VUS-PR score averages, most detection models did not reach a sco
 For dataset 2, which introduces anomalies by extending the idle time, the results are more varied. The best VUS-ROC score was a high 0.949 achieved by SAND, indicating a strong ability to detect these anomalies. However, the best VUS-PR score was only 0.562 from KShapeAD, showing that while models can find the anomalies, they struggle with precision. The average VUS-ROC scores were middling, with neural network models (0.604) slightly outperforming statistical ones (0.572). In contrast, the average VUS-PR scores were poor across the board, with statistical models (0.144) performing better than neural network models (0.059). \par
 Dataset 3, featuring the 'Medium Matrix' anomalies, was clearly the most difficult for the benchmarked models. This is especially evident in the VUS-PR scores, which were exceptionally low. The LOF model performed best on both metrics, yet it highlights a significant performance gap: it achieved a strong VUS-ROC score of 0.926 but a dismal VUS-PR score of only 0.062. On average, VUS-ROC scores were moderate, with statistical models (0.634) performing noticably better than neural network models (0.506). This trend was even more pronounced for the VUS-PR scores, where the average for all models was a near-zero 0.018, confirming the difficulty of this dataset. It is also the only dataset where the best VUS-PR and VUS-ROC score where not achieved by the same model. \par
 Dataset 4, which aggregates all anomaly types, was intended to be the most challenging. The neural network-based OmniAnomaly model achieved the best scores for both VUS-PR (0.394) and VUS-ROC (0.878). While the VUS-ROC score demonstrates good overall sensitivity, the sub-0.400 VUS-PR score again points to a significant challenge in maintaining precision across varied anomaly types. The average VUS-ROC scores were the highest outside of dataset 1, with neural network models (0.659) holding a slight edge over statistical models (0.613). \par
-Other than the results for dataset 1, these scores are unexpectedly bad. While an average VUS-ROC score of around 0.500 for datasets 2 and 3 and could potentially be deemed acceptable, when combined with the horrendous VUS-PR scores, it becomes questionable whether most of the models provided any value at all. This applies even more so to dataset 3, where not a single model was able to achieve a useable level of precision. Given that the anomalies were correctly labeled, this begs the obvious question: Were the anomalies simply too difficult to detect? In order to answer this, I have applied a modified process introduced by \cite{wu2021current}, who attempted to detect anomalies with only a single line of code in order to determine whether they are trivial. Since the goal here is not to look for triviality but instead an acceptable level of difficulty, I have attempted to write a simple script, made up of only basic if-statements, which can, with high accuracy and precision, detect all exisisting anomalies.
+Other than the results for dataset 1, these scores are unexpectedly bad. While an average VUS-ROC score of around 0.500 for datasets 2 and 3 and could potentially be deemed acceptable, when combined with the horrendous VUS-PR scores, it becomes questionable whether most of the models provided any value at all. This applies even more so to dataset 3, where not a single model was able to achieve a useable level of precision. Given that the anomalies were correctly labeled, this begs the obvious question: Were the anomalies simply too difficult to detect? In order to answer this, I have applied a modified process introduced by \cite{wu2021current}, who attempted to detect anomalies with only a single line of code in order to determine whether they are trivial. Since the goal here is not to look for triviality but instead an acceptable level of difficulty, I have attempted to write a simple script, made up of only basic if-statements, which can, with high accuracy and precision, detect all exisisting anomalies. \par
+
+\textit{Dataset 2 Pseudo Code:} \par
+\begin{lstlisting}
+    For i from 0 to len(data)-1:
+        If data[i] < 60:
+            Count consecutive values < 60
+            If count > 7:
+                Mark those indices as anomalies
+    Return anomaly labels
+\end{lstlisting}
+\par
+When appling this simple algorithm returns 110 True Positives, 0 False Positives, 0 False Negatives, and therfore a precision and sensitivity of 1 are achieved.\par
+\textit{Dataset 3 Pseudo Code:} \par
+\begin{lstlisting}
+    For i from 0 to len(data)-1:
+    If data[i] in (530, 700):
+        Count consecutive values in (530, 700)
+        If count == 3 or 4:
+            Mark those indices as anomalies
+    Return anomaly labels
+\end{lstlisting}
+\par
+Similarily here, the algorithm returns 40 True Positives, 0 False Positives, 0 False Negatives, and therfore a precision and sensitivity of 1. \par
+This is obviously not a perfect test, as it requires me to have prior knowledge about the nature of the anomaly. Despite that, if an algorithm of such simplicity can detect anomalies with complete precision and sensitivity, I will argue, that any other sufficiently advanced detection method should be able to at least reach a VUS-PR score of above 0.1 to be deemed functional.\par
+The anomaly ratios (<3\%) are firmly within the established consensus for what an acceptable ratio is, the datapoints are accurately labeled with the help of an automated logger and a manual inspection, the anomalies represent real changes in workload, and the anomalies can be easily detected using a few lines of code. Based on these aspects I am willing to state that the results do not represent poor quality of the datasets but instead a blindspot in the current set of detection models inlcuded by the TSB-AD benchmark. \par
+Since dataset 4 is made up 2/3rds of the anomalies established in datasets 2 and 3, it is only natural that the average scores are also rather unimpressive and lay somewhere between those of dataset 1 and dataset 4. The inclusion of multiple anomaly types seems to have slightly degraded peak VUS-ROC performace compared to all other datasets. This is most likely the result of highly specialized modesl that are good at detecting certain anomalies (eg. peak values) struggle more with other types of anomalies. An nerual network-based model performing best in both metrics is another notable occurance.
+
 \section{Conclusion}
+
+[Placeholder]: Datasets suprisingly challenging. Exposes a potential blindspot of current models. Since they struggle with medium and bottom values, blindspot appears to be anomalies that can only be discovered in the context of the whole dataset or at least a large portion. The anomalies are not possible to see when only compared with the local trend and need an understanding of the bigger picture.
+
+\section{Discussion}
+
+\section{Limitations}
 
 
 
