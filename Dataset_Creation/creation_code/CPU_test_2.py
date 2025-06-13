@@ -89,7 +89,7 @@ try:
         # Pass '' for cpu_percent as it's an event
         log_entry(log_file, [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), current_execution_state, 'WORKLOAD_START', event_details, ''])
 
-        # Update the shared state for the continuous logger *during* the workload
+        # Update the shared state for the continuous logger during the workload
         current_execution_state = 'working_normal'
 
         # CPU intensive operation

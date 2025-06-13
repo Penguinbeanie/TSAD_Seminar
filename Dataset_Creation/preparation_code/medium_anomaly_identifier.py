@@ -67,9 +67,7 @@ def main():
                         true_labels.append(int(row[1]))
                     except ValueError:
                         print(f"Skipping invalid row: {row}")
-                        # Add placeholders or decide how to handle missing/malformed data
-                        # For now, we'll assume data integrity for simplicity in calculation length matching
-                        # Or, ensure data_values and true_labels remain synchronized
+                       
                         pass 
                 else:
                     print(f"Skipping row with unexpected number of columns: {row}")
@@ -91,9 +89,6 @@ def main():
     # Ensure lengths match before calculating metrics
     if len(true_labels) != len(predicted_anomalies):
         print("Mismatch in length between true labels and predicted anomalies. Cannot calculate metrics accurately.")
-        # This might happen if some rows were skipped during parsing.
-        # A robust solution would align them or handle it based on requirements.
-        # For now, we'll proceed if lengths are okay, otherwise print error.
         return
 
     # Calculate TP, FP, FN

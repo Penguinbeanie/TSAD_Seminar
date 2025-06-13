@@ -19,21 +19,13 @@ def create_labeled_dataset():
                 current_state = row.get('state', '').strip()
                 cpu_percent_str = row.get('cpu_percent', '').strip()
 
-                # Update the anomaly tracking flag based on the current row's state. # Removed logic related to anomaly_cluster_ended_requires_idle_tag
-                # This happens for every row, regardless of whether it has CPU data.
-                # if current_state == 'working_anomaly':
-                #     anomaly_cluster_ended_requires_idle_tag = True
-                # elif current_state != 'idle':  # Covers 'working_normal' and other non-anomaly, non-idle states
-                #     anomaly_cluster_ended_requires_idle_tag = False
-                # If current_state is 'idle', the flag is not changed here;
-                # its current value (possibly set by a previous row) will be used below.
+            
 
                 # Try to get CPU data. Only rows with valid CPU data will be in the output.
                 try:
                     cpu_data = float(cpu_percent_str)
                 except ValueError:
-                    # This row doesn't have a valid numerical cpu_percent, or it's empty.
-                    # Skip adding this row to the output dataset, but the state flag update above still applies.
+                   
                     continue
 
                 # Determine the label for the current data point
@@ -41,16 +33,10 @@ def create_labeled_dataset():
 
                 if current_state == 'working_anomaly':
                     label = 1
-                    # The flag 'anomaly_cluster_ended_requires_idle_tag' is already True from the logic above. # Removed logic
-                # elif current_state == 'idle': # Removed block
-                #     if anomaly_cluster_ended_requires_idle_tag:
-                #         label = 1
-                #         anomaly_cluster_ended_requires_idle_tag = False  # Consume the flag for this first idle row
-                #     else:
-                #         label = 0  # Normal idle
+                    
                 else:  # For 'working_normal' or any other states that are not 'idle' or 'working_anomaly'
                     label = 0
-                    # The flag 'anomaly_cluster_ended_requires_idle_tag' would have been set to False by the logic above. # Removed logic
+                    # The flag 'anomaly_cluster_ended_requires_idle_tag' would have been set to False by the logic above. 
                 
                 processed_rows.append([cpu_data, label])
 

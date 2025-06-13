@@ -25,7 +25,6 @@ def series_to_subsequences(time_series: np.ndarray, window_size: int) -> np.ndar
     # Calculate the number of subsequences that can be created
     num_subsequences = len(time_series) - window_size + 1
     
-    # Use numpy's stride tricks for a fast and memory-efficient implementation
     shape = (num_subsequences, window_size)
     strides = (time_series.strides[0], time_series.strides[0])
     return np.lib.stride_tricks.as_strided(time_series, shape=shape, strides=strides)

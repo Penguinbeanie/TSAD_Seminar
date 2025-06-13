@@ -61,7 +61,7 @@ def continuous_logger_thread(function_id):
 
     while state_info.get("continue_logging", False): # Check flag from shared state
         current_time = datetime.now()
-        # Ensure we fetch the most current state for this specific function
+        # Ensure I fetch the most current state for this specific function
         current_main_thread_state = THREAD_STATES.get(function_id, {}).get("current_execution_state", "unknown")
 
 
@@ -397,12 +397,6 @@ def main():
     print("All dataset generation processes have been initiated (or completed if run sequentially).")
 
 if __name__ == '__main__':
-    # Note: The brief print statements within the main() function for starting/finishing each dataset
-    # are placeholders. The actual detailed logging to CSV and console happens within each generate_dataset_*
-    # and its helper run_workload_loop.
-    # Consider enabling one dataset generation at a time for testing, or manage system load if running all.
     
-    # For demonstration, I'm only calling one function.
-    # You can uncomment others as needed. Be mindful of total execution time.
     
     main() 

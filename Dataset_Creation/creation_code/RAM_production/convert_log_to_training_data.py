@@ -41,7 +41,7 @@ def convert_log_data():
                     current_label = 1
                 elif state in ['idle', 'working_normal', 'working_special_prep']:
                     current_label = 0
-                # Other states (like SCRIPT_START without RAM) will be initially 0 and likely filtered later if no RAM
+               
 
                 processed_points.append({
                     'ram_value': ram_value,  # Can be None
