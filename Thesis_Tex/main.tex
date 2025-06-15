@@ -92,6 +92,8 @@
   \end{center}
 }
 
+\newcommand{\supref}[1]{\textsuperscript{\footnotesize{\ref{#1}}}}
+
 \titlespacing*{\section}
 {0pt}{3.5ex plus 1ex minus .2ex}{.2ex plus .2ex}
 \titlespacing*{\subsection}
@@ -287,7 +289,7 @@ When looking at the evaluation results of all major benchmarks, it is difficult 
 Considering how much of the new benchmarking research is based on the assumption that previous datasets are flawed, I have conducted a short qualitative evaluation of the dataset quality found in the NAB benchmark \parencite{Lavin_2015}. As a general guideline, I will be referencing \cite{wu2021current} and their described categories of issues. In all four figures, the red dots are data points labeled as anomalies. 
 
 
-A sizable portion of all anomalies found in the NAB dataset fit into the category of \textbf{trivial anomalies} and can be detected using simple thresholding functions. Examples of that can be found in Figure 1 \ref{fig:trivial}. \par
+A sizable portion of all anomalies found in the NAB dataset fit into the category of \textbf{trivial anomalies} and can be detected using simple thresholding functions. Examples of that can be found in Figure 1 \supref{fig:trivial}. \par
 
 \begin{figure}[htbp] 
     \centering 
@@ -297,7 +299,7 @@ A sizable portion of all anomalies found in the NAB dataset fit into the categor
 \end{figure}
 
 
-Equally common are \textbf{mislabeled anomalies}. Examples can be found in Figure 2 \ref{fig:mislab}. The dataset at the time labels two points as anomalies, while completely ignoring the obvious peaks, which are unusual even when comparing with the entirety of the dataset. The time series at the bottom only highlights one seemingly normal datapoint, while again ignoring the unusual peak directly to its right.
+Equally common are \textbf{mislabeled anomalies}. Examples can be found in Figure 2 \supref{fig:mislab}. The dataset at the time labels two points as anomalies, while completely ignoring the obvious peaks, which are unusual even when comparing with the entirety of the dataset. The time series at the bottom only highlights one seemingly normal datapoint, while again ignoring the unusual peak directly to its right.
 
 \begin{figure}[htbp] 
     \centering 
@@ -306,7 +308,7 @@ Equally common are \textbf{mislabeled anomalies}. Examples can be found in Figur
     \label{fig:mislab}
 \end{figure}
 
-A subcategory of mislabeled anomalies are sequence-based anomalies being labeled as only a single point. Examples can be found in Figure 3 \ref{fig:mislab}. In the upper time series only the first point of an unusual flatline-like sequence is labeled as an anomaly. In the lower time series only the first point of an elevated sequence is labeled as an anomaly. The time series in the middle highlights only a single point out of an entire sequence as an anomaly. Without context, it is hard to understand why the rest of the sequence should be considered as normal and only this one specific point is anomalous. In such cases, \cite[p.~4-5]{wu2021current} suggests to label the entire sequence as an anomaly.
+A subcategory of mislabeled anomalies are sequence-based anomalies being labeled as only a single point. Examples can be found in Figure 3 \supref{fig:point_seq}. In the upper time series only the first point of an unusual flatline-like sequence is labeled as an anomaly. In the lower time series only the first point of an elevated sequence is labeled as an anomaly. The time series in the middle highlights only a single point out of an entire sequence as an anomaly. Without context, it is hard to understand why the rest of the sequence should be considered as normal and only this one specific point is anomalous. In such cases, \cite[p.~4-5]{wu2021current} suggests to label the entire sequence as an anomaly.
 
 \begin{figure}[htbp] 
     \centering 
@@ -315,7 +317,7 @@ A subcategory of mislabeled anomalies are sequence-based anomalies being labeled
     \label{fig:point_seq}
 \end{figure}
 
-Not as commonly found as the previous two flaws but still present are datasets with a \textbf{run-to-failure bias}, as described by \cite{wu2021current}. Examples of those can be found in Figure 4 \ref{fig:run_to_failure}. In both cases, the time series end on an unusual pattern, representing hardware failures before the systems stop being monitored, These are rightfully marked as anomalies but can introduce a bias towards models that simply flag the end of each time series as an anomaly.
+Not as commonly found as the previous two flaws but still present are datasets with a \textbf{run-to-failure bias}, as described by \cite{wu2021current}. Examples of those can be found in Figure 4 \supref{fig:run_to_failure}. In both cases, the time series end on an unusual pattern, representing hardware failures before the systems stop being monitored, These are rightfully marked as anomalies but can introduce a bias towards models that simply flag the end of each time series as an anomaly.
 
 \begin{figure}[htbp] 
     \centering 

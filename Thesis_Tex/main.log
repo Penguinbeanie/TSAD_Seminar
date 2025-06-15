@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  15 JUN 2025 16:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  15 JUN 2025 16:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -603,7 +603,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T1+PTSans-TLF on input line 106.
+LaTeX Font Info:    Trying to load font information for T1+PTSans-TLF on input line 108.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTSans-TLF.fd
 File: T1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for T1/PTSans-TLF.
 ) (./main.aux (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex)
@@ -612,24 +612,24 @@ Package babel Info: Importing data for ngerman
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
  (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count447
@@ -649,7 +649,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 106.
+Package hyperref Info: Link coloring OFF on input line 108.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -684,13 +684,13 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 106.
-Package biblatex Info: Reference segment=0 on input line 106.
+Package biblatex Info: Reference section=0 on input line 108.
+Package biblatex Info: Reference segment=0 on input line 108.
 \c@lstlisting=\count453
 <siegel.pdf, id=130, 593.13643pt x 597.83954pt>
 File: siegel.pdf Graphic file (type pdf)
 <use siegel.pdf>
-Package pdftex.def Info: siegel.pdf  used on input line 116.
+Package pdftex.def Info: siegel.pdf  used on input line 118.
 (pdftex.def)             Requested size: 144.54pt x 145.68289pt.
 
 
@@ -725,11 +725,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+PTSans-TLF on input line 147.
+LaTeX Font Info:    Trying to load font information for TS1+PTSans-TLF on input line 149.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/TS1PTSans-TLF.fd
 File: TS1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for TS1/PTSans-TLF.
 )
-Overfull \hbox (7.10893pt too wide) in paragraph at lines 151--152
+Overfull \hbox (7.10893pt too wide) in paragraph at lines 153--154
 []\T1/PTSans-TLF/m/n/12 Genauigkeit: Es soll genau die In-halte und die Mei-n-ung der Orig-i-nalar-beit wiedergeben. 
  []
 
@@ -743,7 +743,7 @@ Overfull \hbox (7.10893pt too wide) in paragraph at lines 151--152
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.184 
+l.186 
        [1
 
 ]
@@ -757,7 +757,7 @@ l.184
 [5]
 
 [6]
-Overfull \hbox (5.77362pt too wide) in paragraph at lines 266--266
+Overfull \hbox (5.77362pt too wide) in paragraph at lines 268--268
 []\T1/PTSans-TLF/b/n/12 Yahoo (2015)\T1/PTSans-TLF/m/n/12 : Ya-hoo pro-vides one of the ear-li-est avail-able la-beled large scale TSAD datasets.
  []
 
@@ -769,17 +769,17 @@ Overfull \hbox (5.77362pt too wide) in paragraph at lines 266--266
 <trivial.png, id=327, 689.412pt x 497.568pt>
 File: trivial.png Graphic file (type png)
 <use trivial.png>
-Package pdftex.def Info: trivial.png  used on input line 294.
+Package pdftex.def Info: trivial.png  used on input line 296.
 (pdftex.def)             Requested size: 460.72124pt x 332.5109pt.
 <mislab.png, id=330, 689.412pt x 326.748pt>
 File: mislab.png Graphic file (type png)
 <use mislab.png>
-Package pdftex.def Info: mislab.png  used on input line 304.
+Package pdftex.def Info: mislab.png  used on input line 306.
 (pdftex.def)             Requested size: 460.72124pt x 218.35663pt.
 <point_seq.png, id=333, 689.412pt x 479.829pt>
 File: point_seq.png Graphic file (type png)
 <use point_seq.png>
-Package pdftex.def Info: point_seq.png  used on input line 313.
+Package pdftex.def Info: point_seq.png  used on input line 315.
 (pdftex.def)             Requested size: 460.72124pt x 320.6564pt.
 
 
@@ -791,12 +791,12 @@ Package pdftex.def Info: point_seq.png  used on input line 313.
 <run_to_failure.png, id=352, 689.85pt x 326.748pt>
 File: run_to_failure.png Graphic file (type png)
 <use run_to_failure.png>
-Package pdftex.def Info: run_to_failure.png  used on input line 322.
+Package pdftex.def Info: run_to_failure.png  used on input line 324.
 (pdftex.def)             Requested size: 460.72124pt x 218.222pt.
 
 
 [12 <./run_to_failure.png>]
-Overfull \hbox (21.57759pt too wide) in paragraph at lines 360--390
+Overfull \hbox (21.57759pt too wide) in paragraph at lines 362--392
  [][] 
  []
 
@@ -805,7 +805,7 @@ Overfull \hbox (21.57759pt too wide) in paragraph at lines 360--390
 [13]
 
 [14]
-Overfull \hbox (21.57759pt too wide) in paragraph at lines 414--440
+Overfull \hbox (21.57759pt too wide) in paragraph at lines 416--442
  [][] 
  []
 
@@ -817,7 +817,7 @@ Overfull \hbox (21.57759pt too wide) in paragraph at lines 414--440
 <baseline_sequence.png, id=379, 844.8363pt x 289.08pt>
 File: baseline_sequence.png Graphic file (type png)
 <use baseline_sequence.png>
-Package pdftex.def Info: baseline_sequence.png  used on input line 464.
+Package pdftex.def Info: baseline_sequence.png  used on input line 466.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
 
 
@@ -825,7 +825,7 @@ Package pdftex.def Info: baseline_sequence.png  used on input line 464.
 <anomaly_sequence_10.png, id=384, 844.8363pt x 289.08pt>
 File: anomaly_sequence_10.png Graphic file (type png)
 <use anomaly_sequence_10.png>
-Package pdftex.def Info: anomaly_sequence_10.png  used on input line 479.
+Package pdftex.def Info: anomaly_sequence_10.png  used on input line 481.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
 
 
@@ -833,19 +833,19 @@ Package pdftex.def Info: anomaly_sequence_10.png  used on input line 479.
 <anomaly_sequence_11.png, id=391, 844.8363pt x 289.08pt>
 File: anomaly_sequence_11.png Graphic file (type png)
 <use anomaly_sequence_11.png>
-Package pdftex.def Info: anomaly_sequence_11.png  used on input line 494.
+Package pdftex.def Info: anomaly_sequence_11.png  used on input line 496.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
 <anomaly_sequence_12.png, id=392, 844.8363pt x 289.08pt>
 File: anomaly_sequence_12.png Graphic file (type png)
 <use anomaly_sequence_12.png>
-Package pdftex.def Info: anomaly_sequence_12.png  used on input line 509.
+Package pdftex.def Info: anomaly_sequence_12.png  used on input line 511.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
 
 
 [19 <./anomaly_sequence_11.png>]
 
 [20 <./anomaly_sequence_12.png>]
-Overfull \hbox (24.21031pt too wide) in paragraph at lines 550--566
+Overfull \hbox (24.21031pt too wide) in paragraph at lines 552--568
  [][] 
  []
 
@@ -860,11 +860,11 @@ Overfull \hbox (24.21031pt too wide) in paragraph at lines 550--566
 [24]
 
 [25]
-LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 666.
+LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 668.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTMono-TLF.fd
 File: T1PTMono-TLF.fd 2014/02/02 Font definitions for T1/PTMono-TLF.
 )
-Overfull \hbox (48.00337pt too wide) in paragraph at lines 667--667
+Overfull \hbox (48.00337pt too wide) in paragraph at lines 669--669
 \T1/PTMono-TLF/m/n/12 de / EN / Themen / Verbraucherinnen -[] und -[] Verbraucher / Cyber -[] Sicherheitslage /
  []
 
@@ -873,12 +873,12 @@ Overfull \hbox (48.00337pt too wide) in paragraph at lines 667--667
 [26
 
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc}]
-Overfull \hbox (11.83287pt too wide) in paragraph at lines 667--667
+Overfull \hbox (11.83287pt too wide) in paragraph at lines 669--669
 [][]\T1/PTSans-TLF/m/it/12 Yahoo \T1/PTSans-TLF/m/n/12 (2015). []$\T1/PTMono-TLF/m/n/12 https : / / webscope . sandbox . yahoo . com / catalog . php ? datatype =
  []
 
 
-Overfull \hbox (7.71909pt too wide) in paragraph at lines 667--667
+Overfull \hbox (7.71909pt too wide) in paragraph at lines 669--669
 \T1/PTMono-TLF/m/n/12 201818903002$[]\T1/PTSans-TLF/m/n/12 . URL: []$\T1/PTMono-TLF/m/n/12 https : / / doi . org / 10 . 1051 / matecconf / 201818903002$[]\T1/PTSans-TLF/m/n/12 . 
  []
 
@@ -909,15 +909,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24015 strings out of 469608
- 415942 string characters out of 5474779
- 1300983 words of memory out of 5000000
- 50415 multiletter control sequences out of 15000+600000
- 703385 words of font info for 81 fonts, out of 8000000 for 9000
+ 24019 strings out of 469608
+ 416014 string characters out of 5474779
+ 1300996 words of memory out of 5000000
+ 50418 multiletter control sequences out of 15000+600000
+ 717564 words of font info for 84 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  75i,18n,79p,4052b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptmono/PTM55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS56F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS75F.pfb>
-Output written on main.pdf (33 pages, 4728157 bytes).
+Output written on main.pdf (33 pages, 4728279 bytes).
 PDF statistics:
  573 PDF objects out of 1000 (max. 8388607)
  504 compressed objects within 6 object streams
