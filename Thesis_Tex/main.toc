@@ -14,22 +14,22 @@
 \contentsline {subsubsection}{\numberline {1.4.3}Definition and Classifgication of Metrics}{6}{subsubsection.1.4.3}%
 \contentsline {subsection}{\numberline {1.5}State of Benchmarking}{7}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Dataset Analysis}{9}{section.2}%
-\contentsline {section}{\numberline {3}Replication of TSB-AD Benchmark Results}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Setup and Implementation}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Results}{10}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Univariate Results}{10}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{10}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Benchmarking Conclusion}{13}{subsubsection.3.2.3}%
-\contentsline {section}{\numberline {4}Dataset Creation}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Dataset Setup}{13}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Logging}{16}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Hardware Setup}{17}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Statistical Overview}{17}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Benchmarking}{19}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Conclusion}{21}{section.5}%
-\contentsline {section}{\numberline {6}Discussion}{21}{section.6}%
-\contentsline {section}{\numberline {7}Limitations}{21}{section.7}%
-\contentsline {section}{Bibliography}{23}{section.7}%
-\contentsline {section}{\numberline {A}Anhang A}{24}{appendix.A}%
+\contentsline {section}{\numberline {3}Replication of TSB-AD Benchmark Results}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Setup and Implementation}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Results}{13}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Univariate Results}{13}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{15}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Benchmarking Conclusion}{15}{subsubsection.3.2.3}%
+\contentsline {section}{\numberline {4}Dataset Creation}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Dataset Setup}{17}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Logging}{20}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Hardware Setup}{21}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Statistical Overview}{21}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Benchmarking}{23}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Conclusion}{25}{section.5}%
+\contentsline {section}{\numberline {6}Discussion}{25}{section.6}%
+\contentsline {section}{\numberline {7}Limitations}{25}{section.7}%
+\contentsline {section}{Bibliography}{27}{section.7}%
+\contentsline {section}{\numberline {A}Anhang A}{28}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
