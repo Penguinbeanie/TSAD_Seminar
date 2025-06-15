@@ -20,16 +20,16 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Univariate Results}{10}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{10}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Benchmarking Conclusion}{13}{subsubsection.3.2.3}%
-\contentsline {section}{\numberline {4}Dataset Setup}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Dataset Description}{13}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Logging}{15}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Hardware Setup}{16}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Statistical Overview}{16}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Benchmarking}{17}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Conclusion}{20}{section.5}%
-\contentsline {section}{\numberline {6}Discussion}{20}{section.6}%
-\contentsline {section}{\numberline {7}Limitations}{20}{section.7}%
-\contentsline {section}{Bibliography}{22}{section.7}%
-\contentsline {section}{\numberline {A}Anhang A}{23}{appendix.A}%
+\contentsline {section}{\numberline {4}Dataset Creation}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Dataset Setup}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Logging}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Hardware Setup}{17}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Statistical Overview}{17}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Benchmarking}{19}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Conclusion}{21}{section.5}%
+\contentsline {section}{\numberline {6}Discussion}{21}{section.6}%
+\contentsline {section}{\numberline {7}Limitations}{21}{section.7}%
+\contentsline {section}{Bibliography}{23}{section.7}%
+\contentsline {section}{\numberline {A}Anhang A}{24}{appendix.A}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 

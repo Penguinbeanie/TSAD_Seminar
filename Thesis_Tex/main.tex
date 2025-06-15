@@ -409,15 +409,22 @@ The results for multivariate detections models are in many ways similar to those
 Across both univariate and multivariate anomaly detection models, the observed trends regarding benchmark evaluation consistency are largely parallel. While most models displayed relatively small average differences between the two evaluations, a significant portion exhibited substantial discrepancies on individual datasets, particularly those with low anomaly counts where even minor variations in anomaly detection profoundly impacted scores. A consistent finding was that statistical methods generally demonstrated higher consistency than Neural Network-based models. However, notable exceptions exist, such as IForest often showing surprising inconsistency despite its configuration, and conversely, zero-shot models like Moment achieving remarkable stability due to their pre-trained, less randomizable nature. Given that most of the highest absolute differences can be found on recurring datasets, it is reasonable to assume that the specific type of anomalies and data sequences significantly influences the consistency between benchmarking runs. Furthermore, since a large portion of datasets with equally low anomaly counts are not present on this list, it can be ruled out that the higher differences between runs are entirely attributable solely to their low anomaly count. \par
 However, it's important to stress that these observations - for univariate and multivariate models alike - are based on a very limited sample size of just two runs (the original authors' and my own). Therefore, while these results are noteworthy, this comparison doesn't provide any conclusive results regarding the general reproducibility of these models without further, more extensive investigation.
 
-\section{Dataset Setup}
+\section{Dataset Creation}
 A common hurdle cited amon Time Series Anomaly Detection researchers is the lack of high quality, accurately labeled data \parencites[p.~2]{liu2024elephant}[p.~1-6]{wu2021current}[p.~1]{paparrizos2022tsb}. Out of the existing datasets that fulfill the desired criteria, most are either entirely synthetic or contain artificially inserted anomalies that attempt to mimic real world scenarios based on statistical assumptions. To contribute to the current state of research, I will be providing 4 real, high quality, univariate datasets with accurate labels. 
 
-\subsection{Dataset Description}
+\subsection{Dataset Setup}
 The provided datasets contain information about RAM utilization during matrix multiplication. While the first 3 datasets each include 1 unique type of anomaly, the fourth dataset combines all 3 anomalies. \par
 
 \textbf{Baseline Load:} All four datasets have the same baseline load for their default state. A script performs continous matrix multiplications, randomly selecting a matrix of size 3000, 3500, 4500, or 5000 and performing 3 multiplications of the selected size. This is follwed by a sleep period of 4 seconds before another set of matrix multiplication resumes. Such a sequence of multiplications follwed by a sleep time will be defined as an "baseline instance" going forward. Each dataset will first run for a predetermined amount of time without any anomalies, which can be used as the training split for semi-supervised models.
 
-\textbf{Dataset 1 - Large Matrix Injection:} For the first dataset, a particularily large matrix multiplication is performed as the anomaly. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in baseline RAM utilization after the first anomaly injection. 
+\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
+    \centering % Centers the content (image and caption) horizontally
+    \includegraphics[width=\textwidth]{baseline_sequence}
+    \caption{Baseline Load}
+    \label{fig:baseline} % Good practice for referencing the figure later
+\end{figure}
+
+\textbf{Dataset 1 - Large Matrix Injection:} For the first dataset, a particularily large matrix multiplication is performed as the anomaly. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. 
 \begin{itemize}
     \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
     \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
@@ -425,12 +432,27 @@ The provided datasets contain information about RAM utilization during matrix mu
     \item \textit{Anomaly} -- Type: Large Matrix Injection | Matrix Size: 6000 | Multiplications: 4 | Frequency: 1/50 baseload instances
 \end{itemize}
 
+\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
+    \centering % Centers the content (image and caption) horizontally
+    \includegraphics[width=\textwidth]{anomaly_sequence_10}
+    \caption{Large Matrix Injection}
+    \label{fig:anomaly_10} % Good practice for referencing the figure later
+\end{figure}
+
+
 \textbf{Dataset 2 - Sleep Time Injection:} For the second dataset, an additional sleep time is performed instead of a matrix multiplication. This results in a sequence consisting of: regular sleep time -> anomaly sleep time -> regular sleep time. Given that the anomaly does not require more memory than the baselaod calculations, no preparation is requried at the start of the dataset generation.
 \begin{itemize}
     \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
     \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
     \item \textit{Anomaly} -- Type: Sleep Time Injection | Sleep Time Duration: 2 sec | Frequency: 1/50 baseload instances
 \end{itemize}
+
+\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
+    \centering % Centers the content (image and caption) horizontally
+    \includegraphics[width=\textwidth]{anomaly_sequence_11}
+    \caption{Sleep Time Injection}
+    \label{fig:anomaly_11} % Good practice for referencing the figure later
+\end{figure}
 
 \textbf{Dataset 3 - Medium Matrix Injection:} For the third dataset, a matrix multiplication is performed as the anomaly. The size of the matrix falls between the already existing matrices in the baselaod calculations. Given that the anomaly does not require more memory than the baselaod calculations, no preparation is requried at the start of the dataset generation.
 \begin{itemize}
@@ -440,7 +462,14 @@ The provided datasets contain information about RAM utilization during matrix mu
     \item \textit{Anomaly} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 | Frequency: 1/50 baseload instances
 \end{itemize}
 
-\textbf{Dataset 4 - Combined Anomaly Injection:} For the fourth dataset, all three anomalies are injected. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in baseline RAM utilization after the first anomaly injection. The same combined anomaly frequency is maintained as in the previous three datasets. The total length of the dataset is adjusted upwards. 
+\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
+    \centering % Centers the content (image and caption) horizontally
+    \includegraphics[width=\textwidth]{anomaly_sequence_12}
+    \caption{Medium Matrix Injection}
+    \label{fig:anomaly_12} % Good practice for referencing the figure later
+\end{figure}
+
+\textbf{Dataset 4 - Combined Anomaly Injection:} For the fourth dataset, all three anomalies are injected. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. The same combined anomaly frequency is maintained as in the previous three datasets. The total length of the dataset is adjusted upwards. 
 \begin{itemize}
     \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
     \item \textit{Runtime} -- Total: 160 min | Anomaly-free: 25 min 
@@ -540,7 +569,7 @@ For the calculations of the difficulty measures, I used Relative Contrast (RC), 
     \label{tab:VUS-PR-ROC_benchmarking_overview}
 \end{table}
 
-Table 5 provides a summery of results when evaluating datasets 1-4 with the TSB-AD benchmark. \par Unsurprisingly, dataset 1, which essentially just has a larger peak load as its anomalies, had the best results. Sub-PCA managed to achieve almost perfect scores for both VUS-PR (0.989) and VUS-ROC (0.999), highlighting its ability to detect the existing anomalies precisly and with great sensitivity. Most other models, statistical and neural network-based alike, also performed decently well with average scores of 0.887 and 0.767 respectively.
+Table 5 provides a summery of results when evaluating datasets 1-4 with the TSB-AD benchmark. \par Unsurprisingly, dataset 1, which essentially just has a larger peak load as its anomalies, had the best results. Sub-PCA managed to achieve almost perfect scores for both VUS-PR (0.989) and VUS-ROC (0.999), highlighting its ability to detect the existing anomalies precisly and with great sensitivity. Most other models, statistical and neural network-based alike, also performed decently well with average scores (VUS-ROC) of 0.887 and 0.767 respectively.
 When looking at VUS-PR score averages, most detection models did not reach a score of above 0.500, with neural-network based models surprisingly outperforming statistical models. Since all anomalies are sequence-based and not point-based, one would expect the opposite \parencites[p.~10]{liu2024elephant}[p.~1706]{paparrizos2022tsb}. \par
 For dataset 2, which introduces anomalies by extending the idle time, the results are more varied. The best VUS-ROC score was a high 0.949 achieved by SAND, indicating a strong ability to detect these anomalies. However, the best VUS-PR score was only 0.562 from KShapeAD, showing that while models can find the anomalies, they struggle with precision. The average VUS-ROC scores were middling, with neural network models (0.604) slightly outperforming statistical ones (0.572). In contrast, the average VUS-PR scores were poor across the board, with statistical models (0.144) performing better than neural network models (0.059). \par
 Dataset 3, featuring the 'Medium Matrix' anomalies, was clearly the most difficult for the benchmarked models. This is especially evident in the VUS-PR scores, which were exceptionally low. The LOF model performed best on both metrics, yet it highlights a significant performance gap: it achieved a strong VUS-ROC score of 0.926 but a dismal VUS-PR score of only 0.062. On average, VUS-ROC scores were moderate, with statistical models (0.634) performing noticably better than neural network models (0.506). This trend was even more pronounced for the VUS-PR scores, where the average for all models was a near-zero 0.018, confirming the difficulty of this dataset. It is also the only dataset where the best VUS-PR and VUS-ROC score where not achieved by the same model. \par
