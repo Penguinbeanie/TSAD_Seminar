@@ -1,0 +1,34 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{List of Figures}{II}{Doc-Start}%
+\contentsline {section}{List of Tables}{II}{Doc-Start}%
+\contentsline {section}{\numberline {1}Literature Review}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Time Series Data and Anomaly Detection Definition}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Relevant Fields}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Detection Methods}{3}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Degree of Supervision}{3}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Architecture}{3}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Technique}{4}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}Dimensionality}{5}{subsubsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.4}Performance Metrics}{5}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Point-wise or Range-wise}{5}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Threshold-dependent or Threshold-independent}{6}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}Definition and Classifgication of Metrics}{6}{subsubsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.5}State of Benchmarking}{7}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Dataset Analysis}{9}{section.2}%
+\contentsline {section}{\numberline {3}Replication of TSB-AD Benchmark Results}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Setup and Implementation}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Results}{13}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Univariate Results}{13}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{15}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Benchmarking Conclusion}{15}{subsubsection.3.2.3}%
+\contentsline {section}{\numberline {4}Dataset Creation}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Dataset Setup}{17}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Logging}{20}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Hardware Setup}{21}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Statistical Overview}{21}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Benchmarking}{22}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Conclusion}{25}{section.5}%
+\contentsline {section}{Bibliography}{28}{section.5}%
+\contentsline {section}{\numberline {A}Anhang A}{29}{appendix.A}%
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 

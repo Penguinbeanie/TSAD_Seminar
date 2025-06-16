@@ -472,6 +472,8 @@ The provided datasets contain information about RAM utilization during matrix mu
     \item \textit{Anomaly} -- Type: Large Matrix Injection | Matrix Size: 6000 | Multiplications: 4 | Frequency: 1/50 baseload instances
 \end{itemize}
 
+While being moderately easy to solve in theory, it remains a crucial scenario in many industries and fields. It simulates a sudden, unexpected resource demand (a "shock event"), common in DoS attacks or runaway processes.
+
 \begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
     \centering % Centers the content (image and caption) horizontally
     \includegraphics[width=\textwidth]{anomaly_sequence_10}
@@ -487,6 +489,8 @@ The provided datasets contain information about RAM utilization during matrix mu
     \item \textit{Anomaly} -- Type: Sleep Time Injection | Sleep Time Duration: 2 sec | Frequency: 1/50 baseload instances
 \end{itemize}
 
+This anomaly type simulates a process "hanging" or an unexpected period of system inactivity, which is a critical but non-peak anomaly often missed by simple thresholding.
+
 \begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
     \centering % Centers the content (image and caption) horizontally
     \includegraphics[width=\textwidth]{anomaly_sequence_11}
@@ -501,6 +505,8 @@ The provided datasets contain information about RAM utilization during matrix mu
     \item \textit{Preparation Matrix} -- Matrix Size: 4000 | Multiplications: 3
     \item \textit{Anomaly} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 | Frequency: 1/50 baseload instances
 \end{itemize}
+
+The third anomaly type simulates a subtle but abnormal change in workload. This would not activate peak alerts but still deviates from the established operational rhythm. This tests a model's ability to understand the normal operating range in a larger context.
 
 \begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
     \centering % Centers the content (image and caption) horizontally
@@ -519,6 +525,9 @@ The provided datasets contain information about RAM utilization during matrix mu
     \item \textit{Anomaly 3} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 
     \item \textit{Combined Anomaly Frequency} 3
 \end{itemize}
+
+With all three anomalies representing distinctly different scenarios that require unique detection methods, a time series that challanges a model to detect all of them punishes methods that are highly specialized for a specific anomaly type. \par
+While these datasets are based on RAM usage, the underlying principle of creating a baseline workload and injecting distinct, peak and non-peak anomalies is highly transferable to other domains like network traffic, CPU utilization, or sensor data.
 
 \subsection{Logging}
 
@@ -646,10 +655,10 @@ Since Dataset 4 is made up two-thirds of the anomalies established in Datasets 2
 
 This seminar paper embarked on a comprehensive evaluation of the current state of Time Series Anomaly Detection (TSAD) benchmarking, navigating from a literature-driven critique to empirical analysis and contribution. The literature review established a clear picture: while time series anomaly detection is an established discipline in many industries, playing an essential role in areas such as fraud detection and healthcare, the openly published scientific progress has only recently picked up pace. The lack of a generally recognized benchmarking environment with labeled high quality datasetshas posed a significant challenge to the development and evaluation of better detection methods. While eariler datasets like the Yahoo S5 dataset or the Numeta Anomaly Benchmark (NAB) provided a decent starting point, substantial issues with triviality, label quality, and run-to-failure bias have highlighted the need for better benchmarks. TSB-AD, and its predecessor TSB-UAD, have persued this goal and created a new standard for anomaly detection benchmarking that can be expanded on. \par
 The attempt to replicate the results provided by the TSB-AD benchmark has shown that many hurdles exist. In particular, running all provided models turned out to be a challenging endevour. Particularilly for researchers with a more traditional background without strong programming foundations, this could become roadblock in the advancement of TSAD methods. Consistency between the original results an my run has been on average high. The results from statisitcal model tend to be more reproducable than those of neural network-based ones. \par
-The central contribution of this paper was the creation of four new, high-quality, real-world univariate datasets, designed specifically to address the identified flaws of previous benchmarks. By meticulously logging RAM usage during controlled workload scenarios, I produced accurately labeled datasets with a justifiable anomaly ratio and distinct, non-trivial anomaly types. A noteworthy result emerged from benchmarking established algorithms on these new datasets. While models performed expectadly well on the 'Large Matrix Injection' anomalies, which present as clear statistical outliers, their performance degraded dramatically on the more subtle 'Medium Matrix Injection' and 'Sleep Time Injection' tasks. Average VUS-PR scores, in particular, reached unjustifably low levels, indicating a near-total failure to precisely identify these anomalies, which were, by contrast, perfectly detectable with simple, rule-based scripts. \par
+The central contribution of this paper was the creation of four new, high-quality, real-world univariate datasets, designed specifically to address the identified flaws of previous benchmarks. By meticulously logging RAM usage during controlled workload scenarios, I produced accurately labeled datasets with a justifiable anomaly ratio and distinct, non-trivial anomaly types. A noteworthy result emerged from benchmarking established algorithms on these new datasets. While models performed expectadly well on the 'Large Matrix Injection' anomalies, which present as clear statistical outliers, their performance degraded dramatically on the more subtle 'Medium Matrix Injection' and 'Sleep Time Injection' tasks. Average VUS-PR scores, in particular, reached unjustifiably low levels, indicating a near-total failure to precisely identify these anomalies, which were, by contrast, perfectly detectable with simple, rule-based scripts. \par
 This suggest a blindspot in the current set of commonly discussed detection models. Their design may be overly specialized for detecting point-wise outliers (which could be explained by all the sequence-wise anomalies mislabeled as point-wise anomalies in earlier datasets like NAB) or significant deviations from a localized temporal window, while struggling with contextual anomalies that are only identifiable by understanding the broader patterns of the entire time series. The models failed to recognize that a period of inactivity or a moderately-sized workload, while normal-looking in isolation, was anomalous within the established operational rhythm of the system. \par
 
-Ultimately, this thesis provides an overview of the current Time Series Anomaly Detection (TSAD) field and existing benchmarking methods. Further more, it provides four high quality datasets that highlight a critical blindspot in current detection methods. These datasets serve as a useful tool for future model improvements. 
+Ultimately, this thesis gives an overview of the current Time Series Anomaly Detection (TSAD) field and existing benchmarking methods. Further more, it provides four high quality datasets that highlight a critical blindspot in current detection methods. These datasets serve as a useful tool for future model improvements. 
 
 
 
