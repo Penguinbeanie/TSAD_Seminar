@@ -1,0 +1,133 @@
+2025-05-27 11:20:13,257 - INFO - --- Starting processing for model: FITS ---
+2025-05-27 11:20:13,258 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='FITS')
+2025-05-27 11:20:13,259 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.0001}
+2025-05-27 11:20:13,259 - INFO - Processing: 001_CPU1_id_1_Hardware_tr_1150_1st_1196.csv by FITS
+2025-05-27 11:20:14,501 - INFO - Success at 001_CPU1_id_1_Hardware_tr_1150_1st_1196.csv using FITS | Time cost: 1.240s at length 3600
+2025-05-27 11:20:14,502 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-27 11:20:17,118 - INFO - Evaluation result: {'AUC-PR': 0.01527937803600374, 'AUC-ROC': 0.48467697609816246, 'VUS-PR': 0.33975479305731887, 'VUS-ROC': 0.9322556589720671, 'Standard-F1': 0.034653465346534656, 'PA-F1': 0.07281553398058252, 'Event-based-F1': 0.03243243243243231, 'R-based-F1': 0.026422764227642274, 'Affiliation-F': 0.6703221717111997}
+2025-05-27 11:20:17,118 - INFO - Optimal threshold (for PointF1) for 001_CPU1_id_1_Hardware_tr_1150_1st_1196.csv: 4.317896
+2025-05-27 11:20:17,120 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-27 11:20:17,121 - INFO - Appended metrics for 001_CPU1_id_1_Hardware_tr_1150_1st_1196.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-05-27 11:20:17,121 - INFO - Processing: 002_CPU1_id_02_Hardware_tr_982_1st_984.csv by FITS
+2025-05-27 11:20:18,190 - INFO - Success at 002_CPU1_id_02_Hardware_tr_982_1st_984.csv using FITS | Time cost: 1.066s at length 6485
+2025-05-27 11:20:18,191 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-27 11:20:18,587 - INFO - Evaluation result: {'AUC-PR': 0.030756612754406724, 'AUC-ROC': 0.4584588776046744, 'VUS-PR': 0.03669839986517697, 'VUS-ROC': 0.49961200222079066, 'Standard-F1': 0.06515719172503665, 'PA-F1': 0.07018683996750609, 'Event-based-F1': 0.06502205521973527, 'R-based-F1': 0.07143899304336172, 'Affiliation-F': 0.6689135267155601}
+2025-05-27 11:20:18,588 - INFO - Optimal threshold (for PointF1) for 002_CPU1_id_02_Hardware_tr_982_1st_984.csv: 0.135306
+2025-05-27 11:20:18,589 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-27 11:20:18,590 - INFO - Appended metrics for 002_CPU1_id_02_Hardware_tr_982_1st_984.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-05-27 11:20:18,590 - INFO - Processing: 003_CPU1_id_03_Hardware_tr_1169_1st_1172.csv by FITS
+2025-05-27 11:20:19,862 - INFO - Success at 003_CPU1_id_03_Hardware_tr_1169_1st_1172.csv using FITS | Time cost: 1.270s at length 6429
+2025-05-27 11:20:19,862 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-27 11:20:20,425 - INFO - Evaluation result: {'AUC-PR': 0.030936683242269565, 'AUC-ROC': 0.5453981944159232, 'VUS-PR': 0.044452037607555395, 'VUS-ROC': 0.6503831028959279, 'Standard-F1': 0.06937958639092728, 'PA-F1': 0.20024875621890548, 'Event-based-F1': 0.07374112026152001, 'R-based-F1': 0.05382331106161841, 'Affiliation-F': 0.6925984246018173}
+2025-05-27 11:20:20,425 - INFO - Optimal threshold (for PointF1) for 003_CPU1_id_03_Hardware_tr_1169_1st_1172.csv: 3.195438
+2025-05-27 11:20:20,426 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-27 11:20:20,426 - INFO - Appended metrics for 003_CPU1_id_03_Hardware_tr_1169_1st_1172.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-05-28 08:34:26,038 - INFO - --- Starting processing for model: FITS ---
+2025-05-28 08:34:26,038 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', save=True, AD_Name='FITS')
+2025-05-28 08:34:26,039 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.0001}
+2025-05-28 08:34:26,039 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 08:34:26,040 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 08:34:26,040 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 08:34:26,040 - INFO - Processing: 005_CPU2_id_05_Hardware_tr_2000_1st_2015.csv by FITS
+2025-05-28 08:34:28,299 - INFO - Success at 005_CPU2_id_05_Hardware_tr_2000_1st_2015.csv using FITS | Time cost: 2.258s at length 6487
+2025-05-28 08:34:28,300 - INFO - Calculating metrics and appending to CSV.
+2025-05-28 08:34:30,911 - INFO - evaluation_result: {'AUC-PR': 0.0035315787965240976, 'AUC-ROC': 0.28985475157204854, 'VUS-PR': 0.007483736658433612, 'VUS-ROC': 0.46803493196505314, 'Standard-F1': 0.010764155585793743, 'PA-F1': 0.01300148588410104, 'Event-based-F1': 0.010734549915657095, 'R-based-F1': 0.017060705892509978, 'Affiliation-F': 0.6667272182636201}
+2025-05-28 08:34:30,911 - INFO - Appended metrics for 005_CPU2_id_05_Hardware_tr_2000_1st_2015.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-05-28 11:15:22,531 - INFO - --- Starting processing for model: FITS ---
+2025-05-28 11:15:22,531 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='FITS')
+2025-05-28 11:15:22,532 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.0001}
+2025-05-28 11:15:22,532 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 11:15:22,533 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 11:15:22,533 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 11:15:22,533 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-05-28 11:15:22,533 - INFO - Processing: 006_CPU2_id_06_Hardware_tr_2000_1st_2012.csv by FITS
+2025-05-28 11:15:24,518 - INFO - Success at 006_CPU2_id_06_Hardware_tr_2000_1st_2012.csv using FITS | Time cost: 1.982s at length 6487
+2025-05-28 11:15:24,519 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-28 11:15:24,822 - INFO - Evaluation result: {'AUC-PR': 0.01317238201744721, 'AUC-ROC': 0.3685342934925792, 'VUS-PR': 0.01724891423807722, 'VUS-ROC': 0.43220300655308086, 'Standard-F1': 0.035817271209591744, 'PA-F1': 0.035817271209591744, 'Event-based-F1': 0.03552451798998023, 'R-based-F1': 0.03340574672920217, 'Affiliation-F': 0.6670736624735875}
+2025-05-28 11:15:24,822 - INFO - Optimal threshold (for PointF1) for 006_CPU2_id_06_Hardware_tr_2000_1st_2012.csv: 0.000043
+2025-05-28 11:15:24,823 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-05-28 11:15:24,825 - INFO - Appended metrics for 006_CPU2_id_06_Hardware_tr_2000_1st_2012.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-05-28 11:47:28,562 - INFO - --- Starting processing for model: FITS ---
+2025-05-28 11:47:28,562 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='FITS')
+2025-05-28 11:47:28,563 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.0001}
+2025-05-28 11:47:28,563 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 11:47:28,563 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 11:47:28,563 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 11:47:28,563 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-05-28 11:47:28,563 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-05-28 11:47:28,565 - INFO - Processing: 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv by FITS
+2025-05-28 11:47:29,904 - INFO - Success at 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv using FITS | Time cost: 1.337s at length 6494
+2025-05-28 11:47:29,905 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-28 11:47:30,308 - INFO - Evaluation result: {'AUC-PR': 0.01710505390026728, 'AUC-ROC': 0.4353506698369816, 'VUS-PR': 0.024208126557314236, 'VUS-ROC': 0.519736758448211, 'Standard-F1': 0.04211253020365896, 'PA-F1': 0.046831955922865015, 'Event-based-F1': 0.04188300449982688, 'R-based-F1': 0.04234590601874489, 'Affiliation-F': 0.6657338724227534}
+2025-05-28 11:47:30,308 - INFO - Optimal threshold (for PointF1) for 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv: 0.089458
+2025-05-28 11:47:30,309 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_007_CPU3_id_07_Hardware_tr_1500_1st_1559.npy
+2025-05-28 11:47:30,309 - INFO - Appended metrics for 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-05-28 12:00:31,047 - INFO - --- Starting processing for model: FITS ---
+2025-05-28 12:00:31,047 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='FITS')
+2025-05-28 12:00:31,047 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.0001}
+2025-05-28 12:00:31,049 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 12:00:31,049 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 12:00:31,049 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 12:00:31,049 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-05-28 12:00:31,049 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-05-28 12:00:31,050 - INFO - Processing: 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv by FITS
+2025-05-28 12:00:32,630 - INFO - Success at 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv using FITS | Time cost: 1.578s at length 6430
+2025-05-28 12:00:32,631 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-28 12:00:33,035 - INFO - Evaluation result: {'AUC-PR': 0.02040057509715466, 'AUC-ROC': 0.44276002822482663, 'VUS-PR': 0.030478680828472198, 'VUS-ROC': 0.5285178338369276, 'Standard-F1': 0.04218362282878412, 'PA-F1': 0.1945080091533181, 'Event-based-F1': 0.046127637269034134, 'R-based-F1': 0.0483652243522728, 'Affiliation-F': 0.7089260155780087}
+2025-05-28 12:00:33,035 - INFO - Optimal threshold (for PointF1) for 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv: 4.852415
+2025-05-28 12:00:33,036 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_007_CPU3_id_07_Hardware_tr_1500_1st_1559.npy
+2025-05-28 12:00:33,037 - INFO - Appended metrics for 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-05-28 16:52:48,881 - INFO - --- Starting processing for model: FITS ---
+2025-05-28 16:52:48,881 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='FITS')
+2025-05-28 16:52:48,883 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.0001}
+2025-05-28 16:52:48,883 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 16:52:48,883 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 16:52:48,883 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 16:52:48,884 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-05-28 16:52:48,884 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-05-28 16:52:48,884 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_007_CPU3_id_07_Hardware_tr_1500_1st_1559.npy
+2025-05-28 16:52:48,884 - INFO - Processing: 008_CPU3_id_08_Hardware_tr_1500_1st_1814.csv by FITS
+2025-05-28 16:52:50,410 - INFO - Success at 008_CPU3_id_08_Hardware_tr_1500_1st_1814.csv using FITS | Time cost: 1.525s at length 6407
+2025-05-28 16:52:50,411 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-28 16:52:50,824 - INFO - Evaluation result: {'AUC-PR': 0.022101510382096377, 'AUC-ROC': 0.538195589302032, 'VUS-PR': 0.031217959811267133, 'VUS-ROC': 0.6502138368664185, 'Standard-F1': 0.06315789473684211, 'PA-F1': 0.2857142857142857, 'Event-based-F1': 0.07815771109560343, 'R-based-F1': 0.061269146608315096, 'Affiliation-F': 0.7349917304573694}
+2025-05-28 16:52:50,824 - INFO - Optimal threshold (for PointF1) for 008_CPU3_id_08_Hardware_tr_1500_1st_1814.csv: 7.542508
+2025-05-28 16:52:50,825 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_008_CPU3_id_08_Hardware_tr_1500_1st_1814.npy
+2025-05-28 16:52:50,826 - INFO - Appended metrics for 008_CPU3_id_08_Hardware_tr_1500_1st_1814.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-06-04 19:43:42,836 - INFO - --- Starting processing for model: FITS ---
+2025-06-04 19:43:42,836 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='FITS')
+2025-06-04 19:43:42,837 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.0001}
+2025-06-04 19:43:42,837 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-06-04 19:43:42,838 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-06-04 19:43:42,838 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-06-04 19:43:42,838 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-06-04 19:43:42,838 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-06-04 19:43:42,838 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_007_CPU3_id_07_Hardware_tr_1500_1st_1559.npy
+2025-06-04 19:43:42,839 - INFO - Score file already exists, skipping: eval/self/score/uni/FITS\FITS_008_CPU3_id_08_Hardware_tr_1500_1st_1814.npy
+2025-06-04 19:43:42,839 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by FITS
+2025-06-04 19:43:44,182 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using FITS | Time cost: 1.339s at length 5308
+2025-06-04 19:43:44,184 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-04 19:43:44,343 - INFO - Evaluation result: {'AUC-PR': 0.031800869555053186, 'AUC-ROC': 0.5354209715911844, 'VUS-PR': 0.037463439574404706, 'VUS-ROC': 0.5954856382555552, 'Standard-F1': 0.09266409266409266, 'PA-F1': 0.3254237288135593, 'Event-based-F1': 0.11640211640211622, 'R-based-F1': 0.0816039122831453, 'Affiliation-F': 0.6792226307216843}
+2025-06-04 19:43:44,343 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 9.640862
+2025-06-04 19:43:44,345 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-04 19:43:44,346 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-06-04 19:43:44,346 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by FITS
+2025-06-04 19:43:45,486 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using FITS | Time cost: 1.137s at length 5320
+2025-06-04 19:43:45,487 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-04 19:43:45,680 - INFO - Evaluation result: {'AUC-PR': 0.01782817111279391, 'AUC-ROC': 0.43640027918338864, 'VUS-PR': 0.02339450502204084, 'VUS-ROC': 0.5103153194234863, 'Standard-F1': 0.04078578110383536, 'PA-F1': 0.0411522633744856, 'Event-based-F1': 0.04043429427180827, 'R-based-F1': 0.03430984995325903, 'Affiliation-F': 0.6731339546608314}
+2025-06-04 19:43:45,680 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.001238
+2025-06-04 19:43:45,681 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-04 19:43:45,682 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-06-04 19:43:45,683 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by FITS
+2025-06-04 19:43:46,908 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using FITS | Time cost: 1.223s at length 5319
+2025-06-04 19:43:46,909 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-04 19:43:47,128 - INFO - Evaluation result: {'AUC-PR': 0.007730442530704404, 'AUC-ROC': 0.512341352528888, 'VUS-PR': 0.01421604304867199, 'VUS-ROC': 0.6152709874815074, 'Standard-F1': 0.02054154995331466, 'PA-F1': 0.04608294930875576, 'Event-based-F1': 0.01912568306010926, 'R-based-F1': 0.023818119005197598, 'Affiliation-F': 0.6707884067811765}
+2025-06-04 19:43:47,128 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 2.768028
+2025-06-04 19:43:47,129 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-04 19:43:47,130 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/FITS\FITS.csv
+2025-06-04 19:43:47,130 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by FITS
+2025-06-04 19:43:49,199 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using FITS | Time cost: 2.067s at length 9452
+2025-06-04 19:43:49,199 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-04 19:43:49,712 - INFO - Evaluation result: {'AUC-PR': 0.06409501808899837, 'AUC-ROC': 0.5868933638892415, 'VUS-PR': 0.04429394717637904, 'VUS-ROC': 0.6666086465908723, 'Standard-F1': 0.08411214953271029, 'PA-F1': 0.2773109243697479, 'Event-based-F1': 0.11169513797634657, 'R-based-F1': 0.061433573788341855, 'Affiliation-F': 0.6468442150753152}
+2025-06-04 19:43:49,713 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 9.294084
+2025-06-04 19:43:49,713 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-04 19:43:49,715 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/FITS\FITS.csv

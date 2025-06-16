@@ -1,0 +1,133 @@
+2025-05-27 11:19:24,630 - INFO - --- Starting processing for model: AutoEncoder ---
+2025-05-27 11:19:24,630 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='AutoEncoder')
+2025-05-27 11:19:24,631 - INFO - Optimal_Det_HP: {'window_size': 100, 'hidden_neurons': [128, 64]}
+2025-05-27 11:19:24,631 - INFO - Processing: 001_CPU1_id_1_Hardware_tr_1150_1st_1196.csv by AutoEncoder
+2025-05-27 11:19:25,825 - INFO - Success at 001_CPU1_id_1_Hardware_tr_1150_1st_1196.csv using AutoEncoder | Time cost: 1.192s at length 3600
+2025-05-27 11:19:25,826 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-27 11:19:28,361 - INFO - Evaluation result: {'AUC-PR': 0.06506126840192325, 'AUC-ROC': 0.8122019697847497, 'VUS-PR': 0.7650781170572938, 'VUS-ROC': 0.9660561618025914, 'Standard-F1': 0.13142857142857142, 'PA-F1': 0.14204545454545456, 'Event-based-F1': 0.12907431551499324, 'R-based-F1': 0.1322408122734558, 'Affiliation-F': 0.6323101203343757}
+2025-05-27 11:19:28,361 - INFO - Optimal threshold (for PointF1) for 001_CPU1_id_1_Hardware_tr_1150_1st_1196.csv: 7.892273
+2025-05-27 11:19:28,362 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-27 11:19:28,365 - INFO - Appended metrics for 001_CPU1_id_1_Hardware_tr_1150_1st_1196.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-05-27 11:19:28,365 - INFO - Processing: 002_CPU1_id_02_Hardware_tr_982_1st_984.csv by AutoEncoder
+2025-05-27 11:19:29,204 - INFO - Success at 002_CPU1_id_02_Hardware_tr_982_1st_984.csv using AutoEncoder | Time cost: 0.837s at length 6485
+2025-05-27 11:19:29,205 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-27 11:19:29,560 - INFO - Evaluation result: {'AUC-PR': 0.1381795506967638, 'AUC-ROC': 0.8515867318906081, 'VUS-PR': 0.1619711351154192, 'VUS-ROC': 0.832932186721778, 'Standard-F1': 0.2577639751552795, 'PA-F1': 0.2922374429223744, 'Event-based-F1': 0.26888636650271114, 'R-based-F1': 0.13967242802800642, 'Affiliation-F': 0.6814160035593141}
+2025-05-27 11:19:29,561 - INFO - Optimal threshold (for PointF1) for 002_CPU1_id_02_Hardware_tr_982_1st_984.csv: 8.866671
+2025-05-27 11:19:29,562 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-27 11:19:29,563 - INFO - Appended metrics for 002_CPU1_id_02_Hardware_tr_982_1st_984.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-05-27 11:19:29,563 - INFO - Processing: 003_CPU1_id_03_Hardware_tr_1169_1st_1172.csv by AutoEncoder
+2025-05-27 11:19:30,562 - INFO - Success at 003_CPU1_id_03_Hardware_tr_1169_1st_1172.csv using AutoEncoder | Time cost: 0.997s at length 6429
+2025-05-27 11:19:30,563 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-27 11:19:31,060 - INFO - Evaluation result: {'AUC-PR': 0.1274223656097193, 'AUC-ROC': 0.8849805295061645, 'VUS-PR': 0.201005713221267, 'VUS-ROC': 0.8941552675791241, 'Standard-F1': 0.22165605095541402, 'PA-F1': 0.2593516209476309, 'Event-based-F1': 0.22823779193205915, 'R-based-F1': 0.14107185866093805, 'Affiliation-F': 0.8035354735355974}
+2025-05-27 11:19:31,061 - INFO - Optimal threshold (for PointF1) for 003_CPU1_id_03_Hardware_tr_1169_1st_1172.csv: 8.367172
+2025-05-27 11:19:31,062 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-27 11:19:31,063 - INFO - Appended metrics for 003_CPU1_id_03_Hardware_tr_1169_1st_1172.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-05-28 08:33:51,947 - INFO - --- Starting processing for model: AutoEncoder ---
+2025-05-28 08:33:51,947 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', save=True, AD_Name='AutoEncoder')
+2025-05-28 08:33:51,948 - INFO - Optimal_Det_HP: {'window_size': 100, 'hidden_neurons': [128, 64]}
+2025-05-28 08:33:51,948 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 08:33:51,948 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 08:33:51,948 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 08:33:51,949 - INFO - Processing: 005_CPU2_id_05_Hardware_tr_2000_1st_2015.csv by AutoEncoder
+2025-05-28 08:33:53,807 - INFO - Success at 005_CPU2_id_05_Hardware_tr_2000_1st_2015.csv using AutoEncoder | Time cost: 1.855s at length 6487
+2025-05-28 08:33:53,808 - INFO - Calculating metrics and appending to CSV.
+2025-05-28 08:33:55,212 - INFO - evaluation_result: {'AUC-PR': 0.020648479196257733, 'AUC-ROC': 0.844066070321495, 'VUS-PR': 0.05815805179216662, 'VUS-ROC': 0.8904714574241582, 'Standard-F1': 0.06298974991912829, 'PA-F1': 0.08560311284046693, 'Event-based-F1': 0.06153846153846137, 'R-based-F1': 0.06672118212466824, 'Affiliation-F': 0.8332647635930555}
+2025-05-28 08:33:55,212 - INFO - Appended metrics for 005_CPU2_id_05_Hardware_tr_2000_1st_2015.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-05-28 11:15:06,214 - INFO - --- Starting processing for model: AutoEncoder ---
+2025-05-28 11:15:06,214 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='AutoEncoder')
+2025-05-28 11:15:06,215 - INFO - Optimal_Det_HP: {'window_size': 100, 'hidden_neurons': [128, 64]}
+2025-05-28 11:15:06,215 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 11:15:06,215 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 11:15:06,215 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 11:15:06,215 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-05-28 11:15:06,215 - INFO - Processing: 006_CPU2_id_06_Hardware_tr_2000_1st_2012.csv by AutoEncoder
+2025-05-28 11:15:07,818 - INFO - Success at 006_CPU2_id_06_Hardware_tr_2000_1st_2012.csv using AutoEncoder | Time cost: 1.600s at length 6487
+2025-05-28 11:15:07,819 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-28 11:15:08,098 - INFO - Evaluation result: {'AUC-PR': 0.07468030530954589, 'AUC-ROC': 0.8634673777380373, 'VUS-PR': 0.10887021958774916, 'VUS-ROC': 0.8801035263813857, 'Standard-F1': 0.16548463356973994, 'PA-F1': 0.2242562929061785, 'Event-based-F1': 0.17634854771784197, 'R-based-F1': 0.12534356454600928, 'Affiliation-F': 0.7493598068555997}
+2025-05-28 11:15:08,098 - INFO - Optimal threshold (for PointF1) for 006_CPU2_id_06_Hardware_tr_2000_1st_2012.csv: 7.828127
+2025-05-28 11:15:08,099 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-05-28 11:15:08,101 - INFO - Appended metrics for 006_CPU2_id_06_Hardware_tr_2000_1st_2012.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-05-28 11:47:14,599 - INFO - --- Starting processing for model: AutoEncoder ---
+2025-05-28 11:47:14,600 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='AutoEncoder')
+2025-05-28 11:47:14,601 - INFO - Optimal_Det_HP: {'window_size': 100, 'hidden_neurons': [128, 64]}
+2025-05-28 11:47:14,601 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 11:47:14,601 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 11:47:14,601 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 11:47:14,602 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-05-28 11:47:14,602 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-05-28 11:47:14,602 - INFO - Processing: 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv by AutoEncoder
+2025-05-28 11:47:15,782 - INFO - Success at 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv using AutoEncoder | Time cost: 1.178s at length 6494
+2025-05-28 11:47:15,783 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-28 11:47:16,150 - INFO - Evaluation result: {'AUC-PR': 0.10889338758990144, 'AUC-ROC': 0.879895985604056, 'VUS-PR': 0.14796787332992287, 'VUS-ROC': 0.8891052303649015, 'Standard-F1': 0.16595744680851066, 'PA-F1': 0.20041753653444677, 'Event-based-F1': 0.17246596066565772, 'R-based-F1': 0.1253416862325548, 'Affiliation-F': 0.7477885929374886}
+2025-05-28 11:47:16,151 - INFO - Optimal threshold (for PointF1) for 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv: 8.158918
+2025-05-28 11:47:16,152 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_007_CPU3_id_07_Hardware_tr_1500_1st_1559.npy
+2025-05-28 11:47:16,153 - INFO - Appended metrics for 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-05-28 12:00:21,552 - INFO - --- Starting processing for model: AutoEncoder ---
+2025-05-28 12:00:21,552 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='AutoEncoder')
+2025-05-28 12:00:21,554 - INFO - Optimal_Det_HP: {'window_size': 100, 'hidden_neurons': [128, 64]}
+2025-05-28 12:00:21,554 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 12:00:21,554 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 12:00:21,554 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 12:00:21,554 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-05-28 12:00:21,555 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-05-28 12:00:21,555 - INFO - Processing: 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv by AutoEncoder
+2025-05-28 12:00:22,718 - INFO - Success at 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv using AutoEncoder | Time cost: 1.161s at length 6430
+2025-05-28 12:00:22,719 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-28 12:00:23,110 - INFO - Evaluation result: {'AUC-PR': 0.1236999372674346, 'AUC-ROC': 0.877643156881437, 'VUS-PR': 0.15371228541329365, 'VUS-ROC': 0.8949755197573411, 'Standard-F1': 0.18108651911468815, 'PA-F1': 0.21696252465483234, 'Event-based-F1': 0.18849449204406327, 'R-based-F1': 0.11027165819494132, 'Affiliation-F': 0.7792717535640853}
+2025-05-28 12:00:23,110 - INFO - Optimal threshold (for PointF1) for 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv: 8.202232
+2025-05-28 12:00:23,110 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_007_CPU3_id_07_Hardware_tr_1500_1st_1559.npy
+2025-05-28 12:00:23,111 - INFO - Appended metrics for 007_CPU3_id_07_Hardware_tr_1500_1st_1559.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-05-28 16:52:39,550 - INFO - --- Starting processing for model: AutoEncoder ---
+2025-05-28 16:52:39,550 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='AutoEncoder')
+2025-05-28 16:52:39,551 - INFO - Optimal_Det_HP: {'window_size': 100, 'hidden_neurons': [128, 64]}
+2025-05-28 16:52:39,551 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-05-28 16:52:39,552 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-05-28 16:52:39,552 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-05-28 16:52:39,552 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-05-28 16:52:39,552 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-05-28 16:52:39,552 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_007_CPU3_id_07_Hardware_tr_1500_1st_1559.npy
+2025-05-28 16:52:39,553 - INFO - Processing: 008_CPU3_id_08_Hardware_tr_1500_1st_1814.csv by AutoEncoder
+2025-05-28 16:52:40,782 - INFO - Success at 008_CPU3_id_08_Hardware_tr_1500_1st_1814.csv using AutoEncoder | Time cost: 1.227s at length 6407
+2025-05-28 16:52:40,783 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-05-28 16:52:41,146 - INFO - Evaluation result: {'AUC-PR': 0.02750045217135173, 'AUC-ROC': 0.7108238892395424, 'VUS-PR': 0.048379348377735866, 'VUS-ROC': 0.7725108580051732, 'Standard-F1': 0.06174334140435835, 'PA-F1': 0.0974450386215092, 'Event-based-F1': 0.062135922330097015, 'R-based-F1': 0.05341451973170586, 'Affiliation-F': 0.7879837740067351}
+2025-05-28 16:52:41,146 - INFO - Optimal threshold (for PointF1) for 008_CPU3_id_08_Hardware_tr_1500_1st_1814.csv: 7.488154
+2025-05-28 16:52:41,147 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_008_CPU3_id_08_Hardware_tr_1500_1st_1814.npy
+2025-05-28 16:52:41,149 - INFO - Appended metrics for 008_CPU3_id_08_Hardware_tr_1500_1st_1814.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-06-04 19:42:53,216 - INFO - --- Starting processing for model: AutoEncoder ---
+2025-06-04 19:42:53,216 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='AutoEncoder')
+2025-06-04 19:42:53,217 - INFO - Optimal_Det_HP: {'window_size': 100, 'hidden_neurons': [128, 64]}
+2025-06-04 19:42:53,217 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_001_CPU1_id_1_Hardware_tr_1150_1st_1196.npy
+2025-06-04 19:42:53,217 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_002_CPU1_id_02_Hardware_tr_982_1st_984.npy
+2025-06-04 19:42:53,217 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_003_CPU1_id_03_Hardware_tr_1169_1st_1172.npy
+2025-06-04 19:42:53,217 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_005_CPU2_id_05_Hardware_tr_2000_1st_2015.npy
+2025-06-04 19:42:53,218 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_006_CPU2_id_06_Hardware_tr_2000_1st_2012.npy
+2025-06-04 19:42:53,218 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_007_CPU3_id_07_Hardware_tr_1500_1st_1559.npy
+2025-06-04 19:42:53,218 - INFO - Score file already exists, skipping: eval/self/score/uni/AutoEncoder\AutoEncoder_008_CPU3_id_08_Hardware_tr_1500_1st_1814.npy
+2025-06-04 19:42:53,218 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by AutoEncoder
+2025-06-04 19:42:54,506 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using AutoEncoder | Time cost: 1.285s at length 5308
+2025-06-04 19:42:54,506 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-04 19:42:54,705 - INFO - Evaluation result: {'AUC-PR': 0.009900552700169062, 'AUC-ROC': 0.1797262541943393, 'VUS-PR': 0.011942150369227923, 'VUS-ROC': 0.1659795285099385, 'Standard-F1': 0.03447622655806024, 'PA-F1': 0.034476226558060236, 'Event-based-F1': 0.034110289937464434, 'R-based-F1': 0.08117978190784803, 'Affiliation-F': 0.6614999785671741}
+2025-06-04 19:42:54,706 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 6.713769
+2025-06-04 19:42:54,707 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-04 19:42:54,708 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-06-04 19:42:54,708 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by AutoEncoder
+2025-06-04 19:42:55,900 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using AutoEncoder | Time cost: 1.190s at length 5320
+2025-06-04 19:42:55,901 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-04 19:42:56,084 - INFO - Evaluation result: {'AUC-PR': 0.03146993636027762, 'AUC-ROC': 0.6456115861106264, 'VUS-PR': 0.038742601024575225, 'VUS-ROC': 0.6871217396154471, 'Standard-F1': 0.06896551724137931, 'PA-F1': 0.2127659574468085, 'Event-based-F1': 0.0789177001127394, 'R-based-F1': 0.05908233815210559, 'Affiliation-F': 0.7199319626156253}
+2025-06-04 19:42:56,085 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 8.176719
+2025-06-04 19:42:56,085 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-04 19:42:56,087 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-06-04 19:42:56,087 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by AutoEncoder
+2025-06-04 19:42:57,281 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using AutoEncoder | Time cost: 1.191s at length 5319
+2025-06-04 19:42:57,282 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-04 19:42:57,486 - INFO - Evaluation result: {'AUC-PR': 0.011094502570001956, 'AUC-ROC': 0.5629948853949612, 'VUS-PR': 0.01937388371776163, 'VUS-ROC': 0.5602979949492987, 'Standard-F1': 0.03571428571428571, 'PA-F1': 0.04964539007092199, 'Event-based-F1': 0.030651340996168425, 'R-based-F1': 0.026080988332189428, 'Affiliation-F': 0.5608308059751475}
+2025-06-04 19:42:57,487 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 8.672448
+2025-06-04 19:42:57,488 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-04 19:42:57,489 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
+2025-06-04 19:42:57,489 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by AutoEncoder
+2025-06-04 19:42:59,343 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using AutoEncoder | Time cost: 1.852s at length 9452
+2025-06-04 19:42:59,344 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-04 19:42:59,898 - INFO - Evaluation result: {'AUC-PR': 0.020483440140615004, 'AUC-ROC': 0.48767463302844233, 'VUS-PR': 0.03522784321740054, 'VUS-ROC': 0.5242284790747112, 'Standard-F1': 0.04804318488529015, 'PA-F1': 0.07095225393438251, 'Event-based-F1': 0.048442144665859235, 'R-based-F1': 0.03327820194152412, 'Affiliation-F': 0.6273961063090788}
+2025-06-04 19:42:59,899 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 7.670222
+2025-06-04 19:42:59,899 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-04 19:42:59,901 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/AutoEncoder\AutoEncoder.csv
