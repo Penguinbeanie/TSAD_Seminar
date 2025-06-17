@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  17 JUN 2025 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  17 JUN 2025 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -736,13 +736,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.177 
+l.176 
        [1
 
 ]
 
 [2]
-LaTeX Font Info:    Trying to load font information for TS1+PTSans-TLF on input line 189.
+LaTeX Font Info:    Trying to load font information for TS1+PTSans-TLF on input line 188.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/TS1PTSans-TLF.fd
 File: TS1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for TS1/PTSans-TLF.
 )
@@ -754,7 +754,7 @@ File: TS1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for TS1
 [5]
 
 [6]
-Overfull \hbox (5.77362pt too wide) in paragraph at lines 263--263
+Overfull \hbox (5.77362pt too wide) in paragraph at lines 262--262
 []\T1/PTSans-TLF/b/n/12 Yahoo (2015)\T1/PTSans-TLF/m/n/12 : Ya-hoo pro-vides one of the ear-li-est avail-able la-beled large scale TSAD datasets.
  []
 
@@ -770,7 +770,7 @@ Overfull \hbox (5.77362pt too wide) in paragraph at lines 263--263
 <baseline_sequence.png, id=383, 844.8363pt x 289.08pt>
 File: baseline_sequence.png Graphic file (type png)
 <use baseline_sequence.png>
-Package pdftex.def Info: baseline_sequence.png  used on input line 331.
+Package pdftex.def Info: baseline_sequence.png  used on input line 330.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
 
 
@@ -778,12 +778,12 @@ Package pdftex.def Info: baseline_sequence.png  used on input line 331.
 <anomaly_sequence_10.png, id=390, 844.8363pt x 289.08pt>
 File: anomaly_sequence_10.png Graphic file (type png)
 <use anomaly_sequence_10.png>
-Package pdftex.def Info: anomaly_sequence_10.png  used on input line 348.
+Package pdftex.def Info: anomaly_sequence_10.png  used on input line 347.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
 <anomaly_sequence_11.png, id=391, 844.8363pt x 289.08pt>
 File: anomaly_sequence_11.png Graphic file (type png)
 <use anomaly_sequence_11.png>
-Package pdftex.def Info: anomaly_sequence_11.png  used on input line 365.
+Package pdftex.def Info: anomaly_sequence_11.png  used on input line 364.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
 
 
@@ -791,7 +791,7 @@ Package pdftex.def Info: anomaly_sequence_11.png  used on input line 365.
 <anomaly_sequence_12.png, id=397, 844.8363pt x 289.08pt>
 File: anomaly_sequence_12.png Graphic file (type png)
 <use anomaly_sequence_12.png>
-Package pdftex.def Info: anomaly_sequence_12.png  used on input line 382.
+Package pdftex.def Info: anomaly_sequence_12.png  used on input line 381.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
 
 
@@ -801,17 +801,17 @@ Package pdftex.def Info: anomaly_sequence_12.png  used on input line 382.
 <trivial.png, id=409, 689.412pt x 497.568pt>
 File: trivial.png Graphic file (type png)
 <use trivial.png>
-Package pdftex.def Info: trivial.png  used on input line 428.
+Package pdftex.def Info: trivial.png  used on input line 427.
 (pdftex.def)             Requested size: 460.72124pt x 332.5109pt.
 <mislab.png, id=411, 689.412pt x 326.748pt>
 File: mislab.png Graphic file (type png)
 <use mislab.png>
-Package pdftex.def Info: mislab.png  used on input line 437.
+Package pdftex.def Info: mislab.png  used on input line 436.
 (pdftex.def)             Requested size: 460.72124pt x 218.35663pt.
 <point_seq.png, id=413, 689.412pt x 479.829pt>
 File: point_seq.png Graphic file (type png)
 <use point_seq.png>
-Package pdftex.def Info: point_seq.png  used on input line 446.
+Package pdftex.def Info: point_seq.png  used on input line 445.
 (pdftex.def)             Requested size: 460.72124pt x 320.6564pt.
 
 
@@ -823,10 +823,10 @@ Package pdftex.def Info: point_seq.png  used on input line 446.
 <run_to_failure.png, id=431, 689.85pt x 326.748pt>
 File: run_to_failure.png Graphic file (type png)
 <use run_to_failure.png>
-Package pdftex.def Info: run_to_failure.png  used on input line 455.
+Package pdftex.def Info: run_to_failure.png  used on input line 454.
 (pdftex.def)             Requested size: 460.72124pt x 218.222pt.
 
-Overfull \hbox (21.57759pt too wide) in paragraph at lines 471--501
+Overfull \hbox (21.57759pt too wide) in paragraph at lines 470--500
  [][] 
  []
 
@@ -835,7 +835,7 @@ Overfull \hbox (21.57759pt too wide) in paragraph at lines 471--501
 [18 <./run_to_failure.png>]
 
 [19]
-Overfull \hbox (21.57759pt too wide) in paragraph at lines 525--551
+Overfull \hbox (21.57759pt too wide) in paragraph at lines 524--550
  [][] 
  []
 
@@ -844,7 +844,7 @@ Overfull \hbox (21.57759pt too wide) in paragraph at lines 525--551
 [20]
 
 [21]
-Overfull \hbox (24.21031pt too wide) in paragraph at lines 573--589
+Overfull \hbox (24.21031pt too wide) in paragraph at lines 572--588
  [][] 
  []
 
@@ -863,11 +863,11 @@ Overfull \hbox (24.21031pt too wide) in paragraph at lines 573--589
 [27]
 
 [28]
-LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 715.
+LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 714.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTMono-TLF.fd
 File: T1PTMono-TLF.fd 2014/02/02 Font definitions for T1/PTMono-TLF.
 )
-Overfull \hbox (48.00337pt too wide) in paragraph at lines 716--716
+Overfull \hbox (48.00337pt too wide) in paragraph at lines 715--715
 \T1/PTMono-TLF/m/n/12 de / EN / Themen / Verbraucherinnen -[] und -[] Verbraucher / Cyber -[] Sicherheitslage /
  []
 
@@ -876,12 +876,12 @@ Overfull \hbox (48.00337pt too wide) in paragraph at lines 716--716
 [29
 
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc}]
-Overfull \hbox (11.83287pt too wide) in paragraph at lines 716--716
+Overfull \hbox (11.83287pt too wide) in paragraph at lines 715--715
 [][]\T1/PTSans-TLF/m/it/12 Yahoo \T1/PTSans-TLF/m/n/12 (2015). []$\T1/PTMono-TLF/m/n/12 https : / / webscope . sandbox . yahoo . com / catalog . php ? datatype =
  []
 
 
-Overfull \hbox (7.71909pt too wide) in paragraph at lines 716--716
+Overfull \hbox (7.71909pt too wide) in paragraph at lines 715--715
 \T1/PTMono-TLF/m/n/12 201818903002$[]\T1/PTSans-TLF/m/n/12 . URL: []$\T1/PTMono-TLF/m/n/12 https : / / doi . org / 10 . 1051 / matecconf / 201818903002$[]\T1/PTSans-TLF/m/n/12 . 
  []
 
@@ -920,7 +920,7 @@ Here is how much of TeX's memory you used:
  1143 hyphenation exceptions out of 8191
  75i,18n,79p,4052b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptmono/PTM55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS56F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS75F.pfb>
-Output written on main.pdf (37 pages, 4737775 bytes).
+Output written on main.pdf (37 pages, 4737798 bytes).
 PDF statistics:
  637 PDF objects out of 1000 (max. 8388607)
  564 compressed objects within 6 object streams
