@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 1750180274.0921 "main.bcf" "main.bbl" "main" 1750181051.27877 0
+["biber main"] 1750180274.0921 "main.bcf" "main.bbl" "main" 1750182710.37827 0
   "literatur.bib" 1749756768 16242 9efbe441abd687fc1d712bf45e9cd965 ""
-  "main.bcf" 1750181051 113705 919f6bf1e85920c8330480ffaeb55eae "pdflatex"
+  "main.bcf" 1750182710 113705 919f6bf1e85920c8330480ffaeb55eae "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750181047.10293 "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" "main.pdf" "main" 1750181051.27929 0
+["pdflatex"] 1750182706.20337 "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" "main.pdf" "main" 1750182710.37879 0
   "Erklaerung.tex" 1750083801 585 b080055cdb35d7f0740aa45ab7d42d91 ""
   "anomaly_sequence_10.png" 1749971977 153362 0573b2188d5edceebaed919ffc70724c ""
   "anomaly_sequence_11.png" 1749971977 149302 e55f40602f93b6141aa5e73d2faf01a0 ""
   "anomaly_sequence_12.png" 1749971977 172003 62657ad2f464afe93c9ecfaaee7f62a5 ""
   "baseline_sequence.png" 1749971978 148188 00b70dfa744aca4b6cd4b1920f6186fb ""
-  "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" 1750181042 77876 6011825a3d8fcd75f44458ba311a7500 ""
+  "c:/Users/Kai/Documents/Time_Series_Anomaly_Detection/TSAD_Seminar/Thesis_Tex/main.tex" 1750182705 78204 6f60db9adf05a847b7200aee3a558ae9 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc" 1747076911 2566 85d32bcd815d608c52dde2d0410884fa ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptsans_t1.enc" 1747076911 2581 aa32af98902e3c55fcf7bccadd42cf8a ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptsans_ts1.enc" 1747076911 2906 b1860f7ce9685133efbb4942788d2962 ""
@@ -162,14 +162,14 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1747078268 5569470 f263a82cf6bb394f5bc87b63f38b78df ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747078430 3567528 16558e2c0c4b28fea81dee716e177901 ""
   "c:/texlive/2025/texmf.cnf" 1747078253 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1750181051 19048 805562ed59528f36c9858343cb5196d3 "pdflatex"
+  "main.aux" 1750182710 19148 a079947c60a03027bf50697271460eb7 "pdflatex"
   "main.bbl" 1750180275 79451 228e29037f5d473d27ba5caff4ead310 "biber main"
-  "main.lof" 1750181051 890 d1d4079ad09c7a213cf5131e6a923f2e "pdflatex"
-  "main.lot" 1750181051 735 0b7dc2e8b465ab5e4a9f3d5991cdc759 "pdflatex"
-  "main.out" 1750181051 7162 490f2c5cb0680157450ecd11f0a0e6c0 "pdflatex"
-  "main.run.xml" 1750181051 2405 cff807d55f4cd2189edf3a528c771463 "pdflatex"
-  "main.tex" 1750181042 77876 6011825a3d8fcd75f44458ba311a7500 ""
-  "main.toc" 1750181051 3692 462861391301f5dd8729f4fbfd90a0f6 "pdflatex"
+  "main.lof" 1750182710 890 d1d4079ad09c7a213cf5131e6a923f2e "pdflatex"
+  "main.lot" 1750182710 735 c1968302870b6d3db9b35da2745f1194 "pdflatex"
+  "main.out" 1750182710 7218 c8cb6db3f0ae1285ca73215ff2e1ee2f "pdflatex"
+  "main.run.xml" 1750182710 2405 cff807d55f4cd2189edf3a528c771463 "pdflatex"
+  "main.tex" 1750182705 78204 6f60db9adf05a847b7200aee3a558ae9 ""
+  "main.toc" 1750182710 3702 9fd393409031b530769df05acdbcb849 "pdflatex"
   "mislab.png" 1749992531 520673 9379f471754fac5996a5455c00386bf7 ""
   "point_seq.png" 1749993188 830877 5de6a0b5c1760a3cc8ff42f694cf0686 ""
   "run_to_failure.png" 1749991107 1239876 e5d5931c2fa4dacf51d3f13b089adfa8 ""

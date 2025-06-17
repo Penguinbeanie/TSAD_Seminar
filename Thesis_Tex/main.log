@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  17 JUN 2025 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  17 JUN 2025 19:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -608,7 +608,7 @@ LaTeX Font Info:    Trying to load font information for T1+PTSans-TLF on input l
 File: T1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for T1/PTSans-TLF.
 ) (./main.aux (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex)
 Package babel Info: Importing data for ngerman
-(babel)             from babel-de.ini. Reported on input line 311.
+(babel)             from babel-de.ini. Reported on input line 312.
 )
 \openout1 = `main.aux'.
 
@@ -863,11 +863,11 @@ Overfull \hbox (24.21031pt too wide) in paragraph at lines 572--588
 [27]
 
 [28]
-LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 714.
+LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 715.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTMono-TLF.fd
 File: T1PTMono-TLF.fd 2014/02/02 Font definitions for T1/PTMono-TLF.
 )
-Overfull \hbox (48.00337pt too wide) in paragraph at lines 715--715
+Overfull \hbox (48.00337pt too wide) in paragraph at lines 716--716
 \T1/PTMono-TLF/m/n/12 de / EN / Themen / Verbraucherinnen -[] und -[] Verbraucher / Cyber -[] Sicherheitslage /
  []
 
@@ -876,12 +876,12 @@ Overfull \hbox (48.00337pt too wide) in paragraph at lines 715--715
 [29
 
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc}]
-Overfull \hbox (11.83287pt too wide) in paragraph at lines 715--715
+Overfull \hbox (11.83287pt too wide) in paragraph at lines 716--716
 [][]\T1/PTSans-TLF/m/it/12 Yahoo \T1/PTSans-TLF/m/n/12 (2015). []$\T1/PTMono-TLF/m/n/12 https : / / webscope . sandbox . yahoo . com / catalog . php ? datatype =
  []
 
 
-Overfull \hbox (7.71909pt too wide) in paragraph at lines 715--715
+Overfull \hbox (7.71909pt too wide) in paragraph at lines 716--716
 \T1/PTMono-TLF/m/n/12 201818903002$[]\T1/PTSans-TLF/m/n/12 . URL: []$\T1/PTMono-TLF/m/n/12 https : / / doi . org / 10 . 1051 / matecconf / 201818903002$[]\T1/PTSans-TLF/m/n/12 . 
  []
 
@@ -903,7 +903,7 @@ L3 programming layer <2025-04-14>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 490F2C5CB0680157450ECD11F0A0E6C0;7162.
+(rerunfilecheck)             Checksum: C8CB6DB3F0AE1285CA73215FF2E1EE2F;7218.
 
 Package biblatex Warning: Please rerun LaTeX.
 
@@ -912,18 +912,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24039 strings out of 469608
- 416327 string characters out of 5474779
- 1302078 words of memory out of 5000000
- 50427 multiletter control sequences out of 15000+600000
+ 24040 strings out of 469608
+ 416335 string characters out of 5474779
+ 1302150 words of memory out of 5000000
+ 50428 multiletter control sequences out of 15000+600000
  703385 words of font info for 81 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  75i,18n,79p,4052b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptmono/PTM55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS56F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS75F.pfb>
-Output written on main.pdf (37 pages, 4737798 bytes).
+Output written on main.pdf (37 pages, 4738094 bytes).
 PDF statistics:
- 637 PDF objects out of 1000 (max. 8388607)
- 564 compressed objects within 6 object streams
+ 638 PDF objects out of 1000 (max. 8388607)
+ 565 compressed objects within 6 object streams
  124 named destinations out of 1000 (max. 500000)
  366 words of extra memory for PDF output out of 10000 (max. 10000000)
 

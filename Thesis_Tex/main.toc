@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {1.4}Performance Metrics}{5}{subsection.1.4}%
 \contentsline {subsubsection}{\numberline {1.4.1}Point-wise or Range-wise}{5}{subsubsection.1.4.1}%
 \contentsline {subsubsection}{\numberline {1.4.2}Threshold-dependent or Threshold-independent}{6}{subsubsection.1.4.2}%
-\contentsline {subsubsection}{\numberline {1.4.3}Definition and Classifgication of Metrics}{6}{subsubsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.3}Definition and Classification of Metrics}{6}{subsubsection.1.4.3}%
 \contentsline {subsection}{\numberline {1.5}State of Benchmarking}{7}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Methodology}{9}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Analysis of Existing Datasets}{9}{subsection.2.1}%
@@ -27,7 +27,7 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Univariate Results}{18}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Multivariate Results}{20}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Univariate and Multivariate Compared}{20}{subsubsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.3}Dataset Creation}{22}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Results From Novel Datasets}{22}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Statistical Overview}{22}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Benchmarking Results on New Dataset}{23}{subsubsection.3.3.2}%
 \contentsline {section}{\numberline {4}Discussion}{25}{section.4}%
