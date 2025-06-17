@@ -280,54 +280,23 @@ TSB-AD is released open-source to provide a stable platform for research and est
 
 When looking at the evaluation results of all major benchmarks, it is difficult to point to any specific model as the conclusively best. Given the constantly evolving benchmarking criteria and evolution of dataset quality, this is not surprising. Overall, traditional models have been found across multiple papers and benchmarks to rival, or in many case outperform, newer more complex architectures. Foundational models are promising for point-wise anomalies but get beaten decisively for sequence-wise anomalies \parencites[pp.~9-10]{liu2024elephant}[p.~1706]{paparrizos2022tsb}.
 
-\section{Dataset Analysis}
+\section{Methodology}
 
-Considering how much of the new benchmarking research is based on the assumption that previous datasets are flawed, I have conducted a short qualitative evaluation of the dataset quality found in the NAB benchmark \parencite{Lavin_2015}. As a general guideline, I will be referencing \cite{wu2021current} and their described categories of issues. In all four figures, the red dots are data points labeled as anomalies. 
+\subsection{Analysis of Existing Datasets}
 
+Considering how much of the new benchmarking research is based on the assumption that previous datasets are flawed, I have conducted a short qualitative evaluation of the dataset quality found in the Numenta Anomaly Benchmark NAB (Lavin and Ahmad, 2015). As a general guideline, I will be referencing \cite{wu2021current} and their described categories of issues. As a reminder, these are:
 
-A sizable portion of all anomalies found in the NAB dataset fit into the category of \textbf{trivial anomalies} and can be detected using simple thresholding functions. Examples of that can be found in Figure 1 \supref{fig:trivial}. \par
+\begin{itemize}
+    \item Triviality
+    \item Unrealistic Anomaly Density
+    \item Mislabeled Ground Truth
+    \item Run-to-failure Bias
+\end{itemize}
 
-\begin{figure}[htbp] 
-    \centering 
-    \includegraphics[width=\textwidth]{trivial.png}
-    \caption{NAB Trivial}
-    \label{fig:trivial}
-\end{figure}
+I have chosen the NAB for this analysis, as it is commonly cited by many to be one of the earlierst attempts at creating a framework for TSAD benchmarking and includes a variety of different datasets. I will vizually inspecting all provided time series and select some examples representing the above mentioned flaws.
 
+\subsection{Replicating TSB-AD Benchmarking}
 
-Equally common are \textbf{mislabeled anomalies}. Examples can be found in Figure 2 \supref{fig:mislab}. The dataset at the time labels two points as anomalies, while completely ignoring the obvious peaks, which are unusual even when comparing with the entirety of the dataset. The time series at the bottom only highlights one seemingly normal datapoint, while again ignoring the unusual peak directly to its right.
-
-\begin{figure}[htbp] 
-    \centering 
-    \includegraphics[width=\textwidth]{mislab.png}
-    \caption{NAB Mislabeled}
-    \label{fig:mislab}
-\end{figure}
-
-A subcategory of mislabeled anomalies are sequence-based anomalies being labeled as only a single point. Examples can be found in Figure 3 \supref{fig:point_seq}. In the upper time series only the first point of an unusual flatline-like sequence is labeled as an anomaly. In the lower time series only the first point of an elevated sequence is labeled as an anomaly. The time series in the middle highlights only a single point out of an entire sequence as an anomaly. Without context, it is hard to understand why the rest of the sequence should be considered as normal and only this one specific point is anomalous. In such cases, \cite[p.~4-5]{wu2021current} suggests to label the entire sequence as an anomaly.
-
-\begin{figure}[htbp] 
-    \centering 
-    \includegraphics[width=\textwidth]{point_seq.png}
-    \caption{NAB Mislabeled | Point Instead of Sequence}
-    \label{fig:point_seq}
-\end{figure}
-
-Not as commonly found as the previous two flaws but still present are datasets with a \textbf{run-to-failure bias}, as described by \cite{wu2021current}. Examples of those can be found in Figure 4 \supref{fig:run_to_failure}. In both cases, the time series end on an unusual pattern, representing hardware failures before the systems stop being monitored, These are rightfully marked as anomalies but can introduce a bias towards models that simply flag the end of each time series as an anomaly.
-
-\begin{figure}[htbp] 
-    \centering 
-    \includegraphics[width=\textwidth]{run_to_failure.png}
-    \caption{NAB Run-To-Failure Bias}
-    \label{fig:run_to_failure}
-\end{figure}
-
-These are not cherry-picked results and can be found throughout the entire NAB dataset. Interestingly enough, the problem where only a single point of an unusual sequence is labeled as an anomaly can even be found in some of the artificially created time series.This brief analysis confirms the findings of previous authors and supports their claims that many of the early TSAD datasets were deeply flawed and to some extent even unusable for their intended purpose.
-
-
-\section{Replication of TSB-AD Benchmark Results}
-
-\subsection{Setup and Implementation}
 For the recreation of the TSB-AD benchmark results, the following core components were used:
 \begin{itemize}
     \item AMD Ryzen 5 7500F, 6C/12T, 3.70-5.00GHz
@@ -336,7 +305,7 @@ For the recreation of the TSB-AD benchmark results, the following core component
     \item OS: Windows 11
 \end{itemize}
 
-For the actual implementation, the TSB-AD Github repository was cloned and instructions provided by the authors on how to set up the correct development environment were followed. Given the high number of datasets, the benchmark was performed primarily running 3 models in parallel. Two non-resource intensive models using only the CPU (Statistical Methods as classified by the authors of TSB-AD) and one GPU utilizing model (Neural Network-based Method or Foundation Model-based Method). GPU utilization would frequently reach 100\%, whereas CPU utilization rarely even exceeded 60\%.\par
+For the implementation, the TSB-AD Github repository was cloned and instructions provided by the authors on how to set up the correct development environment were followed. Given the high number of datasets, the benchmark was performed primarily running 3 models in parallel. Two non-resource intensive models using only the CPU (Statistical Methods as classified by the authors of TSB-AD) and one GPU utilizing model (Neural Network-based Method or Foundation Model-based Method). GPU utilization would frequently reach 100\%, whereas CPU utilization rarely even exceeded 60\%.\par
 Despite extensive efforts, I was not able to get all provided anomaly detection models to run reliably. These are the models which I could not successfully implement:
 
 \begin{itemize}
@@ -348,8 +317,152 @@ Despite extensive efforts, I was not able to get all provided anomaly detection 
     \item \textbf{NORMA} and Series2Graph are commercially licensed models. 
 \end{itemize}
 
-\subsection{Results}
+\subsection{Dataset Creation}
+
+A common hurdle cited among Time Series Anomaly Detection researchers is the lack of high quality, accurately labeled data \parencites[p.~2]{liu2024elephant}[p.~1-6]{wu2021current}[p.~1]{paparrizos2022tsb}. Out of the existing datasets that fulfill the desired criteria, most are either entirely synthetic or contain artificially inserted anomalies that attempt to mimic real world scenarios based on statistical assumptions. To contribute to the current state of research, I will be providing 4 real, high quality, univariate datasets with accurate labels. \par
+
+\subsubsection{Baseline Load and Anomaly Injection}
+
+The provided datasets contain information about RAM utilization during matrix multiplication. While the first 3 datasets each include 1 unique type of anomaly, the fourth dataset combines all 3 anomalies. \par
+\textbf{Baseline Load:} All four datasets have the same baseline load for their default state. A script performs continuous matrix multiplications, randomly selecting a matrix of size 3000, 3500, 4500, or 5000 and performing 3 multiplications of the selected size. This is followed by a sleep period of 4 seconds before another set of matrix multiplication resumes. Such a sequence of multiplications followed by a sleep time will be defined as an "baseline instance" going forward. Each dataset will first run for a predetermined amount of time without any anomalies, which can be used as the training split for semi-supervised models.
+
+\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
+    \centering % Centers the content (image and caption) horizontally
+    \includegraphics[width=\textwidth]{baseline_sequence}
+    \caption{Baseline Load}
+    \label{fig:baseline} % Good practice for referencing the figure later
+\end{figure}
+
+\textbf{Dataset 1 - Large Matrix Injection:} For the first dataset, a particularily large matrix multiplication is performed as the anomaly. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. 
+\begin{itemize}
+    \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
+    \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
+    \item \textit{Preparation Matrix} -- Matrix Size: 6000 | Multiplications: 4
+    \item \textit{Anomaly} -- Type: Large Matrix Injection | Matrix Size: 6000 | Multiplications: 4 | Frequency: 1/50 baseload instances
+\end{itemize}
+
+While being moderately easy to solve in theory, it remains a crucial scenario in many industries and fields. It simulates a sudden, unexpected resource demand (a "shock event"), common in DoS attacks or runaway processes.
+
+\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
+    \centering % Centers the content (image and caption) horizontally
+    \includegraphics[width=\textwidth]{anomaly_sequence_10}
+    \caption{Large Matrix Injection}
+    \label{fig:anomaly_10} % Good practice for referencing the figure later
+\end{figure}
+
+
+\textbf{Dataset 2 - Sleep Time Injection:} For the second dataset, an additional sleep time is performed instead of a matrix multiplication. This results in a sequence consisting of: regular sleep time -> anomaly sleep time -> regular sleep time. Given that the anomaly does not require more memory than the baselaod calculations, no preparation is requried at the start of the dataset generation.
+\begin{itemize}
+    \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
+    \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
+    \item \textit{Anomaly} -- Type: Sleep Time Injection | Sleep Time Duration: 2 sec | Frequency: 1/50 baseload instances
+\end{itemize}
+
+This anomaly type simulates a process "hanging" or an unexpected period of system inactivity, which is a critical but non-peak anomaly often missed by simple thresholding.
+
+\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
+    \centering % Centers the content (image and caption) horizontally
+    \includegraphics[width=\textwidth]{anomaly_sequence_11}
+    \caption{Sleep Time Injection}
+    \label{fig:anomaly_11} % Good practice for referencing the figure later
+\end{figure}
+
+\textbf{Dataset 3 - Medium Matrix Injection:} For the third dataset, a matrix multiplication is performed as the anomaly. The size of the matrix falls between the already existing matrices in the baselaod calculations. Given that the anomaly does not require more memory than the baselaod calculations, no preparation is requried at the start of the dataset generation.
+\begin{itemize}
+    \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
+    \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
+    \item \textit{Preparation Matrix} -- Matrix Size: 4000 | Multiplications: 3
+    \item \textit{Anomaly} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 | Frequency: 1/50 baseload instances
+\end{itemize}
+
+The third anomaly type simulates a subtle but abnormal change in workload. This would not activate peak alerts but still deviates from the established operational rhythm. This tests a model's ability to understand the normal operating range in a larger context.
+
+\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
+    \centering % Centers the content (image and caption) horizontally
+    \includegraphics[width=\textwidth]{anomaly_sequence_12}
+    \caption{Medium Matrix Injection}
+    \label{fig:anomaly_12} % Good practice for referencing the figure later
+\end{figure}
+
+\textbf{Dataset 4 - Combined Anomaly Injection:} For the fourth dataset, all three anomalies are injected. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. The same combined anomaly frequency is maintained as in the previous three datasets. The total length of the dataset is adjusted upwards. 
+\begin{itemize}
+    \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
+    \item \textit{Runtime} -- Total: 160 min | Anomaly-free: 25 min 
+    \item \textit{Preparation Matrix} -- Matrix Size: 6000 | Multiplications: 4
+    \item \textit{Anomaly 1} -- Type: Large Matrix Injection | Matrix Size: 6000 | Multiplications: 4
+    \item \textit{Anomaly 2} -- Type: Sleep Time Injection | Sleep Time Duration: 2 sec
+    \item \textit{Anomaly 3} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 
+    \item \textit{Combined Anomaly Frequency} 3
+\end{itemize}
+
+With all three anomalies representing distinctly different scenarios that require unique detection methods, a time series that challanges a model to detect all of them punishes methods that are highly specialized for a specific anomaly type. \par
+While these datasets are based on RAM usage, the underlying principle of creating a baseline workload and injecting distinct, peak and non-peak anomalies is highly transferable to other domains like network traffic, CPU utilization, or sensor data.
+
+\subsubsection{Logging}
+
+With real data, the biggest challenge is not to find extensive datasets, it's to find datasets with accurate labels. Without those, (semi-)supervised models cannot function and no models can be properly evaluated. Given this challenge, creating an accurate logging mechanism that will correctly label datapoints as either normal or anomalous was at the core of this entire seminar paper. \par
+The logging system employs a dual approach that provides a comprehensive view of each action executed and accurate monitoring of Resident Set Size (RSS) memory usage. It captures both discrete events and continuous system state. At its center is a centralized, thread-safe function called log\_entry which appends timestamped records to a CSV file. It utilizes a global threading.Lock to serialize file access, preventing race conditions and ensuring that multiple logging instances can write log entries without corruption. \par
+The first part is event-driven and activates whenever the script is started, an instance of matrix multiplication is started, or an instance of matrix multiplication concludes. These event logs provide a clear overview of all operations. \\
+The second part of my logging system (continuous\_logger\_thread) continuously samples current RSS memory usage while running in parallel to the rest of the working script. It monitors the current state of operations in 0.1 second intervals. If it detects the state changing from 'idle' to 'working', it waits for 0.3 seconds before recording RSS memory usage. During testing, I encountered the issue of a matrix multiplication having technically started but no changes in actual hardware utilization has yet occurred. The 0.3 seconds delay ensures that the first datapoint after a workload has started is correctly labeled as "working". This is particularly important for when an anomaly has been injected. Similarly, when it detects a state change from 'working' to 'idle', the logger waits 0.1 seconds before recording RSS memory usage. This exists to prevent situations where the matrix multiplication has already ended but the memory was not yet released. While none of these state changes occur, the logger takes a snapshot every 1.0 seconds. The 0.3 seconds and 0.1 seconds were each originally selected during extensive testing on a dataset that was supposed to track CPU usage. When used on memory, it continued to function as intended and was therefore kept.
+
+\subsubsection{Hardware Setup}
+
+The simulations are ran on the previously described system that was used for the replication of the TSB-AD benchmark. Since Windows is notorious for unannounced and unwanted background activities that can often neither be reliably prevented, nor accounted for, a VMWare Workstation Virtual Machine was used. The specific setup and resource allocations were as follows:
+
+\begin{itemize}
+    \item 4 Processor Cores (2 Processors with 2 Cores each)
+    \item 8GB DDR5 RAM
+    \item OS: Linux Ubuntu 24.04.2 LTS 64-bit
+    \item Automatic Updates Disabled
+    \item Networking Disabled
+\end{itemize}
+
+\section{Results}
+
+\subsection{Flaws in Nunmeta Anomaly Benchmark (NAB)} \label{nab_res}
+
+In all four figures, the red dots are data points labeled as anomalies. 
+
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=\textwidth]{trivial.png}
+    \caption{NAB Trivial}
+    \label{fig:trivial}
+\end{figure}
+
+A sizable portion of all anomalies found in the NAB dataset fit into the category of \textbf{trivial anomalies} and can be detected using simple thresholding functions. Examples of that can be found in Figure \ref{fig:trivial}. \par
+
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=\textwidth]{mislab.png}
+    \caption{NAB Mislabeled}
+    \label{fig:mislab}
+\end{figure}
+
+Equally common are \textbf{mislabeled anomalies}. Examples can be found in Figure \ref{fig:mislab}. The dataset at the time labels two points as anomalies, while completely ignoring the obvious peaks, which are unusual even when comparing with the entirety of the dataset. The time series at the bottom only highlights one seemingly normal datapoint, while again ignoring the unusual peak directly to its right.
+
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=\textwidth]{point_seq.png}
+    \caption{NAB Mislabeled | Point Instead of Sequence}
+    \label{fig:point_seq}
+\end{figure}
+
+A subcategory of mislabeled anomalies are sequence-based anomalies being labeled as only a single point. Examples can be found in Figure \ref{fig:point_seq}. In the upper time series only the first point of an unusual flatline-like sequence is labeled as an anomaly. In the lower time series only the first point of an elevated sequence is labeled as an anomaly. The time series in the middle highlights only a single point out of an entire sequence as an anomaly. Without context, it is hard to understand why the rest of the sequence should be considered as normal and only this one specific point is anomalous. In such cases, \cite[p.~4-5]{wu2021current} suggests to label the entire sequence as an anomaly.
+
+\begin{figure}[htbp] 
+    \centering 
+    \includegraphics[width=\textwidth]{run_to_failure.png}
+    \caption{NAB Run-To-Failure Bias}
+    \label{fig:run_to_failure}
+\end{figure}
+
+Not as commonly found as the previous two flaws but still present are datasets with a \textbf{run-to-failure bias}, as described by \cite{wu2021current}. Examples of those can be found in Figure \ref{fig:run_to_failure}. In both cases, the time series end on an unusual pattern, representing hardware failures before the systems stop being monitored, These are rightfully marked as anomalies but can introduce a bias towards models that simply flag the end of each time series as an anomaly.
+
+\subsection{Consistency Between TSB-AD Results}
+
 Since \cite{liu2024elephant} only publish the full VUS-PR results for each individual dataset and model, the comparison will focus on this metric.
+
 \subsubsection{Univariate Results}
 
 \begin{table}[htbp]
@@ -445,111 +558,14 @@ The results for multivariate detection models are in many ways similar to those 
     \caption{\label{tab:Table 3} Summary of absolute differences in VUS-PR for multivariate datasets.}
 \end{table}
 
-\subsubsection{Benchmarking Conclusion}
+\subsubsection{Univariate and Multivariate Compared}
 
 Across both univariate and multivariate anomaly detection models, the observed trends regarding benchmark evaluation consistency are largely parallel. While most models displayed relatively small average differences between the two evaluations, a significant portion exhibited substantial discrepancies on individual datasets, particularly those with low anomaly counts where even minor variations in anomaly detection profoundly impacted scores. A consistent finding was that statistical methods generally demonstrated higher consistency than Neural Network-based models. However, notable exceptions exist, such as IForest often showing surprising inconsistency despite its configuration, and conversely, zero-shot models like Moment achieving remarkable stability due to their pre-trained, less randomizable nature. Given that most of the highest absolute differences can be found on recurring datasets, it is reasonable to assume that the specific type of anomalies and data sequences significantly influences the consistency between benchmarking runs. Furthermore, since a large portion of datasets with equally low anomaly counts are not present on this list, it can be ruled out that the higher differences between runs are entirely attributable solely to their low anomaly count. \par
 However, it's important to stress that these observations - for univariate and multivariate models alike - are based on a very limited sample size of just two runs (the original authors' and my own). Therefore, while these results are noteworthy, this comparison doesn't provide any conclusive results regarding the general reproducibility of these models without further, more extensive investigation.
 
-\section{Dataset Creation}
-A common hurdle cited among Time Series Anomaly Detection researchers is the lack of high quality, accurately labeled data \parencites[p.~2]{liu2024elephant}[p.~1-6]{wu2021current}[p.~1]{paparrizos2022tsb}. Out of the existing datasets that fulfill the desired criteria, most are either entirely synthetic or contain artificially inserted anomalies that attempt to mimic real world scenarios based on statistical assumptions. To contribute to the current state of research, I will be providing 4 real, high quality, univariate datasets with accurate labels. \par
+\subsection{Dataset Creation}
 
-\subsection{Dataset Setup}
-The provided datasets contain information about RAM utilization during matrix multiplication. While the first 3 datasets each include 1 unique type of anomaly, the fourth dataset combines all 3 anomalies. \par
-\textbf{Baseline Load:} All four datasets have the same baseline load for their default state. A script performs continuous matrix multiplications, randomly selecting a matrix of size 3000, 3500, 4500, or 5000 and performing 3 multiplications of the selected size. This is followed by a sleep period of 4 seconds before another set of matrix multiplication resumes. Such a sequence of multiplications followed by a sleep time will be defined as an "baseline instance" going forward. Each dataset will first run for a predetermined amount of time without any anomalies, which can be used as the training split for semi-supervised models.
-
-\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
-    \centering % Centers the content (image and caption) horizontally
-    \includegraphics[width=\textwidth]{baseline_sequence}
-    \caption{Baseline Load}
-    \label{fig:baseline} % Good practice for referencing the figure later
-\end{figure}
-
-\textbf{Dataset 1 - Large Matrix Injection:} For the first dataset, a particularily large matrix multiplication is performed as the anomaly. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. 
-\begin{itemize}
-    \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
-    \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
-    \item \textit{Preparation Matrix} -- Matrix Size: 6000 | Multiplications: 4
-    \item \textit{Anomaly} -- Type: Large Matrix Injection | Matrix Size: 6000 | Multiplications: 4 | Frequency: 1/50 baseload instances
-\end{itemize}
-
-While being moderately easy to solve in theory, it remains a crucial scenario in many industries and fields. It simulates a sudden, unexpected resource demand (a "shock event"), common in DoS attacks or runaway processes.
-
-\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
-    \centering % Centers the content (image and caption) horizontally
-    \includegraphics[width=\textwidth]{anomaly_sequence_10}
-    \caption{Large Matrix Injection}
-    \label{fig:anomaly_10} % Good practice for referencing the figure later
-\end{figure}
-
-
-\textbf{Dataset 2 - Sleep Time Injection:} For the second dataset, an additional sleep time is performed instead of a matrix multiplication. This results in a sequence consisting of: regular sleep time -> anomaly sleep time -> regular sleep time. Given that the anomaly does not require more memory than the baselaod calculations, no preparation is requried at the start of the dataset generation.
-\begin{itemize}
-    \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
-    \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
-    \item \textit{Anomaly} -- Type: Sleep Time Injection | Sleep Time Duration: 2 sec | Frequency: 1/50 baseload instances
-\end{itemize}
-
-This anomaly type simulates a process "hanging" or an unexpected period of system inactivity, which is a critical but non-peak anomaly often missed by simple thresholding.
-
-\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
-    \centering % Centers the content (image and caption) horizontally
-    \includegraphics[width=\textwidth]{anomaly_sequence_11}
-    \caption{Sleep Time Injection}
-    \label{fig:anomaly_11} % Good practice for referencing the figure later
-\end{figure}
-
-\textbf{Dataset 3 - Medium Matrix Injection:} For the third dataset, a matrix multiplication is performed as the anomaly. The size of the matrix falls between the already existing matrices in the baselaod calculations. Given that the anomaly does not require more memory than the baselaod calculations, no preparation is requried at the start of the dataset generation.
-\begin{itemize}
-    \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
-    \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
-    \item \textit{Preparation Matrix} -- Matrix Size: 4000 | Multiplications: 3
-    \item \textit{Anomaly} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 | Frequency: 1/50 baseload instances
-\end{itemize}
-
-The third anomaly type simulates a subtle but abnormal change in workload. This would not activate peak alerts but still deviates from the established operational rhythm. This tests a model's ability to understand the normal operating range in a larger context.
-
-\begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
-    \centering % Centers the content (image and caption) horizontally
-    \includegraphics[width=\textwidth]{anomaly_sequence_12}
-    \caption{Medium Matrix Injection}
-    \label{fig:anomaly_12} % Good practice for referencing the figure later
-\end{figure}
-
-\textbf{Dataset 4 - Combined Anomaly Injection:} For the fourth dataset, all three anomalies are injected. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. The same combined anomaly frequency is maintained as in the previous three datasets. The total length of the dataset is adjusted upwards. 
-\begin{itemize}
-    \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
-    \item \textit{Runtime} -- Total: 160 min | Anomaly-free: 25 min 
-    \item \textit{Preparation Matrix} -- Matrix Size: 6000 | Multiplications: 4
-    \item \textit{Anomaly 1} -- Type: Large Matrix Injection | Matrix Size: 6000 | Multiplications: 4
-    \item \textit{Anomaly 2} -- Type: Sleep Time Injection | Sleep Time Duration: 2 sec
-    \item \textit{Anomaly 3} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 
-    \item \textit{Combined Anomaly Frequency} 3
-\end{itemize}
-
-With all three anomalies representing distinctly different scenarios that require unique detection methods, a time series that challanges a model to detect all of them punishes methods that are highly specialized for a specific anomaly type. \par
-While these datasets are based on RAM usage, the underlying principle of creating a baseline workload and injecting distinct, peak and non-peak anomalies is highly transferable to other domains like network traffic, CPU utilization, or sensor data.
-
-\subsection{Logging}
-
-With real data, the biggest challenge is not to find extensive datasets, it's to find datasets with accurate labels. Without those, (semi-)supervised models cannot function and no models can be properly evaluated. Given this challenge, creating an accurate logging mechanism that will correctly label datapoints as either normal or anomalous was at the core of this entire seminar paper. \par
-The logging system employs a dual approach that provides a comprehensive view of each action executed and accurate monitoring of Resident Set Size (RSS) memory usage. It captures both discrete events and continuous system state. At its center is a centralized, thread-safe function called log\_entry which appends timestamped records to a CSV file. It utilizes a global threading.Lock to serialize file access, preventing race conditions and ensuring that multiple logging instances can write log entries without corruption. \par
-The first part is event-driven and activates whenever the script is started, an instance of matrix multiplication is started, or an instance of matrix multiplication concludes. These event logs provide a clear overview of all operations. \\
-The second part of my logging system (continuous\_logger\_thread) continuously samples current RSS memory usage while running in parallel to the rest of the working script. It monitors the current state of operations in 0.1 second intervals. If it detects the state changing from 'idle' to 'working', it waits for 0.3 seconds before recording RSS memory usage. During testing, I encountered the issue of a matrix multiplication having technically started but no changes in actual hardware utilization has yet occurred. The 0.3 seconds delay ensures that the first datapoint after a workload has started is correctly labeled as "working". This is particularly important for when an anomaly has been injected. Similarly, when it detects a state change from 'working' to 'idle', the logger waits 0.1 seconds before recording RSS memory usage. This exists to prevent situations where the matrix multiplication has already ended but the memory was not yet released. While none of these state changes occur, the logger takes a snapshot every 1.0 seconds. The 0.3 seconds and 0.1 seconds were each originally selected during extensive testing on a dataset that was supposed to track CPU usage. When used on memory, it continued to function as intended and was therefore kept.
-
-\subsection{Hardware Setup}
-
-The simulations are ran on the previously described system that was used for the replication of the TSB-AD benchmark. Since Windows is notorious for unannounced and unwanted background activities that can often neither be reliably prevented, nor accounted for, a VMWare Workstation Virtual Machine was used. The specific setup and resource allocations were as follows:
-
-\begin{itemize}
-    \item 4 Processor Cores (2 Processors with 2 Cores each)
-    \item 8GB DDR5 RAM
-    \item OS: Linux Ubuntu 24.04.2 LTS 64-bit
-    \item Automatic Updates Disabled
-    \item Networking Disabled
-\end{itemize}
-
-\subsection{Statistical Overview}
-
+\subsubsection{Statistical Overview}
 
 \begin{table}[htbp]
     \centering
@@ -579,9 +595,9 @@ The simulations are ran on the previously described system that was used for the
 \end{table}
 
 Most datasets used for the TSB-AD benchmark are between 1000 and 50000 datapoints in length. Based on this, I decided to keep Datasets 1-3 at around 5000 datapoints. This ensures a sufficiently large sample size, while keeping it small enough for me to manually go through the entire set and check for potential problems or mislabeled datapoints. Since Dataset 4 contains 3 separate anomaly types and I intended to maintain a consistent anomaly ratio between all sets, I increased its size. Otherwise, when maintaining the same anomaly ratio, it would be possible for some anomaly type to not occur at all. \cite[pp.~8]{SchmidlEtAl2022Anomaly} define an acceptable anomaly ratio to be one below 10\%, as anything above it would be better considered to be a classification problem. The median anomaly ratio in the TSB-AD dataset is 4.85\% and \cite[p.~4]{wu2021current} consider the adequate number of anomalies to be exactly 1. Given his range of opinions, I settled on a range of between 0.7\% and 2.2\% for my datasets. The differences between datasets can be explained by the average length of an anomalous sequence depending on anomaly type. The actual anomaly ratio based on anomalous sequences to total sequences is kept steady between datasets. Maintaining the sequence ratio ensures each dataset presents a consistent number of anomalous events to detect, which is more important for a fair comparison than the point ratio that can be skewed by the varying lengths of those events. \par
-For the calculations of the difficulty measures, I used Relative Contrast (RC), as described by \cite[pp.~1704]{paparrizos2022tsb}. Since the authors did not specify their preferred Shape Based Distance (SBD) metric, I applied the commonly used Dynamic Time Warping (DTW), using the cdist\_dtw implementation provided by the tslearn library \parencites{DTW}. \cite[pp.~1704]{paparrizos2022tsb} do not clearly state how to decide on a sliding window for the comparison of individual sequences and only state to "split the time series by its period" \parencite[p.~1704]{paparrizos2022tsb}. I interpret the term "period" to mean a repeating pattern, as is common in time series analysis. With all 4 of my created datasets, a repeating period can be defined as a sequence of matrix multiplications followed by an idle state, which tends to be between 8 and 12 datapoints long. With that in mind, I selected the value 10 for my sliding window. Since I neither know the exact RC implementation of \cite{paparrizos2022tsb}, nor their used SBD metric, it is impossible to compare the here produced values with those provided in the TSB-UAD paper. Therefore, a comparison can only be made between my own datasets. A low RC score should indicate that its difficult to effectively cluster the points in a dataset, making anomaly detection theoretically more challenging. Based on this assumption, Dataset 4 should provide the easiest to detect anomalies. As will be discussed in the next section, this does not hold up.
+For the calculations of the difficulty measures, I used Relative Contrast (RC), as described by \cite[pp.~1704]{paparrizos2022tsb}. Since the authors did not specify their preferred Shape Based Distance (SBD) metric, I applied the commonly used Dynamic Time Warping (DTW), using the cdist\_dtw implementation provided by the tslearn library \parencites{DTW}. \cite[pp.~1704]{paparrizos2022tsb} do not clearly state how to decide on a sliding window for the comparison of individual sequences and only state to "split the time series by its period" \parencite[p.~1704]{paparrizos2022tsb}. I interpret the term "period" to mean a repeating pattern, as is common in time series analysis. With all 4 of my created datasets, a repeating period can be defined as a sequence of matrix multiplications followed by an idle state, which tends to be between 8 and 12 datapoints long. With that in mind, I selected the value 10 for my sliding window. Since I neither know the exact RC implementation of \cite{paparrizos2022tsb}, nor their used SBD metric, it is impossible to compare the here produced values with those provided in the TSB-UAD paper. Therefore, a comparison can only be made between my own datasets. A low RC score should indicate that its difficult to effectively cluster the points in a dataset, making anomaly detection theoretically more challenging. Based on this assumption, Dataset 4 should provide the easiest to detect anomalies. As will be shown later, this does not hold up.
 
-\subsection{Benchmarking}
+\subsubsection{Benchmarking Results on New Dataset}
 
 \begin{table}[htbp]
     \centering
@@ -620,10 +636,25 @@ For the calculations of the difficulty measures, I used Relative Contrast (RC), 
 
 Table 5 provides a summary of results when evaluating datasets 1-4 with the TSB-AD benchmark.
 Unsurprisingly, dataset 1, which essentially just has a larger peak load as its anomalies, had the best results. Sub-PCA managed to achieve almost perfect scores for both VUS-PR (0.989) and VUS-ROC (0.999), highlighting its ability to detect the existing anomalies precisely and with great sensitivity. Most other models, statistical and neural network-based alike, also performed decently well with average scores (VUS-ROC) of 0.887 and 0.767 respectively.
-When looking at VUS-PR score averages, most detection models did not reach a score of above 0.500, with neural-network based models surprisingly outperforming statistical models. Since all anomalies are sequence-based and not point-based, one would expect the opposite \parencites[p.~10]{liu2024elephant}[p.~1706]{paparrizos2022tsb}.
-For dataset 2, which introduces anomalies by extending the idle time, the results are more varied. The best VUS-ROC score was a high 0.949 achieved by SAND, indicating a strong ability to detect these anomalies. However, the best VUS-PR score was only 0.562 from KShapeAD, showing that while models can find the anomalies, they struggle with precision. The average VUS-ROC scores were middling, with neural network models (0.604) slightly outperforming statistical ones (0.572). In contrast, the average VUS-PR scores were poor across the board, with statistical models (0.144) performing better than neural network models (0.059).
-Dataset 3, featuring the 'Medium Matrix' anomalies, was clearly the most difficult for the benchmarked models. This is especially evident in the VUS-PR scores, which were exceptionally low. The LOF model performed best on both metrics, yet it highlights a significant performance gap: it achieved a strong VUS-ROC score of 0.926 but a dismal VUS-PR score of only 0.062. On average, VUS-ROC scores were moderate, with statistical models (0.634) performing noticeably better than neural network models (0.506). This trend was even more pronounced for the VUS-PR scores, where the average for all models was a near-zero 0.018, confirming the difficulty of this dataset. It is also the only dataset where the best VUS-PR and VUS-ROC score where not achieved by the same model.
+When looking at VUS-PR score averages, most detection models did not reach a score of above 0.500, with neural-network based models surprisingly outperforming statistical models. Since all anomalies are sequence-based and not point-based, one would expect the opposite \parencites[p.~10]{liu2024elephant}[p.~1706]{paparrizos2022tsb}.\par
+For dataset 2, which introduces anomalies by extending the idle time, the results are more varied. The best VUS-ROC score was a high 0.949 achieved by SAND, indicating a strong ability to detect these anomalies. However, the best VUS-PR score was only 0.562 from KShapeAD, showing that while models can find the anomalies, they struggle with precision. The average VUS-ROC scores were middling, with neural network models (0.604) slightly outperforming statistical ones (0.572). In contrast, the average VUS-PR scores were poor across the board, with statistical models (0.144) performing better than neural network models (0.059). \par
+Dataset 3, featuring the 'Medium Matrix' anomalies, was clearly the most difficult for the benchmarked models. This is especially evident in the VUS-PR scores, which were exceptionally low. The LOF model performed best on both metrics, yet it highlights a significant performance gap: it achieved a strong VUS-ROC score of 0.926 but a dismal VUS-PR score of only 0.062. On average, VUS-ROC scores were moderate, with statistical models (0.634) performing noticeably better than neural network models (0.506). This trend was even more pronounced for the VUS-PR scores, where the average for all models was a near-zero 0.018, confirming the difficulty of this dataset. It is also the only dataset where the best VUS-PR and VUS-ROC score where not achieved by the same model. \par
 Dataset 4, which aggregates all anomaly types, was intended to be the most challenging. The neural network-based OmniAnomaly model achieved the best scores for both VUS-PR (0.394) and VUS-ROC (0.878). While the VUS-ROC score demonstrates good overall sensitivity, the sub-0.400 VUS-PR score again points to a significant challenge in maintaining precision across varied anomaly types. The average VUS-ROC scores were the highest outside of dataset 1, with neural network models (0.659) holding a slight edge over statistical models (0.613).
+
+\section{Discussion}
+
+\subsection{The Need For Better Benchmarking Tools}
+
+The examples shown in \ref{nab_res} are not cherry-picked results; they represent systemic flaws found throughout the entire NAB dataset. The analysis consistently reveals two main problems. The first is the large number of trivial anomalies that can be detected with simple thresholds. The second is significant mislabeling of the ground truth, where entire unusual sequences are often marked as just a single anomalous point.
+Interestingly, these labeling errors are not just in the real-world data but also appear in some of the artificially created time series. This suggests a potential flaw in how the benchmark was fundamentally designed and labeled.
+This brief analysis therefore confirms the critiques made by previous authors. It supports their claims that many of the early TSAD datasets are compromised, limiting their usefulness for rigorously comparing modern anomaly detection algorithms. The evidence here validates their conclusion that there is a clear need for new benchmarking tools built on a foundation of accuracy and realistic complexity.
+
+\subsection{Benchmark Reproducability}
+
+The replication of the TSB-AD benchmark adds another important point to the discussion: the issue of reproducibility. The results showed that while most models were consistent on average, their scores could differ significantly on specific datasets. This was particularly true for neural network-based methods and models with a low anomaly density where just a few mistakes can drastically change evaluation scores. A single performance score, especially on a new or challenging dataset, should be treated with care. The randomness in some models means that poor performance might be due to a bad initialization, not just a bad model design. It also puts into queastion the claim that the ideal number of anomalies per dataset should always be exactly 1 \parencite[p.~4]{wu2021current}. With only a single anomaly per time series, even a single mistake could result in a vastly worse model evaluation. It forces benchmarks to drastically increase the total number of time series in order to compensate for this behaviour and average out scores.
+
+\subsection{Model Failure on Contextual Anomalies}
+
 Other than the results for dataset 1, these scores are unexpectedly bad. While an average VUS-ROC score of around 0.500 for datasets 2 and 3 and could potentially be deemed acceptable, when combined with the horrendous VUS-PR scores, it becomes questionable whether most of the models provided any value at all. This applies even more so to dataset 3, where not a single model was able to achieve a usable level of precision. Given that the anomalies were correctly labeled, this begs the obvious question: Were the anomalies simply too difficult to detect? In order to answer this, I have applied a modified process introduced by \cite{wu2021current}, who attempted to detect anomalies with only a single line of code in order to determine whether they are trivial. Since the goal here is not to look for triviality but instead an acceptable level of difficulty, I have attempted to write a simple script, made up of only basic if-statements, which can, with high accuracy and precision, detect all existing anomalies.
 \textit{Dataset 2 Pseudo Code:} \par
 \begin{lstlisting}
@@ -651,6 +682,10 @@ This is obviously not a perfect test, as it requires me to have prior knowledge 
 The anomaly ratios (<3\%) are firmly within the established consensus for what an acceptable ratio is, the datapoints are accurately labeled with the help of an automated logger and a manual inspection, the anomalies represent real changes in workload, and the anomalies can be easily detected using a few lines of code. Based on these aspects I am willing to state that the results do not represent poor quality of the datasets but instead a blindspot in the current set of detection models included by the TSB-AD benchmark. \par
 Since Dataset 4 is made up two-thirds of the anomalies established in Datasets 2 and 3, it is only natural that the average scores are also rather unimpressive and lie somewhere between those of Aataset 1 and Dataset 4. The inclusion of multiple anomaly types seems to have slightly degraded peak VUS-ROC performance compared to all other datasets. This is most likely the result of highly specialized models that are good at detecting certain anomalies (e.g. peak values), struggling more with other types of anomalies. A neural network-based model performing best in both metrics is another notable occurrence.
 
+\subsection{Implications for TSAD Research}
+
+\subsection{Limitations}
+
 \section{Conclusion}
 
 This seminar paper embarked on a comprehensive evaluation of the current state of Time Series Anomaly Detection (TSAD) benchmarking, navigating from a literature-driven critique to empirical analysis and contribution. The literature review established a clear picture: while time series anomaly detection is an established discipline in many industries, playing an essential role in areas such as fraud detection and healthcare, the openly published scientific progress has only recently picked up pace. The lack of a generally recognized benchmarking environment with labeled high quality datasetshas posed a significant challenge to the development and evaluation of better detection methods. While eariler datasets like the Yahoo S5 dataset or the Numeta Anomaly Benchmark (NAB) provided a decent starting point, substantial issues with triviality, label quality, and run-to-failure bias have highlighted the need for better benchmarks. TSB-AD, and its predecessor TSB-UAD, have persued this goal and created a new standard for anomaly detection benchmarking that can be expanded on. \par
@@ -659,6 +694,12 @@ The central contribution of this paper was the creation of four new, high-qualit
 This suggest a blindspot in the current set of commonly discussed detection models. Their design may be overly specialized for detecting point-wise outliers (which could be explained by all the sequence-wise anomalies mislabeled as point-wise anomalies in earlier datasets like NAB) or significant deviations from a localized temporal window, while struggling with contextual anomalies that are only identifiable by understanding the broader patterns of the entire time series. The models failed to recognize that a period of inactivity or a moderately-sized workload, while normal-looking in isolation, was anomalous within the established operational rhythm of the system. \par
 
 Ultimately, this thesis gives an overview of the current Time Series Anomaly Detection (TSAD) field and existing benchmarking methods. Further more, it provides four high quality datasets that highlight a critical blindspot in current detection methods. These datasets serve as a useful tool for future model improvements. 
+
+
+
+
+
+
 
 
 
@@ -680,7 +721,7 @@ Ultimately, this thesis gives an overview of the current Time Series Anomaly Det
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \appendix
-\section{Anhang A}
+\section{Full Results of Benchmarking the New Datasets}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Eidesstattliche Erklärung
