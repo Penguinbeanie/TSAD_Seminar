@@ -374,7 +374,7 @@ This anomaly type simulates a process "hanging" or an unexpected period of syste
     \item \textit{Anomaly} -- Type: Medium Matrix Injection | Matrix Size: 4000 | Multiplications: 3 | Frequency: 1/50 baseload instances
 \end{itemize}
 
-The third anomaly type simulates a subtle but abnormal change in workload. This would not activate peak alerts but still deviates from the established operational rhythm. This tests a model's ability to understand the normal operating range in a larger context.
+The third anomaly type simulates a subtle but abnormal change in workload. This would not activate peak alerts but still deviates from the established operational rhythm. This tests a model's ability to understand the normal operating range in a larger context. A real world example could be the occasional execution of malicious code, designed to hide between regular activities, never exceeding peak values in order to avoid detection.
 
 \begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
     \centering % Centers the content (image and caption) horizontally
@@ -683,6 +683,10 @@ The anomaly ratios (<3\%) are firmly within the established consensus for what a
 Since Dataset 4 is made up two-thirds of the anomalies established in Datasets 2 and 3, it is only natural that the average scores are also rather unimpressive and lie somewhere between those of Aataset 1 and Dataset 4. The inclusion of multiple anomaly types seems to have slightly degraded peak VUS-ROC performance compared to all other datasets. This is most likely the result of highly specialized models that are good at detecting certain anomalies (e.g. peak values), struggling more with other types of anomalies. A neural network-based model performing best in both metrics is another notable occurrence.
 
 \subsection{Implications for TSAD Research}
+
+The results indicate that current models struggle with non-peak anomalies, especially those which mimic known activities but at unusual levels between the otherwise present minimum and maximum values. As previously stated, such anomalies could appear in cases of fraud, where malicous activities are designed to avoid standing out. The injected anomalies in dataset 3 can be easily detected with a few lines of code or human evaluation. Despite that, most models struggled with their sensitivity, and all models failed entirely to showcase any acceptable level of precision. In real cases of fraud, attackers would most likely do a better job than to inject malicous acitivities conveniently placed at a level exactly between already existing processes and instead aim to replicate output levels more closely. If existing models failed on my simple simulations, they would certainly fail in more sophisticated scenarios. \par
+To address this, future detection methods must be improved to better incorporate the global context of a time series. However, for such model development to be effective, I propose that a more nuanced dataset categorization is needed. Instead of only classifying anomalies as point-wise or sequence-wise, it would be beneficial to create an extended framework that also defines the contextual nature of the anomaly. This framework could include primary categories like 'Deviation from Local Pattern' and 'Deviation from Global Pattern,' with subcategories such as the types explored in this thesis: 'Peak-Value,' 'Medium-Value,' and 'Low-Value' anomalies. Adopting such a taxonomy would allow researchers to identify which anomaly classes their models struggle with and enable targeted improvements.
+
 
 \subsection{Limitations}
 
