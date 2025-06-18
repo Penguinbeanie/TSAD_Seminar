@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  18 JUN 2025 13:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  18 JUN 2025 16:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -606,7 +606,10 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+PTSans-TLF on input line 108.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTSans-TLF.fd
 File: T1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for T1/PTSans-TLF.
-) (./main.aux)
+) (./main.aux (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex)
+Package babel Info: Importing data for ngerman
+(babel)             from babel-de.ini. Reported on input line 320.
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
@@ -647,6 +650,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 108.
+ (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -658,6 +662,20 @@ Package biblatex Info: ... file 'english.lbx' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+))
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -669,7 +687,7 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 108.
 Package biblatex Info: Reference segment=0 on input line 108.
 \c@lstlisting=\count453
-<siegel.pdf, id=4, 593.13643pt x 597.83954pt>
+<siegel.pdf, id=162, 593.13643pt x 597.83954pt>
 File: siegel.pdf Graphic file (type pdf)
 <use siegel.pdf>
 Package pdftex.def Info: siegel.pdf  used on input line 118.
@@ -678,31 +696,59 @@ Package pdftex.def Info: siegel.pdf  used on input line 118.
 
 [1
 
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptsans_t1.enc} <./siegel.pdf>]
-No file main.toc.
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptsans_t1.enc} <./siegel.pdf>] (./main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+[1
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
 
-[1
-
-]
-No file main.lof.
+[2] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
-No file main.lot.
+ (./main.lot
+Overfull \hbox (23.94649pt too wide) in paragraph at lines 7--7
+ [][] [][]\T1/PTSans-TLF/m/n/12 Model Per-for-mance Com-par-i-son on 010_RAM-spike_10_Hardware_tr_1200_1st_1210[] [][]  
+ []
+
+
+Overfull \hbox (24.5945pt too wide) in paragraph at lines 8--8
+ [][] [][]\T1/PTSans-TLF/m/n/12 Model Per-for-mance Com-par-i-son on 011_RAM-sleep_11_Hardware_tr_1200_1st_1324[] [][]  
+ []
+
+
+Overfull \hbox (39.2105pt too wide) in paragraph at lines 9--9
+ [][] [][]\T1/PTSans-TLF/m/n/12 Model Per-for-mance Com-par-i-son on 012_RAMmedium_12_Hardware_tr_1200_1st_1237[] [][]  
+ []
+
+
+Overfull \hbox (28.89049pt too wide) in paragraph at lines 10--10
+ [][] [][]\T1/PTSans-TLF/m/n/12 Model Per-for-mance Com-par-i-son on 013_RAM-mixed_13_Hardware_tr_2000_1st_2083[] [][]  
+ []
+
+)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
 
 
-[2
+[3
 
 ]
 
-[3
+[4
 
 ]
 
@@ -728,14 +774,6 @@ File: TS1PTSans-TLF.fd 2011/05/04 (autoinst with patch) Font definitions for TS1
 [5]
 
 [6]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 243.
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 243.
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Overfull \hbox (5.77362pt too wide) in paragraph at lines 262--262
 []\T1/PTSans-TLF/b/n/12 Yahoo (2015)\T1/PTSans-TLF/m/n/12 : Ya-hoo pro-vides one of the ear-li-est avail-able la-beled large scale TSAD datasets.
  []
@@ -749,7 +787,7 @@ Overfull \hbox (5.77362pt too wide) in paragraph at lines 262--262
 [9]
 
 [10]
-<baseline_sequence.png, id=173, 844.8363pt x 289.08pt>
+<baseline_sequence.png, id=391, 844.8363pt x 289.08pt>
 File: baseline_sequence.png Graphic file (type png)
 <use baseline_sequence.png>
 Package pdftex.def Info: baseline_sequence.png  used on input line 330.
@@ -757,12 +795,12 @@ Package pdftex.def Info: baseline_sequence.png  used on input line 330.
 
 
 [11 <./baseline_sequence.png>]
-<anomaly_sequence_10.png, id=182, 844.8363pt x 289.08pt>
+<anomaly_sequence_10.png, id=398, 844.8363pt x 289.08pt>
 File: anomaly_sequence_10.png Graphic file (type png)
 <use anomaly_sequence_10.png>
 Package pdftex.def Info: anomaly_sequence_10.png  used on input line 347.
 (pdftex.def)             Requested size: 460.72124pt x 157.64912pt.
-<anomaly_sequence_11.png, id=183, 844.8363pt x 289.08pt>
+<anomaly_sequence_11.png, id=399, 844.8363pt x 289.08pt>
 File: anomaly_sequence_11.png Graphic file (type png)
 <use anomaly_sequence_11.png>
 Package pdftex.def Info: anomaly_sequence_11.png  used on input line 364.
@@ -770,7 +808,7 @@ Package pdftex.def Info: anomaly_sequence_11.png  used on input line 364.
 
 
 [12 <./anomaly_sequence_10.png>]
-<anomaly_sequence_12.png, id=190, 844.8363pt x 289.08pt>
+<anomaly_sequence_12.png, id=405, 844.8363pt x 289.08pt>
 File: anomaly_sequence_12.png Graphic file (type png)
 <use anomaly_sequence_12.png>
 Package pdftex.def Info: anomaly_sequence_12.png  used on input line 381.
@@ -780,7 +818,7 @@ Package pdftex.def Info: anomaly_sequence_12.png  used on input line 381.
 [13 <./anomaly_sequence_11.png>]
 
 [14 <./anomaly_sequence_12.png>]
-<trivial.png, id=204, 689.412pt x 497.568pt>
+<trivial.png, id=417, 689.412pt x 497.568pt>
 File: trivial.png Graphic file (type png)
 <use trivial.png>
 Package pdftex.def Info: trivial.png  used on input line 427.
@@ -788,39 +826,26 @@ Package pdftex.def Info: trivial.png  used on input line 427.
 
 
 [15]
-
-LaTeX Warning: Reference `fig:trivial' on page 16 undefined on input line 432.
-
-<mislab.png, id=211, 689.412pt x 326.748pt>
+<mislab.png, id=423, 689.412pt x 326.748pt>
 File: mislab.png Graphic file (type png)
 <use mislab.png>
 Package pdftex.def Info: mislab.png  used on input line 436.
 (pdftex.def)             Requested size: 460.72124pt x 218.35663pt.
-
-LaTeX Warning: Reference `fig:mislab' on page 16 undefined on input line 441.
-
-<point_seq.png, id=212, 689.412pt x 479.829pt>
+<point_seq.png, id=425, 689.412pt x 479.829pt>
 File: point_seq.png Graphic file (type png)
 <use point_seq.png>
 Package pdftex.def Info: point_seq.png  used on input line 445.
 (pdftex.def)             Requested size: 460.72124pt x 320.6564pt.
 
-LaTeX Warning: Reference `fig:point_seq' on page 16 undefined on input line 450.
-
-
 
 [16 <./trivial.png>]
 
 [17 <./mislab.png> <./point_seq.png>]
-<run_to_failure.png, id=230, 689.85pt x 326.748pt>
+<run_to_failure.png, id=440, 689.85pt x 326.748pt>
 File: run_to_failure.png Graphic file (type png)
 <use run_to_failure.png>
 Package pdftex.def Info: run_to_failure.png  used on input line 454.
 (pdftex.def)             Requested size: 460.72124pt x 218.222pt.
-
-
-LaTeX Warning: Reference `fig:run_to_failure' on page 18 undefined on input line 459.
-
 
 Overfull \hbox (21.57759pt too wide) in paragraph at lines 470--500
  [][] 
@@ -852,13 +877,6 @@ Overfull \hbox (24.21031pt too wide) in paragraph at lines 572--588
 
 [24]
 
-LaTeX Warning: Reference `nab_res' on page 25 undefined on input line 647.
-
-
-LaTeX Warning: Reference `dat1_3' on page 25 undefined on input line 658.
-
-
-
 [25]
 
 [26]
@@ -868,11 +886,11 @@ LaTeX Warning: Reference `dat1_3' on page 25 undefined on input line 658.
 [28]
 
 [29]
-LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 724.
+LaTeX Font Info:    Trying to load font information for T1+PTMono-TLF on input line 726.
  (c:/texlive/2025/texmf-dist/tex/latex/paratype/T1PTMono-TLF.fd
 File: T1PTMono-TLF.fd 2014/02/02 Font definitions for T1/PTMono-TLF.
 )
-Overfull \hbox (48.00337pt too wide) in paragraph at lines 725--725
+Overfull \hbox (48.00337pt too wide) in paragraph at lines 727--727
 \T1/PTMono-TLF/m/n/12 de / EN / Themen / Verbraucherinnen -[] und -[] Verbraucher / Cyber -[] Sicherheitslage /
  []
 
@@ -880,6 +898,61 @@ Overfull \hbox (48.00337pt too wide) in paragraph at lines 725--725
 
 [30
 
-{
-!pdfTeX error: pdflatex.exe (file ptmono_t1.enc): fflush() failed (Invalid argument)
- ==> Fatal error occurred, no output PDF file produced!
+{c:/texlive/2025/texmf-dist/fonts/enc/dvips/paratype/ptmono_t1.enc}]
+Overfull \hbox (11.83287pt too wide) in paragraph at lines 727--727
+[][]\T1/PTSans-TLF/m/it/12 Yahoo \T1/PTSans-TLF/m/n/12 (2015). []$\T1/PTMono-TLF/m/n/12 https : / / webscope . sandbox . yahoo . com / catalog . php ? datatype =
+ []
+
+
+Overfull \hbox (7.71909pt too wide) in paragraph at lines 727--727
+\T1/PTMono-TLF/m/n/12 201818903002$[]\T1/PTSans-TLF/m/n/12 . URL: []$\T1/PTMono-TLF/m/n/12 https : / / doi . org / 10 . 1051 / matecconf / 201818903002$[]\T1/PTSans-TLF/m/n/12 . 
+ []
+
+
+
+[31] (./Erklaerung.tex
+
+[32
+
+]
+
+[33]
+
+[34]
+
+[35])
+
+[36] (./main.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-04-14>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: C8CB6DB3F0AE1285CA73215FF2E1EE2F;7218.
+
+Package biblatex Warning: Please rerun LaTeX.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 24052 strings out of 469608
+ 416556 string characters out of 5474779
+ 1316565 words of memory out of 5000000
+ 50432 multiletter control sequences out of 15000+600000
+ 703385 words of font info for 81 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 75i,18n,79p,4052b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptmono/PTM55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS55F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS56F.pfb><c:/texlive/2025/texmf-dist/fonts/type1/paratype/ptsans/PTS75F.pfb>
+Output written on main.pdf (41 pages, 4751644 bytes).
+PDF statistics:
+ 663 PDF objects out of 1000 (max. 8388607)
+ 586 compressed objects within 6 object streams
+ 132 named destinations out of 1000 (max. 500000)
+ 366 words of extra memory for PDF output out of 10000 (max. 10000000)
+

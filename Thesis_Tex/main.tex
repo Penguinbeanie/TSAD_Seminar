@@ -85,10 +85,10 @@
     \large Lehrstuhl f\"{u}r Wirtschaftsinformatik und Künstliche Intelligenz im Unternehmen \\
     \large Universität Würzburg\\
     \vspace*{\stretch{1}}
-    \large Betreuer:  #8 \\[1mm]
-    \large Assistent:  #9 \\[1mm]
+    \large Supervisor:  #8 \\[1mm]
+    \large Assistant:  #9 \\[1mm]
     \vspace*{\stretch{1}}
-    \large #6, den #7
+    \large #6, #7
   \end{center}
 }
 
@@ -111,7 +111,7 @@
       {Philip Spaier}                        % Vor- und Nachname des Autors
       {3110375}
       
-      {Seminararbeit } % Art der Arbeit
+      {Seminar Thesis } % Art der Arbeit
       {Würzburg}                           % Ort der Erstellung
       {\today}                          % Tag der Abgabe
       {Prof. Dr. Gunther Gust}           % Name des Erstgutachters
@@ -640,6 +640,8 @@ For dataset 2, which introduces anomalies by extending the idle time, the result
 Dataset 3, featuring the 'Medium Matrix' anomalies, was clearly the most difficult for the benchmarked models. This is especially evident in the VUS-PR scores, which were exceptionally low. The LOF model performed best on both metrics, yet it highlights a significant performance gap: it achieved a strong VUS-ROC score of 0.926 but a dismal VUS-PR score of only 0.062. On average, VUS-ROC scores were moderate, with statistical models (0.634) performing noticeably better than neural network models (0.506). This trend was even more pronounced for the VUS-PR scores, where the average for all models was a near-zero 0.018, confirming the difficulty of this dataset. It is also the only dataset where the best VUS-PR and VUS-ROC score where not achieved by the same model. \par
 Dataset 4, which aggregates all anomaly types, was intended to be the most challenging. The neural network-based OmniAnomaly model achieved the best scores for both VUS-PR (0.394) and VUS-ROC (0.878). While the VUS-ROC score demonstrates good overall sensitivity, the sub-0.400 VUS-PR score again points to a significant challenge in maintaining precision across varied anomaly types. The average VUS-ROC scores were the highest outside of dataset 1, with neural network models (0.659) holding a slight edge over statistical models (0.613).
 
+These results were verified with 2 additional benchmarking runs. The scores remained almost identical throughout all three runs.
+
 \section{Discussion}
 
 \subsection{The Need For Better Benchmarking Tools}
@@ -650,7 +652,7 @@ This brief analysis therefore confirms the critiques made by previous authors. I
 
 \subsection{Benchmark Reproducability}
 
-Beyond the issue of dataset quality, the replication of the TSB-AD benchmark revealed another challenge in the field: reproducibility. The results showed that while most models were consistent on average, their scores could differ significantly on specific datasets. This was particularly true for neural network-based methods and models with a low anomaly density where just a few mistakes can drastically change evaluation scores. A single performance score, especially on a new or challenging dataset, should be treated with care. The randomness in some models means that poor performance might be due to a bad initialization, not just a bad model design. It also puts into queastion the claim that the ideal number of anomalies per dataset should always be exactly 1 \parencite[p.~4]{wu2021current}. With only a single anomaly per time series, even a single mistake could result in a vastly worse model evaluation. It forces benchmarks to drastically increase the total number of time series in order to compensate for this behaviour and average out scores.
+Beyond the issue of dataset quality, the replication of the TSB-AD benchmark revealed another challenge in the field: reproducibility between different systems. The results showed that while most models were consistent on average, their scores could differ significantly on specific datasets. This was particularly true for neural network-based methods and models with a low anomaly density where just a few mistakes can drastically change evaluation scores. A single performance score, especially on a new or challenging dataset, should be treated with care. The randomness in some models means that poor performance might be due to a bad initialization, not just a bad model design. It also puts into queastion the claim that the ideal number of anomalies per dataset should always be exactly 1 \parencite[p.~4]{wu2021current}. With only a single anomaly per time series, even a single mistake could result in a vastly worse model evaluation. It forces benchmarks to drastically increase the total number of time series in order to compensate for this behaviour and average out scores. Considering the high reproducibility of my own datasets between runs, the observed differences are likely to be caused by differences between systems and potentially setups. 
 
 \subsection{Model Failure on Contextual Anomalies}
 
@@ -692,7 +694,7 @@ To address this, future detection methods must be improved to better incorporate
 
 The broad scope of this thesis required a breadth-focused approach, meaning an in-depth exploration of every subtopic was not possible. \par
 Specifically, the analysis of existing datasets was qualitative and limited to a single benchmark suite (NAB). This means my findings might be biased or not fully represent the entire body of existing work.
-Furthermore, the TSB-AD benchmark replication was performed only once. With such a small sample size, the results may not be statistically significant and could be due to chance. These runs were also done on consumer hardware in a non-isolated environment, which might have affected the outcomes. \par
+Furthermore, the TSB-AD benchmark replication was performed only once. With such a small sample size, the results may not be statistically significant and could be due to chance. These runs were also done on consumer hardware in a non-isolated environment, which might have affected the outcomes. Additionally, minor unrecognized differences in implementation or updates to the used third party packages and libraries could have caused some of the observed differences. \par
 For the dataset creation, two main limitations exist. First, despite efforts to isolate the simulation environment using a Virtual Machine and disabling background processes, undetected effects from the host hardware are still possible. A completely isolated system, like one running Linux From Scratch, would offer more control but requires extensive specialized knowledge. However, visual inspection suggests no significant data quality issues, likely due to the stable nature of memory allocation. Second, the anomalies themselves are simulations. While designed to be challenging, they only roughly represent real-world issues. Achieving exact replications of naturally occurring anomalies would require injecting actual malicious code or inducing real hardware failures.
 
 \section{Conclusion}
@@ -731,6 +733,166 @@ Ultimately, this thesis gives an overview of the current Time Series Anomaly Det
 \clearpage
 \appendix
 \section{Full Results of Benchmarking the New Datasets}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Model Performance Comparison on 010\_RAMspike\_10\_Hardware\_tr\_1200\_1st\_1210}
+    \begin{tabular}{|l|c|c|c|c|}
+        \toprule
+        \textbf{Model} & \textbf{AUC-PR} & \textbf{AUC-ROC} & \textbf{VUS-PR} & \textbf{VUS-ROC} \\
+        \midrule
+        AnomalyTransformer & 0.0171 & 0.4753 & 0.0221 & 0.4767 \\
+        AutoEncoder & 0.0099 & 0.1797 & 0.0119 & 0.1660 \\
+        CNN & 0.9465 & 0.9583 & 0.9475 & 0.9766 \\
+        FFT & 0.5835 & 0.9072 & 0.4995 & 0.9379 \\
+        FITS & 0.0318 & 0.5354 & 0.0375 & 0.5955 \\
+        IForest & 0.1081 & 0.9153 & 0.1322 & 0.9003 \\
+        KMeansAD\_U & 0.1211 & 0.9174 & 0.1433 & 0.9022 \\
+        KShapeAD & 0.2319 & 0.9419 & 0.2119 & 0.9437 \\
+        Left\_STAMPi & 0.0224 & 0.6119 & 0.0304 & 0.5943 \\
+        LOF & 0.0310 & 0.6006 & 0.0427 & 0.6669 \\
+        LSTMAD & 0.7009 & 0.9697 & 0.7084 & 0.9759 \\
+        M2N2 & 0.9462 & 0.9683 & 0.9376 & 0.9877 \\
+        MatrixProfile & 0.1077 & 0.8046 & 0.1544 & 0.8910 \\
+        MOMENT\_ZS & 0.1874 & 0.9628 & 0.2233 & 0.9670 \\
+        OmniAnomaly & 0.9791 & 0.9996 & 0.9866 & 0.9998 \\
+        POLY & 0.7869 & 0.9954 & 0.8133 & 0.9968 \\
+        SAND & 0.0614 & 0.8385 & 0.0743 & 0.8612 \\
+        SR & 0.4325 & 0.9028 & 0.4522 & 0.9378 \\
+        Sub\_HBOS & 0.4562 & 0.8222 & 0.3928 & 0.8999 \\
+        Sub\_IForest & 0.8427 & 0.9933 & 0.8795 & 0.9966 \\
+        Sub\_KNN & 0.0648 & 0.8747 & 0.0867 & 0.8875 \\
+        Sub\_LOF & 0.1619 & 0.9526 & 0.2121 & 0.9530 \\
+        Sub\_MCD & 0.0108 & 0.2701 & 0.0132 & 0.2595 \\
+        Sub\_OCSVM & 0.0648 & 0.7716 & 0.0749 & 0.7485 \\
+        Sub\_PCA & 0.9883 & 0.9998 & 0.9893 & 0.9999 \\
+        TranAD & 0.8239 & 0.9961 & 0.8913 & 0.9976 \\
+        USAD & 0.1291 & 0.9453 & 0.1746 & 0.9462 \\
+        \bottomrule
+    \end{tabular}
+    
+    \label{tab:model_performance_RAMspike}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Model Performance Comparison on 011\_RAMsleep\_11\_Hardware\_tr\_1200\_1st\_1324}
+    \begin{tabular}{|l|c|c|c|c|}
+        \toprule
+        \textbf{Model} & \textbf{AUC-PR} & \textbf{AUC-ROC} & \textbf{VUS-PR} & \textbf{VUS-ROC} \\
+        \midrule
+        AnomalyTransformer & 0.0217 & 0.4882 & 0.0269 & 0.4826 \\
+        AutoEncoder & 0.0315 & 0.6456 & 0.0387 & 0.6871 \\
+        CNN & 0.0173 & 0.4475 & 0.0220 & 0.4622 \\
+        FFT & 0.0207 & 0.3123 & 0.0260 & 0.3319 \\
+        FITS & 0.0178 & 0.4364 & 0.0234 & 0.5103 \\
+        IForest & 0.0132 & 0.2683 & 0.0166 & 0.2112 \\
+        KMeansAD\_U & 0.0629 & 0.6214 & 0.0485 & 0.5825 \\
+        KShapeAD & 0.5849 & 0.9209 & 0.5619 & 0.9445 \\
+        Left\_STAMPi & 0.0583 & 0.7618 & 0.0702 & 0.7498 \\
+        LOF & 0.0239 & 0.4362 & 0.0272 & 0.4533 \\
+        LSTMAD & 0.0212 & 0.5416 & 0.0274 & 0.6055 \\
+        M2N2 & 0.0184 & 0.4805 & 0.0220 & 0.5269 \\
+        MatrixProfile & 0.0216 & 0.4504 & 0.0244 & 0.4467 \\
+        MOMENT\_ZS & 0.0148 & 0.3359 & 0.0178 & 0.2944 \\
+        OmniAnomaly & 0.2378 & 0.8521 & 0.2667 & 0.8712 \\
+        POLY & 0.0164 & 0.3716 & 0.0211 & 0.3459 \\
+        SAND & 0.5052 & 0.9371 & 0.4225 & 0.9487 \\
+        SR & 0.0258 & 0.5872 & 0.0325 & 0.6455 \\
+        Sub\_HBOS & 0.6076 & 0.8314 & 0.5494 & 0.8736 \\
+        Sub\_IForest & 0.0110 & 0.0892 & 0.0132 & 0.1317 \\
+        Sub\_KNN & 0.0632 & 0.7234 & 0.0798 & 0.7677 \\
+        Sub\_LOF & 0.0650 & 0.8238 & 0.0825 & 0.8612 \\
+        Sub\_MCD & 0.0345 & 0.6672 & 0.0468 & 0.7134 \\
+        Sub\_OCSVM & 0.0648 & 0.7607 & 0.0623 & 0.7934 \\
+        Sub\_PCA & 0.0150 & 0.3463 & 0.0191 & 0.3698 \\
+        TranAD & 0.0219 & 0.5443 & 0.0310 & 0.6188 \\
+        USAD & 0.0275 & 0.5959 & 0.0362 & 0.5931 \\
+        \bottomrule
+    \end{tabular}
+    
+    \label{tab:model_performance_RAMsleep}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Model Performance Comparison on 012\_RAMmedium\_12\_Hardware\_tr\_1200\_1st\_1237}
+    \begin{tabular}{|l|c|c|c|c|}
+        \toprule
+        \textbf{Model} & \textbf{AUC-PR} & \textbf{AUC-ROC} & \textbf{VUS-PR} & \textbf{VUS-ROC} \\
+        \midrule
+        AnomalyTransformer & 0.0085 & 0.5179 & 0.0144 & 0.4915 \\
+        AutoEncoder & 0.0111 & 0.5630 & 0.0194 & 0.5603 \\
+        CNN & 0.0044 & 0.1373 & 0.0086 & 0.2994 \\
+        FFT & 0.0075 & 0.3364 & 0.0143 & 0.3396 \\
+        FITS & 0.0077 & 0.5123 & 0.0142 & 0.6153 \\
+        IForest & 0.0120 & 0.6676 & 0.0190 & 0.6548 \\
+        KMeansAD\_U & 0.0175 & 0.5914 & 0.0229 & 0.5411 \\
+        KShapeAD & 0.0097 & 0.6309 & 0.0169 & 0.6655 \\
+        Left\_STAMPi & 0.0174 & 0.6920 & 0.0276 & 0.6591 \\
+        LOF & 0.0503 & 0.9260 & 0.0621 & 0.9264 \\
+        LSTMAD & 0.0053 & 0.3307 & 0.0093 & 0.5000 \\
+        M2N2 & 0.0047 & 0.2339 & 0.0088 & 0.4380 \\
+        MatrixProfile & 0.0096 & 0.5403 & 0.0282 & 0.6904 \\
+        MOMENT\_ZS & 0.0057 & 0.3700 & 0.0092 & 0.3590 \\
+        OmniAnomaly & 0.0049 & 0.2509 & 0.0156 & 0.5425 \\
+        POLY & 0.0058 & 0.3636 & 0.0108 & 0.3504 \\
+        SAND & 0.0115 & 0.6955 & 0.0203 & 0.7291 \\
+        SR & 0.0053 & 0.3402 & 0.0101 & 0.5142 \\
+        Sub\_HBOS & 0.0071 & 0.4415 & 0.0102 & 0.5115 \\
+        Sub\_IForest & 0.0195 & 0.7884 & 0.0457 & 0.8525 \\
+        Sub\_KNN & 0.0097 & 0.5965 & 0.0200 & 0.6327 \\
+        Sub\_LOF & 0.0060 & 0.4246 & 0.0105 & 0.4209 \\
+        Sub\_MCD & 0.0124 & 0.6283 & 0.0232 & 0.7032 \\
+        Sub\_OCSVM & 0.0074 & 0.5224 & 0.0144 & 0.6283 \\
+        Sub\_PCA & 0.0048 & 0.2216 & 0.0071 & 0.2922 \\
+        TranAD & 0.0133 & 0.7199 & 0.0170 & 0.7197 \\
+        USAD & 0.0064 & 0.3663 & 0.0103 & 0.3208 \\
+        \bottomrule
+    \end{tabular}
+    
+    \label{tab:model_performance_RAMmedium}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Model Performance Comparison on 013\_RAMmixed\_13\_Hardware\_tr\_2000\_1st\_2083}
+    \begin{tabular}{|l|c|c|c|c|}
+        \toprule
+        \textbf{Model} & \textbf{AUC-PR} & \textbf{AUC-ROC} & \textbf{VUS-PR} & \textbf{VUS-ROC} \\
+        \midrule
+        AnomalyTransformer & 0.0204 & 0.4819 & 0.0315 & 0.4867 \\
+        AutoEncoder & 0.0205 & 0.4877 & 0.0352 & 0.5242 \\
+        CNN & 0.3191 & 0.5636 & 0.0941 & 0.5556 \\
+        FFT & 0.1247 & 0.5532 & 0.0551 & 0.4276 \\
+        FITS & 0.0641 & 0.5869 & 0.0443 & 0.6666 \\
+        IForest & 0.1251 & 0.5930 & 0.0500 & 0.5329 \\
+        KMeansAD\_U & 0.0243 & 0.5500 & 0.0336 & 0.4481 \\
+        KShapeAD & 0.0391 & 0.6980 & 0.0473 & 0.7077 \\
+        Left\_STAMPi & 0.0351 & 0.6919 & 0.0484 & 0.7102 \\
+        LOF & 0.0177 & 0.4088 & 0.0319 & 0.5099 \\
+        LSTMAD & 0.1008 & 0.6478 & 0.0581 & 0.7293 \\
+        M2N2 & 0.3219 & 0.6197 & 0.1040 & 0.6358 \\
+        MatrixProfile & 0.0735 & 0.6210 & 0.1033 & 0.7788 \\
+        MOMENT\_ZS & 0.0966 & 0.6134 & 0.0761 & 0.5910 \\
+        OmniAnomaly & 0.5149 & 0.8398 & 0.3942 & 0.8782 \\
+        POLY & 0.2589 & 0.6070 & 0.1117 & 0.5163 \\
+        SAND & 0.0420 & 0.6928 & 0.0549 & 0.7198 \\
+        SR & 0.1094 & 0.5934 & 0.0673 & 0.6898 \\
+        Sub\_HBOS & 0.2093 & 0.6745 & 0.1685 & 0.7796 \\
+        Sub\_IForest & 0.3550 & 0.6704 & 0.1711 & 0.6827 \\
+        Sub\_KNN & 0.0199 & 0.5114 & 0.0305 & 0.4698 \\
+        Sub\_LOF & 0.0603 & 0.5957 & 0.0515 & 0.4912 \\
+        Sub\_MCD & 0.0268 & 0.5209 & 0.0402 & 0.5227 \\
+        Sub\_OCSVM & 0.0234 & 0.4790 & 0.0375 & 0.5490 \\
+        Sub\_PCA & 0.3318 & 0.6393 & 0.1230 & 0.5795 \\
+        TranAD & 0.2698 & 0.6989 & 0.1359 & 0.7731 \\
+        USAD & 0.0757 & 0.7174 & 0.0746 & 0.6647 \\
+        \bottomrule
+    \end{tabular}
+    
+    \label{tab:model_performance_RAMmixed}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Eidesstattliche Erklärung
