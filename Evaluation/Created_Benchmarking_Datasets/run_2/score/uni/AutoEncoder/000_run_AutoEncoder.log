@@ -1,0 +1,31 @@
+2025-06-18 13:50:01,694 - INFO - --- Starting processing for model: AutoEncoder ---
+2025-06-18 13:50:01,694 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='AutoEncoder')
+2025-06-18 13:50:01,695 - INFO - Optimal_Det_HP: {'window_size': 100, 'hidden_neurons': [128, 64]}
+2025-06-18 13:50:01,696 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by AutoEncoder
+2025-06-18 13:50:02,698 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using AutoEncoder | Time cost: 0.999s at length 5308
+2025-06-18 13:50:02,699 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:02,872 - INFO - Evaluation result: {'AUC-PR': 0.009900552700169062, 'AUC-ROC': 0.1797262541943393, 'VUS-PR': 0.011942150369227923, 'VUS-ROC': 0.1659795285099385, 'Standard-F1': 0.03447622655806024, 'PA-F1': 0.034476226558060236, 'Event-based-F1': 0.034110289937464434, 'R-based-F1': 0.08117978190784803, 'Affiliation-F': 0.6614999785671741}
+2025-06-18 13:50:02,872 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 6.713769
+2025-06-18 13:50:02,873 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:50:02,874 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/AutoEncoder\run2_AutoEncoder.csv
+2025-06-18 13:50:02,874 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by AutoEncoder
+2025-06-18 13:50:03,747 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using AutoEncoder | Time cost: 0.871s at length 5320
+2025-06-18 13:50:03,748 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:03,936 - INFO - Evaluation result: {'AUC-PR': 0.03146993636027762, 'AUC-ROC': 0.6456115861106264, 'VUS-PR': 0.038742601024575225, 'VUS-ROC': 0.6871217396154471, 'Standard-F1': 0.06896551724137931, 'PA-F1': 0.2127659574468085, 'Event-based-F1': 0.0789177001127394, 'R-based-F1': 0.05908233815210559, 'Affiliation-F': 0.7199319626156253}
+2025-06-18 13:50:03,936 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 8.176719
+2025-06-18 13:50:03,937 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:50:03,938 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/AutoEncoder\run2_AutoEncoder.csv
+2025-06-18 13:50:03,938 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by AutoEncoder
+2025-06-18 13:50:04,859 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using AutoEncoder | Time cost: 0.918s at length 5319
+2025-06-18 13:50:04,859 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:05,076 - INFO - Evaluation result: {'AUC-PR': 0.011094502570001956, 'AUC-ROC': 0.5629948853949612, 'VUS-PR': 0.01937388371776163, 'VUS-ROC': 0.5602979949492987, 'Standard-F1': 0.03571428571428571, 'PA-F1': 0.04964539007092199, 'Event-based-F1': 0.030651340996168425, 'R-based-F1': 0.026080988332189428, 'Affiliation-F': 0.5608308059751475}
+2025-06-18 13:50:05,076 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 8.672448
+2025-06-18 13:50:05,077 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:50:05,078 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/AutoEncoder\run2_AutoEncoder.csv
+2025-06-18 13:50:05,078 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by AutoEncoder
+2025-06-18 13:50:06,669 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using AutoEncoder | Time cost: 1.588s at length 9452
+2025-06-18 13:50:06,670 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:07,256 - INFO - Evaluation result: {'AUC-PR': 0.020483440140615004, 'AUC-ROC': 0.48767463302844233, 'VUS-PR': 0.03522784321740054, 'VUS-ROC': 0.5242284790747112, 'Standard-F1': 0.04804318488529015, 'PA-F1': 0.07095225393438251, 'Event-based-F1': 0.048442144665859235, 'R-based-F1': 0.03327820194152412, 'Affiliation-F': 0.6273961063090788}
+2025-06-18 13:50:07,257 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 7.670222
+2025-06-18 13:50:07,257 - INFO - Saved binary predictions to eval/self/predictions/uni/AutoEncoder\PRED_AutoEncoder_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:50:07,259 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/AutoEncoder\run2_AutoEncoder.csv

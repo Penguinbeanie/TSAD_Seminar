@@ -1,0 +1,32 @@
+2025-06-18 13:47:29,619 - INFO - --- Starting processing for model: MatrixProfile ---
+2025-06-18 13:47:29,620 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='MatrixProfile')
+2025-06-18 13:47:29,621 - INFO - Optimal_Det_HP: {'periodicity': 1}
+2025-06-18 13:47:29,621 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by MatrixProfile
+2025-06-18 13:47:29,725 - INFO - init
+2025-06-18 13:48:03,587 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using MatrixProfile | Time cost: 33.964s at length 5308
+2025-06-18 13:48:03,588 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:03,762 - INFO - Evaluation result: {'AUC-PR': 0.10774368148914032, 'AUC-ROC': 0.804599081194826, 'VUS-PR': 0.15440591099163495, 'VUS-ROC': 0.8909657086005633, 'Standard-F1': 0.210727969348659, 'PA-F1': 0.32616487455197135, 'Event-based-F1': 0.21991701244813255, 'R-based-F1': 0.1260974534454291, 'Affiliation-F': 0.8329935000226404}
+2025-06-18 13:48:03,762 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 0.032951
+2025-06-18 13:48:03,763 - INFO - Saved binary predictions to eval/self/predictions/uni/MatrixProfile\PRED_MatrixProfile_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:48:03,764 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/MatrixProfile\run2_MatrixProfile.csv
+2025-06-18 13:48:03,765 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by MatrixProfile
+2025-06-18 13:48:03,805 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using MatrixProfile | Time cost: 0.037s at length 5320
+2025-06-18 13:48:03,806 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:04,003 - INFO - Evaluation result: {'AUC-PR': 0.02163549604656963, 'AUC-ROC': 0.45040481591345316, 'VUS-PR': 0.024354834019113755, 'VUS-ROC': 0.446746817973648, 'Standard-F1': 0.04545454545454545, 'PA-F1': 0.14388489208633093, 'Event-based-F1': 0.09302325581395299, 'R-based-F1': 0.049315068493150684, 'Affiliation-F': 0.5084598227870463}
+2025-06-18 13:48:04,003 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.285385
+2025-06-18 13:48:04,004 - INFO - Saved binary predictions to eval/self/predictions/uni/MatrixProfile\PRED_MatrixProfile_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:48:04,005 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/MatrixProfile\run2_MatrixProfile.csv
+2025-06-18 13:48:04,005 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by MatrixProfile
+2025-06-18 13:48:04,032 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using MatrixProfile | Time cost: 0.025s at length 5319
+2025-06-18 13:48:04,034 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:04,250 - INFO - Evaluation result: {'AUC-PR': 0.009580540382722658, 'AUC-ROC': 0.5403059291532488, 'VUS-PR': 0.02823592586123367, 'VUS-ROC': 0.6903905749042606, 'Standard-F1': 0.03791469194312796, 'PA-F1': 0.0, 'Event-based-F1': 0.0, 'R-based-F1': 0, 'Affiliation-F': 0.7303601131334593}
+2025-06-18 13:48:04,250 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.161254
+2025-06-18 13:48:04,252 - INFO - Saved binary predictions to eval/self/predictions/uni/MatrixProfile\PRED_MatrixProfile_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:48:04,253 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/MatrixProfile\run2_MatrixProfile.csv
+2025-06-18 13:48:04,253 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by MatrixProfile
+2025-06-18 13:48:04,310 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using MatrixProfile | Time cost: 0.054s at length 9452
+2025-06-18 13:48:04,311 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:04,864 - INFO - Evaluation result: {'AUC-PR': 0.07354229447318496, 'AUC-ROC': 0.6209850828372453, 'VUS-PR': 0.10332764690340245, 'VUS-ROC': 0.7788411894059185, 'Standard-F1': 0.1182608695652174, 'PA-F1': 0.4158125915080527, 'Event-based-F1': 0.14988290398126444, 'R-based-F1': 0.1658451024768629, 'Affiliation-F': 0.8059010235427754}
+2025-06-18 13:48:04,864 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 0.362271
+2025-06-18 13:48:04,865 - INFO - Saved binary predictions to eval/self/predictions/uni/MatrixProfile\PRED_MatrixProfile_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:48:04,866 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/MatrixProfile\run2_MatrixProfile.csv

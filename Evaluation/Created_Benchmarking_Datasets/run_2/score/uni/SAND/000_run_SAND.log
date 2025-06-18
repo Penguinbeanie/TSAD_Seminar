@@ -1,0 +1,31 @@
+2025-06-18 13:49:28,837 - INFO - --- Starting processing for model: SAND ---
+2025-06-18 13:49:28,837 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='SAND')
+2025-06-18 13:49:28,838 - INFO - Optimal_Det_HP: {'periodicity': 1}
+2025-06-18 13:49:28,838 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by SAND
+2025-06-18 13:49:30,934 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using SAND | Time cost: 2.093s at length 5308
+2025-06-18 13:49:30,935 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:49:31,102 - INFO - Evaluation result: {'AUC-PR': 0.061409026739300474, 'AUC-ROC': 0.8385392640711791, 'VUS-PR': 0.07428393334606839, 'VUS-ROC': 0.8611624477975411, 'Standard-F1': 0.14799154334038056, 'PA-F1': 0.3440453686200378, 'Event-based-F1': 0.16385542168674683, 'R-based-F1': 0.17426514495614873, 'Affiliation-F': 0.8009643777921333}
+2025-06-18 13:49:31,102 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 1.753405
+2025-06-18 13:49:31,103 - INFO - Saved binary predictions to eval/self/predictions/uni/SAND\PRED_SAND_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:49:31,104 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/SAND\run2_SAND.csv
+2025-06-18 13:49:31,105 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by SAND
+2025-06-18 13:49:33,067 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using SAND | Time cost: 1.961s at length 5320
+2025-06-18 13:49:33,068 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:49:33,273 - INFO - Evaluation result: {'AUC-PR': 0.505197009634817, 'AUC-ROC': 0.93705810504275, 'VUS-PR': 0.4224507312592442, 'VUS-ROC': 0.9486500559176544, 'Standard-F1': 0.48677248677248675, 'PA-F1': 0.7174887892376681, 'Event-based-F1': 0.6434316353887394, 'R-based-F1': 0.46667939660110747, 'Affiliation-F': 0.8200436199945275}
+2025-06-18 13:49:33,273 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 3.128497
+2025-06-18 13:49:33,274 - INFO - Saved binary predictions to eval/self/predictions/uni/SAND\PRED_SAND_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:49:33,275 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/SAND\run2_SAND.csv
+2025-06-18 13:49:33,275 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by SAND
+2025-06-18 13:49:35,668 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using SAND | Time cost: 2.390s at length 5319
+2025-06-18 13:49:35,669 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:49:35,893 - INFO - Evaluation result: {'AUC-PR': 0.011522317244550297, 'AUC-ROC': 0.6955341920818336, 'VUS-PR': 0.020331432424486748, 'VUS-ROC': 0.72907039914305, 'Standard-F1': 0.032191069574247146, 'PA-F1': 0.03321224701608718, 'Event-based-F1': 0.031222896790980018, 'R-based-F1': 0.038680046326490525, 'Affiliation-F': 0.7208500733759245}
+2025-06-18 13:49:35,894 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.290753
+2025-06-18 13:49:35,895 - INFO - Saved binary predictions to eval/self/predictions/uni/SAND\PRED_SAND_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:49:35,896 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/SAND\run2_SAND.csv
+2025-06-18 13:49:35,896 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by SAND
+2025-06-18 13:49:39,249 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using SAND | Time cost: 3.352s at length 9452
+2025-06-18 13:49:39,251 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:49:39,799 - INFO - Evaluation result: {'AUC-PR': 0.042039270962481515, 'AUC-ROC': 0.6927872912365566, 'VUS-PR': 0.05485751649203167, 'VUS-ROC': 0.7197636892261737, 'Standard-F1': 0.08363201911589009, 'PA-F1': 0.10923379174852653, 'Event-based-F1': 0.08449788755281108, 'R-based-F1': 0.0899137977419223, 'Affiliation-F': 0.6745056785526615}
+2025-06-18 13:49:39,800 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 0.597380
+2025-06-18 13:49:39,801 - INFO - Saved binary predictions to eval/self/predictions/uni/SAND\PRED_SAND_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:49:39,801 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/SAND\run2_SAND.csv

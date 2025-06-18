@@ -1,0 +1,31 @@
+2025-06-18 14:03:08,433 - INFO - --- Starting processing for model: Sub_IForest ---
+2025-06-18 14:03:08,433 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='Sub_IForest')
+2025-06-18 14:03:08,434 - INFO - Optimal_Det_HP: {'periodicity': 1, 'n_estimators': 150}
+2025-06-18 14:03:08,434 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by Sub_IForest
+2025-06-18 14:03:08,683 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using Sub_IForest | Time cost: 0.246s at length 5308
+2025-06-18 14:03:08,684 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:08,842 - INFO - Evaluation result: {'AUC-PR': 0.8426576632913781, 'AUC-ROC': 0.9932764188083336, 'VUS-PR': 0.8795302880993813, 'VUS-ROC': 0.9966236076720494, 'Standard-F1': 0.7727272727272727, 'PA-F1': 0.914572864321608, 'Event-based-F1': 0.8874172185430459, 'R-based-F1': 0.7304545214442024, 'Affiliation-F': 0.9726137349741584}
+2025-06-18 14:03:08,843 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 0.140159
+2025-06-18 14:03:08,843 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_IForest\PRED_Sub_IForest_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:03:08,845 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/Sub_IForest\run3_Sub_IForest.csv
+2025-06-18 14:03:08,845 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by Sub_IForest
+2025-06-18 14:03:09,011 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using Sub_IForest | Time cost: 0.165s at length 5320
+2025-06-18 14:03:09,012 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:09,200 - INFO - Evaluation result: {'AUC-PR': 0.011033610374158826, 'AUC-ROC': 0.08915808759378817, 'VUS-PR': 0.013223299081467094, 'VUS-ROC': 0.13168755955212233, 'Standard-F1': 0.040515653775322284, 'PA-F1': 0.040515653775322284, 'Event-based-F1': 0.038390550018456954, 'R-based-F1': 0.01664791359146579, 'Affiliation-F': 0.6714938923283565}
+2025-06-18 14:03:09,200 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: -0.121581
+2025-06-18 14:03:09,202 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_IForest\PRED_Sub_IForest_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:03:09,203 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/Sub_IForest\run3_Sub_IForest.csv
+2025-06-18 14:03:09,203 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by Sub_IForest
+2025-06-18 14:03:09,377 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using Sub_IForest | Time cost: 0.171s at length 5319
+2025-06-18 14:03:09,378 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:09,591 - INFO - Evaluation result: {'AUC-PR': 0.01954468830056528, 'AUC-ROC': 0.7883974237544991, 'VUS-PR': 0.04574822433538595, 'VUS-ROC': 0.8525362896966348, 'Standard-F1': 0.052921719955898575, 'PA-F1': 0.06783369803063458, 'Event-based-F1': 0.051246344520261736, 'R-based-F1': 0.0444297283557182, 'Affiliation-F': 0.7076888178643089}
+2025-06-18 14:03:09,592 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: -0.013229
+2025-06-18 14:03:09,593 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_IForest\PRED_Sub_IForest_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:03:09,594 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/Sub_IForest\run3_Sub_IForest.csv
+2025-06-18 14:03:09,594 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by Sub_IForest
+2025-06-18 14:03:09,791 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using Sub_IForest | Time cost: 0.195s at length 9452
+2025-06-18 14:03:09,792 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:10,330 - INFO - Evaluation result: {'AUC-PR': 0.3550200038110392, 'AUC-ROC': 0.6704121038811793, 'VUS-PR': 0.17105827055526743, 'VUS-ROC': 0.6826676909941832, 'Standard-F1': 0.46875, 'PA-F1': 0.47470817120622566, 'Event-based-F1': 0.31827376938637864, 'R-based-F1': 0.3115495505681497, 'Affiliation-F': 0.31986243480663623}
+2025-06-18 14:03:10,331 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 0.081704
+2025-06-18 14:03:10,331 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_IForest\PRED_Sub_IForest_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:03:10,332 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/Sub_IForest\run3_Sub_IForest.csv

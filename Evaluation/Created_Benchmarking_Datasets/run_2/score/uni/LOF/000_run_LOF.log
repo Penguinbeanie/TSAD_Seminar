@@ -1,0 +1,31 @@
+2025-06-18 13:47:23,278 - INFO - --- Starting processing for model: LOF ---
+2025-06-18 13:47:23,278 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='LOF')
+2025-06-18 13:47:23,280 - INFO - Optimal_Det_HP: {'n_neighbors': 50}
+2025-06-18 13:47:23,280 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by LOF
+2025-06-18 13:47:23,311 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using LOF | Time cost: 0.029s at length 5308
+2025-06-18 13:47:23,312 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:47:23,536 - INFO - Evaluation result: {'AUC-PR': 0.030956477596080948, 'AUC-ROC': 0.6006336006336007, 'VUS-PR': 0.0427005485546344, 'VUS-ROC': 0.6668776775422989, 'Standard-F1': 0.1142857142857143, 'PA-F1': 0.35, 'Event-based-F1': 0.12886597938144317, 'R-based-F1': 0.11508510723556206, 'Affiliation-F': 0.7404542151176499}
+2025-06-18 13:47:23,536 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 37.407218
+2025-06-18 13:47:23,537 - INFO - Saved binary predictions to eval/self/predictions/uni/LOF\PRED_LOF_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:47:23,538 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/LOF\run2_LOF.csv
+2025-06-18 13:47:23,539 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by LOF
+2025-06-18 13:47:23,564 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using LOF | Time cost: 0.022s at length 5320
+2025-06-18 13:47:23,566 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:47:23,814 - INFO - Evaluation result: {'AUC-PR': 0.02391304347826087, 'AUC-ROC': 0.4361804222648752, 'VUS-PR': 0.02724134308987092, 'VUS-ROC': 0.4532754034254575, 'Standard-F1': 0.046709129511677286, 'PA-F1': 0.0, 'Event-based-F1': 0.0, 'R-based-F1': 0, 'Affiliation-F': 0.5978335782483343}
+2025-06-18 13:47:23,815 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 1.000000
+2025-06-18 13:47:23,815 - INFO - Saved binary predictions to eval/self/predictions/uni/LOF\PRED_LOF_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:47:23,817 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/LOF\run2_LOF.csv
+2025-06-18 13:47:23,817 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by LOF
+2025-06-18 13:47:23,845 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using LOF | Time cost: 0.026s at length 5319
+2025-06-18 13:47:23,889 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:47:24,168 - INFO - Evaluation result: {'AUC-PR': 0.05028544408784288, 'AUC-ROC': 0.926027656753173, 'VUS-PR': 0.06207985103308089, 'VUS-ROC': 0.9264252039226258, 'Standard-F1': 0.16597510373443985, 'PA-F1': 0.16597510373443983, 'Event-based-F1': 0.15546218487394942, 'R-based-F1': 0.12345260301848397, 'Affiliation-F': 0.7246755004637565}
+2025-06-18 13:47:24,168 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 38.636441
+2025-06-18 13:47:24,169 - INFO - Saved binary predictions to eval/self/predictions/uni/LOF\PRED_LOF_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:47:24,170 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/LOF\run2_LOF.csv
+2025-06-18 13:47:24,170 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by LOF
+2025-06-18 13:47:24,219 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using LOF | Time cost: 0.045s at length 9452
+2025-06-18 13:47:24,220 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:47:24,914 - INFO - Evaluation result: {'AUC-PR': 0.017749542495797216, 'AUC-ROC': 0.40878215107357696, 'VUS-PR': 0.031908758494293685, 'VUS-ROC': 0.509903190394559, 'Standard-F1': 0.06156552330694811, 'PA-F1': 0.1097770154373928, 'Event-based-F1': 0.06307490144546636, 'R-based-F1': 0.04282605241855151, 'Affiliation-F': 0.6527276833388058}
+2025-06-18 13:47:24,914 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 40.070088
+2025-06-18 13:47:24,915 - INFO - Saved binary predictions to eval/self/predictions/uni/LOF\PRED_LOF_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:47:24,916 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/LOF\run2_LOF.csv

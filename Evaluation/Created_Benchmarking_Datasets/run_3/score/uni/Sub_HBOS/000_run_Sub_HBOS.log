@@ -1,0 +1,31 @@
+2025-06-18 14:03:46,981 - INFO - --- Starting processing for model: Sub_HBOS ---
+2025-06-18 14:03:46,981 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='Sub_HBOS')
+2025-06-18 14:03:46,982 - INFO - Optimal_Det_HP: {'periodicity': 1, 'n_bins': 10}
+2025-06-18 14:03:46,982 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by Sub_HBOS
+2025-06-18 14:03:49,224 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using Sub_HBOS | Time cost: 2.240s at length 5308
+2025-06-18 14:03:49,225 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:49,389 - INFO - Evaluation result: {'AUC-PR': 0.45622849015972855, 'AUC-ROC': 0.8221558008792053, 'VUS-PR': 0.39280025998247614, 'VUS-ROC': 0.8999011816570602, 'Standard-F1': 0.5263157894736842, 'PA-F1': 0.896551724137931, 'Event-based-F1': 0.7586206896551719, 'R-based-F1': 0.4479859455389635, 'Affiliation-F': 0.9252441022655155}
+2025-06-18 14:03:49,389 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 17.065981
+2025-06-18 14:03:49,390 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_HBOS\PRED_Sub_HBOS_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:03:49,391 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/Sub_HBOS\run3_Sub_HBOS.csv
+2025-06-18 14:03:49,391 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by Sub_HBOS
+2025-06-18 14:03:49,397 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using Sub_HBOS | Time cost: 0.004s at length 5320
+2025-06-18 14:03:49,398 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:49,573 - INFO - Evaluation result: {'AUC-PR': 0.6075727691666883, 'AUC-ROC': 0.8313636363636364, 'VUS-PR': 0.5494071681366166, 'VUS-ROC': 0.8735746330823155, 'Standard-F1': 0.735632183908046, 'PA-F1': 1.0, 'Event-based-F1': 0.9999999999999996, 'R-based-F1': 0.6778846153846155, 'Affiliation-F': 0.9948382482637697}
+2025-06-18 14:03:49,574 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 16.597400
+2025-06-18 14:03:49,575 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_HBOS\PRED_Sub_HBOS_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:03:49,576 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/Sub_HBOS\run3_Sub_HBOS.csv
+2025-06-18 14:03:49,576 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by Sub_HBOS
+2025-06-18 14:03:49,580 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using Sub_HBOS | Time cost: 0.003s at length 5319
+2025-06-18 14:03:49,582 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:49,817 - INFO - Evaluation result: {'AUC-PR': 0.0071127781495750894, 'AUC-ROC': 0.4414638189050956, 'VUS-PR': 0.010229449040852944, 'VUS-ROC': 0.5115015066592635, 'Standard-F1': 0.01973481344434166, 'PA-F1': 0.02499218994064355, 'Event-based-F1': 0.017626691847655, 'R-based-F1': 0.030440672210595474, 'Affiliation-F': 0.6773093567637856}
+2025-06-18 14:03:49,817 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 8.329057
+2025-06-18 14:03:49,818 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_HBOS\PRED_Sub_HBOS_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:03:49,819 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/Sub_HBOS\run3_Sub_HBOS.csv
+2025-06-18 14:03:49,819 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by Sub_HBOS
+2025-06-18 14:03:49,827 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using Sub_HBOS | Time cost: 0.005s at length 9452
+2025-06-18 14:03:49,828 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:50,355 - INFO - Evaluation result: {'AUC-PR': 0.20927159779732127, 'AUC-ROC': 0.6744654386398612, 'VUS-PR': 0.16847984867612184, 'VUS-ROC': 0.7795618243592797, 'Standard-F1': 0.2669683257918552, 'PA-F1': 0.5919117647058824, 'Event-based-F1': 0.33690658499234266, 'R-based-F1': 0.20432968020431724, 'Affiliation-F': 0.7718104422043196}
+2025-06-18 14:03:50,355 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 19.078108
+2025-06-18 14:03:50,356 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_HBOS\PRED_Sub_HBOS_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:03:50,357 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/Sub_HBOS\run3_Sub_HBOS.csv

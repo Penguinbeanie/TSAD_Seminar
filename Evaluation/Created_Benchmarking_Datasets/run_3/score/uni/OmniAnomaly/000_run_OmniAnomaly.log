@@ -1,0 +1,31 @@
+2025-06-18 14:06:25,790 - INFO - --- Starting processing for model: OmniAnomaly ---
+2025-06-18 14:06:25,790 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='OmniAnomaly')
+2025-06-18 14:06:25,790 - INFO - Optimal_Det_HP: {'win_size': 5, 'lr': 0.002}
+2025-06-18 14:06:25,790 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by OmniAnomaly
+2025-06-18 14:06:27,225 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using OmniAnomaly | Time cost: 1.432s at length 5308
+2025-06-18 14:06:27,225 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:27,389 - INFO - Evaluation result: {'AUC-PR': 0.9791081037019836, 'AUC-ROC': 0.9995997868338293, 'VUS-PR': 0.9865837802510862, 'VUS-ROC': 0.9998354330231647, 'Standard-F1': 0.9130434782608696, 'PA-F1': 0.9528795811518325, 'Event-based-F1': 0.9485714285714281, 'R-based-F1': 0.9171590809838085, 'Affiliation-F': 0.9969828774776102}
+2025-06-18 14:06:27,389 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 1.463285
+2025-06-18 14:06:27,390 - INFO - Saved binary predictions to eval/self/predictions/uni/OmniAnomaly\PRED_OmniAnomaly_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:06:27,390 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/OmniAnomaly\run3_OmniAnomaly.csv
+2025-06-18 14:06:27,392 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by OmniAnomaly
+2025-06-18 14:06:29,037 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using OmniAnomaly | Time cost: 1.643s at length 5320
+2025-06-18 14:06:29,039 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:29,218 - INFO - Evaluation result: {'AUC-PR': 0.2378316062830686, 'AUC-ROC': 0.8521130692723782, 'VUS-PR': 0.2666833921474636, 'VUS-ROC': 0.8712290283865134, 'Standard-F1': 0.5617021276595745, 'PA-F1': 0.7885304659498208, 'Event-based-F1': 0.6878306878306873, 'R-based-F1': 0.27169811320754716, 'Affiliation-F': 0.8983286512035997}
+2025-06-18 14:06:29,218 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.692119
+2025-06-18 14:06:29,219 - INFO - Saved binary predictions to eval/self/predictions/uni/OmniAnomaly\PRED_OmniAnomaly_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:06:29,220 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/OmniAnomaly\run3_OmniAnomaly.csv
+2025-06-18 14:06:29,221 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by OmniAnomaly
+2025-06-18 14:06:30,888 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using OmniAnomaly | Time cost: 1.666s at length 5319
+2025-06-18 14:06:30,888 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:31,107 - INFO - Evaluation result: {'AUC-PR': 0.0049260683953175795, 'AUC-ROC': 0.2509376775904527, 'VUS-PR': 0.015622489884097566, 'VUS-ROC': 0.5424770430756696, 'Standard-F1': 0.015904572564612324, 'PA-F1': 0.015904572564612324, 'Event-based-F1': 0.015513126491646762, 'R-based-F1': 0.0086920586260164, 'Affiliation-F': 0.6704024307860968}
+2025-06-18 14:06:31,108 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.192966
+2025-06-18 14:06:31,108 - INFO - Saved binary predictions to eval/self/predictions/uni/OmniAnomaly\PRED_OmniAnomaly_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:06:31,109 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/OmniAnomaly\run3_OmniAnomaly.csv
+2025-06-18 14:06:31,110 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by OmniAnomaly
+2025-06-18 14:06:32,495 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using OmniAnomaly | Time cost: 1.382s at length 9452
+2025-06-18 14:06:32,496 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:33,000 - INFO - Evaluation result: {'AUC-PR': 0.5148574237118233, 'AUC-ROC': 0.8397674454859883, 'VUS-PR': 0.3941692639119818, 'VUS-ROC': 0.878166853959611, 'Standard-F1': 0.6404199475065617, 'PA-F1': 0.7666666666666667, 'Event-based-F1': 0.6585034013605436, 'R-based-F1': 0.3007491632454114, 'Affiliation-F': 0.839603504653167}
+2025-06-18 14:06:33,000 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 1.047523
+2025-06-18 14:06:33,001 - INFO - Saved binary predictions to eval/self/predictions/uni/OmniAnomaly\PRED_OmniAnomaly_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:06:33,002 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/OmniAnomaly\run3_OmniAnomaly.csv

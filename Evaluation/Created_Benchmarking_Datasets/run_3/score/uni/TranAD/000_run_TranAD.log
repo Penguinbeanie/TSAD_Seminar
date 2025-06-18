@@ -1,0 +1,31 @@
+2025-06-18 14:06:01,037 - INFO - --- Starting processing for model: TranAD ---
+2025-06-18 14:06:01,037 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='TranAD')
+2025-06-18 14:06:01,038 - INFO - Optimal_Det_HP: {'win_size': 10, 'lr': 0.0001}
+2025-06-18 14:06:01,038 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by TranAD
+2025-06-18 14:06:06,036 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using TranAD | Time cost: 4.996s at length 5308
+2025-06-18 14:06:06,037 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:06,190 - INFO - Evaluation result: {'AUC-PR': 0.8239430420773864, 'AUC-ROC': 0.9960631662759323, 'VUS-PR': 0.8913042994223384, 'VUS-ROC': 0.9976413389907026, 'Standard-F1': 0.7483870967741935, 'PA-F1': 0.9680851063829787, 'Event-based-F1': 0.9499999999999995, 'R-based-F1': 0.7616248860967075, 'Affiliation-F': 0.9923780854151196}
+2025-06-18 14:06:06,190 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 3.822923
+2025-06-18 14:06:06,192 - INFO - Saved binary predictions to eval/self/predictions/uni/TranAD\PRED_TranAD_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:06:06,193 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/TranAD\run3_TranAD.csv
+2025-06-18 14:06:06,193 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by TranAD
+2025-06-18 14:06:06,734 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using TranAD | Time cost: 0.540s at length 5320
+2025-06-18 14:06:06,735 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:06,934 - INFO - Evaluation result: {'AUC-PR': 0.021945514142614395, 'AUC-ROC': 0.5442540568836154, 'VUS-PR': 0.031011316534884276, 'VUS-ROC': 0.6187632685945409, 'Standard-F1': 0.06540880503144654, 'PA-F1': 0.09102192800992967, 'Event-based-F1': 0.06550404083368772, 'R-based-F1': 0.033280278525516425, 'Affiliation-F': 0.6905971682401322}
+2025-06-18 14:06:06,934 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.917887
+2025-06-18 14:06:06,935 - INFO - Saved binary predictions to eval/self/predictions/uni/TranAD\PRED_TranAD_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:06:06,936 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/TranAD\run3_TranAD.csv
+2025-06-18 14:06:06,936 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by TranAD
+2025-06-18 14:06:11,972 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using TranAD | Time cost: 5.034s at length 5319
+2025-06-18 14:06:11,973 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:12,196 - INFO - Evaluation result: {'AUC-PR': 0.013278641474770522, 'AUC-ROC': 0.7199374881606365, 'VUS-PR': 0.01704193302601862, 'VUS-ROC': 0.7197034906108858, 'Standard-F1': 0.045819014891179836, 'PA-F1': 0.045819014891179836, 'Event-based-F1': 0.04472477064220178, 'R-based-F1': 0.03935582598557167, 'Affiliation-F': 0.6608738188227411}
+2025-06-18 14:06:12,197 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.966860
+2025-06-18 14:06:12,197 - INFO - Saved binary predictions to eval/self/predictions/uni/TranAD\PRED_TranAD_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:06:12,198 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/TranAD\run3_TranAD.csv
+2025-06-18 14:06:12,198 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by TranAD
+2025-06-18 14:06:21,418 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using TranAD | Time cost: 9.217s at length 9452
+2025-06-18 14:06:21,419 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:21,919 - INFO - Evaluation result: {'AUC-PR': 0.26980264881529253, 'AUC-ROC': 0.698941623071047, 'VUS-PR': 0.13589496452923505, 'VUS-ROC': 0.7731415424634198, 'Standard-F1': 0.3734439834024897, 'PA-F1': 0.47470817120622566, 'Event-based-F1': 0.31768953068592026, 'R-based-F1': 0.2563072434655762, 'Affiliation-F': 0.31860405443504625}
+2025-06-18 14:06:21,919 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 5.231975
+2025-06-18 14:06:21,920 - INFO - Saved binary predictions to eval/self/predictions/uni/TranAD\PRED_TranAD_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:06:21,921 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/TranAD\run3_TranAD.csv

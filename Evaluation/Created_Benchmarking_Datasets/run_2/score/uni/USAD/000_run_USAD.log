@@ -1,0 +1,31 @@
+2025-06-18 13:50:37,566 - INFO - --- Starting processing for model: USAD ---
+2025-06-18 13:50:37,566 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='USAD')
+2025-06-18 13:50:37,567 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.001}
+2025-06-18 13:50:37,568 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by USAD
+2025-06-18 13:50:38,100 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using USAD | Time cost: 0.531s at length 5308
+2025-06-18 13:50:38,102 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:38,270 - INFO - Evaluation result: {'AUC-PR': 0.12914325620867625, 'AUC-ROC': 0.9452666367559984, 'VUS-PR': 0.17463925263854935, 'VUS-ROC': 0.9462347921930089, 'Standard-F1': 0.26506024096385544, 'PA-F1': 0.30919765166340507, 'Event-based-F1': 0.2706722189173108, 'R-based-F1': 0.27178970893015875, 'Affiliation-F': 0.9003262262083104}
+2025-06-18 13:50:38,270 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 1.650310
+2025-06-18 13:50:38,272 - INFO - Saved binary predictions to eval/self/predictions/uni/USAD\PRED_USAD_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:50:38,273 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/USAD\run2_USAD.csv
+2025-06-18 13:50:38,273 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by USAD
+2025-06-18 13:50:38,745 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using USAD | Time cost: 0.470s at length 5320
+2025-06-18 13:50:38,746 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:38,957 - INFO - Evaluation result: {'AUC-PR': 0.02747746124978841, 'AUC-ROC': 0.5958689582969813, 'VUS-PR': 0.03618583951227331, 'VUS-ROC': 0.5930837569074003, 'Standard-F1': 0.05538461538461538, 'PA-F1': 0.07819287576020852, 'Event-based-F1': 0.05536263518206164, 'R-based-F1': 0.04022925210092252, 'Affiliation-F': 0.6440438262038879}
+2025-06-18 13:50:38,957 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 1.203972
+2025-06-18 13:50:38,958 - INFO - Saved binary predictions to eval/self/predictions/uni/USAD\PRED_USAD_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:50:38,959 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/USAD\run2_USAD.csv
+2025-06-18 13:50:38,960 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by USAD
+2025-06-18 13:50:39,456 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using USAD | Time cost: 0.494s at length 5319
+2025-06-18 13:50:39,457 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:39,676 - INFO - Evaluation result: {'AUC-PR': 0.006356949448894127, 'AUC-ROC': 0.3662743890888426, 'VUS-PR': 0.01033452819506516, 'VUS-ROC': 0.3208419387296051, 'Standard-F1': 0.025210084033613446, 'PA-F1': 0.025210084033613446, 'Event-based-F1': 0.01826484018264822, 'R-based-F1': 0.009302325581395349, 'Affiliation-F': 0.3728851947926151}
+2025-06-18 13:50:39,676 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 1.286522
+2025-06-18 13:50:39,677 - INFO - Saved binary predictions to eval/self/predictions/uni/USAD\PRED_USAD_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:50:39,678 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/USAD\run2_USAD.csv
+2025-06-18 13:50:39,678 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by USAD
+2025-06-18 13:50:40,481 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using USAD | Time cost: 0.801s at length 9452
+2025-06-18 13:50:40,482 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:41,029 - INFO - Evaluation result: {'AUC-PR': 0.07566072930635792, 'AUC-ROC': 0.7173865233300595, 'VUS-PR': 0.07455036913700175, 'VUS-ROC': 0.6647464437140186, 'Standard-F1': 0.23210831721470018, 'PA-F1': 0.23552123552123552, 'Event-based-F1': 0.18678274633953257, 'R-based-F1': 0.11491766589005412, 'Affiliation-F': 0.3086612347807819}
+2025-06-18 13:50:41,029 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 1.839720
+2025-06-18 13:50:41,030 - INFO - Saved binary predictions to eval/self/predictions/uni/USAD\PRED_USAD_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:50:41,031 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/USAD\run2_USAD.csv

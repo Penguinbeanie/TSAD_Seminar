@@ -1,0 +1,31 @@
+2025-06-18 13:50:11,125 - INFO - --- Starting processing for model: LSTMAD ---
+2025-06-18 13:50:11,125 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='LSTMAD')
+2025-06-18 13:50:11,126 - INFO - Optimal_Det_HP: {'window_size': 100, 'lr': 0.0008}
+2025-06-18 13:50:11,127 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by LSTMAD
+2025-06-18 13:50:12,779 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using LSTMAD | Time cost: 1.649s at length 5308
+2025-06-18 13:50:12,780 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:12,941 - INFO - Evaluation result: {'AUC-PR': 0.700881795992727, 'AUC-ROC': 0.9697354590971613, 'VUS-PR': 0.7083943621714549, 'VUS-ROC': 0.9759050890648788, 'Standard-F1': 0.6993865030674847, 'PA-F1': 0.9238578680203046, 'Event-based-F1': 0.881889763779527, 'R-based-F1': 0.4895554860432857, 'Affiliation-F': 0.9602083618073813}
+2025-06-18 13:50:12,941 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 2.141943
+2025-06-18 13:50:12,943 - INFO - Saved binary predictions to eval/self/predictions/uni/LSTMAD\PRED_LSTMAD_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:50:12,944 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/LSTMAD\run2_LSTMAD.csv
+2025-06-18 13:50:12,944 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by LSTMAD
+2025-06-18 13:50:14,443 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using LSTMAD | Time cost: 1.497s at length 5320
+2025-06-18 13:50:14,445 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:14,664 - INFO - Evaluation result: {'AUC-PR': 0.02120809043058331, 'AUC-ROC': 0.5416210085499913, 'VUS-PR': 0.027355216151888073, 'VUS-ROC': 0.6055438980758163, 'Standard-F1': 0.06345475910693302, 'PA-F1': 0.08520526723470179, 'Event-based-F1': 0.06344171292624894, 'R-based-F1': 0.03329029444054809, 'Affiliation-F': 0.6834855379405845}
+2025-06-18 13:50:14,664 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.143945
+2025-06-18 13:50:14,665 - INFO - Saved binary predictions to eval/self/predictions/uni/LSTMAD\PRED_LSTMAD_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:50:14,666 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/LSTMAD\run2_LSTMAD.csv
+2025-06-18 13:50:14,666 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by LSTMAD
+2025-06-18 13:50:16,176 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using LSTMAD | Time cost: 1.508s at length 5319
+2025-06-18 13:50:16,177 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:16,404 - INFO - Evaluation result: {'AUC-PR': 0.0052644826465188576, 'AUC-ROC': 0.330734987687062, 'VUS-PR': 0.009311433158651426, 'VUS-ROC': 0.5000168262121162, 'Standard-F1': 0.01504324934185784, 'PA-F1': 0.01504324934185784, 'Event-based-F1': 0.014672686230248292, 'R-based-F1': 0.012106343466533701, 'Affiliation-F': 0.6665290621897488}
+2025-06-18 13:50:16,404 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.000012
+2025-06-18 13:50:16,405 - INFO - Saved binary predictions to eval/self/predictions/uni/LSTMAD\PRED_LSTMAD_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:50:16,406 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/LSTMAD\run2_LSTMAD.csv
+2025-06-18 13:50:16,406 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by LSTMAD
+2025-06-18 13:50:18,342 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using LSTMAD | Time cost: 1.933s at length 9452
+2025-06-18 13:50:18,342 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:18,871 - INFO - Evaluation result: {'AUC-PR': 0.10076628458551351, 'AUC-ROC': 0.6477613120332818, 'VUS-PR': 0.05810183167105134, 'VUS-ROC': 0.7293196688407223, 'Standard-F1': 0.14084507042253522, 'PA-F1': 0.47104247104247104, 'Event-based-F1': 0.3060109289617483, 'R-based-F1': 0.1158699808795411, 'Affiliation-F': 0.39326364202262454}
+2025-06-18 13:50:18,871 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 4.744703
+2025-06-18 13:50:18,872 - INFO - Saved binary predictions to eval/self/predictions/uni/LSTMAD\PRED_LSTMAD_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:50:18,873 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/LSTMAD\run2_LSTMAD.csv

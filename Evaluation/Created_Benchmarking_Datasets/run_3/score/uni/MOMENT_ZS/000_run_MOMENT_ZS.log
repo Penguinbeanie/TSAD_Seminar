@@ -1,0 +1,43 @@
+2025-06-18 14:02:51,578 - INFO - --- Starting processing for model: MOMENT_ZS ---
+2025-06-18 14:02:51,578 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='MOMENT_ZS')
+2025-06-18 14:02:51,579 - INFO - Optimal_Det_HP: {'win_size': 64}
+2025-06-18 14:02:51,579 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by MOMENT_ZS
+2025-06-18 14:02:51,979 - INFO - Setting d_model to 768
+2025-06-18 14:02:52,826 - INFO - Initializing pre-trained transformer from google/flan-t5-base.
+2025-06-18 14:02:52,827 - INFO - Enabling gradient checkpointing.
+2025-06-18 14:02:55,129 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using MOMENT_ZS | Time cost: 3.547s at length 5308
+2025-06-18 14:02:55,130 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:02:55,292 - INFO - Evaluation result: {'AUC-PR': 0.18736999433612453, 'AUC-ROC': 0.9627717500057925, 'VUS-PR': 0.22325322341992107, 'VUS-ROC': 0.9670416569426934, 'Standard-F1': 0.3305084745762712, 'PA-F1': 0.3752577319587629, 'Event-based-F1': 0.33698030634573267, 'R-based-F1': 0.31430324290666833, 'Affiliation-F': 0.9148942769984966}
+2025-06-18 14:02:55,293 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 2.260106
+2025-06-18 14:02:55,293 - INFO - Saved binary predictions to eval/self/predictions/uni/MOMENT_ZS\PRED_MOMENT_ZS_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:02:55,295 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/MOMENT_ZS\run3_MOMENT_ZS.csv
+2025-06-18 14:02:55,295 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by MOMENT_ZS
+2025-06-18 14:02:55,585 - INFO - Setting d_model to 768
+2025-06-18 14:02:56,428 - INFO - Initializing pre-trained transformer from google/flan-t5-base.
+2025-06-18 14:02:56,428 - INFO - Enabling gradient checkpointing.
+2025-06-18 14:02:58,219 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using MOMENT_ZS | Time cost: 2.922s at length 5320
+2025-06-18 14:02:58,220 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:02:58,413 - INFO - Evaluation result: {'AUC-PR': 0.014792480098794802, 'AUC-ROC': 0.33593962659221777, 'VUS-PR': 0.017823699395412982, 'VUS-ROC': 0.29437145487960703, 'Standard-F1': 0.04189678156541612, 'PA-F1': 0.04189678156541611, 'Event-based-F1': 0.041531720327681425, 'R-based-F1': 0.02097955852589111, 'Affiliation-F': 0.66878676489073}
+2025-06-18 14:02:58,413 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.726560
+2025-06-18 14:02:58,414 - INFO - Saved binary predictions to eval/self/predictions/uni/MOMENT_ZS\PRED_MOMENT_ZS_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:02:58,415 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/MOMENT_ZS\run3_MOMENT_ZS.csv
+2025-06-18 14:02:58,415 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by MOMENT_ZS
+2025-06-18 14:02:58,574 - INFO - Setting d_model to 768
+2025-06-18 14:02:59,478 - INFO - Initializing pre-trained transformer from google/flan-t5-base.
+2025-06-18 14:02:59,478 - INFO - Enabling gradient checkpointing.
+2025-06-18 14:03:01,320 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using MOMENT_ZS | Time cost: 2.904s at length 5319
+2025-06-18 14:03:01,321 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:01,545 - INFO - Evaluation result: {'AUC-PR': 0.0056588044710029145, 'AUC-ROC': 0.37002746732335673, 'VUS-PR': 0.009181132744234466, 'VUS-ROC': 0.35897769172639116, 'Standard-F1': 0.015503875968992248, 'PA-F1': 0.015503875968992248, 'Event-based-F1': 0.015122140364482343, 'R-based-F1': 0.0035294596959701036, 'Affiliation-F': 0.6634717678846921}
+2025-06-18 14:03:01,546 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.701282
+2025-06-18 14:03:01,547 - INFO - Saved binary predictions to eval/self/predictions/uni/MOMENT_ZS\PRED_MOMENT_ZS_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:03:01,548 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/MOMENT_ZS\run3_MOMENT_ZS.csv
+2025-06-18 14:03:01,548 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by MOMENT_ZS
+2025-06-18 14:03:01,675 - INFO - Setting d_model to 768
+2025-06-18 14:03:02,517 - INFO - Initializing pre-trained transformer from google/flan-t5-base.
+2025-06-18 14:03:02,517 - INFO - Enabling gradient checkpointing.
+2025-06-18 14:03:05,562 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using MOMENT_ZS | Time cost: 4.013s at length 9452
+2025-06-18 14:03:05,564 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:06,078 - INFO - Evaluation result: {'AUC-PR': 0.09663553985771542, 'AUC-ROC': 0.6133956589230156, 'VUS-PR': 0.07605114329310707, 'VUS-ROC': 0.5909869400260659, 'Standard-F1': 0.2863961813842482, 'PA-F1': 0.2904761904761905, 'Event-based-F1': 0.22107728337236485, 'R-based-F1': 0.18204855262658123, 'Affiliation-F': 0.31326666359418975}
+2025-06-18 14:03:06,078 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 2.491920
+2025-06-18 14:03:06,079 - INFO - Saved binary predictions to eval/self/predictions/uni/MOMENT_ZS\PRED_MOMENT_ZS_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:03:06,080 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/MOMENT_ZS\run3_MOMENT_ZS.csv

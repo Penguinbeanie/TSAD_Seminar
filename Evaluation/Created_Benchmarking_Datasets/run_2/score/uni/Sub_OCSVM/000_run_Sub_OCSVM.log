@@ -1,0 +1,31 @@
+2025-06-18 13:49:59,080 - INFO - --- Starting processing for model: Sub_OCSVM ---
+2025-06-18 13:49:59,080 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='Sub_OCSVM')
+2025-06-18 13:49:59,081 - INFO - Optimal_Det_HP: {'periodicity': 2, 'kernel': 'rbf'}
+2025-06-18 13:49:59,081 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by Sub_OCSVM
+2025-06-18 13:49:59,365 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using Sub_OCSVM | Time cost: 0.282s at length 5308
+2025-06-18 13:49:59,366 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:49:59,531 - INFO - Evaluation result: {'AUC-PR': 0.06482712828442123, 'AUC-ROC': 0.7715688566752396, 'VUS-PR': 0.07494349511648567, 'VUS-ROC': 0.748527544147246, 'Standard-F1': 0.1513157894736842, 'PA-F1': 0.34705882352941175, 'Event-based-F1': 0.1779935275080904, 'R-based-F1': 0.13830695480721772, 'Affiliation-F': 0.6860295112946316}
+2025-06-18 13:49:59,531 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 238.761461
+2025-06-18 13:49:59,532 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_OCSVM\PRED_Sub_OCSVM_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:49:59,533 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/Sub_OCSVM\run2_Sub_OCSVM.csv
+2025-06-18 13:49:59,533 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by Sub_OCSVM
+2025-06-18 13:49:59,712 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using Sub_OCSVM | Time cost: 0.176s at length 5320
+2025-06-18 13:49:59,713 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:49:59,902 - INFO - Evaluation result: {'AUC-PR': 0.06475243085780141, 'AUC-ROC': 0.760692723782935, 'VUS-PR': 0.06231385084924691, 'VUS-ROC': 0.7933853298251918, 'Standard-F1': 0.1137123745819398, 'PA-F1': 0.21141649048625794, 'Event-based-F1': 0.11890606420927456, 'R-based-F1': 0.12267005619057143, 'Affiliation-F': 0.6681501811655921}
+2025-06-18 13:49:59,902 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 239.568391
+2025-06-18 13:49:59,903 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_OCSVM\PRED_Sub_OCSVM_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:49:59,904 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/Sub_OCSVM\run2_Sub_OCSVM.csv
+2025-06-18 13:49:59,904 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by Sub_OCSVM
+2025-06-18 13:50:00,148 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using Sub_OCSVM | Time cost: 0.242s at length 5319
+2025-06-18 13:50:00,149 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:00,379 - INFO - Evaluation result: {'AUC-PR': 0.007369025491330955, 'AUC-ROC': 0.5223574540632696, 'VUS-PR': 0.014358806946281815, 'VUS-ROC': 0.6282931085060163, 'Standard-F1': 0.018123928483957875, 'PA-F1': 0.01957905041605482, 'Event-based-F1': 0.01765571358509071, 'R-based-F1': 0.010845643920043033, 'Affiliation-F': 0.6986160524210173}
+2025-06-18 13:50:00,379 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 245.215089
+2025-06-18 13:50:00,379 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_OCSVM\PRED_Sub_OCSVM_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:50:00,381 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/Sub_OCSVM\run2_Sub_OCSVM.csv
+2025-06-18 13:50:00,381 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by Sub_OCSVM
+2025-06-18 13:50:01,151 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using Sub_OCSVM | Time cost: 0.768s at length 9452
+2025-06-18 13:50:01,152 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:01,690 - INFO - Evaluation result: {'AUC-PR': 0.023385590427248283, 'AUC-ROC': 0.4790345713821203, 'VUS-PR': 0.03746203817937971, 'VUS-ROC': 0.548993430627215, 'Standard-F1': 0.06606606606606606, 'PA-F1': 0.12790697674418605, 'Event-based-F1': 0.0751072961373388, 'R-based-F1': 0.08432315892440062, 'Affiliation-F': 0.6468001245427857}
+2025-06-18 13:50:01,690 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 413.081976
+2025-06-18 13:50:01,691 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_OCSVM\PRED_Sub_OCSVM_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:50:01,692 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/Sub_OCSVM\run2_Sub_OCSVM.csv

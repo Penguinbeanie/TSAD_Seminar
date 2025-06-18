@@ -1,0 +1,31 @@
+2025-06-18 14:03:53,634 - INFO - --- Starting processing for model: KShapeAD ---
+2025-06-18 14:03:53,634 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='KShapeAD')
+2025-06-18 14:03:53,635 - INFO - Optimal_Det_HP: {'periodicity': 1}
+2025-06-18 14:03:53,635 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by KShapeAD
+2025-06-18 14:04:42,833 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using KShapeAD | Time cost: 49.196s at length 5308
+2025-06-18 14:04:42,834 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:04:43,006 - INFO - Evaluation result: {'AUC-PR': 0.23190356451083594, 'AUC-ROC': 0.9418995801974525, 'VUS-PR': 0.21192314144684476, 'VUS-ROC': 0.9436716755343861, 'Standard-F1': 0.35294117647058826, 'PA-F1': 0.7330316742081447, 'Event-based-F1': 0.5218508997429301, 'R-based-F1': 0.41886949905505244, 'Affiliation-F': 0.8374477346669397}
+2025-06-18 14:04:43,007 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 2.663347
+2025-06-18 14:04:43,008 - INFO - Saved binary predictions to eval/self/predictions/uni/KShapeAD\PRED_KShapeAD_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:04:43,009 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/KShapeAD\run3_KShapeAD.csv
+2025-06-18 14:04:43,009 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by KShapeAD
+2025-06-18 14:04:45,007 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using KShapeAD | Time cost: 1.996s at length 5320
+2025-06-18 14:04:45,008 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:04:45,217 - INFO - Evaluation result: {'AUC-PR': 0.5849401943697881, 'AUC-ROC': 0.9208916419473041, 'VUS-PR': 0.5618645989558517, 'VUS-ROC': 0.9444524434908332, 'Standard-F1': 0.6012269938650308, 'PA-F1': 0.9345794392523364, 'Event-based-F1': 0.9160305343511446, 'R-based-F1': 0.6809091175008044, 'Affiliation-F': 0.9445669438396477}
+2025-06-18 14:04:45,217 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 2.919114
+2025-06-18 14:04:45,218 - INFO - Saved binary predictions to eval/self/predictions/uni/KShapeAD\PRED_KShapeAD_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:04:45,219 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/KShapeAD\run3_KShapeAD.csv
+2025-06-18 14:04:45,219 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by KShapeAD
+2025-06-18 14:04:47,028 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using KShapeAD | Time cost: 1.806s at length 5319
+2025-06-18 14:04:47,029 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:04:47,313 - INFO - Evaluation result: {'AUC-PR': 0.009650067637138604, 'AUC-ROC': 0.6309054745216897, 'VUS-PR': 0.01686763140251188, 'VUS-ROC': 0.6655081055365691, 'Standard-F1': 0.028770706190061026, 'PA-F1': 0.03134523291249456, 'Event-based-F1': 0.027969583078402208, 'R-based-F1': 0.03525190073108188, 'Affiliation-F': 0.7206032764545381}
+2025-06-18 14:04:47,314 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.154771
+2025-06-18 14:04:47,314 - INFO - Saved binary predictions to eval/self/predictions/uni/KShapeAD\PRED_KShapeAD_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:04:47,316 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/KShapeAD\run3_KShapeAD.csv
+2025-06-18 14:04:47,316 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by KShapeAD
+2025-06-18 14:04:49,304 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using KShapeAD | Time cost: 1.985s at length 9452
+2025-06-18 14:04:49,305 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:04:49,841 - INFO - Evaluation result: {'AUC-PR': 0.03909779289296094, 'AUC-ROC': 0.6980148681664006, 'VUS-PR': 0.04730402476455693, 'VUS-ROC': 0.7076618010269814, 'Standard-F1': 0.07604562737642585, 'PA-F1': 0.07604562737642585, 'Event-based-F1': 0.07003891050583619, 'R-based-F1': 0.04195166438668491, 'Affiliation-F': 0.3179067771252602}
+2025-06-18 14:04:49,841 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 2.406673
+2025-06-18 14:04:49,842 - INFO - Saved binary predictions to eval/self/predictions/uni/KShapeAD\PRED_KShapeAD_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:04:49,843 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/KShapeAD\run3_KShapeAD.csv

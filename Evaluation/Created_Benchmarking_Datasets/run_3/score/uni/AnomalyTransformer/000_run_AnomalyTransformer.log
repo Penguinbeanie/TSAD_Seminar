@@ -1,0 +1,31 @@
+2025-06-18 14:02:19,791 - INFO - --- Starting processing for model: AnomalyTransformer ---
+2025-06-18 14:02:19,791 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='AnomalyTransformer')
+2025-06-18 14:02:19,793 - INFO - Optimal_Det_HP: {'win_size': 50, 'lr': 0.001}
+2025-06-18 14:02:19,793 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by AnomalyTransformer
+2025-06-18 14:02:27,202 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using AnomalyTransformer | Time cost: 7.406s at length 5308
+2025-06-18 14:02:27,204 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:02:27,360 - INFO - Evaluation result: {'AUC-PR': 0.01714393368500377, 'AUC-ROC': 0.47527314548591143, 'VUS-PR': 0.02209188595766095, 'VUS-ROC': 0.4767282446061033, 'Standard-F1': 0.03370994628634933, 'PA-F1': 0.0, 'Event-based-F1': 0.0, 'R-based-F1': 0, 'Affiliation-F': 0.647788837481034}
+2025-06-18 14:02:27,360 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 0.000000
+2025-06-18 14:02:27,362 - INFO - Saved binary predictions to eval/self/predictions/uni/AnomalyTransformer\PRED_AnomalyTransformer_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:02:27,363 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/AnomalyTransformer\run3_AnomalyTransformer.csv
+2025-06-18 14:02:27,364 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by AnomalyTransformer
+2025-06-18 14:02:33,755 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using AnomalyTransformer | Time cost: 6.389s at length 5320
+2025-06-18 14:02:33,761 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:02:33,943 - INFO - Evaluation result: {'AUC-PR': 0.021684622889302042, 'AUC-ROC': 0.48824899668469723, 'VUS-PR': 0.026949371041923888, 'VUS-ROC': 0.4826431867365597, 'Standard-F1': 0.04054054054054054, 'PA-F1': 0.24242424242424243, 'Event-based-F1': 0.083333333333333, 'R-based-F1': 0.05384615384615384, 'Affiliation-F': 0.5271276191985065}
+2025-06-18 14:02:33,943 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.149203
+2025-06-18 14:02:33,945 - INFO - Saved binary predictions to eval/self/predictions/uni/AnomalyTransformer\PRED_AnomalyTransformer_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:02:33,946 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/AnomalyTransformer\run3_AnomalyTransformer.csv
+2025-06-18 14:02:33,946 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by AnomalyTransformer
+2025-06-18 14:02:40,313 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using AnomalyTransformer | Time cost: 6.365s at length 5319
+2025-06-18 14:02:40,314 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:02:40,522 - INFO - Evaluation result: {'AUC-PR': 0.008533763759973938, 'AUC-ROC': 0.5178821746542905, 'VUS-PR': 0.014408195984293761, 'VUS-ROC': 0.4915129338478625, 'Standard-F1': 0.03278688524590164, 'PA-F1': 0.06451612903225806, 'Event-based-F1': 0.02614379084967307, 'R-based-F1': 0.025225225225225224, 'Affiliation-F': 0.664063610164455}
+2025-06-18 14:02:40,523 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.000000
+2025-06-18 14:02:40,524 - INFO - Saved binary predictions to eval/self/predictions/uni/AnomalyTransformer\PRED_AnomalyTransformer_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:02:40,525 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/AnomalyTransformer\run3_AnomalyTransformer.csv
+2025-06-18 14:02:40,525 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by AnomalyTransformer
+2025-06-18 14:02:51,043 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using AnomalyTransformer | Time cost: 10.514s at length 9452
+2025-06-18 14:02:51,044 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:02:51,574 - INFO - Evaluation result: {'AUC-PR': 0.02044362229582283, 'AUC-ROC': 0.48188331963662523, 'VUS-PR': 0.03154352952694993, 'VUS-ROC': 0.4866626435529546, 'Standard-F1': 0.04022392701637985, 'PA-F1': 0.034071550255536626, 'Event-based-F1': 0.0049382716049381735, 'R-based-F1': 0.0032520325203252032, 'Affiliation-F': 0.57368084963953}
+2025-06-18 14:02:51,575 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 0.000000
+2025-06-18 14:02:51,575 - INFO - Saved binary predictions to eval/self/predictions/uni/AnomalyTransformer\PRED_AnomalyTransformer_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:02:51,576 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/AnomalyTransformer\run3_AnomalyTransformer.csv

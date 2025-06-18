@@ -1,0 +1,31 @@
+2025-06-18 14:06:33,004 - INFO - --- Starting processing for model: FITS ---
+2025-06-18 14:06:33,004 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='FITS')
+2025-06-18 14:06:33,005 - INFO - Optimal_Det_HP: {'win_size': 100, 'lr': 0.0001}
+2025-06-18 14:06:33,005 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by FITS
+2025-06-18 14:06:34,252 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using FITS | Time cost: 1.244s at length 5308
+2025-06-18 14:06:34,252 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:34,411 - INFO - Evaluation result: {'AUC-PR': 0.031800869555053186, 'AUC-ROC': 0.5354209715911844, 'VUS-PR': 0.037463439574404706, 'VUS-ROC': 0.5954856382555552, 'Standard-F1': 0.09266409266409266, 'PA-F1': 0.3254237288135593, 'Event-based-F1': 0.11640211640211622, 'R-based-F1': 0.0816039122831453, 'Affiliation-F': 0.6792226307216843}
+2025-06-18 14:06:34,411 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 9.640862
+2025-06-18 14:06:34,412 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:06:34,423 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/FITS\run3_FITS.csv
+2025-06-18 14:06:34,423 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by FITS
+2025-06-18 14:06:35,652 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using FITS | Time cost: 1.226s at length 5320
+2025-06-18 14:06:35,658 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:35,842 - INFO - Evaluation result: {'AUC-PR': 0.01782817111279391, 'AUC-ROC': 0.43640027918338864, 'VUS-PR': 0.02339450502204084, 'VUS-ROC': 0.5103153194234863, 'Standard-F1': 0.04078578110383536, 'PA-F1': 0.0411522633744856, 'Event-based-F1': 0.04043429427180827, 'R-based-F1': 0.03430984995325903, 'Affiliation-F': 0.6731339546608314}
+2025-06-18 14:06:35,843 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.001238
+2025-06-18 14:06:35,849 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:06:35,850 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/FITS\run3_FITS.csv
+2025-06-18 14:06:35,850 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by FITS
+2025-06-18 14:06:37,124 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using FITS | Time cost: 1.271s at length 5319
+2025-06-18 14:06:37,129 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:37,350 - INFO - Evaluation result: {'AUC-PR': 0.007730442530704404, 'AUC-ROC': 0.512341352528888, 'VUS-PR': 0.01421604304867199, 'VUS-ROC': 0.6152709874815074, 'Standard-F1': 0.02054154995331466, 'PA-F1': 0.04608294930875576, 'Event-based-F1': 0.01912568306010926, 'R-based-F1': 0.023818119005197598, 'Affiliation-F': 0.6707884067811765}
+2025-06-18 14:06:37,350 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 2.768028
+2025-06-18 14:06:37,358 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:06:37,359 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/FITS\run3_FITS.csv
+2025-06-18 14:06:37,360 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by FITS
+2025-06-18 14:06:39,492 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using FITS | Time cost: 2.132s at length 9452
+2025-06-18 14:06:39,499 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:06:40,016 - INFO - Evaluation result: {'AUC-PR': 0.06409501808899837, 'AUC-ROC': 0.5868933638892415, 'VUS-PR': 0.04429394717637904, 'VUS-ROC': 0.6666086465908723, 'Standard-F1': 0.08411214953271029, 'PA-F1': 0.2773109243697479, 'Event-based-F1': 0.11169513797634657, 'R-based-F1': 0.061433573788341855, 'Affiliation-F': 0.6468442150753152}
+2025-06-18 14:06:40,017 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 9.294084
+2025-06-18 14:06:40,023 - INFO - Saved binary predictions to eval/self/predictions/uni/FITS\PRED_FITS_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:06:40,025 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/FITS\run3_FITS.csv

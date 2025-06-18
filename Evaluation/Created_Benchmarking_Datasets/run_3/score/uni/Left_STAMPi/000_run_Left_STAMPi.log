@@ -1,0 +1,31 @@
+2025-06-18 14:04:49,845 - INFO - --- Starting processing for model: Left_STAMPi ---
+2025-06-18 14:04:49,845 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='Left_STAMPi')
+2025-06-18 14:04:49,846 - INFO - Optimal_Det_HP: {}
+2025-06-18 14:04:49,846 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by Left_STAMPi
+2025-06-18 14:04:55,738 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using Left_STAMPi | Time cost: 5.889s at length 5308
+2025-06-18 14:04:55,739 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:04:55,910 - INFO - Evaluation result: {'AUC-PR': 0.022386131911804073, 'AUC-ROC': 0.6119185587270694, 'VUS-PR': 0.030375469192521078, 'VUS-ROC': 0.594293956879534, 'Standard-F1': 0.052947052947052944, 'PA-F1': 0.06742687159147248, 'Event-based-F1': 0.05254294375210501, 'R-based-F1': 0.05032216908210368, 'Affiliation-F': 0.7195025036041334}
+2025-06-18 14:04:55,910 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 8.757744
+2025-06-18 14:04:55,911 - INFO - Saved binary predictions to eval/self/predictions/uni/Left_STAMPi\PRED_Left_STAMPi_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:04:55,913 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/Left_STAMPi\run3_Left_STAMPi.csv
+2025-06-18 14:04:55,913 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by Left_STAMPi
+2025-06-18 14:04:58,840 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using Left_STAMPi | Time cost: 2.925s at length 5320
+2025-06-18 14:04:58,841 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:04:59,024 - INFO - Evaluation result: {'AUC-PR': 0.058312947340929774, 'AUC-ROC': 0.7618303960914325, 'VUS-PR': 0.07020197819667941, 'VUS-ROC': 0.7497590090869716, 'Standard-F1': 0.12727272727272726, 'PA-F1': 0.17699115044247787, 'Event-based-F1': 0.13023531152878481, 'R-based-F1': 0.12566135135537165, 'Affiliation-F': 0.7209589538333856}
+2025-06-18 14:04:59,024 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 9.353404
+2025-06-18 14:04:59,025 - INFO - Saved binary predictions to eval/self/predictions/uni/Left_STAMPi\PRED_Left_STAMPi_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:04:59,027 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/Left_STAMPi\run3_Left_STAMPi.csv
+2025-06-18 14:04:59,027 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by Left_STAMPi
+2025-06-18 14:05:01,867 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using Left_STAMPi | Time cost: 2.838s at length 5319
+2025-06-18 14:05:01,869 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:05:02,076 - INFO - Evaluation result: {'AUC-PR': 0.017426573061720643, 'AUC-ROC': 0.6919658079181663, 'VUS-PR': 0.02759432162050713, 'VUS-ROC': 0.6590992966726066, 'Standard-F1': 0.06, 'PA-F1': 0.06, 'Event-based-F1': 0.049382716049382325, 'R-based-F1': 0.012121212121212121, 'Affiliation-F': 0.4825123816492317}
+2025-06-18 14:05:02,076 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 10.225531
+2025-06-18 14:05:02,077 - INFO - Saved binary predictions to eval/self/predictions/uni/Left_STAMPi\PRED_Left_STAMPi_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:05:02,078 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/Left_STAMPi\run3_Left_STAMPi.csv
+2025-06-18 14:05:02,078 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by Left_STAMPi
+2025-06-18 14:05:09,254 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using Left_STAMPi | Time cost: 7.174s at length 9452
+2025-06-18 14:05:09,255 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:05:09,777 - INFO - Evaluation result: {'AUC-PR': 0.0350635766365425, 'AUC-ROC': 0.691893664548688, 'VUS-PR': 0.04837919603528508, 'VUS-ROC': 0.7102216176340326, 'Standard-F1': 0.07629427792915532, 'PA-F1': 0.13227513227513227, 'Event-based-F1': 0.08427876823338686, 'R-based-F1': 0.046033632206258335, 'Affiliation-F': 0.3891083760928557}
+2025-06-18 14:05:09,777 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 9.785781
+2025-06-18 14:05:09,778 - INFO - Saved binary predictions to eval/self/predictions/uni/Left_STAMPi\PRED_Left_STAMPi_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:05:09,779 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/Left_STAMPi\run3_Left_STAMPi.csv

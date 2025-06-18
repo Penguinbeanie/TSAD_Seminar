@@ -1,0 +1,31 @@
+2025-06-18 14:03:15,234 - INFO - --- Starting processing for model: POLY ---
+2025-06-18 14:03:15,234 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='POLY')
+2025-06-18 14:03:15,235 - INFO - Optimal_Det_HP: {'periodicity': 1, 'power': 4}
+2025-06-18 14:03:15,235 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by POLY
+2025-06-18 14:03:15,684 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using POLY | Time cost: 0.445s at length 5308
+2025-06-18 14:03:15,685 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:15,842 - INFO - Evaluation result: {'AUC-PR': 0.7868899032926182, 'AUC-ROC': 0.9953849102785274, 'VUS-PR': 0.8133002941300912, 'VUS-ROC': 0.996791133660151, 'Standard-F1': 0.721311475409836, 'PA-F1': 0.7489711934156379, 'Event-based-F1': 0.731277533039647, 'R-based-F1': 0.7129364717076966, 'Affiliation-F': 0.9788978407620296}
+2025-06-18 14:03:15,842 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 0.411925
+2025-06-18 14:03:15,842 - INFO - Saved binary predictions to eval/self/predictions/uni/POLY\PRED_POLY_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 14:03:15,844 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/POLY\run3_POLY.csv
+2025-06-18 14:03:15,847 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by POLY
+2025-06-18 14:03:15,883 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using POLY | Time cost: 0.033s at length 5320
+2025-06-18 14:03:15,884 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:16,070 - INFO - Evaluation result: {'AUC-PR': 0.016423585413348863, 'AUC-ROC': 0.3716454370964928, 'VUS-PR': 0.021103922511434628, 'VUS-ROC': 0.34586521197766107, 'Standard-F1': 0.04480651731160896, 'PA-F1': 0.044861337683523655, 'Event-based-F1': 0.044081632653061184, 'R-based-F1': 0.019400451019966666, 'Affiliation-F': 0.6855706145735009}
+2025-06-18 14:03:16,072 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.161928
+2025-06-18 14:03:16,072 - INFO - Saved binary predictions to eval/self/predictions/uni/POLY\PRED_POLY_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 14:03:16,073 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/POLY\run3_POLY.csv
+2025-06-18 14:03:16,074 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by POLY
+2025-06-18 14:03:16,107 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using POLY | Time cost: 0.031s at length 5319
+2025-06-18 14:03:16,108 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:16,323 - INFO - Evaluation result: {'AUC-PR': 0.005769933888480309, 'AUC-ROC': 0.36356791058912674, 'VUS-PR': 0.01084263572126873, 'VUS-ROC': 0.350412364184864, 'Standard-F1': 0.018190298507462687, 'PA-F1': 0.018682858477347034, 'Event-based-F1': 0.017305893358278743, 'R-based-F1': 0.007497233114663247, 'Affiliation-F': 0.6739015301431207}
+2025-06-18 14:03:16,324 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.257200
+2025-06-18 14:03:16,325 - INFO - Saved binary predictions to eval/self/predictions/uni/POLY\PRED_POLY_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 14:03:16,326 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/POLY\run3_POLY.csv
+2025-06-18 14:03:16,326 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by POLY
+2025-06-18 14:03:16,370 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using POLY | Time cost: 0.042s at length 9452
+2025-06-18 14:03:16,371 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 14:03:16,886 - INFO - Evaluation result: {'AUC-PR': 0.2589012457422415, 'AUC-ROC': 0.6069801987915717, 'VUS-PR': 0.11168862039736807, 'VUS-ROC': 0.516312287378632, 'Standard-F1': 0.37894736842105264, 'PA-F1': 0.42657342657342656, 'Event-based-F1': 0.2894534257120858, 'R-based-F1': 0.25006952169076757, 'Affiliation-F': 0.31652241382516927}
+2025-06-18 14:03:16,887 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 0.432935
+2025-06-18 14:03:16,888 - INFO - Saved binary predictions to eval/self/predictions/uni/POLY\PRED_POLY_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 14:03:16,889 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/POLY\run3_POLY.csv

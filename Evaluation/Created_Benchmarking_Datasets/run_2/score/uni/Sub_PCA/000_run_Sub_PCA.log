@@ -1,0 +1,31 @@
+2025-06-18 13:48:04,868 - INFO - --- Starting processing for model: Sub_PCA ---
+2025-06-18 13:48:04,868 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='Sub_PCA')
+2025-06-18 13:48:04,869 - INFO - Optimal_Det_HP: {'periodicity': 1, 'n_components': None}
+2025-06-18 13:48:04,869 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by Sub_PCA
+2025-06-18 13:48:04,880 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using Sub_PCA | Time cost: 0.008s at length 5308
+2025-06-18 13:48:04,881 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:05,046 - INFO - Evaluation result: {'AUC-PR': 0.9882895632214499, 'AUC-ROC': 0.9997809359511487, 'VUS-PR': 0.9892723795128516, 'VUS-ROC': 0.9998750502992884, 'Standard-F1': 0.9468085106382979, 'PA-F1': 0.9578947368421052, 'Event-based-F1': 0.9565217391304343, 'R-based-F1': 0.9451574080764551, 'Affiliation-F': 0.9974494060698466}
+2025-06-18 13:48:05,046 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 1946.804827
+2025-06-18 13:48:05,047 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_PCA\PRED_Sub_PCA_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:48:05,048 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/Sub_PCA\run2_Sub_PCA.csv
+2025-06-18 13:48:05,048 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by Sub_PCA
+2025-06-18 13:48:05,052 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using Sub_PCA | Time cost: 0.002s at length 5320
+2025-06-18 13:48:05,053 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:05,259 - INFO - Evaluation result: {'AUC-PR': 0.014952092429585326, 'AUC-ROC': 0.3463418251614029, 'VUS-PR': 0.019086515514002728, 'VUS-ROC': 0.36977303848579396, 'Standard-F1': 0.046554084892743035, 'PA-F1': 0.05011389521640091, 'Event-based-F1': 0.046203110704483026, 'R-based-F1': 0.030076444694728026, 'Affiliation-F': 0.6767282251906523}
+2025-06-18 13:48:05,260 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 576.167148
+2025-06-18 13:48:05,261 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_PCA\PRED_Sub_PCA_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:48:05,262 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/Sub_PCA\run2_Sub_PCA.csv
+2025-06-18 13:48:05,262 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by Sub_PCA
+2025-06-18 13:48:05,267 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using Sub_PCA | Time cost: 0.003s at length 5319
+2025-06-18 13:48:05,267 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:05,505 - INFO - Evaluation result: {'AUC-PR': 0.004758658074500936, 'AUC-ROC': 0.22156184883500665, 'VUS-PR': 0.007077385942358785, 'VUS-ROC': 0.2921868014591519, 'Standard-F1': 0.016881198565098118, 'PA-F1': 0.01688119856509812, 'Event-based-F1': 0.01646611779607345, 'R-based-F1': 0.022641192900221367, 'Affiliation-F': 0.6585475950892608}
+2025-06-18 13:48:05,505 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 750.877173
+2025-06-18 13:48:05,506 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_PCA\PRED_Sub_PCA_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:48:05,507 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/Sub_PCA\run2_Sub_PCA.csv
+2025-06-18 13:48:05,507 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by Sub_PCA
+2025-06-18 13:48:05,514 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using Sub_PCA | Time cost: 0.005s at length 9452
+2025-06-18 13:48:05,514 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:06,080 - INFO - Evaluation result: {'AUC-PR': 0.33176920214389655, 'AUC-ROC': 0.6392754775474206, 'VUS-PR': 0.12304630410344848, 'VUS-ROC': 0.5795337019250419, 'Standard-F1': 0.4615384615384616, 'PA-F1': 0.4674329501915709, 'Event-based-F1': 0.3148765843895927, 'R-based-F1': 0.3081915305247731, 'Affiliation-F': 0.3196384746330078}
+2025-06-18 13:48:06,080 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 6072.561090
+2025-06-18 13:48:06,081 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_PCA\PRED_Sub_PCA_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:48:06,082 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/Sub_PCA\run2_Sub_PCA.csv

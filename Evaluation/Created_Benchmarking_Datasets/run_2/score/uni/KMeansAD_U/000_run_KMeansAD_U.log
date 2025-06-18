@@ -1,0 +1,31 @@
+2025-06-18 13:48:11,030 - INFO - --- Starting processing for model: KMeansAD_U ---
+2025-06-18 13:48:11,030 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='KMeansAD_U')
+2025-06-18 13:48:11,031 - INFO - Optimal_Det_HP: {'periodicity': 2, 'n_clusters': 10}
+2025-06-18 13:48:11,031 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by KMeansAD_U
+2025-06-18 13:48:11,221 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using KMeansAD_U | Time cost: 0.188s at length 5308
+2025-06-18 13:48:11,221 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:11,377 - INFO - Evaluation result: {'AUC-PR': 0.12113545368289033, 'AUC-ROC': 0.9173728322664494, 'VUS-PR': 0.14325785265395916, 'VUS-ROC': 0.9021747846086811, 'Standard-F1': 0.2456140350877193, 'PA-F1': 0.2558139534883721, 'Event-based-F1': 0.25157232704402466, 'R-based-F1': 0.10043324143363529, 'Affiliation-F': 0.4907823460805962}
+2025-06-18 13:48:11,377 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 10.968999
+2025-06-18 13:48:11,378 - INFO - Saved binary predictions to eval/self/predictions/uni/KMeansAD_U\PRED_KMeansAD_U_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:48:11,379 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/KMeansAD_U\run2_KMeansAD_U.csv
+2025-06-18 13:48:11,379 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by KMeansAD_U
+2025-06-18 13:48:11,483 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using KMeansAD_U | Time cost: 0.101s at length 5320
+2025-06-18 13:48:11,484 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:11,659 - INFO - Evaluation result: {'AUC-PR': 0.06286655209615939, 'AUC-ROC': 0.6213662537079043, 'VUS-PR': 0.048518648499126064, 'VUS-ROC': 0.5825307718686782, 'Standard-F1': 0.13333333333333333, 'PA-F1': 0.16393442622950818, 'Event-based-F1': 0.1418439716312052, 'R-based-F1': 0.12319063751154913, 'Affiliation-F': 0.5125619596112582}
+2025-06-18 13:48:11,659 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 3.446850
+2025-06-18 13:48:11,660 - INFO - Saved binary predictions to eval/self/predictions/uni/KMeansAD_U\PRED_KMeansAD_U_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:48:11,661 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/KMeansAD_U\run2_KMeansAD_U.csv
+2025-06-18 13:48:11,661 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by KMeansAD_U
+2025-06-18 13:48:11,779 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using KMeansAD_U | Time cost: 0.116s at length 5319
+2025-06-18 13:48:11,780 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:11,984 - INFO - Evaluation result: {'AUC-PR': 0.01747495071735565, 'AUC-ROC': 0.5914046220875165, 'VUS-PR': 0.022854784878350187, 'VUS-ROC': 0.5410694593926466, 'Standard-F1': 0.11009174311926605, 'PA-F1': 0.11009174311926606, 'Event-based-F1': 0.10471204188481635, 'R-based-F1': 0.136532942541369, 'Affiliation-F': 0.3936545827839074}
+2025-06-18 13:48:11,984 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 7.463955
+2025-06-18 13:48:11,986 - INFO - Saved binary predictions to eval/self/predictions/uni/KMeansAD_U\PRED_KMeansAD_U_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:48:11,987 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/KMeansAD_U\run2_KMeansAD_U.csv
+2025-06-18 13:48:11,987 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by KMeansAD_U
+2025-06-18 13:48:12,217 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using KMeansAD_U | Time cost: 0.228s at length 9452
+2025-06-18 13:48:12,218 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:12,756 - INFO - Evaluation result: {'AUC-PR': 0.024330780345644794, 'AUC-ROC': 0.5499857465151343, 'VUS-PR': 0.03363651625080875, 'VUS-ROC': 0.4480844336744732, 'Standard-F1': 0.06903163950143816, 'PA-F1': 0.07640878701050621, 'Event-based-F1': 0.06404391582799598, 'R-based-F1': 0.12504908123886996, 'Affiliation-F': 0.2876568015928246}
+2025-06-18 13:48:12,757 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 12.268493
+2025-06-18 13:48:12,757 - INFO - Saved binary predictions to eval/self/predictions/uni/KMeansAD_U\PRED_KMeansAD_U_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:48:12,758 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/KMeansAD_U\run2_KMeansAD_U.csv

@@ -1,0 +1,31 @@
+2025-06-18 13:50:54,617 - INFO - --- Starting processing for model: M2N2 ---
+2025-06-18 13:50:54,617 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='M2N2')
+2025-06-18 13:50:54,618 - INFO - Optimal_Det_HP: {}
+2025-06-18 13:50:54,618 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by M2N2
+2025-06-18 13:50:55,272 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using M2N2 | Time cost: 0.653s at length 5308
+2025-06-18 13:50:55,273 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:55,427 - INFO - Evaluation result: {'AUC-PR': 0.9461692372848384, 'AUC-ROC': 0.9682630959226703, 'VUS-PR': 0.9376157788904143, 'VUS-ROC': 0.987742745300533, 'Standard-F1': 0.9540229885057472, 'PA-F1': 1.0, 'Event-based-F1': 0.9999999999999996, 'R-based-F1': 0.9352460847335633, 'Affiliation-F': 0.9992464990022077}
+2025-06-18 13:50:55,428 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 3.904718
+2025-06-18 13:50:55,429 - INFO - Saved binary predictions to eval/self/predictions/uni/M2N2\PRED_M2N2_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:50:55,430 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/M2N2\run2_M2N2.csv
+2025-06-18 13:50:55,431 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by M2N2
+2025-06-18 13:50:56,052 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using M2N2 | Time cost: 0.621s at length 5320
+2025-06-18 13:50:56,054 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:56,249 - INFO - Evaluation result: {'AUC-PR': 0.018375092214965465, 'AUC-ROC': 0.48053568312685396, 'VUS-PR': 0.021965636265726677, 'VUS-ROC': 0.526853667145123, 'Standard-F1': 0.04548408057179987, 'PA-F1': 0.04759844223279965, 'Event-based-F1': 0.04511930585683292, 'R-based-F1': 0.030024635467656546, 'Affiliation-F': 0.6678938007468107}
+2025-06-18 13:50:56,249 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.095227
+2025-06-18 13:50:56,250 - INFO - Saved binary predictions to eval/self/predictions/uni/M2N2\PRED_M2N2_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:50:56,251 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/M2N2\run2_M2N2.csv
+2025-06-18 13:50:56,251 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by M2N2
+2025-06-18 13:50:56,912 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using M2N2 | Time cost: 0.659s at length 5319
+2025-06-18 13:50:56,913 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:57,132 - INFO - Evaluation result: {'AUC-PR': 0.004704166173623058, 'AUC-ROC': 0.23388425838226937, 'VUS-PR': 0.008820654416879046, 'VUS-ROC': 0.43795042145418306, 'Standard-F1': 0.015328607012837708, 'PA-F1': 0.015328607012837708, 'Event-based-F1': 0.014951121334100042, 'R-based-F1': 0.014674760313319251, 'Affiliation-F': 0.666256703787987}
+2025-06-18 13:50:57,132 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.001548
+2025-06-18 13:50:57,133 - INFO - Saved binary predictions to eval/self/predictions/uni/M2N2\PRED_M2N2_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:50:57,134 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/M2N2\run2_M2N2.csv
+2025-06-18 13:50:57,134 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by M2N2
+2025-06-18 13:50:57,379 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using M2N2 | Time cost: 0.242s at length 9452
+2025-06-18 13:50:57,380 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:50:57,897 - INFO - Evaluation result: {'AUC-PR': 0.321939352866142, 'AUC-ROC': 0.6197365109696156, 'VUS-PR': 0.1039788073468777, 'VUS-ROC': 0.6357903967071101, 'Standard-F1': 0.46640316205533594, 'PA-F1': 0.47843137254901963, 'Event-based-F1': 0.3199999999999997, 'R-based-F1': 0.28361258684102986, 'Affiliation-F': 0.31995800366543625}
+2025-06-18 13:50:57,897 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 5.257215
+2025-06-18 13:50:57,898 - INFO - Saved binary predictions to eval/self/predictions/uni/M2N2\PRED_M2N2_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:50:57,899 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/M2N2\run2_M2N2.csv

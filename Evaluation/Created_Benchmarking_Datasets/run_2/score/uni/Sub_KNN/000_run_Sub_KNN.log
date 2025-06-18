@@ -1,0 +1,31 @@
+2025-06-18 13:48:09,433 - INFO - --- Starting processing for model: Sub_KNN ---
+2025-06-18 13:48:09,433 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='Sub_KNN')
+2025-06-18 13:48:09,434 - INFO - Optimal_Det_HP: {'periodicity': 2, 'n_neighbors': 50}
+2025-06-18 13:48:09,435 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by Sub_KNN
+2025-06-18 13:48:09,543 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using Sub_KNN | Time cost: 0.106s at length 5308
+2025-06-18 13:48:09,544 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:09,719 - INFO - Evaluation result: {'AUC-PR': 0.0647867549863463, 'AUC-ROC': 0.8746595555106192, 'VUS-PR': 0.08666877329823201, 'VUS-ROC': 0.8875408349830638, 'Standard-F1': 0.14590347923681257, 'PA-F1': 0.17660044150110377, 'Event-based-F1': 0.14676494676494659, 'R-based-F1': 0.1291521817343797, 'Affiliation-F': 0.8252402162819309}
+2025-06-18 13:48:09,719 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 12.739409
+2025-06-18 13:48:09,720 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_KNN\PRED_Sub_KNN_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:48:09,721 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/Sub_KNN\run2_Sub_KNN.csv
+2025-06-18 13:48:09,721 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by Sub_KNN
+2025-06-18 13:48:09,787 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using Sub_KNN | Time cost: 0.063s at length 5320
+2025-06-18 13:48:09,788 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:09,971 - INFO - Evaluation result: {'AUC-PR': 0.06322676828265555, 'AUC-ROC': 0.7234479148490666, 'VUS-PR': 0.07975187155738137, 'VUS-ROC': 0.7677142889703268, 'Standard-F1': 0.16194331983805668, 'PA-F1': 0.299625468164794, 'Event-based-F1': 0.20185922974767553, 'R-based-F1': 0.13333333333333333, 'Affiliation-F': 0.7240853047530559}
+2025-06-18 13:48:09,972 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 3.368074
+2025-06-18 13:48:09,973 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_KNN\PRED_Sub_KNN_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:48:09,974 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/Sub_KNN\run2_Sub_KNN.csv
+2025-06-18 13:48:09,974 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by Sub_KNN
+2025-06-18 13:48:10,047 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using Sub_KNN | Time cost: 0.071s at length 5319
+2025-06-18 13:48:10,048 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:10,276 - INFO - Evaluation result: {'AUC-PR': 0.009674785033003695, 'AUC-ROC': 0.5964955483993181, 'VUS-PR': 0.019960095389372975, 'VUS-ROC': 0.6326823804352428, 'Standard-F1': 0.02475685234305924, 'PA-F1': 0.023008849557522124, 'Event-based-F1': 0.023095713968465405, 'R-based-F1': 0.006300165327186153, 'Affiliation-F': 0.7271629148811192}
+2025-06-18 13:48:10,277 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 7.962571
+2025-06-18 13:48:10,278 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_KNN\PRED_Sub_KNN_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:48:10,279 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/Sub_KNN\run2_Sub_KNN.csv
+2025-06-18 13:48:10,279 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by Sub_KNN
+2025-06-18 13:48:10,481 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using Sub_KNN | Time cost: 0.200s at length 9452
+2025-06-18 13:48:10,482 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:48:11,026 - INFO - Evaluation result: {'AUC-PR': 0.01990646486416413, 'AUC-ROC': 0.5113735571130458, 'VUS-PR': 0.03053238215116611, 'VUS-ROC': 0.46977431740888825, 'Standard-F1': 0.04638088545326774, 'PA-F1': 0.055944055944055944, 'Event-based-F1': 0.04567814476458174, 'R-based-F1': 0.04596156673499979, 'Affiliation-F': 0.6143663310772164}
+2025-06-18 13:48:11,026 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 14.429308
+2025-06-18 13:48:11,027 - INFO - Saved binary predictions to eval/self/predictions/uni/Sub_KNN\PRED_Sub_KNN_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:48:11,028 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/Sub_KNN\run2_Sub_KNN.csv

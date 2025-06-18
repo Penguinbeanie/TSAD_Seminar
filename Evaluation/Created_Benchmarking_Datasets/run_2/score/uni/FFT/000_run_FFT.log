@@ -1,0 +1,31 @@
+2025-06-18 13:47:15,055 - INFO - --- Starting processing for model: FFT ---
+2025-06-18 13:47:15,056 - INFO - Using arguments: Namespace(dataset_dir='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\TSB-AD-U-Self', file_list='C:\\Users\\Kai\\Documents\\Time_Series_Anomaly_Detection\\Time-Series-Anomaly-Detection-Seminar\\TSB-AD\\Datasets\\File_List\\self_dataset.csv', score_dir='eval/self/score/uni/', save_dir='eval/self/metrics/uni/', pred_dir='eval/self/predictions/uni/', save=True, AD_Name='FFT')
+2025-06-18 13:47:15,057 - INFO - Optimal_Det_HP: {}
+2025-06-18 13:47:15,057 - INFO - Processing: 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv by FFT
+2025-06-18 13:47:15,083 - INFO - Success at 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv using FFT | Time cost: 0.023s at length 5308
+2025-06-18 13:47:15,084 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:47:15,293 - INFO - Evaluation result: {'AUC-PR': 0.583465942915047, 'AUC-ROC': 0.9072042582680879, 'VUS-PR': 0.49945195781539675, 'VUS-ROC': 0.9379131149325417, 'Standard-F1': 0.6153846153846154, 'PA-F1': 0.6746987951807228, 'Event-based-F1': 0.6675938803894292, 'R-based-F1': 0.6808325936301375, 'Affiliation-F': 0.750636492614058}
+2025-06-18 13:47:15,293 - INFO - Optimal threshold (for PointF1) for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv: 1.842719
+2025-06-18 13:47:15,294 - INFO - Saved binary predictions to eval/self/predictions/uni/FFT\PRED_FFT_010_RAMspike_10_Hardware_tr_1200_1st_1210.npy
+2025-06-18 13:47:15,295 - INFO - Appended metrics for 010_RAMspike_10_Hardware_tr_1200_1st_1210.csv to eval/self/metrics/uni/FFT\run2_FFT.csv
+2025-06-18 13:47:15,295 - INFO - Processing: 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv by FFT
+2025-06-18 13:47:15,318 - INFO - Success at 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv using FFT | Time cost: 0.021s at length 5320
+2025-06-18 13:47:15,319 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:47:15,576 - INFO - Evaluation result: {'AUC-PR': 0.020676691729323307, 'AUC-ROC': 0.31228406909788864, 'VUS-PR': 0.02598363107437614, 'VUS-ROC': 0.3318690160272401, 'Standard-F1': 0.040515653775322284, 'PA-F1': 0.0, 'Event-based-F1': 0.0, 'R-based-F1': 0, 'Affiliation-F': 0.6142305246043324}
+2025-06-18 13:47:15,576 - INFO - Optimal threshold (for PointF1) for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv: 0.000000
+2025-06-18 13:47:15,577 - INFO - Saved binary predictions to eval/self/predictions/uni/FFT\PRED_FFT_011_RAMsleep_11_Hardware_tr_1200_1st_1324.npy
+2025-06-18 13:47:15,578 - INFO - Appended metrics for 011_RAMsleep_11_Hardware_tr_1200_1st_1324.csv to eval/self/metrics/uni/FFT\run2_FFT.csv
+2025-06-18 13:47:15,578 - INFO - Processing: 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv by FFT
+2025-06-18 13:47:15,600 - INFO - Success at 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv using FFT | Time cost: 0.020s at length 5319
+2025-06-18 13:47:15,601 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:47:15,895 - INFO - Evaluation result: {'AUC-PR': 0.007520210565895845, 'AUC-ROC': 0.33642735366546694, 'VUS-PR': 0.014309575044555078, 'VUS-ROC': 0.33956725477410943, 'Standard-F1': 0.014928158238477329, 'PA-F1': 0.0, 'Event-based-F1': 0.0, 'R-based-F1': 0, 'Affiliation-F': 0.5760643534790316}
+2025-06-18 13:47:15,895 - INFO - Optimal threshold (for PointF1) for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv: 0.000000
+2025-06-18 13:47:15,896 - INFO - Saved binary predictions to eval/self/predictions/uni/FFT\PRED_FFT_012_RAMmedium_12_Hardware_tr_1200_1st_1237.npy
+2025-06-18 13:47:15,897 - INFO - Appended metrics for 012_RAMmedium_12_Hardware_tr_1200_1st_1237.csv to eval/self/metrics/uni/FFT\run2_FFT.csv
+2025-06-18 13:47:15,897 - INFO - Processing: 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv by FFT
+2025-06-18 13:47:15,958 - INFO - Success at 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv using FFT | Time cost: 0.057s at length 9452
+2025-06-18 13:47:15,959 - INFO - Calculating metrics, determining optimal threshold, and generating predictions.
+2025-06-18 13:47:16,628 - INFO - Evaluation result: {'AUC-PR': 0.12470819974473876, 'AUC-ROC': 0.553243447294399, 'VUS-PR': 0.05508962297905393, 'VUS-ROC': 0.4275845530055812, 'Standard-F1': 0.26361031518624645, 'PA-F1': 0.21352313167259787, 'Event-based-F1': 0.14925373134328324, 'R-based-F1': 0.1455223880597015, 'Affiliation-F': 0.17006154591861425}
+2025-06-18 13:47:16,628 - INFO - Optimal threshold (for PointF1) for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv: 1.337631
+2025-06-18 13:47:16,629 - INFO - Saved binary predictions to eval/self/predictions/uni/FFT\PRED_FFT_013_RAMmixed_13_Hardware_tr_2000_1st_2083.npy
+2025-06-18 13:47:16,630 - INFO - Appended metrics for 013_RAMmixed_13_Hardware_tr_2000_1st_2083.csv to eval/self/metrics/uni/FFT\run2_FFT.csv
