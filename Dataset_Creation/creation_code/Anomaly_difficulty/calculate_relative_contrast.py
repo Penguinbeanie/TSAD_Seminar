@@ -34,7 +34,6 @@ def calculate_relative_contrast(subsequences: np.ndarray) -> float:
     Calculates the Relative Contrast (RC) for a set of time series subsequences
     using DTW distance metric.
 
-    This implementation follows the definition from the paper:
     Rc = E[Dmean(s)] / E[Dmin(s)]
 
     Args:

@@ -1,9 +1,7 @@
 import csv
 import os
 
-# Define input and output file paths
-# Script is in Dataset_Creation/creation_code/RAM_production/
-# Data is in Dataset_Creation/prelim_datasets/
+
 SCRIPT_DIR = os.path.dirname(__file__)
 BASE_INPUT_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "..", "prelim_datasets")
 
