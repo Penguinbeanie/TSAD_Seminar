@@ -142,7 +142,7 @@
 \lhead{Abstract}
 \section*{Abstract}
 
-The following seminar thesis provides four contributions to the current state of Time Series Anomaly Detection (TSAD) benchmarking. First, it includes a detailed literature review, explaining time series data, anomalies, detection methods, their use cases, and an overview of the current set of datasets and benchmarking tools. Secondly, a qualitative analysis of the Numeta Anomaly Benchmark (NAB) reinforces the commonly found claim that previous benchmarking datasets are highly flawed. Thirdly, I will replicate the TSB-AD benchmark and compare the authors' results with mine, looking at consistency between runs. Lastly, I provide four labeled high quality datasets that highlight a critical blindspot in current models' ability to detect non-peak anomalies. These require a good understanding of the entire time series, as opposed to just short local context windows.
+The following seminar thesis provides four contributions to the current state of Time Series Anomaly Detection (TSAD) benchmarking. First, it includes a detailed literature review, explaining time series data, anomalies, detection methods, their use cases, and an overview of the current set of datasets and benchmarking tools. Secondly, a qualitative analysis of the Numenta Anomaly Benchmark (NAB) reinforces the commonly found claim that previous benchmarking datasets are highly flawed. Thirdly, I will replicate the TSB-AD benchmark and compare the authors' results with mine, looking at consistency between runs. Lastly, I provide four labeled high quality datasets that highlight a critical blindspot in current models' ability to detect non-peak anomalies. These require a good understanding of the entire time series, as opposed to just short local context windows.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,7 +166,7 @@ Time Series Anomaly Detection (TSAD), as a subcategory of the broader field of A
 Time Series Data, as used in the rest of this thesis, shall be defined as follows: a sequence of data or observations, typically indexed by or associated with specific timestamps, collected in chronological order over a period of time.
 For the purpose of analysis, continuous signals must be converted into individual data points. Each datapoint can either represent a binary state (1 or 0), be a numerical value measured on a ratio scale (eg. number of occurrences), or a numerical value measured on an interval scale (eg. temperature on a Celsius scale).
 A time series with a dimensionality of one (only a single feature) will be referred to as "univariate", while a time series with higher dimensionality (multiple features) will be referred to as "multivariate". \\
-An anomaly will be defined as follows: an abnormal, rarely occurring data point or sequence, that has to be be detectable with exclusively context independent methods. Individual anomalous data points will be referred to as "point based" anomalies. Multiple consecutive anomalous points, each of which might be unremarkable on their own, while displaying unusual behavior as a sequence,  will be referred to as "sequence based" or "collective" anomalies \parencites[p.~3]{liu2024elephant}[p.~8]{chalapathy2019deeplearninganomalydetection}. A separate category of anomalies would be context dependent ones. Those are data points or sequences, possibly indistinguishable from normal ones if analyzed without context, but if combined with additional information about the field or time series, are considered anomalous \citep[pp.~7-8]{chalapathy2019deeplearninganomalydetection}. Context dependent anomalies will not be topic of the research presented here. \\
+An anomaly will be defined as follows: an abnormal, rarely occurring data point or sequence, that has to be be detectable with exclusively context independent methods. Individual anomalous data points will be referred to as "point based" anomalies. Multiple consecutive anomalous points, each of which might be unremarkable on their own, while displaying unusual behavior as a sequence,  will be referred to as "sequence based" or "collective" anomalies \parencites[p.~3]{liu2024elephant}[p.~8]{chalapathy2019deeplearninganomalydetection}. Further more, there is the category of 'contextual anomalies', which are anomalies that deviate from an expected distribution, relying on a context that can be found entirely within the time series itself (eg. a window) \parencite[p.1699]{paparrizos2022tsb}. Context dependent anomalies that require additional external information about the field or time series will not be considered in this thesis. \\
 Given those definitions, Time Series Anomaly Detection is therefore the task of correctly and autonomously identifying anomalies within a given time series.
 
 
@@ -261,7 +261,7 @@ The following defines the most commonly used metrics and classifies them into th
 
 While time series anomaly detection is a well-established field, most advancements in systematic benchmarking have been made within the last decade. The following will provide an overview over the most important papers and datasets contributing to this endeavor. As always, given the large corpus of work, this is not an exhaustive list.  \par
 \textbf{Yahoo (2015)}: Yahoo provides one of the earliest available labeled large scale TSAD datasets. It consists of real data with time series from various Yahoo services and synthetic data, containing trends, noise, and seasonality \parencite{Yahoo}. \par
-\textbf{Numenta Anomaly Benchmark (NAB), 2015:} The Numeta Anomaly Benchmark is often considered to be the first large scale open source benchmarking environment for TSAD. At the time of release, it contained 58 datasets, made up of a mixture of artificial and real time series. The labels are first created by multiple humans, then combined into a ground truth by an algorithm. NAB uses a custom threshold dependent scoring function for the evaluation of a model's performance, designating high value to an algorithms ability to detect an anomaly as early as possible. It is designed specifically for real time anomaly detection, not static analysis. Therefore, only unsupervised models can be tested, with no training/test split of the data \parencites{Lavin_2015}.\par
+\textbf{Numenta Anomaly Benchmark (NAB), 2015:} The Numenta Anomaly Benchmark is often considered to be the first large scale open source benchmarking environment for TSAD. At the time of release, it contained 58 datasets, made up of a mixture of artificial and real time series. The labels are first created by multiple humans, then combined into a ground truth by an algorithm. NAB uses a custom threshold dependent scoring function for the evaluation of a model's performance, designating high value to an algorithms ability to detect an anomaly as early as possible. It is designed specifically for real time anomaly detection, not static analysis. Therefore, only unsupervised models can be tested, with no training/test split of the data \parencites{Lavin_2015}.\par
 \textbf{Illusion of Progress (2021):} \cite{wu2021current} provide substantial criticism regarding the state of TSAD benchmarking. The authors find most previously created datasets to contain one or multiple of the following flaws:
 \begin{itemize}
     \item \textit{Triviality:} Many anomalies "are so simple that solving them seems pointless or even absurd" \parencites[p.~2]{wu2021current}.
@@ -342,7 +342,7 @@ The provided datasets contain information about RAM utilization during matrix mu
     \label{fig:anomaly_10} % Good practice for referencing the figure later
 \end{figure}
 
-\textbf{Dataset 1 - Large Matrix Injection:} For the first dataset, a particularly large matrix multiplication is performed as the anomaly. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. 
+\textbf{Dataset 1 - Large Matrix Injection:} For the first dataset, a particularly large matrix multiplication is performed as the anomaly. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. Afterwards, these preparation matrix multiplications are removed from the time series for a clear training split.
 \begin{itemize}
     \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
     \item \textit{Runtime} -- Total: 90 min | Anomaly-free: 20 min 
@@ -367,7 +367,7 @@ While being moderately easy to solve in theory, it remains a crucial scenario in
     \item \textit{Anomaly} -- Type: Sleep Time Injection | Sleep Time Duration: 2 sec | Frequency: 1/50 baseload instances
 \end{itemize}
 
-This anomaly type simulates a process "hanging" or an unexpected period of system inactivity, which is a critical but non-peak anomaly often missed by simple tresholding.
+This anomaly type simulates a process "hanging" or an unexpected period of system inactivity, which is a critical but non-peak anomaly often missed by simple thresholding.
 
 \begin{figure}[H] % htbp are common placement options (here, top, bottom, page)
     \centering % Centers the content (image and caption) horizontally
@@ -386,7 +386,7 @@ This anomaly type simulates a process "hanging" or an unexpected period of syste
 The third anomaly type simulates a subtle but abnormal change in workload. This would not activate peak alerts but still deviates from the established operational rhythm. This tests a model's ability to understand the normal operating range in a larger context. A real world example could be the occasional execution of malicious code, designed to hide between regular activities, never exceeding peak values in order to avoid detection.
 
 
-\textbf{Dataset 4 - Combined Anomaly Injection:} For the fourth dataset, all three anomalies are injected. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. The same combined anomaly frequency is maintained as in the previous three datasets. The total length of the dataset is adjusted upwards. 
+\textbf{Dataset 4 - Combined Anomaly Injection:} For the fourth dataset, all three anomalies are injected. The generation starts with a large matrix multiplication to prepare the memory and avoid any changes in idle RAM utilization after the first anomaly injection. Afterwards, these preparation matrix multiplications are removed from the time series for a clear training split. The same combined anomaly frequency is maintained as in the previous three datasets. The total length of the dataset is adjusted upwards. 
 \begin{itemize}
     \item \textit{Baseload} -- Matrix Size: [3000, 3500, 4500, 5000] | Number of Multiplications: 3 | Sleep Time: 4 sec
     \item \textit{Runtime} -- Total: 160 min | Anomaly-free: 25 min 
@@ -422,7 +422,7 @@ The simulations are ran on the previously described system that was used for the
 
 \section{Results}
 
-\subsection{Flaws in Nunmeta Anomaly Benchmark (NAB)} \label{nab_res}
+\subsection{Flaws in Numenta Anomaly Benchmark (NAB)} \label{nab_res}
 
 In all four figures, the red dots are data points labeled as anomalies. 
 
@@ -439,7 +439,7 @@ In all four figures, the red dots are data points labeled as anomalies.
     \label{fig:mislab}
 \end{figure}
 
-A sizable portion of all anomalies found in the NAB dataset fit into the category of \textbf{trivial anomalies} and can be detected using simple tresholding functions. Examples of that can be found in Figure \ref{fig:trivial}. \par
+A sizable portion of all anomalies found in the NAB dataset fit into the category of \textbf{trivial anomalies} and can be detected using simple thresholding functions. Examples of that can be found in Figure \ref{fig:trivial}. \par
 
 
 
@@ -470,7 +470,7 @@ Not as commonly found as the previous two flaws, but still present, are datasets
     \label{tab:vus_pr_diff_summary_uni}
     \begin{tabular}{lrrrrrrr}
         \toprule
-        \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File\\ID}} & \textbf{\makecell[r]{Num. of\\Anom.}} & \textbf{\makecell[r]{Datasets\\>5\% Diff.}} & \textbf{\makecell[r]{Datasets\\>25\% Diff.}} & \textbf{\makecell[r]{Datasets\\>50\% Diff.}} \\
+        \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File\\ID}} & \textbf{\makecell[r]{Num. of\\Anom.}} & \textbf{\makecell[r]{Datasets\\>0.05 Diff.}} & \textbf{\makecell[r]{Datasets\\>0.25 Diff.}} & \textbf{\makecell[r]{Datasets\\>0.50 Diff.}} \\
         \midrule
         \rowcolor{lightgray} Sub-IForest & 0.231 & 0.966 & 405 & 1 & 210 & 115 & 67 \\
         \rowcolor{lightgray} Sub-LOF & 0.177 & 0.960 & 603 & 1 & 208 & 89 & 38 \\
@@ -486,13 +486,13 @@ Not as commonly found as the previous two flaws, but still present, are datasets
         \rowcolor{myLightBlue} FITS & 0.038 & 0.450 & 579 & 1 & 86 & 6 & 0 \\
         \rowcolor{lightgray} KMeansAD & 0.012 & 0.268 & 419 & 1 & 21 & 1 & 0 \\
         \rowcolor{lightgray} Sub-MCD & 0.009 & 0.316 & 788 & 1 & 20 & 1 & 0 \\
-        \rowcolor{myLightGreen} MOMENT-ZS & 0.007 & 0.413 & 579 & 1 & 9 & 1 & 0 \\
+        \rowcolor{myLightGreen} MOMENT-ZS & 0.007 & 0.414 & 579 & 1 & 9 & 1 & 0 \\
         \rowcolor{myLightBlue} AutoEncoder & 0.006 & 0.152 & 658 & 1 & 8 & 0 & 0 \\
         \rowcolor{lightgray} LOF & 0.002 & 0.075 & 811 & 3 & 2 & 0 & 0 \\
         \rowcolor{lightgray} Sub-KNN & 0.002 & 0.216 & 538 & 3 & 3 & 0 & 0 \\
         \rowcolor{lightgray} POLY & 0.001 & 0.288 & 534 & 1 & 2 & 1 & 0 \\
         \rowcolor{lightgray} Sub-PCA & 0.001 & 0.071 & 534 & 1 & 1 & 0 & 0 \\
-        \rowcolor{lightgray} Sub-HBOS & 0.001 & 0.094 & 531 & 1 & 1 & 0 & 0 \\
+        \rowcolor{lightgray} Sub-HBOS & 0.001 & 0.095 & 531 & 1 & 1 & 0 & 0 \\
         \rowcolor{lightgray} Sub-OCSVM & 0.001 & 0.082 & 534 & 1 & 2 & 0 & 0 \\
         \rowcolor{lightgray} MatrixProfile & 5.96e-05 & 0.015 & 017 & 1 & 0 & 0 & 0 \\
         \rowcolor{lightgray} SR & 8.24e-06 & 0.002 & 534 & 1 & 0 & 0 & 0 \\
@@ -507,7 +507,7 @@ Not as commonly found as the previous two flaws, but still present, are datasets
         \rowcolor{myLightGreen} \strut & Foundation Model-based Method \\
         
     \end{tabular}
-    \caption{\label{tab:Table 2} Summary of absolute differences in VUS-PR for univariate datasets.}
+    \caption{\label{tab:Table 2} Summary of absolute differences in VUS-PR for univariate datasets}
 \end{table}
 
 \begin{table}[htbp]
@@ -515,7 +515,7 @@ Not as commonly found as the previous two flaws, but still present, are datasets
     \label{tab:vus_pr_diff_summary_multi}
     \begin{tabular}{lrrrrrrr}
         \toprule
-        \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File\\ID}} & \textbf{\makecell[r]{Num. of\\Anom.}} & \textbf{\makecell[r]{Datasets\\>5\% Diff.}} & \textbf{\makecell[r]{Datasets\\>25\% Diff.}} & \textbf{\makecell[r]{Datasets\\>50\% Diff.}} \\
+        \textbf{Model} & \textbf{\makecell[r]{Avg. Abs.\\Diff.}} & \textbf{\makecell[r]{Max. Abs.\\Diff.}} & \textbf{\makecell[r]{File\\ID}} & \textbf{\makecell[r]{Num. of\\Anom.}} & \textbf{\makecell[r]{Datasets\\>0.05 Diff.}} & \textbf{\makecell[r]{Datasets\\>0.25 Diff.}} & \textbf{\makecell[r]{Datasets\\>0.50 Diff.}} \\
         \midrule
         \rowcolor{myLightBlue} TranAD & 0.185 & 0.910 & 175 & 4 & 83 & 36 & 28 \\
         \rowcolor{lightgray} PCA & 0.155 & 0.855 & 156 & 1 & 91 & 44 & 17 \\
@@ -546,7 +546,7 @@ Not as commonly found as the previous two flaws, but still present, are datasets
         \rowcolor{lightgray} \strut & Statistical Methods \\
         \rowcolor{myLightBlue} \strut & Neural Network-based Method \\
     \end{tabular}
-    \caption{\label{tab:Table 3} Summary of absolute differences in VUS-PR for multivariate datasets.}
+    \caption{\label{tab:Table 3} Summary of absolute differences in VUS-PR for multivariate datasets}
 \end{table}
 
 \subsection{Consistency Between TSB-AD Results}
@@ -556,13 +556,13 @@ Since \cite{liu2024elephant} only publish the full VUS-PR results for each indiv
 \subsubsection{Univariate Results}
 
 Table \ref{tab:Table 2} provides information about the differences found between both benchmark evaluations for univariate detection models. \par
-For most models, the average difference stayed firmly below 0.100, with (Sub-)IForest, Sub-LOF, LSTMAD, and USAD being the main exceptions. Beyond these averages, almost half of all models had at least one dataset where the absolute score differed by more than 0.950. Furthermore, a third of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differed by at least 50\%. These high discrepancies typically occurred for datasets with a low anomaly count, making even small variations in detected anomalies strongly noticeable in the scores. When comparing model types, statistical methods generally showed higher consistency between runs than Neural Network-based methods. This is somewhat to be expected, as the inherent complexity, numerous parameters, and sensitivity to initialization or even minor data variations in Neural Networks can lead to greater variability in outcomes, even when attempting to fix seeds. The notable exceptions here were (Sub-)IForest and Sub-LOF. Their inconsistency were somewhat surprising, especially given that (Sub-)IForest were configured with (150) 200 n\_estimators and a consistent seed, factors which should generally promote stability. Interestingly, Moment (zero-shot) demonstrated remarkably high consistency, outperforming even 3 statistical methods and significantly surpassing most other neural network models. This high consistency might be attributable to its fundamental zero-shot nature. As a pre-trained model, it involves little re-training randomness in each run, relying instead on fixed, deterministic weights for its inferences. The dataset \#534 appeared 4 times as an entry for the highest absolute difference. Multiple datasets appeared twice. These are: \#849, \#865, \#603, \#579.
+For most models, the average difference stayed firmly below 0.100, with (Sub-)IForest, Sub-LOF, LSTMAD, and USAD being the main exceptions. Beyond these averages, almost half of all models had at least one dataset where the absolute score differed by more than 0.950. Furthermore, a third of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differed by at least 0.50. These high discrepancies typically occurred for datasets with a low anomaly count, making even small variations in detected anomalies strongly noticeable in the scores. When comparing model types, statistical methods generally showed higher consistency between runs than Neural Network-based methods. This is somewhat to be expected, as the inherent complexity, numerous parameters, and sensitivity to initialization or even minor data variations in Neural Networks can lead to greater variability in outcomes, even when attempting to fix seeds. The notable exceptions here were (Sub-)IForest and Sub-LOF. Their inconsistency were somewhat surprising, especially given that (Sub-)IForest were configured with (150) 200 n\_estimators and a consistent seed, factors which should generally promote stability. Interestingly, Moment (zero-shot) demonstrated remarkably high consistency, outperforming even 3 statistical methods and significantly surpassing most other neural network models. This high consistency might be attributable to its fundamental zero-shot nature. As a pre-trained model, it involves little re-training randomness in each run, relying instead on fixed, deterministic weights for its inferences. The dataset \#534 appeared 4 times as an entry for the highest absolute difference. Multiple datasets appeared twice. These are: \#849, \#865, \#603, \#579.
 
 \subsubsection{Multivariate Results}
 
 Table \ref{tab:Table 3} provides information about the differences found between both benchmark evaluations for multivariate detection models.
 
-The results for multivariate detection models are in many ways similar to those of univariate detection models. Only 5 out of 20 models display an average difference between runs of more than 0.100, with those being TranAD, PCA, OmniAnomaly, USAD, and IForest. 1/4th of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differed by at least 50\%. These high discrepancies typically occurred for datasets with a low anomaly count. As with the univariate models, when comparing model types, statistical methods generally showed higher consistency between runs than Neural Network-based methods. The exceptions here being the statistical models PCA and IForest (ranking 2nd and 5th), and the Neural Network-based model AutoEncoder (ranking 14th). HBOS was the only model to have its largest difference occur during a dataset with multiple hundred anomalies. Given the small absolute difference (0.00000291), this seems insignificant. Most prone to differences was the dataset \#175, appearing 5 times as the dataset with the highest absolute difference, followed by \#156 with 4 appearances. 
+The results for multivariate detection models are in many ways similar to those of univariate detection models. Only 5 out of 20 models display an average difference between runs of more than 0.100, with those being TranAD, PCA, OmniAnomaly, USAD, and IForest. 1/4th of all models had more than 10 datasets where the difference between the benchmark evaluation by the original authors and the benchmark evaluation run by me differed by at least 0.50. These high discrepancies typically occurred for datasets with a low anomaly count. As with the univariate models, when comparing model types, statistical methods generally showed higher consistency between runs than Neural Network-based methods. The exceptions here being the statistical models PCA and IForest (ranking 2nd and 5th), and the Neural Network-based model AutoEncoder (ranking 14th). HBOS was the only model to have its largest difference occur during a dataset with multiple hundred anomalies. Given the small absolute difference (0.00000291), this seems insignificant. Most prone to differences was the dataset \#175, appearing 5 times as the dataset with the highest absolute difference, followed by \#156 with 4 appearances. 
 
 
 \subsubsection{Univariate and Multivariate Compared}
@@ -597,11 +597,11 @@ Across both univariate and multivariate anomaly detection models, the observed t
     \textit{Anomaly Ratio (Point based): Total Anomalous Points divided by Length} \\
     \textit{Anomaly Ratio (Sequence based): Total Anomalous Sequences divided by Length}
     \noindent
-    \caption{\label{tab:Table 4} Statistical summery of datasets 1-4}
+    \caption{\label{tab:Table 4} Statistical summary of datasets 1-4}
 \end{table}
 
 Most datasets used for the TSB-AD benchmark are between 1000 and 50000 data points in length. Similarly, datasets 1-3 have around 5000 data points. This ensures a sufficiently large sample size, while keeping it small enough for me to manually go through the entire set and check for potential problems or mislabeled data points. Since dataset 4 contains 3 separate anomaly types and I intended to maintain a consistent anomaly ratio between all sets, I increased its size. Otherwise, when maintaining the same anomaly ratio, it would be possible for some anomaly type to not occur at all. \cite[pp.~8]{SchmidlEtAl2022Anomaly} define an acceptable anomaly ratio to be one below 10\%, as anything above it would be better considered to be a classification problem. The median anomaly ratio in the TSB-AD dataset is 4.85\% and \cite[p.~4]{wu2021current} consider the adequate number of anomalies to be exactly 1. The anomaly range of my datasets falls right between those definitions, at between 0.7\% and 2.2\%. The differences between datasets can be explained by the average length of an anomalous sequence depending on anomaly type. The actual anomaly ratio based on anomalous sequences to total sequences is kept steady between datasets, falling between 0.15\% and 0.22\%. Maintaining the sequence ratio ensures each dataset presents a consistent number of anomalous events to detect, which is more important for a fair comparison than the point ratio that can be skewed by the varying lengths of those events. \par
-For the calculations of the difficulty measures, I used Relative Contrast (RC), as described by \cite[pp.~1704]{paparrizos2022tsb}. Since the authors did not specify their preferred Shape Based Distance (SBD) metric, I applied the commonly used Dynamic Time Warping (DTW), using the cdist\_dtw implementation provided by the tslearn library \parencites{DTW}. \cite[pp.~1704]{paparrizos2022tsb} do not clearly state how to decide on a sliding window for the comparison of individual sequences and only state to "split the time series by its period" \parencite[p.~1704]{paparrizos2022tsb}. I interpret the term "period" to mean a repeating pattern, as is common in time series analysis. With all 4 of my created datasets, a repeating period can be defined as a sequence of matrix multiplications followed by an idle state, which tends to be between 8 and 12 data points long. With that in mind, I selected the value 10 for my sliding window. Since I neither know the exact RC implementation of \cite{paparrizos2022tsb}, nor their used SBD metric, it is impossible to compare the here produced values with those provided in the TSB-UAD paper. Therefore, a comparison can only be made between my own datasets. A low RC score should indicate that its difficult to effectively cluster the points in a dataset, making anomaly detection theoretically more challenging. Based on this assumption, dataset 4 should provide the easiest to detect anomalies. As will be shown later, this does not hold up.
+For the calculations of the difficulty measures, I used Relative Contrast (RC), as described by \cite[pp.~1704]{paparrizos2022tsb}. Since the authors did not specify their preferred Shape Based Distance (SBD) metric, I applied the commonly used Dynamic Time Warping (DTW), using the cdist\_dtw implementation provided by the tslearn library \parencites{DTW}. \cite[pp.~1704]{paparrizos2022tsb} do not clearly state how to decide on a sliding window for the comparison of individual sequences and only state to "split the time series by its period" \parencite[p.~1704]{paparrizos2022tsb}. I interpret the term "period" to mean a repeating pattern, as is common in time series analysis. With all 4 of my created datasets, a repeating period can be defined as a sequence of matrix multiplications followed by an idle state, which tends to be between 8 and 12 data points long. With that in mind, I selected the value 10 for my sliding window. Since I neither know the exact RC implementation of \cite{paparrizos2022tsb}, nor their used SBD metric, it is impossible to compare the here produced values with those provided in the TSB-UAD paper. Therefore, a comparison can only be made between my own datasets. A low RC score should indicate that it is difficult to effectively cluster the points in a dataset, making anomaly detection theoretically more challenging. Based on this assumption, dataset 4 should provide the easiest to detect anomalies. As will be shown later, this does not hold up.
 
 \subsubsection{Benchmarking Results on New Dataset} \label{dat1_3}
 
@@ -621,8 +621,8 @@ For the calculations of the difficulty measures, I used Relative Contrast (RC), 
         \hspace{1em}Best Model & Sub-PCA & KShapeAD & LOF & OmniAnomaly \\
         \hspace{1em}Best Score & 0.989 & 0.562 & 0.062 & 0.394 \\
         \hspace{1em}Avg. Score & 0.376 & 0.096 & 0.018 & 0.084 \\
-        \hspace{1em}Avg. Score (St. Mod.) & 0.253 & 0.144 & 0.024 & 0.062 \\
-        \hspace{1em}Avg. Score (NN Mod.) & 0.472 & 0.059 & 0.014 & 0.108 \\
+        \hspace{1em}Avg. Score (St. Mod.) & 0.255 & 0.125 & 0.023 & 0.061 \\
+        \hspace{1em}Avg. Score (NN Mod.) & 0.494 & 0.051 & 0.013 & 0.105 \\
         
         \cmidrule(r){1-5} % A partial rule to separate the two sections
         
@@ -631,21 +631,21 @@ For the calculations of the difficulty measures, I used Relative Contrast (RC), 
         \hspace{1em}Best Model & Sub-PCA & SAND & LOF & OmniAnomaly \\
         \hspace{1em}Best Score & 0.999 & 0.949 & 0.926 & 0.878 \\
         \hspace{1em}Avg. Score & 0.832 & 0.586 & 0.554 & 0.615 \\
-        \hspace{1em}Avg. Score (St. Mod.) & 0.887 & 0.572 & 0.634 & 0.613 \\
-        \hspace{1em}Avg. Score (NN Mod.) & 0.767 & 0.604 & 0.506 & 0.659 \\
+        \hspace{1em}Avg. Score (St. Mod.) & 0.863 & 0.566 & 0.607 & 0.604 \\
+        \hspace{1em}Avg. Score (NN Mod.) & 0.809 & 0.565 & 0.485 & 0.651 \\
         
         \bottomrule
     \end{tabular}
-    \caption{VUS-PR and VUS-ROC: Summary of benchmarking results for datasets 1-4.}
+    \caption{VUS-PR and VUS-ROC: Summary of benchmarking results for datasets 1-4}
     \label{tab:VUS-PR-ROC_benchmarking_overview}
 \end{table}
 
 Table \ref{tab:VUS-PR-ROC_benchmarking_overview} provides a summary of results when evaluating datasets 1-4 with the TSB-AD benchmark.
-Unsurprisingly, dataset 1, which essentially just has a larger peak load as its anomalies, had the best results. Sub-PCA managed to achieve almost perfect scores for both VUS-PR (0.989) and VUS-ROC (0.999), highlighting its ability to detect the existing anomalies precisely and with great sensitivity. Most other models, statistical and neural network-based alike, also performed decently well with average scores (VUS-ROC) of 0.887 and 0.767 respectively.
+Unsurprisingly, dataset 1, which essentially just has a larger peak load as its anomalies, had the best results. Sub-PCA managed to achieve almost perfect scores for both VUS-PR (0.989) and VUS-ROC (0.999), highlighting its ability to detect the existing anomalies precisely and with great sensitivity. Most other models, statistical and neural network-based alike, also performed decently well with average scores (VUS-ROC) of 0.863 and 0.809 respectively.
 When looking at VUS-PR score averages, most detection models did not reach a score of above 0.500, with neural-network based models surprisingly outperforming statistical models. Since all anomalies are sequence-based and not point-based, one would expect the opposite \parencites[p.~10]{liu2024elephant}[p.~1706]{paparrizos2022tsb}.\par
-For dataset 2, which introduces anomalies by extending the idle time, the results are more varied. The best VUS-ROC score was a high 0.949, achieved by SAND, indicating a strong ability to detect these anomalies. However, the best VUS-PR score was only 0.562 from KShapeAD, showing that while models can find the anomalies, they struggle with precision. The average VUS-ROC scores were middling, with neural network models (0.604) slightly outperforming statistical ones (0.572). In contrast, the average VUS-PR scores were poor across the board, with statistical models (0.144) performing better than neural network models (0.059). \par
-Dataset 3, featuring the 'Medium Matrix' anomalies, was clearly the most difficult for the benchmarked models. This is especially evident in the VUS-PR scores, which were exceptionally low. The LOF model performed best on both metrics, yet it highlights a significant performance gap: it achieved a strong VUS-ROC score of 0.926 but a dismal VUS-PR score of only 0.062. On average, VUS-ROC scores were moderate, with statistical models (0.634) performing noticeably better than neural network models (0.506). This trend was even more pronounced for the VUS-PR scores, where the average for all models was a near-zero 0.018, confirming the difficulty of this dataset. It is also the only dataset where the best VUS-PR and VUS-ROC score where not achieved by the same model. \par
-Dataset 4, which aggregates all anomaly types, was intended to be the most challenging. The neural network-based OmniAnomaly model achieved the best scores for both VUS-PR (0.394) and VUS-ROC (0.878). While the VUS-ROC score demonstrates good overall sensitivity, the sub-0.400 VUS-PR score again points to a significant challenge in maintaining precision across varied anomaly types. The average VUS-ROC scores were the highest outside of dataset 1, with neural network models (0.659) holding a slight edge over statistical models (0.613).
+For dataset 2, which introduces anomalies by extending the idle time, the results are more varied. The best VUS-ROC score was a high 0.949, achieved by SAND, indicating a strong ability to detect these anomalies. However, the best VUS-PR score was only 0.562 from KShapeAD, showing that while models can find the anomalies, they struggle with precision. The average VUS-ROC scores were middling, with neural network models (0.565) being almost equal to statistical ones (0.566). In contrast, the average VUS-PR scores were poor across the board, with statistical models (0.125) performing better than neural network models (0.051). \par
+Dataset 3, featuring the 'Medium Matrix' anomalies, was clearly the most difficult for the benchmarked models. This is especially evident in the VUS-PR scores, which were exceptionally low. The LOF model performed best on both metrics, yet it highlights a significant performance gap: it achieved a strong VUS-ROC score of 0.926 but a dismal VUS-PR score of only 0.062. On average, VUS-ROC scores were moderate, with statistical models (0.607) performing noticeably better than neural network models (0.485). This trend was even more pronounced for the VUS-PR scores, where the average for all models was a near-zero (0.018), confirming the difficulty of this dataset. It is also the only dataset where the best VUS-PR and VUS-ROC score where not achieved by the same model. \par
+Dataset 4, which aggregates all anomaly types, was intended to be the most challenging. The neural network-based OmniAnomaly model achieved the best scores for both VUS-PR (0.394) and VUS-ROC (0.878). While the VUS-ROC score demonstrates good overall sensitivity, the sub-0.400 VUS-PR score again points to a significant challenge in maintaining precision across varied anomaly types. The average VUS-ROC scores were the highest outside of dataset 1, with neural network models (0.651) holding a slight edge over statistical models (0.604).
 
 These results were verified with 2 additional benchmarking runs. The scores remained almost identical throughout all three runs.
 
@@ -689,7 +689,7 @@ When applying this simple algorithm, it returns 110 True Positives, 0 False Posi
 Similarly here, the algorithm returns 40 True Positives, 0 False Positives, 0 False Negatives, and therefore a precision and sensitivity of 1. \par
 This is obviously not a perfect test, as it requires me to have prior knowledge about the nature of the anomaly. Despite that, if an algorithm of such simplicity can detect anomalies with complete precision and sensitivity, I will argue, that any other sufficiently advanced detection method should be able to at least reach a VUS-PR score of above 0.1 to be deemed functional.\\
 The anomaly ratios (<3\%) are firmly within the established consensus for what an acceptable ratio is, the data points are accurately labeled with the help of an automated logger and a manual inspection, the anomalies represent real changes in workload, and the anomalies can be easily detected using a few lines of code. Based on these aspects I am willing to state that the results do not represent poor quality of the datasets but instead a blindspot in the current set of detection models included by the TSB-AD benchmark. \\
-Since dataset 4 is made up two-thirds of the anomalies established in datasets 2 and 3, it is only natural that the average scores are also rather unimpressive and lie somewhere between those of dataset 1 and dataset 4. The inclusion of multiple anomaly types seems to have slightly degraded peak VUS-ROC performance compared to all other datasets. This is most likely the result of highly specialized models that are good at detecting certain anomalies (e.g. peak values), struggling more with other types of anomalies. A neural network-based model performing best in both metrics is another notable occurrence, as all anomalies are sequence-wise.
+Since dataset 4 is made up two-thirds of the anomalies established in datasets 2 and 3, it is only natural that the average scores are also rather unimpressive and lie somewhere between those of dataset 1 and dataset 3. The inclusion of multiple anomaly types seems to have slightly degraded peak VUS-ROC performance compared to all other datasets. This is most likely the result of highly specialized models that are good at detecting certain anomalies (e.g. peak values), struggling more with other types of anomalies. A neural network-based model performing best in both metrics is another notable occurrence, as all anomalies are sequence-wise.
 
 \subsection{Implications for TSAD Research}
 
@@ -706,8 +706,8 @@ For the dataset creation, two main limitations exist. First, despite efforts to 
 
 \section{Conclusion}
 
-This seminar paper embarked on a comprehensive evaluation of the current state of Time Series Anomaly Detection (TSAD) benchmarking, navigating from a literature-driven critique to empirical analysis and contribution. The literature review established a clear picture: while time series anomaly detection is an established discipline in many industries, playing an essential role in areas such as fraud detection and healthcare, the openly published scientific progress has only recently picked up pace. The lack of a generally recognized benchmarking environment with labeled high quality datasets posed a significant challenge to the development and evaluation of better detection methods. While earlier datasets like the Yahoo S5 dataset or the Numeta Anomaly Benchmark (NAB) provided a decent starting point, substantial issues with triviality, label quality, and run-to-failure bias have highlighted the need for better benchmarks. TSB-AD, and its predecessor TSB-UAD, have pursued this goal and created a new standard for anomaly detection benchmarking that can be expanded on. \\
-The attempt to replicate the results provided by the TSB-AD benchmark has shown that many hurdles exist. In particular, running all provided models turned out to be a challenging endeavour. For researchers with a more traditional background without strong programming foundations, this could become roadblock in the advancement of TSAD methods. Consistency between the original results an my run has been on average high but it is important to be careful when evaluating model performance on datasets with a low number of anomalies. The results from statistical models tend to be more reproducible than those of neural network-based ones. \\
+This seminar paper embarked on a comprehensive evaluation of the current state of Time Series Anomaly Detection (TSAD) benchmarking, navigating from a literature-driven critique to empirical analysis and contribution. The literature review established a clear picture: while time series anomaly detection is an established discipline in many industries, playing an essential role in areas such as fraud detection and healthcare, the openly published scientific progress has only recently picked up pace. The lack of a generally recognized benchmarking environment with labeled high quality datasets posed a significant challenge to the development and evaluation of better detection methods. While earlier datasets like the Yahoo S5 dataset or the Numenta Anomaly Benchmark (NAB) provided a decent starting point, substantial issues with triviality, label quality, and run-to-failure bias have highlighted the need for better benchmarks. TSB-AD, and its predecessor TSB-UAD, have pursued this goal and created a new standard for anomaly detection benchmarking that can be expanded on. \\
+The attempt to replicate the results provided by the TSB-AD benchmark has shown that many hurdles exist. In particular, running all provided models turned out to be a challenging endeavour. For researchers with a more traditional background (without strong programming foundations), this could become a roadblock in the advancement of TSAD methods. Consistency between the original results and my run has been on average high but it is important to be careful when evaluating model performance on datasets with a low number of anomalies. The results from statistical models tend to be more reproducible than those of neural network-based ones. \\
 The central contribution of this paper was the creation of four new, high-quality, real-world univariate datasets, designed specifically to address the identified flaws of previous benchmarks. By meticulously logging RAM usage during controlled workload scenarios, I produced accurately labeled datasets with a justifiable anomaly ratio and distinct, non-trivial anomaly types. A noteworthy result emerged from benchmarking established algorithms on these new datasets. While models performed expectedly well on the 'Large Matrix Injection' anomalies, which are clear statistical outliers, their performance degraded dramatically on the more subtle 'Medium Matrix Injection' and 'Sleep Time Injection' tasks. Average VUS-PR scores, in particular, reached unjustifiably low levels, indicating a near-total failure to precisely identify these anomalies, which were, by contrast, perfectly detectable with simple, rule-based scripts. \\
 This suggest a blindspot in the current set of commonly discussed detection models. Their design may be overly specialized for detecting point-wise outliers (which could be explained by all the sequence-wise anomalies mislabeled as point-wise anomalies in earlier datasets like NAB) or significant deviations from a localized temporal window, while struggling with contextual anomalies that are only identifiable by understanding the broader patterns of the entire time series. The models failed to recognize that a period of inactivity or a moderately-sized workload, while normal-looking in isolation, was anomalous within the established operational rhythm of the system. \par
 
@@ -903,7 +903,7 @@ Ultimately, this thesis gives an overview of the current Time Series Anomaly Det
 
 For all the used code and generated data, access: \url{https://github.com/Penguinbeanie/TSAD_Seminar}
 
-The TSB-AD benchmark replication was performed separately. Due to Github file upload limitations, the benchmarking datasets and evaluations were removed: \url{https://github.com/Penguinbeanie/Time-Series-Anomaly-Detection-Seminar}. A summery file, containing all results, is present in the first repository, titled 'merged\_all\_uni\_metrics.csv' and 'merged\_all\_multi\_metrics.csv'.
+The TSB-AD benchmark replication was performed separately. Due to Github file upload limitations, the benchmarking datasets and evaluations were removed: \url{https://github.com/Penguinbeanie/Time-Series-Anomaly-Detection-Seminar}. A summary file, containing all results, is present in the first repository, titled 'merged\_all\_uni\_metrics.csv' and 'merged\_all\_multi\_metrics.csv'.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Eidesstattliche Erklärung

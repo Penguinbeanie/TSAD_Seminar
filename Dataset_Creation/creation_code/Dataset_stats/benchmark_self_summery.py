@@ -4,26 +4,25 @@ import glob
 
 def analyze_benchmark_data():
     """
-    Analyzes benchmark data from CSV files in a specified directory, calculates
-    summary statistics for VUS-PR and VUS-ROC metrics, and saves the results
+    Summary statistics for VUS-PR and VUS-ROC metrics, and saves the results
     to a new CSV file.
     """
     # The list of statistical models as provided in the instructions.
     statistical_models = [
         "Sub-IForest", "Sub-LOF", "IForest", "KShapeAD", "SAND", "KMeansAD",
         "Sub-MCD", "LOF", "Sub-KNN", "POLY", "Sub-PCA", "Sub-HBOS",
-        "Sub-OCSVM", "MatrixProfile", "SR"
+        "Sub-OCSVM", "MatrixProfile", "SR", "FFT", "Left_STAMPi"
     ]
     
     # The list of neural network models as provided in the instructions.
     neural_net_models = [
         "LSTMAD", "USAD", "TranAD", "OmniAnomaly", "CNN", "AnomalyTransformer",
-        "FITS", "AutoEncoder"
+        "FITS", "AutoEncoder", "M2N2", "MOMENT_ZS"
     ]
 
     # The script is intended to be run from the workspace root.
-    input_dir = r"Evaluation/self/dataset_based"
-    output_dir = r"Evaluation/self/dataset_based"
+    input_dir = r"Evaluation/Created_Benchmarking_Datasets/dataset_based"
+    output_dir = r"Evaluation/Created_Benchmarking_Datasets/dataset_based"
 
     # Find all CSV files for datasets 010 to 013.
     filepaths = []
@@ -78,7 +77,7 @@ def analyze_benchmark_data():
 
     output_df = pd.DataFrame(results)
     # Define the output file path for the summary.
-    output_filename = "benchmark_summary.csv"
+    output_filename = "updated_benchmark_summary.csv"
     output_filepath = os.path.join(output_dir, output_filename)
     
     # Save the summary dataframe to a CSV file.
